@@ -14052,11 +14052,11 @@ exports.run = function(wday, mday) {
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20201105112128324" list="$:/ControlPanel FlyLady" modified="20201105112128324" title="$:/StoryList">
+<div list="FlyLady" title="$:/StoryList">
 <pre></pre>
 </div>
 <div title="$:/temp/BrowserStorage/Log">
-<pre>$:/state/showeditpreview $:/state/tab--86143343 $:/state/plugin-info-1089825214-$:/plugins/tiddlywiki/browser-storage--1352979840 $:/state/tab-2065006209 $:/state/tab--1498284803 $:/state/tab-1749438307</pre>
+<pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
 <pre>{
@@ -14071,7 +14071,7 @@ exports.run = function(wday, mday) {
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;https://steffiland.github.io/wiki/assets/static/flylady/index.html&quot;
+            &quot;text&quot;: &quot;https://steffiland.github.io/web/flylady.html&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
@@ -14091,7 +14091,7 @@ exports.run = function(wday, mday) {
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/wiki/assets/static/flylady/index.html&quot;
+            &quot;text&quot;: &quot;/web/flylady.html&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -14103,11 +14103,11 @@ exports.run = function(wday, mday) {
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1920&quot;
+            &quot;text&quot;: &quot;3440&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;1080&quot;
+            &quot;text&quot;: &quot;1440&quot;
         },
         &quot;$:/info/browser/language&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/language&quot;,
@@ -15692,7 +15692,7 @@ Lampen entstauben:0</pre>
 
 * Beispiele für Filter in Listen http://tobibeer.github.io/tw/filters/#Filter%20Examples</pre>
 </div>
-<div created="20190807074506558" modified="20190808091430663" tags="$:/tags/RawMarkupWikified/BottomBody WikiTweaks" title="Versteckter Wiki-Content" type="text/vnd.tiddlywiki">
+<div created="20190807074506558" modified="20201105130952055" tags="$:/tags/RawMarkupWikified/BottomBody WikiTweaks" title="Versteckter Wiki-Content" type="text/vnd.tiddlywiki">
 <pre>\import [[$:/core/ui/PageMacros]] [all[shadows+tiddlers]tag[$:/tags/Macro]!has[draft.of]]
 \rules only filteredtranscludeinline transcludeinline macrocallinline
 &lt;div class=&quot;hideInTopBody&quot;&gt;
@@ -15701,7 +15701,7 @@ Hier ist Platz für Code, der  z.B. für die JavaScript Verarbeitung immer &quot
 
 &lt;/div&gt;
 
-&lt;!-- div class=&quot;scheduleData&quot;&gt;
+&lt;div class=&quot;scheduleData&quot; style=&quot;display: none;&quot;&gt;
 &lt;!-- funktioniert nicht in Kombi mit dem BrowserLocalStorage Plugin --&gt;
 {{ErinnerungenData||$:/core/templates/plain-text-tiddler}}
 &lt;/div --&gt;
@@ -18508,7 +18508,7 @@ if(typeof(exports) !== "undefined") {
 </script>
 </div>
 <!--~~ Raw markup for the bottom of the body section ~~-->
-<div class="hideInTopBody">Hier ist Platz für Code, der  z.B. für die JavaScript Verarbeitung immer "sichtbar" sein muss, aber gleichzeitig nicht auf der Webseite zu sehen sein soll (außer der Tiddler ist geöffnet).</div><!-- div class="scheduleData">
+<div class="hideInTopBody">Hier ist Platz für Code, der  z.B. für die JavaScript Verarbeitung immer "sichtbar" sein muss, aber gleichzeitig nicht auf der Webseite zu sehen sein soll (außer der Tiddler ist geöffnet).</div><div class="scheduleData" style="display: none;">
 <!-- funktioniert nicht in Kombi mit dem BrowserLocalStorage Plugin -->
 {
   "Morgenroutine": "7:00",
