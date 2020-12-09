@@ -143,6 +143,8 @@ Error message and password prompt
 
 <li> </li>
 
+<li>$:/config/AutoSave</li>
+
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home</li>
 
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/manager</li>
@@ -191,11 +193,11 @@ Error message and password prompt
 
 <li>2020-12-09 FOG für Frauen</li>
 
+<li>2020-12-09 Start</li>
+
 <li>2020-12-09 test</li>
 
 <li>2020-12-09 testneu</li>
-
-<li>2020-12-09 v</li>
 
 <li>2020-12-09blub</li>
 
@@ -223,6 +225,8 @@ Error message and password prompt
 
 <li>Trainingsübersicht</li>
 
+<li>YayogFrauenTemplate</li>
+
 </ul>
 </p>
 
@@ -245,6 +249,9 @@ Error message and password prompt
 * Legs: {{!!legs}}
 * Hips: {{!!hips}}
 </pre>
+</div>
+<div created="20201209133541959" modified="20201209133541959" title="$:/config/AutoSave">
+<pre>no</pre>
 </div>
 <div created="20201209124652652" modified="20201209124652652" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home">
 <pre>show</pre>
@@ -9662,8 +9669,8 @@ Error message and password prompt
 <div created="20201209131819927" modified="20201209131819927" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Saving</pre>
 </div>
-<div created="20201209131822999" modified="20201209131822999" title="$:/state/tab-2065006209">
-<pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
+<div created="20201209131822999" modified="20201209133540881" title="$:/state/tab-2065006209">
+<pre>$:/core/ui/ControlPanel/Saving/General</pre>
 </div>
 <div created="20201209082023485" modified="20201209124704787" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Recent</pre>
@@ -9671,7 +9678,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20201209133128234" list="Trainingsübersicht GettingStarted [[FOG für Frauen]]" modified="20201209133505060" title="$:/StoryList">
+<div created="20201209133128234" list="Trainingsübersicht GettingStarted [[FOG für Frauen]]" modified="20201209140354914" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9853,6 +9860,17 @@ Error message and password prompt
 * Hips: {{!!hips}}
 </pre>
 </div>
+<div created="20201209135630293" hips="0" hips_text="einbeiniges Hüftstrecken" legs="0" legs_text="seitl. Ausfallschritte" modified="20201209141144809" pull="0" pull_text="umgek. Bankdrücken, Knie im rechten Winkel" push_gerade="0" push_gerade_text="Military Press mit 1sec Pause, Hände kniehoch" push_rechtw="0" push_rechtw_text="Liegestütz eng, Hände hüfthoch" sxw="2x12" tags="training fogff" title="2020-12-09 Start" type="text/vnd.tiddlywiki" woche="Z1 Woche 1">
+<pre>Zyklus: {{!!woche}} (Sätze x Wdh: {{!!sxw}})
+
+* Pull: {{!!pull}} - &lt;$view tiddler=&quot;Progression Pull&quot; index={{!!pull}}  /&gt; {{!!pull_text}}
+* Push gerade: {{!!push_gerade}} - &lt;$view tiddler=&quot;Progression Push gerade&quot; index={{!!push_gerade}}  /&gt;  {{!!push_gerade_text}}
+* Push rechtwinklig: {{!!push_rechtw}} - &lt;$view tiddler=&quot;Progression Push rechtwinklig&quot; index={{!!push_rechtw}}  /&gt; {{!!push_rechtw_text}}
+* Legs: {{!!legs}}  - &lt;$view tiddler=&quot;Progression Beine&quot; index={{!!legs}}  /&gt; {{!!legs_text}}
+* Hips: {{!!hips}}  - &lt;$view tiddler=&quot;Progression Beuge&quot; index={{!!hips}}  /&gt; {{!!hips_text}}
+
+---</pre>
+</div>
 <div created="20201209123504968" hips="2" legs="0" modified="20201209124157428" pull="3" push="" push_gerade="1" push_rechtw="1" sxw="2x12" tags="training fogff" title="2020-12-09 test" type="text/vnd.tiddlywiki" woche="Z4 Woche 2">
 <pre>Zyklus: {{!!woche}} (Sätze x Wdh: {{!!sxw}})
 
@@ -9864,9 +9882,6 @@ Error message and password prompt
 </pre>
 </div>
 <div created="20201209124354622" hips="1" legs="0" modified="20201209130152231" pull="2" push_gerade="1" push_rechtw="0" sxw="2x12" tags="training fogff" title="2020-12-09 testneu" type="text/vnd.tiddlywiki" woche="Z1 Woche 3">
-<pre>{{||Template}}</pre>
-</div>
-<div created="20201209133500915" modified="20201209133500915" tags="training fogff" title="2020-12-09 v" type="text/vnd.tiddlywiki">
 <pre>{{||Template}}</pre>
 </div>
 <div created="20201209113208948" legs="&lt;&lt;item&gt;&gt;" modified="20201209113513180" pull="Umgekehrtes Bankdrücken" push="" tags="training fogff" title="2020-12-09blub" type="text/vnd.tiddlywiki" woche="z1w2">
@@ -9890,21 +9905,24 @@ Error message and password prompt
 
 </pre>
 </div>
-<div created="20201209072302621" modified="20201209133412300" neutitel="2020-12-09 testneu" push="gerade" tags="" title="FOG für Frauen">
+<div created="20201209072302621" modified="20201209141128020" neutitel="2020-12-09 testneu" push="gerade" tags="" title="FOG für Frauen">
 <pre>\define titelprefix()
 &lt;&lt;now &quot;YYYY-0MM-0DD&quot;&gt;&gt;
 \end
 
-&lt;$wikify name=titel text=&quot;&lt;&lt;titelprefix&gt;&gt; {{Temp!!neutitel}}&quot; &gt;
-
 Neuer Tagebucheintrag: &lt;&lt;titelprefix&gt;&gt;
 &lt;$edit-text tiddler=&quot;Temp&quot; field=&quot;neutitel&quot; 
- /&gt; &lt;$button&gt;
-&lt;$action-createtiddler $basetitle=&lt;&lt;titel&gt;&gt; $overwrite=&quot;yes&quot; $template=&quot;YayogFrauenTemplate&quot; /&gt;
-Eintrag anlegen:
-&lt;/$button&gt;
-&lt;$link to=&lt;&lt;titel&gt;&gt; &gt;{{$:/core/images/link}}&lt;/$link&gt;
+ /&gt;
 
+&lt;$wikify name=titel text=&quot;&lt;&lt;titelprefix&gt;&gt; {{Temp!!neutitel}}&quot; &gt;
+
+ &lt;$button&gt;
+&lt;$action-createtiddler $basetitle=&lt;&lt;titel&gt;&gt; $overwrite=&quot;yes&quot; $template=&quot;YayogFrauenTemplate&quot; /&gt;
+Eintrag anlegen
+&lt;/$button&gt;
+
+---
+!! &lt;&lt;titel&gt;&gt;
 
 Zyklus/Woche: &lt;$select tiddler=&lt;&lt;titel&gt;&gt; field='woche'&gt;
 &lt;optgroup label='Zyklus 1'&gt;
@@ -9950,6 +9968,16 @@ Pull-Übung:
 &lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;pull_text&quot; 
  /&gt;
 
+Bein-Übung:
+
+&lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=legs default=0&gt;
+&lt;$list filter=&quot;[title[Progression Beine]indexes[]]&quot; variable=&quot;bein_item&quot;&gt;
+&lt;option value=&lt;&lt;bein_item&gt;&gt; &gt;&lt;&lt;bein_item&gt;&gt; - &lt;$transclude tiddler=&quot;Progression Beine&quot; index=&lt;&lt;bein_item&gt;&gt;/&gt;&lt;/option&gt;
+&lt;/$list&gt;
+&lt;/$select&gt;
+&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;legs_text&quot; 
+ /&gt;
+
 Push-Übung gerade:
 
 &lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=push_gerade default=0&gt;
@@ -9967,18 +9995,9 @@ Push-Übung rechtwinkling:
 &lt;option value=&lt;&lt;push_r_item&gt;&gt; &gt;&lt;&lt;push_r_item&gt;&gt; - &lt;$transclude tiddler=&quot;Progression Push rechtwinklig&quot; index=&lt;&lt;push_r_item&gt;&gt;/&gt;&lt;/option&gt;
 &lt;/$list&gt;
 &lt;/$select&gt;
-&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;pull_rechtw_text&quot; 
+&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;push_rechtw_text&quot; 
  /&gt;
 
-Bein-Übung:
-
-&lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=legs default=0&gt;
-&lt;$list filter=&quot;[title[Progression Beine]indexes[]]&quot; variable=&quot;bein_item&quot;&gt;
-&lt;option value=&lt;&lt;bein_item&gt;&gt; &gt;&lt;&lt;bein_item&gt;&gt; - &lt;$transclude tiddler=&quot;Progression Beine&quot; index=&lt;&lt;bein_item&gt;&gt;/&gt;&lt;/option&gt;
-&lt;/$list&gt;
-&lt;/$select&gt;
-&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;legs_text&quot; 
- /&gt;
 
 Beuge-Übung:
 
@@ -10035,7 +10054,7 @@ Beuge-Übung:
 * Hips: {{!!hips}}
 </pre>
 </div>
-<div created="20201209095546498" modified="20201209133452876" neutitel="v" tags="" title="Temp">
+<div created="20201209095546498" modified="20201209135447885" neutitel="Start" tags="" title="Temp">
 <pre>&lt;&lt;now YYYY-0MM--0DD&gt;&gt; __{{!!neutitel}}__</pre>
 </div>
 <div created="20201209130024348" modified="20201209130338109" tags="" title="Template">
@@ -10068,6 +10087,9 @@ Beuge-Übung:
   
 &lt;/$list&gt;
 &lt;/table&gt;</pre>
+</div>
+<div created="20201209133605971" hips="0" legs="0" modified="20201209133643763" pull="0" push_gerade="0" push_rechtw="0" tags="training fogff" title="YayogFrauenTemplate" type="text/vnd.tiddlywiki">
+<pre>{{||Template}}</pre>
 </div>
 
 
