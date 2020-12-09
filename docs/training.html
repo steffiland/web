@@ -47,7 +47,7 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 <link id="faviconLink" rel="shortcut icon" href="favicon.ico">
-<title>Traningstagebuch — a non-linear personal web notebook</title>
+<title>Trainingstagebuch — </title>
 <!--~~ This is a Tiddlywiki file. The points of interest in the file are marked with this pattern ~~-->
 
 <!--~~ Raw markup ~~-->
@@ -162,6 +162,8 @@ Error message and password prompt
 <li>$:/GitHub/Username</li>
 
 <li>$:/isEncrypted</li>
+
+<li>$:/SiteSubtitle</li>
 
 <li>$:/SiteTitle</li>
 
@@ -9645,8 +9647,11 @@ Error message and password prompt
 <div title="$:/isEncrypted">
 <pre>no</pre>
 </div>
-<div created="20201209124607303" modified="20201209124609860" title="$:/SiteTitle">
-<pre>Traningstagebuch</pre>
+<div created="20201209133033892" modified="20201209133033892" title="$:/SiteSubtitle">
+<pre></pre>
+</div>
+<div created="20201209124607303" modified="20201209133032201" title="$:/SiteTitle">
+<pre>Trainingstagebuch</pre>
 </div>
 <div created="20201209113018196" modified="20201209113018196" title="$:/state/Link/--213845083/search">
 <pre>2</pre>
@@ -9882,7 +9887,7 @@ Error message and password prompt
 
 </pre>
 </div>
-<div created="20201209072302621" modified="20201209132454748" neutitel="2020-12-09 testneu" push="gerade" tags="" title="FOG für Frauen">
+<div created="20201209072302621" modified="20201209133109765" neutitel="2020-12-09 testneu" push="gerade" tags="" title="FOG für Frauen">
 <pre>\define titelprefix()
 &lt;&lt;now &quot;YYYY-0MM-0DD&quot;&gt;&gt;
 \end
@@ -9895,7 +9900,8 @@ Neuer Tagebucheintrag: &lt;&lt;titelprefix&gt;&gt;
 &lt;$action-createtiddler $basetitle=&lt;&lt;titel&gt;&gt; $overwrite=&quot;yes&quot; $template=&quot;YayogFrauenTemplate&quot; /&gt;
 Eintrag anlegen:
 &lt;/$button&gt;
-&quot;&lt;&lt;titel&gt;&gt;&quot;
+&lt;$link to=&lt;&lt;titel&gt;&gt; &gt;{{$:/core/images/link}}&lt;/$link&gt;
+
 
 Zyklus/Woche: &lt;$select tiddler=&lt;&lt;titel&gt;&gt; field='woche'&gt;
 &lt;optgroup label='Zyklus 1'&gt;
