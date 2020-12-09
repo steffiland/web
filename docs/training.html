@@ -149,6 +149,8 @@ Error message and password prompt
 
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/manager</li>
 
+<li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/refresh</li>
+
 <li>$:/core</li>
 
 <li>$:/DefaultTiddlers</li>
@@ -173,6 +175,8 @@ Error message and password prompt
 
 <li>$:/state/showeditpreview</li>
 
+<li>$:/state/sidebar</li>
+
 <li>$:/state/tab-1749438307</li>
 
 <li>$:/state/tab-2065006209</li>
@@ -192,6 +196,8 @@ Error message and password prompt
 <li>$:/themes/tiddlywiki/vanilla</li>
 
 <li>2020-12-09 FOG für Frauen</li>
+
+<li>2020-12-09 Nun</li>
 
 <li>2020-12-09 Start</li>
 
@@ -252,7 +258,10 @@ Error message and password prompt
 <div created="20201209124652652" modified="20201209124652652" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home">
 <pre>show</pre>
 </div>
-<div created="20201209110241656" modified="20201209110241656" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/manager">
+<div created="20201209110241656" modified="20201209184948967" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/manager">
+<pre>hide</pre>
+</div>
+<div created="20201209184943796" modified="20201209184943796" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/refresh">
 <pre>show</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="TiddlyWiki5 core" list="readme" name="Core" plugin-priority="0" plugin-type="plugin" title="$:/core" type="application/json" version="5.1.22">
@@ -9660,7 +9669,10 @@ Error message and password prompt
 <div created="20201209113018196" modified="20201209113018196" title="$:/state/Link/--213845083/search">
 <pre>2</pre>
 </div>
-<div created="20201209072334849" modified="20201209072334849" title="$:/state/showeditpreview">
+<div created="20201209072334849" modified="20201209182307590" title="$:/state/showeditpreview">
+<pre>no</pre>
+</div>
+<div created="20201209185001646" modified="20201209185055961" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20201209131819927" modified="20201209131819927" title="$:/state/tab-1749438307">
@@ -9669,13 +9681,13 @@ Error message and password prompt
 <div created="20201209131822999" modified="20201209133540881" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/General</pre>
 </div>
-<div created="20201209082023485" modified="20201209124704787" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Recent</pre>
+<div created="20201209082023485" modified="20201209184938641" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Tools</pre>
 </div>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div list="GettingStarted [[FOG für Frauen]] Training" title="$:/StoryList">
+<div created="20201209181015217" list="YayogFrauenTemplate [[FOG für Frauen]] Training" modified="20201209182030008" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9723,11 +9735,11 @@ Error message and password prompt
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1920&quot;
+            &quot;text&quot;: &quot;393&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;1080&quot;
+            &quot;text&quot;: &quot;851&quot;
         },
         &quot;$:/info/browser/language&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/language&quot;,
@@ -9856,6 +9868,9 @@ Error message and password prompt
 * Legs: {{!!legs}}
 * Hips: {{!!hips}}
 </pre>
+</div>
+<div created="20201209181236357" modified="20201209181236357" title="2020-12-09 Nun" woche="Z1 Woche 1">
+<pre></pre>
 </div>
 <div created="20201209135630293" hips_text="einbeiniges Hüftstrecken" legs_text="seitl. Ausfallschritte" modified="20201209152533079" pull_text="umgek. Bankdrücken, Knie im rechten Winkel" push_gerade_text="Military Press mit 1sec Pause, Hände kniehoch" push_rechtw_text="Liegestütz eng, Hände hüfthoch" tags="training fogff" title="2020-12-09 Start" type="text/vnd.tiddlywiki" woche="Z1 Woche 1">
 <pre>Zyklus: {{!!woche}} (Sätze x Wdh: {{!!sxw}})
@@ -10029,7 +10044,7 @@ Beuge-Übung:
 * Hips: {{!!hips}}
 </pre>
 </div>
-<div created="20201209095546498" modified="20201209135447885" neutitel="Start" tags="" title="Temp">
+<div created="20201209095546498" listlimit="10" modified="20201209182047504" neutitel="Nun" tags="" title="Temp">
 <pre>&lt;&lt;now YYYY-0MM--0DD&gt;&gt; __{{!!neutitel}}__</pre>
 </div>
 <div created="20201209130024348" modified="20201209130338109" tags="" title="Template">
@@ -10046,7 +10061,7 @@ Beuge-Übung:
 <div created="20201209152023724" modified="20201209152207743" title="training">
 <pre>{{Training}}</pre>
 </div>
-<div created="20201209130805592" modified="20201209152935642" tags="" title="Training">
+<div created="20201209130805592" modified="20201209182734114" tags="" title="Training">
 <pre>&lt;table&gt;
 &lt;tr&gt;
 &lt;th&gt;Training&lt;/th&gt;
@@ -10056,17 +10071,23 @@ Beuge-Übung:
 &lt;th&gt;Push rechtw.&lt;/th&gt;
 &lt;th&gt;Beuge&lt;/th&gt;
 &lt;/tr&gt;
-&lt;$list filter=&quot;[tag[training]!suffix[Template]sort[created]]&quot; variable =&quot;title&quot;&gt;
+&lt;$list filter=&quot;[tag[training]!suffix[Template]sort[created]last[10]]&quot; variable =&quot;title&quot;&gt;
         &lt;tr&gt;
-        &lt;td rowspan&gt; &lt;$link to=&lt;&lt;title&gt;&gt;&gt;&lt;&lt;title&gt;&gt;&lt;/$link&gt; &lt;br/&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=woche/&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=sxw/&gt; &lt;/td&gt;
-        &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=pull/&gt; : &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=pull_text/&gt;&lt;/td&gt;
-        &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=legs/&gt; : &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=legs_text/&gt;&lt;/td&gt;
-        &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=push_gerade/&gt; : &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=push_gerade_text/&gt;&lt;/td&gt;
-        &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=push_rechtw/&gt; : &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=push_rechtw_text/&gt;&lt;/td&gt;
-        &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=hips/&gt; : &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=hips_text/&gt;&lt;/td&gt;
+        &lt;td rowspan=2&gt; &lt;$link to=&lt;&lt;title&gt;&gt;&gt;&lt;&lt;title&gt;&gt;&lt;/$link&gt; &lt;br/&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=woche/&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=sxw/&gt; &lt;/td&gt;
+        &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=pull/&gt;&lt;/td&gt;
+        &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=legs/&gt;&lt;/td&gt;
+        &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=push_gerade/&gt;&lt;/td&gt;
+        &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=push_rechtw/&gt;&lt;/td&gt;
+        &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=hips/&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+  &lt;tr&gt;
+        &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=pull_text/&gt;&lt;/td&gt;
+        &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=legs_text/&gt;&lt;/td&gt;
+        &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=push_gerade_text/&gt;&lt;/td&gt;
+        &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=push_rechtw_text/&gt;&lt;/td&gt;
+        &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=hips_text/&gt;&lt;/td&gt;
         
         &lt;/tr&gt;
-  
 &lt;/$list&gt;
 &lt;/table&gt;</pre>
 </div>
