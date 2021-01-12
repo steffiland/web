@@ -417,6 +417,8 @@ Error message and password prompt
 
 <li>2021-01-11 </li>
 
+<li>2021-01-12 </li>
+
 <li>FOG Frauen Plan</li>
 
 <li>FOG für Frauen</li>
@@ -10125,7 +10127,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210112190353810" list="$:/ControlPanel GettingStarted [[FOG für Frauen]] [[Training kurz]]" modified="20210112200218824" title="$:/StoryList">
+<div list="GettingStarted [[FOG für Frauen]] [[Training kurz]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20201229131941415" modified="20201229131941415" title="$:/temp/HidePluginWarning">
@@ -11269,6 +11271,9 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div created="20210111190200008" hips="3+1s" hips_text="↗️" legs="4+2s" legs_text="↗️" modified="20210111190308619" pull="5b+1s" pull_text="↗️" push="2+1s" push_text="↗️" push_type="gerade" sxw="2x12" tags="training fogff" title="2021-01-11 " type="text/vnd.tiddlywiki" woche="Z1 Woche 1">
 <pre>{{||Template}}</pre>
 </div>
+<div created="20210112200347057" modified="20210112201113575" push_type="rechtwinklig" title="2021-01-12 ">
+<pre></pre>
+</div>
 <div created="20201229132124927" modified="20201229134033412" tags="" title="FOG Frauen Plan" type="text/x-markdown">
 <pre>Zyklus 1 | | Sätze x Wdh Woche 1,2 | Sätze x Wdh Woche 3,4 | Intervalldauer / Satz
 ---|---|---|--|--
@@ -11283,7 +11288,7 @@ gerade Tage (2,4,6) |  Pull | 2x12 |  3x10 | 2 min
 
 </pre>
 </div>
-<div created="20201209185211015" modified="20201229134249971" neutitel="2020-12-09 testneu" push="gerade" push_type="Progression Push rechtwinklig" tags="" title="FOG für Frauen">
+<div created="20201209185211015" modified="20210112201145212" neutitel="2020-12-09 testneu" push="gerade" push_type="Progression Push rechtwinklig" tags="" title="FOG für Frauen">
 <pre>\define titelprefix()
 &lt;&lt;now &quot;YYYY-0MM-0DD&quot;&gt;&gt;
 \end
@@ -11339,7 +11344,7 @@ Sätze x Wiederholungen: &lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=sxw&gt;
 Pull-Übung:  
 
 &lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=pull &gt;
-&lt;$list filter=&quot;[title[Progression Pull]indexes[]]&quot; variable=&quot;pullitem&quot;&gt;
+&lt;$list filter=&quot;[title[Progression Pull]indexes[]sortan[]]&quot; variable=&quot;pullitem&quot;&gt;
 &lt;option value=&lt;&lt;pullitem&gt;&gt; &gt;&lt;&lt;pullitem&gt;&gt; - &lt;$transclude tiddler=&quot;Progression Pull&quot; index=&lt;&lt;pullitem&gt;&gt;/&gt;&lt;/option&gt;
 &lt;/$list&gt;
 &lt;/$select&gt;
@@ -11348,7 +11353,7 @@ Pull-Übung:
 Bein-Übung:
 
 &lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=legs &gt;
-&lt;$list filter=&quot;[title[Progression Beine]indexes[]]&quot; variable=&quot;bein_item&quot;&gt;
+&lt;$list filter=&quot;[title[Progression Beine]indexes[]sortan[]]&quot; variable=&quot;bein_item&quot;&gt;
 &lt;option value=&lt;&lt;bein_item&gt;&gt; &gt;&lt;&lt;bein_item&gt;&gt; - &lt;$transclude tiddler=&quot;Progression Beine&quot; index=&lt;&lt;bein_item&gt;&gt;/&gt;&lt;/option&gt;
 &lt;/$list&gt;
 &lt;/$select&gt;
@@ -11364,7 +11369,7 @@ Push-Übung:
 &lt;$wikify name=myPush text=&quot;Progression Push &lt;&lt;pushpart&gt;&gt;&quot; &gt;
 
 &lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=push&gt;
-&lt;$list  filter=&quot;[title&lt;myPush&gt;indexes[]]&quot; variable=&quot;push_item&quot;&gt;
+&lt;$list  filter=&quot;[title&lt;myPush&gt;indexes[]sortan[]]&quot; variable=&quot;push_item&quot;&gt;
 &lt;option value=&lt;&lt;push_item&gt;&gt; &gt;&lt;&lt;push_item&gt;&gt; - &lt;$transclude tiddler=&lt;&lt;myPush&gt;&gt; index=&lt;&lt;push_item&gt;&gt;/&gt;&lt;/option&gt;
 &lt;/$list&gt;
 &lt;/$select&gt;
@@ -11377,7 +11382,7 @@ Push-Übung:
 Beuge-Übung:
 
 &lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=hips&gt;
-&lt;$list filter=&quot;[title[Progression Beuge]indexes[]]&quot; variable=&quot;hip_item&quot;&gt;
+&lt;$list filter=&quot;[title[Progression Beuge]indexes[]sortan[]]&quot; variable=&quot;hip_item&quot;&gt;
 &lt;option value=&lt;&lt;hip_item&gt;&gt; &gt;&lt;&lt;hip_item&gt;&gt; - &lt;$transclude tiddler=&quot;Progression Beuge&quot; index=&lt;&lt;hip_item&gt;&gt;/&gt;&lt;/option&gt;
 &lt;/$list&gt;
 &lt;/$select&gt;
@@ -11660,7 +11665,7 @@ Beuge-Übung:
 <div created="20201209201958809" modified="20201209202554998" tags="intern" title="Progression Push n" type="application/x-tiddler-dictionary">
 <pre>0:</pre>
 </div>
-<div created="20201209121410675" modified="20210112195839179" tags="intern rechtwinklig" title="Progression Push rechtwinklig" type="application/x-tiddler-dictionary">
+<div created="20201209121410675" modified="20210112201139180" tags="intern rechtwinklig" title="Progression Push rechtwinklig" type="application/x-tiddler-dictionary">
 <pre>0:
 1:Liegestütz mit den Händen auf Brusthöhe
 2:Liegestütz mit den Händen in Hüfthöhe
@@ -11684,7 +11689,7 @@ Beuge-Übung:
 8:Liegestütz, Füße kniehoch
 8+1s:Liegestütz, Füße kniehoch
 8+2s:Liegestütz, Füße kniehoch
-9: Tripod Pushups im Wechsel: Beine schulterbreit, ein Bein erhöht halten
+9: Tripod Pushups im Wechsel: Beine schulterbreit, ein Bein erhöht
 9+1s:Tripod Pushups mit 1s Pause
 9+2s:Tripod Pushups mit 2s Pause
 10: einarmiger Liegestütz, Hände hüfthoch
