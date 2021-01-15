@@ -425,7 +425,11 @@ Error message and password prompt
 
 <li>2021-01-12 </li>
 
+<li>2021-01-13</li>
+
 <li>2021-01-13 </li>
+
+<li>2021-01-15</li>
 
 <li>Einstellungen</li>
 
@@ -450,6 +454,8 @@ Error message and password prompt
 <li>sxw</li>
 
 <li>tag1</li>
+
+<li>Tagebucheintrag bearbeiten</li>
 
 <li>Template</li>
 
@@ -10132,7 +10138,7 @@ Error message and password prompt
 <div created="20201209131822999" modified="20210112200223948" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
 </div>
-<div created="20201209082023485" modified="20210115085655626" title="$:/state/tab/sidebar--595412856">
+<div created="20201209082023485" modified="20210115095909000" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
 <div title="$:/status/RequireReloadDueToPluginChange">
@@ -11291,20 +11297,22 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div created="20210112200347057" modified="20210112201113575" push_type="rechtwinklig" title="2021-01-12 ">
 <pre></pre>
 </div>
+<div created="20210113192132755" hips="5+2s" hips_text="↗️" legs="5+1s" legs_text="Technik" modified="20210115095939844" pull="5b+1s" pull_text="↗️" push="3" push_text="↗️" push_type="rechtwinklig" sxw="2x12" tags="training fogff" title="2021-01-13" type="text/vnd.tiddlywiki" woche="Z1 Woche 2">
+<pre>{{||Template}}</pre>
+</div>
 <div created="20210113192132755" hips="5+2s" hips_text="↗️" legs="5+1s" legs_text="Technik" modified="20210113212732333" pull="5b+1s" pull_text="↗️" push="3" push_text="↗️" push_type="rechtwinklig" sxw="2x12" tags="training fogff" title="2021-01-13 " type="text/vnd.tiddlywiki" woche="Z1 Woche 2">
 <pre>{{||Template}}</pre>
 </div>
-<div created="20201209095546498" listlimit="10" modified="20210115090447854" neutitel="2" tags="$:/tags/StartupAction intern" titel_template="&lt;&lt;now &quot;YYYY-0MM-0DD&quot;&gt;&gt;" title="Einstellungen">
+<div created="20210115100000643" hips="0" hips_text="" legs="0" legs_text="" modified="20210115100000643" pull="0" pull_text="" push="0" push_text="" push_type="n" sxw="" tags="training fogff" title="2021-01-15" type="text/vnd.tiddlywiki" woche="">
+<pre>{{||Template}}</pre>
+</div>
+<div created="20201209095546498" listlimit="10" modified="20210115100014209" neutitel="2021-01-13" tags="$:/tags/StartupAction intern" titel_template="&lt;&lt;now &quot;YYYY-0MM-0DD&quot;&gt;&gt;" title="Einstellungen">
 <pre>* Anzeigelimit Trainingstagebuch: {{!!listlimit}}
 * Template für Titel neuer Tagebucheinträge: {{!!titel_template}}
-* Titel neuer Tagebucheintrag: {{!!neutitel}}
+* aktueller Titel neuer Tagebucheintrag: {{!!neutitel}}
 &lt;$wikify name=titel text=&quot;{{!!titel_template}}&quot; &gt;
-* &lt;&lt;titel&gt;&gt;
-
-
 &lt;$action-setfield neutitel=&lt;&lt;titel&gt;&gt; /&gt;
 
-Test:
 &lt;$button&gt;
 Übernehme Template für neuen Titel 
 &lt;$action-setfield neutitel=&lt;&lt;titel&gt;&gt; /&gt;
@@ -11330,108 +11338,25 @@ Test:
 **Wechsel zu Zyklus 2:** die letzten beiden Wochen solange wdh., bis an 3 Trainingstagen in Folge keine Fortschritte gemacht wurden
 </pre>
 </div>
-<div created="20201209185211015" modified="20210115090749651" neutitel="2020-12-09 testneu" push="gerade" push_type="Progression Push rechtwinklig" tags="" title="FOG für Frauen">
-<pre>\define titelprefix()
-&lt;&lt;now &quot;YYYY-0MM-0DD&quot;&gt;&gt;
-\end
+<div created="20201209185211015" modified="20210115095450444" push="gerade" push_type="Progression Push rechtwinklig" tags="" tiddler="Einstellungen" title="FOG für Frauen">
+<pre>&lt;$wikify name=titelneu text=&quot;{{Einstellungen!!titel_template}}&quot; &gt;
 
-Tagebucheintrag: 
+&lt;$button  to=&quot;Tagebucheintrag bearbeiten&quot;&gt;
+&lt;$action-createtiddler $basetitle=&lt;&lt;titelneu&gt;&gt; $overwrite=&quot;yes&quot; $template=&quot;YayogFrauenTemplate&quot; /&gt;
+&lt;$action-setfield neutitel=&lt;&lt;titelneu&gt;&gt; $tiddler=&quot;Einstellungen&quot; /&gt;
+{{$:/core/images/new-button}} neu anlegen
+&lt;/$button&gt;
+&lt;$edit-text tiddler=&quot;Einstellungen&quot; field=&quot;titel_template&quot; 
+ /&gt;
+&lt;/$wikify&gt;
+ ODER
+
+&lt;$button to=&quot;Tagebucheintrag bearbeiten&quot; &gt;
+{{$:/core/images/edit-button}} bearbeiten
+&lt;/$button&gt;
 &lt;$edit-text tiddler=&quot;Einstellungen&quot; field=&quot;neutitel&quot; 
  /&gt;
-
-&lt;$wikify name=titel text=&quot;{{Einstellungen!!neutitel}}&quot; &gt;
-
- &lt;$button&gt;
-&lt;$action-createtiddler $basetitle={{Einstellungen!!neutitel}} $overwrite=&quot;yes&quot; $template=&quot;YayogFrauenTemplate&quot; /&gt;
-{{$:/core/images/new-button}}
-&lt;/$button&gt;
-
----
-!! &lt;&lt;titel&gt;&gt; [[FOG Frauen Plan]]
-
-Zyklus/Woche: &lt;$select tiddler={{Einstellungen!!neutitel}} field='woche'&gt;
-&lt;optgroup label='Zyklus 1'&gt;
-&lt;option&gt;Z1 Woche 1&lt;/option&gt;
-&lt;option&gt;Z1 Woche 2&lt;/option&gt;
-&lt;option&gt;Z1 Woche 3&lt;/option&gt;
-&lt;option&gt;Z1 Woche 4&lt;/option&gt;
-&lt;/optgroup&gt;
-&lt;optgroup label='Zyklus 2'&gt;
-&lt;option&gt;Z2 Woche 1&lt;/option&gt;
-&lt;option&gt;Z2 Woche 2&lt;/option&gt;
-&lt;option&gt;Z2 Woche 3&lt;/option&gt;
-&lt;option&gt;Z2 Woche 4&lt;/option&gt;
-&lt;/optgroup&gt;
-&lt;optgroup label='Zyklus 3'&gt;
-&lt;option&gt;Z3 Woche 1&lt;/option&gt;
-&lt;option&gt;Z3 Woche 2&lt;/option&gt;
-&lt;option&gt;Z3 Woche 3&lt;/option&gt;
-&lt;option&gt;Z3 Woche 4&lt;/option&gt;
-&lt;/optgroup&gt;
-&lt;optgroup label='Zyklus 4'&gt;
-&lt;option&gt;Z4 Woche 1&lt;/option&gt;
-&lt;option&gt;Z4 Woche 2&lt;/option&gt;
-&lt;option&gt;Z4 Woche 3&lt;/option&gt;
-&lt;option&gt;Z4 Woche 4&lt;/option&gt;
-&lt;/optgroup&gt;
-&lt;/$select&gt;
-
-Sätze x Wiederholungen: &lt;$select tiddler={{Einstellungen!!neutitel}} field=sxw&gt;
-&lt;$list filter=&quot;[title[sxw]indexes[]]&quot; variable=&quot;sxwitem&quot;&gt;
-&lt;option&gt;&lt;&lt;sxwitem&gt;&gt;&lt;/option&gt;
-&lt;/$list&gt;
-&lt;/$select&gt;
-
-
-Pull-Übung:  
-
-&lt;$select tiddler={{Einstellungen!!neutitel}} field=pull &gt;
-&lt;$list filter=&quot;[title[Progression Pull]indexes[]sortan[]]&quot; variable=&quot;pullitem&quot;&gt;
-&lt;option value=&lt;&lt;pullitem&gt;&gt; &gt;&lt;&lt;pullitem&gt;&gt; - &lt;$transclude tiddler=&quot;Progression Pull&quot; index=&lt;&lt;pullitem&gt;&gt;/&gt;&lt;/option&gt;
-&lt;/$list&gt;
-&lt;/$select&gt;
-&lt;$edit-text tiddler={{Einstellungen!!neutitel}} field=&quot;pull_text&quot; /&gt;
-
-Bein-Übung:
-
-&lt;$select tiddler={{Einstellungen!!neutitel}} field=legs &gt;
-&lt;$list filter=&quot;[title[Progression Beine]indexes[]sortan[]]&quot; variable=&quot;bein_item&quot;&gt;
-&lt;option value=&lt;&lt;bein_item&gt;&gt; &gt;&lt;&lt;bein_item&gt;&gt; - &lt;$transclude tiddler=&quot;Progression Beine&quot; index=&lt;&lt;bein_item&gt;&gt;/&gt;&lt;/option&gt;
-&lt;/$list&gt;
-&lt;/$select&gt;
-&lt;$edit-text tiddler={{Einstellungen!!neutitel}} field=&quot;legs_text&quot; /&gt;
-
-Push-Übung:
-&lt;$select tiddler={{Einstellungen!!neutitel}} field=push_type&gt;
-&lt;option&gt;gerade&lt;/option&gt;
-&lt;option&gt;rechtwinklig&lt;/option&gt;
-&lt;/$select&gt;
-
-&lt;$set name=&quot;pushpart&quot; tiddler={{Einstellungen!!neutitel}} field=&quot;push_type&quot;&gt;
-&lt;$wikify name=myPush text=&quot;Progression Push &lt;&lt;pushpart&gt;&gt;&quot; &gt;
-
-&lt;$select tiddler={{Einstellungen!!neutitel}} field=push&gt;
-&lt;$list  filter=&quot;[title&lt;myPush&gt;indexes[]sortan[]]&quot; variable=&quot;push_item&quot;&gt;
-&lt;option value=&lt;&lt;push_item&gt;&gt; &gt;&lt;&lt;push_item&gt;&gt; - &lt;$transclude tiddler=&lt;&lt;myPush&gt;&gt; index=&lt;&lt;push_item&gt;&gt;/&gt;&lt;/option&gt;
-&lt;/$list&gt;
-&lt;/$select&gt;
-&lt;$edit-text tiddler={{Einstellungen!!neutitel}} field=&quot;push_text&quot; /&gt;
-
-
-&lt;/$wikify&gt;
-&lt;/$set&gt;
-
-Beuge-Übung:
-
-&lt;$select tiddler={{Einstellungen!!neutitel}} field=hips&gt;
-&lt;$list filter=&quot;[title[Progression Beuge]indexes[]sortan[]]&quot; variable=&quot;hip_item&quot;&gt;
-&lt;option value=&lt;&lt;hip_item&gt;&gt; &gt;&lt;&lt;hip_item&gt;&gt; - &lt;$transclude tiddler=&quot;Progression Beuge&quot; index=&lt;&lt;hip_item&gt;&gt;/&gt;&lt;/option&gt;
-&lt;/$list&gt;
-&lt;/$select&gt;
-&lt;$edit-text tiddler={{Einstellungen!!neutitel}} field=&quot;hips_text&quot; 
- /&gt;
-
-&lt;/$wikify&gt;</pre>
+</pre>
 </div>
 <div created="20201209072302621" modified="20201209195023829" neutitel="2020-12-09 testneu" push="gerade" tags="" title="FOG für Frauen alt">
 <pre>\define titelprefix()
@@ -11761,6 +11686,93 @@ Beuge-Übung:
 * Legs: {{!!legs}}
 * Hips: {{!!hips}}
 </pre>
+</div>
+<div created="20210115094459690" modified="20210115095852888" tags="" title="Tagebucheintrag bearbeiten">
+<pre>&lt;$wikify name=titel text=&quot;{{Einstellungen!!neutitel}}&quot; &gt;
+
+!! &lt;&lt;titel&gt;&gt; [[FOG Frauen Plan]]
+
+Zyklus/Woche: &lt;$select tiddler=&lt;&lt;titel&gt;&gt; field='woche'&gt;
+&lt;optgroup label='Zyklus 1'&gt;
+&lt;option&gt;Z1 Woche 1&lt;/option&gt;
+&lt;option&gt;Z1 Woche 2&lt;/option&gt;
+&lt;option&gt;Z1 Woche 3&lt;/option&gt;
+&lt;option&gt;Z1 Woche 4&lt;/option&gt;
+&lt;/optgroup&gt;
+&lt;optgroup label='Zyklus 2'&gt;
+&lt;option&gt;Z2 Woche 1&lt;/option&gt;
+&lt;option&gt;Z2 Woche 2&lt;/option&gt;
+&lt;option&gt;Z2 Woche 3&lt;/option&gt;
+&lt;option&gt;Z2 Woche 4&lt;/option&gt;
+&lt;/optgroup&gt;
+&lt;optgroup label='Zyklus 3'&gt;
+&lt;option&gt;Z3 Woche 1&lt;/option&gt;
+&lt;option&gt;Z3 Woche 2&lt;/option&gt;
+&lt;option&gt;Z3 Woche 3&lt;/option&gt;
+&lt;option&gt;Z3 Woche 4&lt;/option&gt;
+&lt;/optgroup&gt;
+&lt;optgroup label='Zyklus 4'&gt;
+&lt;option&gt;Z4 Woche 1&lt;/option&gt;
+&lt;option&gt;Z4 Woche 2&lt;/option&gt;
+&lt;option&gt;Z4 Woche 3&lt;/option&gt;
+&lt;option&gt;Z4 Woche 4&lt;/option&gt;
+&lt;/optgroup&gt;
+&lt;/$select&gt;
+
+Sätze x Wiederholungen: &lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=sxw&gt;
+&lt;$list filter=&quot;[title[sxw]indexes[]]&quot; variable=&quot;sxwitem&quot;&gt;
+&lt;option&gt;&lt;&lt;sxwitem&gt;&gt;&lt;/option&gt;
+&lt;/$list&gt;
+&lt;/$select&gt;
+
+
+Pull-Übung:  
+
+&lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=pull &gt;
+&lt;$list filter=&quot;[title[Progression Pull]indexes[]sortan[]]&quot; variable=&quot;pullitem&quot;&gt;
+&lt;option value=&lt;&lt;pullitem&gt;&gt; &gt;&lt;&lt;pullitem&gt;&gt; - &lt;$transclude tiddler=&quot;Progression Pull&quot; index=&lt;&lt;pullitem&gt;&gt;/&gt;&lt;/option&gt;
+&lt;/$list&gt;
+&lt;/$select&gt;
+&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;pull_text&quot; /&gt;
+
+Bein-Übung:
+
+&lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=legs &gt;
+&lt;$list filter=&quot;[title[Progression Beine]indexes[]sortan[]]&quot; variable=&quot;bein_item&quot;&gt;
+&lt;option value=&lt;&lt;bein_item&gt;&gt; &gt;&lt;&lt;bein_item&gt;&gt; - &lt;$transclude tiddler=&quot;Progression Beine&quot; index=&lt;&lt;bein_item&gt;&gt;/&gt;&lt;/option&gt;
+&lt;/$list&gt;
+&lt;/$select&gt;
+&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;legs_text&quot; /&gt;
+
+Push-Übung:
+&lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=push_type&gt;
+&lt;option&gt;gerade&lt;/option&gt;
+&lt;option&gt;rechtwinklig&lt;/option&gt;
+&lt;/$select&gt;
+
+&lt;$set name=&quot;pushpart&quot; tiddler=&lt;&lt;titel&gt;&gt; field=&quot;push_type&quot;&gt;
+&lt;$wikify name=myPush text=&quot;Progression Push &lt;&lt;pushpart&gt;&gt;&quot; &gt;
+
+&lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=push&gt;
+&lt;$list  filter=&quot;[title&lt;myPush&gt;indexes[]sortan[]]&quot; variable=&quot;push_item&quot;&gt;
+&lt;option value=&lt;&lt;push_item&gt;&gt; &gt;&lt;&lt;push_item&gt;&gt; - &lt;$transclude tiddler=&lt;&lt;myPush&gt;&gt; index=&lt;&lt;push_item&gt;&gt;/&gt;&lt;/option&gt;
+&lt;/$list&gt;
+&lt;/$select&gt;
+&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;push_text&quot; /&gt;
+&lt;/$wikify&gt;
+&lt;/$set&gt;
+
+Beuge-Übung:
+
+&lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=hips&gt;
+&lt;$list filter=&quot;[title[Progression Beuge]indexes[]sortan[]]&quot; variable=&quot;hip_item&quot;&gt;
+&lt;option value=&lt;&lt;hip_item&gt;&gt; &gt;&lt;&lt;hip_item&gt;&gt; - &lt;$transclude tiddler=&quot;Progression Beuge&quot; index=&lt;&lt;hip_item&gt;&gt;/&gt;&lt;/option&gt;
+&lt;/$list&gt;
+&lt;/$select&gt;
+&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;hips_text&quot; 
+ /&gt;
+
+&lt;/$wikify&gt;</pre>
 </div>
 <div created="20201209195044974" modified="20201209195645045" tags="" title="Template">
 <pre>Zyklus: {{!!woche}} (Sätze x Wdh: {{!!sxw}})
