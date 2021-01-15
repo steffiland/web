@@ -10117,8 +10117,8 @@ Error message and password prompt
 <div created="20201229132942784" modified="20201229133016406" title="$:/state/plugin-info-896098052-$:/plugins/tiddlywiki/markdown--436478829">
 <pre>usage</pre>
 </div>
-<div created="20201209072334849" modified="20201209185357581" title="$:/state/showeditpreview">
-<pre>yes</pre>
+<div created="20201209072334849" modified="20210115161858348" title="$:/state/showeditpreview">
+<pre>no</pre>
 </div>
 <div created="20201209185001646" modified="20201209185055961" title="$:/state/sidebar">
 <pre>yes</pre>
@@ -11323,13 +11323,13 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 **Wechsel zu Zyklus 2:** die letzten beiden Wochen solange wdh., bis an 3 Trainingstagen in Folge keine Fortschritte gemacht wurden
 </pre>
 </div>
-<div created="20201209185211015" modified="20210115095450444" push="gerade" push_type="Progression Push rechtwinklig" tags="" tiddler="Einstellungen" title="FOG für Frauen">
+<div created="20201209185211015" modified="20210115161924481" push="gerade" push_type="Progression Push rechtwinklig" tags="" tiddler="Einstellungen" title="FOG für Frauen">
 <pre>&lt;$wikify name=titelneu text=&quot;{{Einstellungen!!titel_template}}&quot; &gt;
 
 &lt;$button  to=&quot;Tagebucheintrag bearbeiten&quot;&gt;
 &lt;$action-createtiddler $basetitle=&lt;&lt;titelneu&gt;&gt; $overwrite=&quot;yes&quot; $template=&quot;YayogFrauenTemplate&quot; /&gt;
 &lt;$action-setfield neutitel=&lt;&lt;titelneu&gt;&gt; $tiddler=&quot;Einstellungen&quot; /&gt;
-{{$:/core/images/new-button}} neu anlegen
+{{$:/core/images/new-button}} neu: {{Einstellungen!!titel_template}}
 &lt;/$button&gt;
 &lt;$edit-text tiddler=&quot;Einstellungen&quot; field=&quot;titel_template&quot; 
  /&gt;
