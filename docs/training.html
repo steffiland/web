@@ -10138,7 +10138,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div list="GettingStarted [[FOG für Frauen]] [[Training kurz]]" title="$:/StoryList">
+<div created="20210115161938751" list="GettingStarted [[FOG für Frauen]] [[Training kurz]]" modified="20210115161938751" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20210115084054514" modified="20210115084054514" title="$:/temp/advancedsearch">
@@ -11323,7 +11323,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 **Wechsel zu Zyklus 2:** die letzten beiden Wochen solange wdh., bis an 3 Trainingstagen in Folge keine Fortschritte gemacht wurden
 </pre>
 </div>
-<div created="20201209185211015" modified="20210115161924481" push="gerade" push_type="Progression Push rechtwinklig" tags="" tiddler="Einstellungen" title="FOG für Frauen">
+<div created="20201209185211015" modified="20210115162159606" push="gerade" push_type="Progression Push rechtwinklig" tags="" tiddler="Einstellungen" title="FOG für Frauen">
 <pre>&lt;$wikify name=titelneu text=&quot;{{Einstellungen!!titel_template}}&quot; &gt;
 
 &lt;$button  to=&quot;Tagebucheintrag bearbeiten&quot;&gt;
@@ -11341,7 +11341,11 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 &lt;/$button&gt;
 &lt;$edit-text tiddler=&quot;Einstellungen&quot; field=&quot;neutitel&quot; 
  /&gt;
-</pre>
+&lt;$select tiddler=Einstellungen field=neutitel &gt;
+&lt;$list  filter=&quot;[tag[training]!suffix[Template]!sort[created]last{Einstellungen!!listlimit}]&quot;  variable=&quot;item&quot;&gt;
+&lt;option &gt;&lt;&lt;item&gt;&gt;&lt;/option&gt;
+&lt;/$list&gt;
+&lt;/$select&gt;</pre>
 </div>
 <div created="20201209072302621" modified="20201209195023829" neutitel="2020-12-09 testneu" push="gerade" tags="" title="FOG für Frauen alt">
 <pre>\define titelprefix()
