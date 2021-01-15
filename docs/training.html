@@ -423,13 +423,9 @@ Error message and password prompt
 
 <li>2021-01-11 </li>
 
-<li>2021-01-12 </li>
-
-<li>2021-01-13</li>
-
 <li>2021-01-13 </li>
 
-<li>2021-01-15</li>
+<li>Draft of 'Training kurz'</li>
 
 <li>Einstellungen</li>
 
@@ -11288,23 +11284,43 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div created="20201223133422585" hips="5" hips_text="↗️" legs="4" legs_text="↗️" modified="20201223133508086" pull="5a" pull_text="↗️" push="2+1s" push_text="Technik" push_type="gerade" sxw="2x12" tags="training fogff" title="2020-12-23 " type="text/vnd.tiddlywiki" woche="Z1 Woche 1">
 <pre>{{||Template}}</pre>
 </div>
-<div created="20201229134400114" hips="5+1s" legs="4+1s" legs_text="↗️" modified="20201229135756430" pull="5b+1s" pull_text="12,10" push="3" push_type="rechtwinklig" sxw="2x12" tags="training" title="2020-12-29" woche="Z1 Woche 1">
+<div created="20201229134400114" hips="5+1s" legs="4+1s" legs_text="↗️" modified="20210115103037715" pull="5b+1s" pull_text="12,10" push="3" push_type="rechtwinklig" sxw="2x12" tags="training fogff" title="2020-12-29" woche="Z1 Woche 1">
 <pre></pre>
 </div>
 <div created="20210111190200008" hips="3+1s" hips_text="↗️" legs="4+2s" legs_text="↗️" modified="20210111190308619" pull="5b+1s" pull_text="↗️" push="2+1s" push_text="↗️" push_type="gerade" sxw="2x12" tags="training fogff" title="2021-01-11 " type="text/vnd.tiddlywiki" woche="Z1 Woche 1">
 <pre>{{||Template}}</pre>
 </div>
-<div created="20210112200347057" modified="20210112201113575" push_type="rechtwinklig" title="2021-01-12 ">
-<pre></pre>
-</div>
-<div created="20210113192132755" hips="5+2s" hips_text="↗️" legs="5+1s" legs_text="Technik" modified="20210115095939844" pull="5b+1s" pull_text="↗️" push="3" push_text="↗️" push_type="rechtwinklig" sxw="2x12" tags="training fogff" title="2021-01-13" type="text/vnd.tiddlywiki" woche="Z1 Woche 2">
-<pre>{{||Template}}</pre>
-</div>
 <div created="20210113192132755" hips="5+2s" hips_text="↗️" legs="5+1s" legs_text="Technik" modified="20210113212732333" pull="5b+1s" pull_text="↗️" push="3" push_text="↗️" push_type="rechtwinklig" sxw="2x12" tags="training fogff" title="2021-01-13 " type="text/vnd.tiddlywiki" woche="Z1 Woche 2">
 <pre>{{||Template}}</pre>
 </div>
-<div created="20210115100000643" hips="0" hips_text="" legs="0" legs_text="" modified="20210115100000643" pull="0" pull_text="" push="0" push_text="" push_type="n" sxw="" tags="training fogff" title="2021-01-15" type="text/vnd.tiddlywiki" woche="">
-<pre>{{||Template}}</pre>
+<div created="20201209130805592" draft.of="Training kurz" draft.title="Training kurz" modified="20210115102830001" tags="" title="Draft of 'Training kurz'">
+<pre>&lt;table&gt;
+&lt;tr&gt;
+&lt;th&gt;Training&lt;/th&gt;
+&lt;th&gt;Pull&lt;/th&gt;
+&lt;th&gt;Beine&lt;/th&gt;
+&lt;th&gt;Push&lt;/th&gt;
+&lt;th&gt;Beuge&lt;/th&gt;
+&lt;/tr&gt;
+&lt;$list filter=&quot;[tag[training]!suffix[Template]!sort[created]last{Einstellungen!!listlimit}]&quot; variable =&quot;title&quot;&gt;
+        &lt;tr&gt;
+        &lt;td rowspan=2&gt; &lt;$link to=&lt;&lt;title&gt;&gt;&gt;&lt;&lt;title&gt;&gt;&lt;/$link&gt; &lt;br/&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=woche/&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=sxw/&gt; &lt;/td&gt;
+        &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=pull/&gt;&lt;/td&gt;
+        &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=legs/&gt;&lt;/td&gt;
+        &lt;td&gt; 
+             &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=push/&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=push_type/&gt; 
+        &lt;/td&gt;
+        &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=hips/&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+  &lt;tr&gt;
+        &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=pull_text/&gt;&lt;/td&gt;
+        &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=legs_text/&gt;&lt;/td&gt;
+        &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=push_text/&gt;&lt;/td&gt;
+        &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=hips_text/&gt;&lt;/td&gt;
+        
+        &lt;/tr&gt;
+&lt;/$list&gt;
+&lt;/table&gt;</pre>
 </div>
 <div created="20201209095546498" listlimit="10" modified="20210115100014209" neutitel="2021-01-13" tags="$:/tags/StartupAction intern" titel_template="&lt;&lt;now &quot;YYYY-0MM-0DD&quot;&gt;&gt;" title="Einstellungen">
 <pre>* Anzeigelimit Trainingstagebuch: {{!!listlimit}}
