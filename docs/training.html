@@ -177,6 +177,8 @@ Error message and password prompt
 
 <li>$:/SiteTitle</li>
 
+<li>$:/state/showeditpreview</li>
+
 <li>$:/state/sidebar</li>
 
 <li>$:/state/tab--1455663219</li>
@@ -200,6 +202,8 @@ Error message and password prompt
 <li>$:/state/toc/TOC-FOG für Frauen Trainingsplan-1367091134</li>
 
 <li>$:/state/toc/TOC-FOG für Frauen-1367091134</li>
+
+<li>$:/state/toc/TOC/FOG für Frauen-fogff-1367091134</li>
 
 <li>$:/state/toc/TOC/FOG für Frauen-Trainingsplan FOG für Frauen-1367091134</li>
 
@@ -229,7 +233,7 @@ Error message and password prompt
 
 <li>FOG für Frauen</li>
 
-<li>FOG für Frauen alt</li>
+<li>fogff</li>
 
 <li>Progression Beine</li>
 
@@ -243,8 +247,6 @@ Error message and password prompt
 
 <li>sxw</li>
 
-<li>tag1</li>
-
 <li>Tagebucheintrag bearbeiten</li>
 
 <li>Template</li>
@@ -252,8 +254,6 @@ Error message and password prompt
 <li>Template alt</li>
 
 <li>TOC</li>
-
-<li>training</li>
 
 <li>Training lang</li>
 
@@ -10443,6 +10443,9 @@ Error message and password prompt
 <div created="20201209124607303" modified="20210115201017137" title="$:/SiteTitle">
 <pre>💪 </pre>
 </div>
+<div created="20210116123243473" modified="20210116123243473" title="$:/state/showeditpreview">
+<pre>yes</pre>
+</div>
 <div created="20210116120950002" modified="20210116121903709" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
@@ -10464,8 +10467,8 @@ Error message and password prompt
 <div created="20210115194907006" modified="20210115195014701" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/General</pre>
 </div>
-<div created="20210115194841734" modified="20210116121925400" title="$:/state/tab/sidebar--595412856">
-<pre>TOC</pre>
+<div created="20210115194841734" modified="20210116123811147" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Recent</pre>
 </div>
 <div created="20210116121729544" modified="20210116121729544" title="$:/state/toc/fogff-FOG für Frauen Trainingsplan-853454163">
 <pre>open</pre>
@@ -10477,6 +10480,9 @@ Error message and password prompt
 <pre>open</pre>
 </div>
 <div created="20210116121935342" modified="20210116121935342" title="$:/state/toc/TOC-FOG für Frauen-1367091134">
+<pre>open</pre>
+</div>
+<div created="20210116123751067" modified="20210116123751067" title="$:/state/toc/TOC/FOG für Frauen-fogff-1367091134">
 <pre>open</pre>
 </div>
 <div created="20210116122302531" modified="20210116122302531" title="$:/state/toc/TOC/FOG für Frauen-Trainingsplan FOG für Frauen-1367091134">
@@ -10653,113 +10659,10 @@ Error message and password prompt
 &lt;/$select&gt;
 </pre>
 </div>
-<div created="20201209072302621" modified="20201209195023829" neutitel="2020-12-09 testneu" push="gerade" tags="" title="FOG für Frauen alt">
-<pre>\define titelprefix()
-&lt;&lt;now &quot;YYYY-0MM-0DD&quot;&gt;&gt;
-\end
-
-Neuer Tagebucheintrag: &lt;&lt;titelprefix&gt;&gt;
-&lt;$edit-text tiddler=&quot;Temp&quot; field=&quot;neutitel&quot; 
- /&gt;
-
-&lt;$wikify name=titel text=&quot;&lt;&lt;titelprefix&gt;&gt; {{Temp!!neutitel}}&quot; &gt;
-
- &lt;$button&gt;
-&lt;$action-createtiddler $basetitle=&lt;&lt;titel&gt;&gt; $overwrite=&quot;yes&quot; $template=&quot;YayogFrauenTemplate&quot; /&gt;
-Eintrag anlegen
-&lt;/$button&gt;
-
----
-!! &lt;&lt;titel&gt;&gt;
-
-Zyklus/Woche: &lt;$select tiddler=&lt;&lt;titel&gt;&gt; field='woche'&gt;
-&lt;optgroup label='Zyklus 1'&gt;
-&lt;option&gt;Z1 Woche 1&lt;/option&gt;
-&lt;option&gt;Z1 Woche 2&lt;/option&gt;
-&lt;option&gt;Z1 Woche 3&lt;/option&gt;
-&lt;option&gt;Z1 Woche 4&lt;/option&gt;
-&lt;/optgroup&gt;
-&lt;optgroup label='Zyklus 2'&gt;
-&lt;option&gt;Z2 Woche 1&lt;/option&gt;
-&lt;option&gt;Z2 Woche 2&lt;/option&gt;
-&lt;option&gt;Z2 Woche 3&lt;/option&gt;
-&lt;option&gt;Z2 Woche 4&lt;/option&gt;
-&lt;/optgroup&gt;
-&lt;optgroup label='Zyklus 3'&gt;
-&lt;option&gt;Z3 Woche 1&lt;/option&gt;
-&lt;option&gt;Z3 Woche 2&lt;/option&gt;
-&lt;option&gt;Z3 Woche 3&lt;/option&gt;
-&lt;option&gt;Z3 Woche 4&lt;/option&gt;
-&lt;/optgroup&gt;
-&lt;optgroup label='Zyklus 4'&gt;
-&lt;option&gt;Z4 Woche 1&lt;/option&gt;
-&lt;option&gt;Z4 Woche 2&lt;/option&gt;
-&lt;option&gt;Z4 Woche 3&lt;/option&gt;
-&lt;option&gt;Z4 Woche 4&lt;/option&gt;
-&lt;/optgroup&gt;
-&lt;/$select&gt;
-
-Sätze x Wiederholungen: &lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=sxw&gt;
-&lt;$list filter=&quot;[title[sxw]indexes[]]&quot; variable=&quot;sxwitem&quot;&gt;
-&lt;option&gt;&lt;&lt;sxwitem&gt;&gt;&lt;/option&gt;
-&lt;/$list&gt;
-&lt;/$select&gt;
-
-
-Pull-Übung:  
-
-&lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=pull default=0&gt;
-&lt;$list filter=&quot;[title[Progression Pull]indexes[]]&quot; variable=&quot;pullitem&quot;&gt;
-&lt;option value=&lt;&lt;pullitem&gt;&gt; &gt;&lt;&lt;pullitem&gt;&gt; - &lt;$transclude tiddler=&quot;Progression Pull&quot; index=&lt;&lt;pullitem&gt;&gt;/&gt;&lt;/option&gt;
-&lt;/$list&gt;
-&lt;/$select&gt;
-&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;pull_text&quot; 
- /&gt;
-
-Bein-Übung:
-
-&lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=legs default=0&gt;
-&lt;$list filter=&quot;[title[Progression Beine]indexes[]]&quot; variable=&quot;bein_item&quot;&gt;
-&lt;option value=&lt;&lt;bein_item&gt;&gt; &gt;&lt;&lt;bein_item&gt;&gt; - &lt;$transclude tiddler=&quot;Progression Beine&quot; index=&lt;&lt;bein_item&gt;&gt;/&gt;&lt;/option&gt;
-&lt;/$list&gt;
-&lt;/$select&gt;
-&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;legs_text&quot; 
- /&gt;
-
-Push-Übung gerade:
-
-&lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=push_gerade default=0&gt;
-&lt;$list filter=&quot;[title[Progression Push gerade]indexes[]]&quot; variable=&quot;push_g_item&quot;&gt;
-&lt;option value=&lt;&lt;push_g_item&gt;&gt; &gt;&lt;&lt;push_g_item&gt;&gt; - &lt;$transclude tiddler=&quot;Progression Push gerade&quot; index=&lt;&lt;push_g_item&gt;&gt;/&gt;&lt;/option&gt;
-&lt;/$list&gt;
-&lt;/$select&gt;
-&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;push_gerade_text&quot; 
- /&gt;
-
-Push-Übung rechtwinkling:
-
-&lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=push_rechtw default=0&gt;
-&lt;$list filter=&quot;[title[Progression Push rechtwinklig]indexes[]]&quot; variable=&quot;push_r_item&quot;&gt;
-&lt;option value=&lt;&lt;push_r_item&gt;&gt; &gt;&lt;&lt;push_r_item&gt;&gt; - &lt;$transclude tiddler=&quot;Progression Push rechtwinklig&quot; index=&lt;&lt;push_r_item&gt;&gt;/&gt;&lt;/option&gt;
-&lt;/$list&gt;
-&lt;/$select&gt;
-&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;push_rechtw_text&quot; 
- /&gt;
-
-
-Beuge-Übung:
-
-&lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=hips default=0&gt;
-&lt;$list filter=&quot;[title[Progression Beuge]indexes[]]&quot; variable=&quot;hip_item&quot;&gt;
-&lt;option value=&lt;&lt;hip_item&gt;&gt; &gt;&lt;&lt;hip_item&gt;&gt; - &lt;$transclude tiddler=&quot;Progression Beuge&quot; index=&lt;&lt;hip_item&gt;&gt;/&gt;&lt;/option&gt;
-&lt;/$list&gt;
-&lt;/$select&gt;
-&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;hips_text&quot; 
- /&gt;
-
-&lt;/$wikify&gt;</pre>
+<div caption="Interna" created="20210116123141461" modified="20210116123727017" tags="[[FOG für Frauen]]" title="fogff">
+<pre>&lt;&lt;list-links filter:&quot;[tag[fogff]tag[intern]sort[created]]&quot;&gt;&gt;</pre>
 </div>
-<div created="20201209074158717" modified="20210112192404869" tags="intern" title="Progression Beine" type="application/x-tiddler-dictionary">
+<div created="20201209074158717" modified="20210116123127032" tags="intern fogff" title="Progression Beine" type="application/x-tiddler-dictionary">
 <pre>0:
 1:Sumokniebeuge
 2: Therapiekniebeuge
@@ -10794,7 +10697,7 @@ Beuge-Übung:
 13+2s:Leg Switch Pistols with jump
 </pre>
 </div>
-<div created="20201209123818393" modified="20201223124653369" tags="intern" title="Progression Beuge" type="application/x-tiddler-dictionary">
+<div created="20201209123818393" modified="20210116123119399" tags="intern fogff" title="Progression Beuge" type="application/x-tiddler-dictionary">
 <pre>0:
 1: Good mornings
 1+2s: good mornings mit 2s Pause
@@ -10819,7 +10722,7 @@ Beuge-Übung:
 8+1s: Warrior einbeinig mit 1s Pause
 8+2s: Warrior einbeinig mit 2s Pause</pre>
 </div>
-<div created="20201209120830367" modified="20210112191458233" tags="intern" title="Progression Pull" type="application/x-tiddler-dictionary">
+<div created="20201209120830367" modified="20210116123102401" tags="intern fogff" title="Progression Pull" type="application/x-tiddler-dictionary">
 <pre>:
 0:
 1: Türziehen, leicht gebeugte Knie
@@ -10876,7 +10779,7 @@ Beuge-Übung:
 
 </pre>
 </div>
-<div created="20201209121330547" modified="20210112194431030" tags="intern gerade" title="Progression Push gerade" type="application/x-tiddler-dictionary">
+<div created="20201209121330547" modified="20210116123111341" tags="intern gerade fogff" title="Progression Push gerade" type="application/x-tiddler-dictionary">
 <pre>0:
 1: Military Press, Hände auf Hüfthöhe
 1+1s: Military Press, Hände auf Hüfthöhe, 1s Pause
@@ -10924,7 +10827,7 @@ Beuge-Übung:
 16+2s:Handstand-Pushups 
 </pre>
 </div>
-<div created="20201209121410675" modified="20210112201139180" tags="intern rechtwinklig" title="Progression Push rechtwinklig" type="application/x-tiddler-dictionary">
+<div created="20201209121410675" modified="20210116123050578" tags="intern rechtwinklig fogff" title="Progression Push rechtwinklig" type="application/x-tiddler-dictionary">
 <pre>0:
 1:Liegestütz mit den Händen auf Brusthöhe
 2:Liegestütz mit den Händen in Hüfthöhe
@@ -10969,15 +10872,6 @@ Beuge-Übung:
 <pre>2x12:
 3x10:
 10x3:</pre>
-</div>
-<div created="20201209072238603" legs="&lt;&lt;item&gt;&gt;" modified="20201209083649455" pull="Umgekehrtes Bankdrücken" push="Military Press" tags="" title="tag1" type="text/vnd.tiddlywiki" woche="z1w2">
-<pre>Zyklus: {{!!woche}} (Sätze x Wdh: {{!!sxw}})
-
-* Pull: {{!!pull}}
-* Push: {{!!push}}
-* Legs: {{!!legs}}
-* Hips: {{!!hips}}
-</pre>
 </div>
 <div created="20210115094459690" modified="20210116120716352" showplan="hide" tags="" title="Tagebucheintrag bearbeiten">
 <pre>&lt;$wikify name=titel text=&quot;{{Einstellungen!!neutitel}}&quot; &gt;
@@ -11077,7 +10971,7 @@ Beuge-Übung:
 
 &lt;/$wikify&gt;</pre>
 </div>
-<div created="20201209195044974" hips="0" legs="0" modified="20210115181756377" pull="0" push="0" tags="" title="Template">
+<div created="20201209195044974" hips="0" legs="0" modified="20210116123852397" pull="0" push="0" tags="fogff intern" title="Template">
 <pre>Zyklus: {{!!woche}} (Sätze x Wdh: {{!!sxw}})
 &lt;$wikify name=myPush text=&quot;Progression Push {{!!push_type}}&quot; &gt; 
 
@@ -11107,9 +11001,6 @@ Beuge-Übung:
 &lt;&lt;toc-selective-expandable 'TOC'&gt;&gt;
 
 &lt;/div&gt;</pre>
-</div>
-<div created="20201209152023724" modified="20201209152207743" title="training">
-<pre>{{Training}}</pre>
 </div>
 <div created="20201209200638103" modified="20210115083953052" tags="" title="Training lang">
 <pre>&lt;table&gt;
