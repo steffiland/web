@@ -193,9 +193,11 @@ Error message and password prompt
 
 <li>Dingens</li>
 
-<li>Listen</li>
+<li>FilterLiveEditor</li>
 
 <li>ListWidget Snippet</li>
+
+<li>Temp</li>
 
 </ul>
 </p>
@@ -10331,7 +10333,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210121090904090" list="[[ListWidget Snippet]] Listen BeispielListe Dingens GettingStarted" modified="20210121093028505" title="$:/StoryList">
+<div created="20210121090904090" list="BeispielTemplate [[ListWidget Snippet]] FilterLiveEditor BeispielListe Dingens GettingStarted" modified="20210121101041293" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10467,21 +10469,22 @@ feld: `{{!!feld}}` --&gt; &quot;//{{!!feld}}//&quot;</pre>
 <div created="20210121090105843" modified="20210121092602443" tags="" title="Dingens" topic="blubb">
 <pre>{{||BeispielListe}}</pre>
 </div>
-<div created="20210121092604067" modified="20210121093120935" tags="" title="Listen">
-<pre>[[Recipe book]] [[ScrambledEggs]] [[Mom's apple pie]]
+<div created="20210121092604067" modified="20210121105720880" tags="" title="FilterLiveEditor">
+<pre>&lt;$edit-text tiddler=Temp field=filter size=50 /&gt;
 
-[tag[Recipe]]
-&lt;&lt;list-links &quot;[tag[task]sort[title]]&quot;&gt;&gt;
-&lt;$list filter=&quot;[tag[test]sort[title]]&quot;&gt;
-* &lt;&lt;currentTiddler&gt;&gt;
-&lt;/$list &gt;
-&lt;&lt;list-links &quot;[tag[task]sort[title]]&quot;&gt;&gt;
+&lt;$list filter={{Temp!!filter}} variable=item&gt;
+
+* &lt;&lt;item&gt;&gt;
+&lt;/$list&gt;
 </pre>
 </div>
 <div caption="Listwidget" created="20210121092726898" modified="20210121093041699" tags="$:/tags/TextEditor/Snippet" title="ListWidget Snippet">
 <pre>&lt;$list filter=&quot;[tag[test]sort[title]]&quot;&gt;
 * &lt;&lt;currentTiddler&gt;&gt;
 &lt;/$list &gt;</pre>
+</div>
+<div created="20210121105009248" filter="[{BeispielListe!!tags}split[ ]] DiBu bla" modified="20210121105636314" title="Temp">
+<pre></pre>
 </div>
 
 
