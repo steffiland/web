@@ -191,7 +191,13 @@ Error message and password prompt
 
 <li>Blubb Beispiel 1</li>
 
+<li>CSS</li>
+
 <li>Dingens</li>
+
+<li>einige Filter</li>
+
+<li>FilterBspData</li>
 
 <li>FilterLiveEditor</li>
 
@@ -10333,7 +10339,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210121090904090" list="BeispielTemplate [[ListWidget Snippet]] FilterLiveEditor BeispielListe Dingens GettingStarted" modified="20210121101041293" title="$:/StoryList">
+<div created="20210121090904090" list="$:/AdvancedSearch Dingens [[Blubb Beispiel 1]] CSS FilterBspData BeispielListe GettingStarted" modified="20210121134358169" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10466,10 +10472,38 @@ Error message and password prompt
 
 feld: `{{!!feld}}` --&gt; &quot;//{{!!feld}}//&quot;</pre>
 </div>
-<div created="20210121090105843" modified="20210121092602443" tags="" title="Dingens" topic="blubb">
+<div created="20210121131933854" modified="20210121133012004" tags="$:/tags/Stylesheet" title="CSS" type="text/plain">
+<pre>[data-tags*=&quot;blubb&quot;] {
+  border: 2px solid pink;
+}
+[data-tags*=&quot;filter&quot;] .tc-tiddler-body {
+  border: 2px solid green;
+}</pre>
+</div>
+<div created="20210121090105843" modified="20210121132402685" tags="blubb" title="Dingens" topic="blubb">
 <pre>{{||BeispielListe}}</pre>
 </div>
-<div created="20210121092604067" modified="20210121105720880" tags="" title="FilterLiveEditor">
+<div created="20210121122539575" modified="20210121150815155" tags="beispiel filter" title="einige Filter">
+<pre>
+&lt;$list filter=&quot;[[FilterBspData]indexes[]]&quot; variable=filtername &gt;
+
+!! &lt;&lt;filtername&gt;&gt;
+''Filter:'' &lt;$view tiddler=FilterBspData index=&lt;&lt;filtername&gt;&gt;/&gt;
+&lt;$list filter=&quot;[[FilterBspData]getindex&lt;filtername&gt;]&quot; variable=item &gt;
+
+''Ergebnis:'' &lt;$list filter=&lt;&lt;item&gt;&gt; variable=erg&gt;
+&lt;&lt;erg&gt;&gt;
+&lt;/$list&gt;
+
+&lt;/$list&gt;&lt;/$list&gt;</pre>
+</div>
+<div created="20210121131133020" modified="20210121135458625" tags="filter" title="FilterBspData" type="application/json">
+<pre>{
+&quot;multi&quot;:  &quot;[{BeispielListe!!tags}split[ ]] DiBu bla sort +[sort[]]&quot;,
+&quot;bla&quot;: &quot;[{$:/palette}indexes[]sort[title]]&quot;
+}</pre>
+</div>
+<div created="20210121092604067" modified="20210121134047003" tags="filter" title="FilterLiveEditor">
 <pre>&lt;$edit-text tiddler=Temp field=filter size=50 /&gt;
 
 &lt;$list filter={{Temp!!filter}} variable=item&gt;
@@ -10483,7 +10517,7 @@ feld: `{{!!feld}}` --&gt; &quot;//{{!!feld}}//&quot;</pre>
 * &lt;&lt;currentTiddler&gt;&gt;
 &lt;/$list &gt;</pre>
 </div>
-<div created="20210121105009248" filter="[{BeispielListe!!tags}split[ ]] DiBu bla" modified="20210121105636314" title="Temp">
+<div created="20210121105009248" filter="[[FilterBspData]indexes[]]" modified="20210121134133645" title="Temp">
 <pre></pre>
 </div>
 
