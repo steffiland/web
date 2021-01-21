@@ -145,8 +145,6 @@ Error message and password prompt
 
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home</li>
 
-<li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/refresh</li>
-
 <li>$:/config/RelinkOnRename</li>
 
 <li>$:/core</li>
@@ -195,6 +193,10 @@ Error message and password prompt
 
 <li>Dingens</li>
 
+<li>Listen</li>
+
+<li>ListWidget Snippet</li>
+
 </ul>
 </p>
 
@@ -212,10 +214,7 @@ Error message and password prompt
 <div created="20210120141015327" modified="20210120141015327" title="$:/config/AutoSave">
 <pre>no</pre>
 </div>
-<div created="20210121090757704" modified="20210121090757704" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home">
-<pre>show</pre>
-</div>
-<div created="20210121090752889" modified="20210121090752889" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/refresh">
+<div created="20210121090925515" modified="20210121090925515" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home">
 <pre>show</pre>
 </div>
 <div created="20210121081925448" modified="20210121081925448" title="$:/config/RelinkOnRename">
@@ -10326,13 +10325,13 @@ Error message and password prompt
 <div created="20210120141017716" modified="20210120141017716" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
 </div>
-<div created="20210121080243864" modified="20210121090747998" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Tools</pre>
+<div created="20210121080243864" modified="20210121090926762" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Recent</pre>
 </div>
 <div title="$:/status/RequireReloadDueToPluginChange">
-<pre>yes</pre>
+<pre>no</pre>
 </div>
-<div created="20210121080842590" list="BeispielListe Dingens [[Blubb Beispiel 1]] GettingStarted" modified="20210121090549024" title="$:/StoryList">
+<div created="20210121090904090" list="[[ListWidget Snippet]] Listen BeispielListe Dingens GettingStarted" modified="20210121093028505" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10444,27 +10443,45 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20210121075441582" modified="20210121090515482" tags="blubb template" title="BeispielListe" topic="{{!!title}}">
+<div created="20210121075441582" modified="20210121091835823" tags="blubb template" title="BeispielListe">
 <pre>Alle Beispiele zum Thema &quot;{{!!topic}}&quot;
 
 &lt;$list filter=&quot;[tag{!!topic}tag[beispiel]sort[title]]&quot; template=&quot;BeispielTemplate&quot; /&gt;
 </pre>
 </div>
-<div created="20210121075544327" feld="feld" modified="20210121090310255" tags="intern template" title="BeispielTemplate">
-<pre>&lt;h2&gt; {{!!title}} &lt;/h2&gt;
-&lt;h3&gt; Quelltext: &lt;/h3&gt;
+<div created="20210121075544327" feld="feld" modified="20210121092002345" tags="intern template" title="BeispielTemplate" type="text/x-markdown">
+<pre>## &lt;&lt;currentTiddler&gt;&gt;
+### Quelltext:
 &lt;pre&gt;&lt;$text text={{!!text}} /&gt;&lt;/pre&gt;
 
-&lt;h3&gt; Wirkung &lt;/h3&gt;
+### Wirkung:
 {{!!text}}
-&lt;hr/&gt;</pre>
+
+---</pre>
 </div>
-<div created="20210121075143195" feld="feldinhalt" modified="20210121085935658" tags="beispiel blubb" title="Blubb Beispiel 1">
+<div created="20210121075143195" feld="feldinhalt" modified="20210121092203960" tags="beispiel blubb" title="Blubb Beispiel 1">
 <pre>ein Beispiel &lt;&lt;currentTiddler&gt;&gt;
-feld: {{!!feld}}</pre>
+
+feld: `{{!!feld}}` --&gt; &quot;//{{!!feld}}//&quot;</pre>
 </div>
-<div created="20210121090105843" modified="20210121090703386" tags="" title="Dingens" topic="blubb">
+<div created="20210121090105843" modified="20210121092602443" tags="" title="Dingens" topic="blubb">
 <pre>{{||BeispielListe}}</pre>
+</div>
+<div created="20210121092604067" modified="20210121093120935" tags="" title="Listen">
+<pre>[[Recipe book]] [[ScrambledEggs]] [[Mom's apple pie]]
+
+[tag[Recipe]]
+&lt;&lt;list-links &quot;[tag[task]sort[title]]&quot;&gt;&gt;
+&lt;$list filter=&quot;[tag[test]sort[title]]&quot;&gt;
+* &lt;&lt;currentTiddler&gt;&gt;
+&lt;/$list &gt;
+&lt;&lt;list-links &quot;[tag[task]sort[title]]&quot;&gt;&gt;
+</pre>
+</div>
+<div caption="Listwidget" created="20210121092726898" modified="20210121093041699" tags="$:/tags/TextEditor/Snippet" title="ListWidget Snippet">
+<pre>&lt;$list filter=&quot;[tag[test]sort[title]]&quot;&gt;
+* &lt;&lt;currentTiddler&gt;&gt;
+&lt;/$list &gt;</pre>
 </div>
 
 
