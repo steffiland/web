@@ -52,6 +52,19 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 
 <!--~~ Raw markup ~~-->
 
+<!-- this will be added to the HTML Header because of the RawMarkup Tag -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+function printRepoCount() {
+  var responseObj = JSON.parse(this.responseText);
+  console.log(responseObj.name + " has " + responseObj.public_repos + " public repositories!");
+}
+var request = new XMLHttpRequest();
+request.onload = printRepoCount;
+request.open('get', 'https://api.github.com/users/steffiland', true);
+request.send();
+
+</script>
 
 
 </head>
@@ -200,6 +213,8 @@ Error message and password prompt
 <li>FilterBspData</li>
 
 <li>FilterLiveEditor</li>
+
+<li>HtmlHeaderAdditions</li>
 
 <li>ListWidget Snippet</li>
 
@@ -10339,7 +10354,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210121090904090" list="$:/AdvancedSearch Dingens [[Blubb Beispiel 1]] CSS FilterBspData BeispielListe GettingStarted" modified="20210121134358169" title="$:/StoryList">
+<div list="HtmlHeaderAdditions GettingStarted" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10484,8 +10499,7 @@ feld: `{{!!feld}}` --&gt; &quot;//{{!!feld}}//&quot;</pre>
 <pre>{{||BeispielListe}}</pre>
 </div>
 <div created="20210121122539575" modified="20210121150815155" tags="beispiel filter" title="einige Filter">
-<pre>
-&lt;$list filter=&quot;[[FilterBspData]indexes[]]&quot; variable=filtername &gt;
+<pre>&lt;$list filter=&quot;[[FilterBspData]indexes[]]&quot; variable=filtername &gt;
 
 !! &lt;&lt;filtername&gt;&gt;
 ''Filter:'' &lt;$view tiddler=FilterBspData index=&lt;&lt;filtername&gt;&gt;/&gt;
@@ -10510,6 +10524,22 @@ feld: `{{!!feld}}` --&gt; &quot;//{{!!feld}}//&quot;</pre>
 
 * &lt;&lt;item&gt;&gt;
 &lt;/$list&gt;
+</pre>
+</div>
+<div created="20210125071034517" modified="20210125071326830" tags="$:/tags/RawMarkup intern" title="HtmlHeaderAdditions" type="text/plain">
+<pre>&lt;!-- this will be added to the HTML Header because of the RawMarkup Tag --&gt;
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+function printRepoCount() {
+  var responseObj = JSON.parse(this.responseText);
+  console.log(responseObj.name + &quot; has &quot; + responseObj.public_repos + &quot; public repositories!&quot;);
+}
+var request = new XMLHttpRequest();
+request.onload = printRepoCount;
+request.open('get', 'https://api.github.com/users/steffiland', true);
+request.send();
+
+&lt;/script&gt;
 </pre>
 </div>
 <div caption="Listwidget" created="20210121092726898" modified="20210121093041699" tags="$:/tags/TextEditor/Snippet" title="ListWidget Snippet">
