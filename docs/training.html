@@ -10515,8 +10515,8 @@ ConvictConditioning</pre>
 <div created="20201209124607303" modified="20210115201017137" title="$:/SiteTitle">
 <pre>💪 </pre>
 </div>
-<div created="20210118080006797" modified="20210118080006797" title="$:/state/advancedsearch/currentTab">
-<pre>$:/core/ui/AdvancedSearch/Shadows</pre>
+<div created="20210118080006797" modified="20210125133012358" title="$:/state/advancedsearch/currentTab">
+<pre>$:/core/ui/AdvancedSearch/System</pre>
 </div>
 <div created="20210116123243473" modified="20210118134123970" title="$:/state/showeditpreview">
 <pre>yes</pre>
@@ -10533,8 +10533,8 @@ ConvictConditioning</pre>
 <div created="20210116120713766" modified="20210116120715060" title="$:/state/tab--1487522871">
 <pre>Zyklus 2</pre>
 </div>
-<div created="20210118080006798" modified="20210118080006798" title="$:/state/tab--1498284803">
-<pre>$:/core/ui/AdvancedSearch/Shadows</pre>
+<div created="20210118080006798" modified="20210125133012360" title="$:/state/tab--1498284803">
+<pre>$:/core/ui/AdvancedSearch/System</pre>
 </div>
 <div created="20210116122314488" modified="20210118141358395" title="$:/state/tab--281337851">
 <pre>Zyklus 2</pre>
@@ -10551,8 +10551,8 @@ ConvictConditioning</pre>
 <div created="20210118140350474" modified="20210118140350474" title="$:/state/tab-687079307">
 <pre>Zyklus 1</pre>
 </div>
-<div created="20210115194841734" modified="20210125100343203" title="$:/state/tab/sidebar--595412856">
-<pre>TOC</pre>
+<div created="20210115194841734" modified="20210125131358422" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Recent</pre>
 </div>
 <div created="20210116121729544" modified="20210116121729544" title="$:/state/toc/fogff-FOG für Frauen Trainingsplan-853454163">
 <pre>open</pre>
@@ -10593,7 +10593,7 @@ ConvictConditioning</pre>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210125093417859" list="CCSquatProgression Makros [[FOG für Frauen]] [[Trainingsübersicht FOG für Frauen]] ConvictConditioning" modified="20210125100359299" title="$:/StoryList">
+<div created="20210125093417859" list="Makros [[FOG für Frauen]] [[Trainingsübersicht FOG für Frauen]] ConvictConditioning" modified="20210125133013549" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10952,21 +10952,38 @@ CCHangProgression
 
 </pre>
 </div>
-<div created="20210125093310102" modified="20210125100341383" tags="$:/tags/Macro intern" title="Makros">
-<pre>\define dataindex(tiddler:&quot;CCPushUpProgression&quot; index:&quot;1&quot; column:&quot;2&quot;)
+<div created="20210125093310102" modified="20210125134304930" tags="$:/tags/Macro intern" title="Makros">
+<pre>\define dataindex(tiddler:&quot;NotExistingTitle&quot; index:&quot;1&quot; column:&quot;1&quot; sep:&quot;:&quot;)
 &lt;$wikify text=&quot;&lt;$transclude tiddler=$tiddler$ index=$index$ /&gt;&quot; name=&quot;line&quot; &gt;
-&lt;$list filter=&quot;[&lt;line&gt;split[:]nth[$column$]]&quot;&gt;&lt;&lt;currentTiddler&gt;&gt;&lt;/$list&gt;
+&lt;$list filter=&quot;[&lt;line&gt;split[$sep$]nth[$column$]]&quot;&gt;&lt;&lt;currentTiddler&gt;&gt;&lt;/$list&gt;
 &lt;/$wikify&gt;
 \end
+\define example(text:&quot;hello&quot;)
+* ''Code:'' `$text$`
+* ''Ergebnis: '' $text$
+\end
 
-Beispiele
+!!dataindex Makro
+* für den Datenzugriff auf mehrspaltige Datatiddler
+* Parameter:
+** //tiddler //- Name des Datentiddlers
+** //index //- Zeile bzw. Indexname, auf den zugegriffen werden soll (default: 1)
+** //column //- Spalte, deren Wert abgegriffen werden soll (default: 1)
+** //sep //- Trennzeichen zwischen den Spalten (default: ':')
+&lt;$macrocall $name=&quot;example&quot; text=&quot;&lt;&lt;dataindex&gt;&gt;&quot;/&gt;
 
-* dataindex Makro führ mehrspaltige Datatiddler
-** &lt;$text text=&quot;&lt;&lt;dataindex&gt;&gt;&quot; /&gt; &amp;rArr; &lt;&lt;dataindex&gt;&gt;
-** &lt;$text text='&lt;&lt;dataindex &quot;CCWadenhebenProgression&quot; &quot;3&quot; &quot;2&quot; &gt;&gt;' /&gt; &amp;rArr;  &lt;&lt;dataindex &quot;CCWadenhebenProgression&quot; &quot;3&quot; &quot;1&quot; &gt;&gt;
-** der erste Parameter nach dem Namen gibt den index an, wie bei gewöhnlichen data-Tiddlern
-**  der 2. Parameter 'column' gibt an, das wievielte Feld ausgegeben werden soll
+&lt;$macrocall $name=&quot;example&quot; text='&lt;&lt;dataindex &quot;CCWadenhebenProgression&quot; &quot;3&quot; &quot;3&quot;&gt;&gt;'/&gt;
 
+&lt;$macrocall $name=&quot;example&quot; text='&lt;$macrocall $name=&quot;dataindex&quot; tiddler=&quot;CCWadenhebenProgression&quot; index=&quot;3&quot; /&gt;'/&gt;
+
+!! Example Makro
+* für Codebeispiele. Erwartet den Parameter &quot;text&quot;.
+* Beispiel 1:  `&lt;&lt;example &quot;Text to test&quot;&gt;&gt;` &amp;rArr; 
+&lt;&lt;example &quot;Text to test&quot;&gt;&gt;
+
+
+* Bsp 2: `&lt;$macrocall $name=&quot;example&quot; text=&quot;{{{[tag[ConvictConditioning]join[ --- ]]}}}&quot;/&gt;` &amp;rArr;
+&lt;$macrocall $name=&quot;example&quot; text=&quot;{{{[tag[ConvictConditioning]join[ - ]]}}}&quot;/&gt;
 
 </pre>
 </div>
