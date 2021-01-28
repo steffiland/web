@@ -10577,7 +10577,7 @@ ConvictConditioning</pre>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210128131033441" list="2021-01-28 [[FOG für Frauen]] Einstellungen [[Tagebucheintrag bearbeiten]] [[Trainingsübersicht FOG für Frauen]] ConvictConditioning" modified="20210128131057794" title="$:/StoryList">
+<div list="[[FOG für Frauen]] [[Trainingsübersicht FOG für Frauen]] ConvictConditioning" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10961,7 +10961,7 @@ und folgende Varianten:
 * davon 2x10 Wdh. und nach jedem Satz die Hand gut ausschütteln *dann 1 Aufwärmsatz einfache Fingertip Pushups, 1 Level einfacher als die Arbeitssätze:
 * 5-10 Wdh. keinesfalls mehr als max. 15 Wdh.</pre>
 </div>
-<div created="20201209095546498" listlimit="10" modified="20210128131046136" neutitel="2021-01-28" tags="$:/tags/StartupAction intern fogff" titel_template="&lt;&lt;now &quot;YYYY-0MM-0DD&quot;&gt;&gt;" title="Einstellungen">
+<div created="20201209095546498" listlimit="10" modified="20210128132254775" neutitel="2021-01-28" tags="$:/tags/StartupAction intern fogff" titel_template="&lt;&lt;now &quot;YYYY-0MM-0DD&quot;&gt;&gt;" title="Einstellungen">
 <pre>* Anzeigelimit Trainingstagebuch: &lt;$edit-text  field=&quot;listlimit&quot; /&gt;
 * Template für Titel neuer Tagebucheinträge:  &lt;$edit-text  field=&quot;titel_template&quot; /&gt;  &amp;rArr; &quot;{{!!titel_template}}&quot;
 * &amp;#10173; [[GettingStarted]]
@@ -10989,7 +10989,7 @@ und folgende Varianten:
 * keinesfalls explosive Übungsausführung
 </pre>
 </div>
-<div created="20201209185211015" modified="20210118082300879" tags="fogff TOC" title="FOG für Frauen">
+<div created="20201209185211015" modified="20210128132251415" tags="fogff TOC" title="FOG für Frauen">
 <pre>&lt;$wikify name=titelneu text=&quot;{{Einstellungen!!titel_template}}&quot; &gt;
 &lt;$button  to=&quot;Tagebucheintrag bearbeiten&quot;&gt;
 &lt;$action-createtiddler $basetitle=&lt;&lt;titelneu&gt;&gt; $overwrite=&quot;yes&quot; $template=&quot;YayogFrauenTemplate&quot; /&gt;
@@ -11002,7 +11002,7 @@ und folgende Varianten:
 {{$:/core/images/edit-button}}
 &lt;/$button&gt;
 &lt;$select tiddler=Einstellungen field=neutitel &gt;
-&lt;$list  filter=&quot;[tag[fogff-training]!suffix[Template]!sort[created]last{Einstellungen!!listlimit}]&quot;  variable=&quot;item&quot;&gt;
+&lt;$list  filter=&quot;[tag[fogff-training]!suffix[Template]!sort[created]first{Einstellungen!!listlimit}]&quot;  variable=&quot;item&quot;&gt;
 &lt;option&gt;&lt;&lt;item&gt;&gt;&lt;/option&gt;
 &lt;/$list&gt;
 &lt;/$select&gt;
