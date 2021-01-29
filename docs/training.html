@@ -10973,7 +10973,7 @@ ConvictConditioning</pre>
 8:Wadenheben einbeinig auf Stufe, gestreckt:4x30:4x50
 </pre>
 </div>
-<div created="20210121194450643" modified="20210129093921620" tags="TOC" title="ConvictConditioning">
+<div created="20210121194450643" modified="20210129125721707" tags="TOC" title="ConvictConditioning">
 <pre>! Big Six - 6 Grundübungen
 
 * Liegestütze: CCPushUpProgression - alternativ [[Progression Push rechtwinklig]]
@@ -10983,7 +10983,7 @@ ConvictConditioning</pre>
 
 und dann für Fortgeschrittene ab Level 6:
 
-* Brücken: CCBridgeProgression - TODO Alternative mit den Beugeübungen von FOGFF  erarbeiten
+* Brücken: CCBridgeProgression - TODO Alternative erarbeiten, z.B. https://www.daniwinksflexibility.com/bendy-blog/the-ultimate-bridge-pose-progression-guide
 ** Tipp in CC: erst beginnen, wenn man Level 6 beim Beinheben (d.h. hängendes Knieheben) und bei den Kniebeugen (d.h. vollst. Kniebeuge im engen Stand)beherrscht
 * Handstand: CCHandstandProgression - alternativ [[Progression Push gerade]] ggf. die höheren Schwierigkeitsgrade Progression aus der App übernehmen
 ** Tipp in CC: erst beginnen, wenn man enge Liegestütze (Level 6), oder sogar erst Level 7 beherrscht
@@ -11426,7 +11426,7 @@ v11:Malteser Pushups
 * &lt;&lt;currentTiddler&gt;&gt;
 &lt;/$list &gt;</pre>
 </div>
-<div created="20210129123738475" modified="20210129124341058" tags="intern $:/tags/Stylesheet" title="StyleSheet" type="text/css">
+<div created="20210129123738475" modified="20210129130345010" tags="intern $:/tags/Stylesheet" title="StyleSheet" type="text/css">
 <pre>.row-numbers table {
   counter-reset: row-num;
 }
@@ -11434,7 +11434,7 @@ v11:Malteser Pushups
   counter-increment: row-num ;
 }
 .row-numbers table tr:nth-child(even)  td:first-child::before {
-    content: counter(row-num) &quot;. &quot;;
+    content: &quot;(&quot; counter(row-num) &quot;) &quot;;
 }</pre>
 </div>
 <div created="20201209081342383" modified="20201209082339321" tags="intern" title="sxw" type="application/x-tiddler-dictionary">
@@ -11442,7 +11442,7 @@ v11:Malteser Pushups
 3x10:
 10x3:</pre>
 </div>
-<div created="20210115094459690" modified="20210128124708015" showdelete="hide" showplan="show" tags="" title="Tagebucheintrag bearbeiten">
+<div created="20210115094459690" modified="20210129130203119" showdelete="hide" showplan="show" tags="" title="Tagebucheintrag bearbeiten">
 <pre>&lt;$wikify name=titel text=&quot;{{Einstellungen!!neutitel}}&quot; &gt;
 
 !! &quot;&lt;&lt;titel&gt;&gt;&quot;  &lt;$reveal type=&quot;nomatch&quot; state=&quot;!!showDelete&quot; text=&quot;show&quot;&gt;
@@ -11535,6 +11535,16 @@ Push-Übung:
 &lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;push_text&quot; /&gt;
 &lt;/$wikify&gt;
 &lt;/$set&gt;
+
+Beinheben-Übung: 
+&lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=core&gt;
+&lt;$list filter=&quot;[title[BeinhebenSchrägProgression]indexes[]sortan[]]&quot; variable=&quot;core_item&quot;&gt;
+&lt;option value=&lt;&lt;core_item&gt;&gt; &gt;&lt;&lt;core_item&gt;&gt; - &lt;$transclude tiddler=&quot;BeinhebenSchrägProgression&quot; index=&lt;&lt;core_item&gt;&gt;/&gt;&lt;/option&gt;
+&lt;/$list&gt;
+&lt;/$select&gt;
+&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;core_text&quot; 
+ /&gt;
+
 
 Beuge-Übung:
 
@@ -11696,7 +11706,7 @@ Splitplan | Übung
 Aufwärtsbewegung: langsam und kontrolliert, dauert ca. 2sec (wenn explosiv: dann unter 1sec)  &lt;br/&gt;
 Abwärtsbewegung: langsam und kontrolliert, dauert ca. 2sec</pre>
 </div>
-<div caption="Trainingsübersicht" class="row-numbers" created="20201209130805592" modified="20210129123937872" tags="fogff [[FOG für Frauen]]" title="Trainingsübersicht FOG für Frauen">
+<div caption="Trainingsübersicht" class="row-numbers" created="20201209130805592" modified="20210129130324090" tags="fogff [[FOG für Frauen]]" title="Trainingsübersicht FOG für Frauen">
 <pre>&lt;table&gt;
 &lt;tr&gt;
 &lt;th&gt;Training&lt;/th&gt;
@@ -11704,6 +11714,7 @@ Abwärtsbewegung: langsam und kontrolliert, dauert ca. 2sec</pre>
 &lt;th&gt;Beine&lt;/th&gt;
 &lt;th&gt;Push&lt;/th&gt;
 &lt;th&gt;Beuge&lt;/th&gt;
+&lt;th&gt;Core&lt;/th&gt;
 &lt;/tr&gt;
 &lt;$list filter=&quot;[tag[fogff-training]!suffix[Template]!sort[created]first{Einstellungen!!listlimit}]&quot; variable =&quot;title&quot;&gt;
         &lt;tr&gt;
@@ -11714,12 +11725,14 @@ Abwärtsbewegung: langsam und kontrolliert, dauert ca. 2sec</pre>
              &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=push/&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=push_type/&gt; 
         &lt;/td&gt;
         &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=hips/&gt;&lt;/td&gt;
+        &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=core/&gt;&lt;/td&gt;
         &lt;/tr&gt;
   &lt;tr&gt;
         &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=pull_text/&gt;&lt;/td&gt;
         &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=legs_text/&gt;&lt;/td&gt;
         &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=push_text/&gt;&lt;/td&gt;
         &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=hips_text/&gt;&lt;/td&gt;
+        &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=core_text/&gt;&lt;/td&gt;
         
         &lt;/tr&gt;
 &lt;/$list&gt;
