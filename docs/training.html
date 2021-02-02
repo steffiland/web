@@ -10587,7 +10587,7 @@ ConvictConditioning</pre>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210130114249367" list="[[FOG für Frauen]] [[Tagebucheintrag bearbeiten]] [[Trainingsübersicht FOG für Frauen]] ConvictConditioning" modified="20210130114249367" title="$:/StoryList">
+<div list="[[FOG für Frauen]] [[Trainingsübersicht FOG für Frauen]] ConvictConditioning" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10729,7 +10729,7 @@ ConvictConditioning</pre>
 <div created="20210123162217827" hips="6+2s" hips_text="↗️" legs="5+2s" legs_text="Technik" modified="20210123172327197" pull="5b+2s" pull_text="10,10,8" push="3+2s" push_text="↗️" push_type="rechtwinklig" sxw="3x10" tags="fogff-training training" title="2021-01-23" type="text/vnd.tiddlywiki" woche="Z1 Woche 3">
 <pre>{{||Template}}</pre>
 </div>
-<div created="20210125192055967" hips="6+2s" hips_text="10,10,7 Li ist schwächer" legs="5+2s" legs_text="Technik" modified="20210125195410170" pull="5b+2s" pull_text="↗️" push="3" push_text="9,10,9" push_type="gerade" sxw="3x10" tags="fogff-training training" title="2021-01-25" type="text/vnd.tiddlywiki" woche="Z1 Woche 3">
+<div created="20210125192055967" hips="6+2s" hips_text="10,10,7  &lt;br/&gt; Li ist schwächer" legs="5+2s" legs_text="Technik" modified="20210202143353862" pull="5b+2s" pull_text="↗️" push="3" push_text="9,10,9" push_type="gerade" sxw="3x10" tags="fogff-training training" title="2021-01-25" type="text/vnd.tiddlywiki" woche="Z1 Woche 3">
 <pre>{{||Template}}</pre>
 </div>
 <div created="20210128124703031" hips="6+2s" hips_text="↗️" legs="5+2s" legs_text="wackelig, Technik" modified="20210128132002041" pull="6a" pull_text="10,10,9" push="4" push_text="Technik" push_type="rechtwinklig" sxw="3x10" tags="fogff-training training" title="2021-01-28" type="text/vnd.tiddlywiki" woche="Z1 Woche 4">
@@ -11074,7 +11074,7 @@ und folgende Varianten:
 * davon 2x10 Wdh. und nach jedem Satz die Hand gut ausschütteln *dann 1 Aufwärmsatz einfache Fingertip Pushups, 1 Level einfacher als die Arbeitssätze:
 * 5-10 Wdh. keinesfalls mehr als max. 15 Wdh.</pre>
 </div>
-<div created="20201209095546498" listlimit="15" modified="20210130114249364" neutitel="2021-01-30" tags="$:/tags/StartupAction intern fogff" titel_template="&lt;&lt;now &quot;YYYY-0MM-0DD&quot;&gt;&gt;" title="Einstellungen">
+<div created="20201209095546498" listlimit="15" modified="20210202143312012" neutitel="2021-01-25" tags="$:/tags/StartupAction intern fogff" titel_template="&lt;&lt;now &quot;YYYY-0MM-0DD&quot;&gt;&gt;" title="Einstellungen">
 <pre>* Anzeigelimit Trainingstagebuch: &lt;$edit-text  field=&quot;listlimit&quot; /&gt;
 * Template für Titel neuer Tagebucheinträge:  &lt;$edit-text  field=&quot;titel_template&quot; /&gt;  &amp;rArr; &quot;{{!!titel_template}}&quot;
 * &amp;#10173; [[GettingStarted]]
@@ -11431,15 +11431,15 @@ v11:Malteser Pushups
 * &lt;&lt;currentTiddler&gt;&gt;
 &lt;/$list &gt;</pre>
 </div>
-<div created="20210129123738475" modified="20210129130345010" tags="intern $:/tags/Stylesheet" title="StyleSheet" type="text/css">
+<div created="20210129123738475" modified="20210202142822768" tags="intern $:/tags/Stylesheet" title="StyleSheet" type="text/css">
 <pre>.row-numbers table {
   counter-reset: row-num;
 }
-.row-numbers table tr:nth-child(even)  {
+.row-numbers table tr.row-numbers  {
   counter-increment: row-num ;
 }
-.row-numbers table tr:nth-child(even)  td:first-child::before {
-    content: &quot;(&quot; counter(row-num) &quot;) &quot;;
+.row-numbers table &gt; td.row-numbers::before {
+    content: &amp;quot;(&amp;quot; counter(row-num) &amp;quot;) &amp;quot;;
 }</pre>
 </div>
 <div created="20201209081342383" modified="20201209082339321" tags="intern" title="sxw" type="application/x-tiddler-dictionary">
@@ -11447,7 +11447,7 @@ v11:Malteser Pushups
 3x10:
 10x3:</pre>
 </div>
-<div created="20210115094459690" modified="20210129130203119" showdelete="hide" showplan="show" tags="" title="Tagebucheintrag bearbeiten">
+<div created="20210115094459690" modified="20210202142000617" showdelete="hide" showplan="show" tags="" title="Tagebucheintrag bearbeiten">
 <pre>&lt;$wikify name=titel text=&quot;{{Einstellungen!!neutitel}}&quot; &gt;
 
 !! &quot;&lt;&lt;titel&gt;&gt;&quot;  &lt;$reveal type=&quot;nomatch&quot; state=&quot;!!showDelete&quot; text=&quot;show&quot;&gt;
@@ -11561,6 +11561,8 @@ Beuge-Übung:
 &lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;hips_text&quot; 
  /&gt;
 
+Bemerkungen: 
+&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;description&quot;/&gt; 
 &lt;/$wikify&gt;</pre>
 </div>
 <div created="20201209195044974" hips="0" legs="0" modified="20210116123852397" pull="0" push="0" tags="fogff intern" title="Template">
@@ -11711,10 +11713,9 @@ Splitplan | Übung
 Aufwärtsbewegung: langsam und kontrolliert, dauert ca. 2sec (wenn explosiv: dann unter 1sec)  &lt;br/&gt;
 Abwärtsbewegung: langsam und kontrolliert, dauert ca. 2sec</pre>
 </div>
-<div caption="Trainingsübersicht" class="row-numbers" created="20201209130805592" modified="20210129130324090" tags="fogff [[FOG für Frauen]]" title="Trainingsübersicht FOG für Frauen">
+<div caption="Trainingsübersicht" class="row-numbers" created="20201209130805592" modified="20210202143258121" tags="fogff [[FOG für Frauen]]" title="Trainingsübersicht FOG für Frauen">
 <pre>&lt;table&gt;
 &lt;tr&gt;
-&lt;th&gt;Training&lt;/th&gt;
 &lt;th&gt;Pull&lt;/th&gt;
 &lt;th&gt;Beine&lt;/th&gt;
 &lt;th&gt;Push&lt;/th&gt;
@@ -11722,22 +11723,26 @@ Abwärtsbewegung: langsam und kontrolliert, dauert ca. 2sec</pre>
 &lt;th&gt;Core&lt;/th&gt;
 &lt;/tr&gt;
 &lt;$list filter=&quot;[tag[fogff-training]!suffix[Template]!sort[created]first{Einstellungen!!listlimit}]&quot; variable =&quot;title&quot;&gt;
+        &lt;tr class=&quot;row-numbers&quot;&gt;
+        &lt;th class=&quot;row-numbers&quot; colspan=5&gt;
+             &lt;$link to=&lt;&lt;title&gt;&gt;&gt;&lt;&lt;title&gt;&gt;:&lt;/$link&gt; 
+             &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=woche/&gt; &amp;mdash;
+             &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=sxw/&gt; &amp;mdash;
+             &lt;$transclude tiddler=&lt;&lt;title&gt;&gt; field=description/&gt; 
+        &lt;/th&gt;&lt;/tr&gt;
         &lt;tr&gt;
-        &lt;td rowspan=2&gt; &lt;$link to=&lt;&lt;title&gt;&gt;&gt;&lt;&lt;title&gt;&gt;&lt;/$link&gt; &lt;br/&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=woche/&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=sxw/&gt; &lt;/td&gt;
         &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=pull/&gt;&lt;/td&gt;
         &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=legs/&gt;&lt;/td&gt;
-        &lt;td&gt; 
-             &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=push/&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=push_type/&gt; 
-        &lt;/td&gt;
+        &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=push/&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=push_type/&gt;&lt;/td&gt;
         &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=hips/&gt;&lt;/td&gt;
         &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=core/&gt;&lt;/td&gt;
         &lt;/tr&gt;
   &lt;tr&gt;
-        &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=pull_text/&gt;&lt;/td&gt;
-        &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=legs_text/&gt;&lt;/td&gt;
-        &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=push_text/&gt;&lt;/td&gt;
-        &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=hips_text/&gt;&lt;/td&gt;
-        &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=core_text/&gt;&lt;/td&gt;
+        &lt;td&gt; &lt;$transclude tiddler=&lt;&lt;title&gt;&gt; field=pull_text/&gt;&lt;/td&gt;
+        &lt;td&gt; &lt;$transclude tiddler=&lt;&lt;title&gt;&gt; field=legs_text/&gt;&lt;/td&gt;
+        &lt;td&gt; &lt;$transclude tiddler=&lt;&lt;title&gt;&gt; field=push_text/&gt;&lt;/td&gt;
+        &lt;td&gt; &lt;$transclude tiddler=&lt;&lt;title&gt;&gt; field=hips_text/&gt;&lt;/td&gt;
+        &lt;td&gt; &lt;$transclude tiddler=&lt;&lt;title&gt;&gt; field=core_text/&gt;&lt;/td&gt;
         
         &lt;/tr&gt;
 &lt;/$list&gt;
