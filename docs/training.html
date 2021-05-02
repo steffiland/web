@@ -293,6 +293,10 @@ Error message and password prompt
 
 <li>BridgeHold</li>
 
+<li>CC Training</li>
+
+<li>CC Training bearbeiten</li>
+
 <li>CCBeinhebenProgression</li>
 
 <li>CCBridgeHoldProgression</li>
@@ -312,6 +316,8 @@ Error message and password prompt
 <li>CCPushUpProgression</li>
 
 <li>CCSquatProgression</li>
+
+<li>CCTemplate</li>
 
 <li>CCTwistProgression</li>
 
@@ -10298,9 +10304,10 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20201209124632735" modified="20210406111441316" title="$:/DefaultTiddlers">
+<div created="20201209124632735" modified="20210502200139549" title="$:/DefaultTiddlers">
 <pre>[[FOG für Frauen]]
 [[Mobility Training]]
+[[CC Training]]
 [[Trainingsübersicht FOG für Frauen]]
 [[Trainingsübersicht Mobility]]
 ConvictConditioning</pre>
@@ -10615,7 +10622,7 @@ ConvictConditioning</pre>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210411184332966" list="[[FOG für Frauen]] [[Mobility Training]] [[Mobility Training bearbeiten]] TriFecta [[Trainingsübersicht Mobility]] ConvictConditioning" modified="20210411191131066" title="$:/StoryList">
+<div list="[[FOG für Frauen]] [[Mobility Training]] [[CC Training]] [[Trainingsübersicht FOG für Frauen]] [[Trainingsübersicht Mobility]] ConvictConditioning" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10923,6 +10930,64 @@ ConvictConditioning</pre>
  &lt;/g&gt;
 &lt;/svg&gt;</pre>
 </div>
+<div created="20210502193603277" modified="20210502194421513" tags="TOC" title="CC Training">
+<pre>&lt;$wikify name=titelneu text=&quot;{{Einstellungen!!titel_template}} CC&quot; &gt;
+&lt;$button  to=&quot;CC Training bearbeiten&quot;&gt;
+&lt;$action-createtiddler $basetitle=&lt;&lt;titelneu&gt;&gt; $overwrite=&quot;yes&quot; $template=&quot;CCTemplate&quot; /&gt;
+&lt;$action-setfield neutitel=&lt;&lt;titelneu&gt;&gt; $tiddler=&quot;Einstellungen&quot; /&gt;
+{{$:/core/images/new-button}}  
+&lt;/$button&gt;
+&lt;&lt;titelneu&gt;&gt;
+&lt;/$wikify&gt;
+&amp;#8286; &lt;$button to=&quot;CC Training bearbeiten&quot; &gt;
+{{$:/core/images/edit-button}}
+&lt;/$button&gt;
+&lt;$select tiddler=Einstellungen field=neutitel &gt;
+&lt;$list  filter=&quot;[tag[cc-training]!suffix[Template]!sort[created]first{Einstellungen!!listlimit}]&quot;  variable=&quot;item&quot;&gt;
+&lt;option&gt;&lt;&lt;item&gt;&gt;&lt;/option&gt;
+&lt;/$list&gt;
+&lt;/$select&gt;
+&amp;#8286; &lt;$button to=Einstellungen&gt;{{$:/core/images/options-button}}&lt;/$button&gt;</pre>
+</div>
+<div created="20210502194048451" modified="20210502200121880" showdelete="hide" showplan="show" tags="" title="CC Training bearbeiten">
+<pre>&lt;$wikify name=titel text=&quot;{{Einstellungen!!neutitel}}&quot; &gt;
+
+!! &quot;&lt;&lt;titel&gt;&gt;&quot;  &lt;$reveal type=&quot;nomatch&quot; state=&quot;!!showDelete&quot; text=&quot;show&quot;&gt;
+&lt;$button set=&quot;!!showDelete&quot; setTo=&quot;show&quot;&gt;{{$:/core/images/delete-button}}&lt;/$button&gt;
+&lt;/$reveal&gt;
+&lt;$reveal type=&quot;match&quot; state=&quot;!!showDelete&quot; text=&quot;show&quot;&gt;
+&lt;$button  set=&quot;!!showDelete&quot; setTo=&quot;hide&quot;&gt;
+&lt;$action-deletetiddler $tiddler=&lt;&lt;titel&gt;&gt; /&gt;
+&lt;$action-sendmessage $message=&quot;tm-close-tiddler&quot;/&gt;
+{{$:/core/images/delete-button}} 
+Ja, Eintrag wirklich löschen
+&lt;/$button&gt; 
+&lt;$button  set=&quot;!!showDelete&quot; setTo=&quot;hide&quot;&gt;{{$:/core/images/close-button}} nein, doch nicht löschen&lt;/$button&gt; 
+&lt;/$reveal&gt;
+
+---
+
+Push-Ups: 
+Level: &lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=&quot;push-lvl&quot;&gt;
+&lt;$list filter=&quot;[title[CCPushUpProgression]indexes[]nsort[]]&quot; variable=&quot;push&quot;&gt;
+&lt;option value=&lt;&lt;push&gt;&gt; &gt;&lt;&lt;push&gt;&gt; - &lt;$transclude tiddler=&quot;CCPushUpProgression&quot; index=&lt;&lt;push&gt;&gt;/&gt;&lt;/option&gt;
+&lt;/$list&gt;
+&lt;/$select&gt;
+
+[title[CCPushUpProgression]indexes[]nsort[]]
+&lt;&lt;push&gt;&gt;
+Ziel: &lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=&quot;push-goal&quot;&gt;
+&lt;$list filter=&quot;[title[CCPushUpProgression]index[1]nsort[]]&quot; variable=&quot;pgoal&quot;&gt;
+&lt;option&gt;&lt;&lt;pgoal&gt;&gt;&lt;/option&gt;
+&lt;/$list&gt;
+&lt;/$select&gt;
+
+
+
+Bemerkungen: 
+&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;push_text&quot;/&gt; 
+&lt;/$wikify&gt;</pre>
+</div>
 <div created="20210128103856380" modified="20210128111859333" tags="CCProgression" title="CCBeinhebenProgression" type="application/x-tiddler-dictionary">
 <pre>1:Knieanziehen im Sitzen, Knee Tucks:1x10:2x25:3x40
 2:Knieheben im Liegen:1x10:2x20:3x35
@@ -11017,6 +11082,9 @@ ConvictConditioning</pre>
 8:(halbe) einbeinige Kniebeuge:1x5:2x10:2x20
 9:unterstützte (tiefe) einbeinige Kniebeuge:1x5:2x10:2x20
 10:einbeinige (tiefe) Kniebeuge:1x5:2x10:2x50</pre>
+</div>
+<div created="20210502193848029" modified="20210502193949588" tags="cc-training training" title="CCTemplate">
+<pre>{{||CCDisplayTemplate}}</pre>
 </div>
 <div created="20210127200713721" modified="20210127201158558" tags="CCProgression" title="CCTwistProgression" type="application/x-tiddler-dictionary">
 <pre>1: Twist mit gestrecktem Bein
@@ -11132,7 +11200,7 @@ und folgende Varianten:
 * davon 2x10 Wdh. und nach jedem Satz die Hand gut ausschütteln *dann 1 Aufwärmsatz einfache Fingertip Pushups, 1 Level einfacher als die Arbeitssätze:
 * 5-10 Wdh. keinesfalls mehr als max. 15 Wdh.</pre>
 </div>
-<div created="20201209095546498" listlimit="15" modified="20210411191125506" neutitel="2021-04-11 Mobility" tags="$:/tags/StartupAction intern fogff" titel_template="&lt;&lt;now &quot;YYYY-0MM-0DD&quot;&gt;&gt;" title="Einstellungen">
+<div created="20201209095546498" listlimit="15" modified="20210502195722557" neutitel="2021-05-02 CC" tags="$:/tags/StartupAction intern fogff" titel_template="&lt;&lt;now &quot;YYYY-0MM-0DD&quot;&gt;&gt;" title="Einstellungen">
 <pre>* Anzeigelimit Trainingstagebuch: &lt;$edit-text  field=&quot;listlimit&quot; /&gt;
 * Template für Titel neuer Tagebucheinträge:  &lt;$edit-text  field=&quot;titel_template&quot; /&gt;  &amp;rArr; &quot;{{!!titel_template}}&quot;
 * &amp;#10173; [[GettingStarted]]
