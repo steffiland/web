@@ -167,6 +167,8 @@ Error message and password prompt
 
 <li>$:/core</li>
 
+<li>$:/DefaultTiddlers</li>
+
 <li>$:/GitHub/Branch</li>
 
 <li>$:/GitHub/Filename</li>
@@ -253,9 +255,9 @@ Error message and password prompt
 
 <li>CSS</li>
 
-<li>Dingens</li>
+<li>Filter-Listen in Wiki-Text</li>
 
-<li>einige Filter</li>
+<li>FilterBeispiele</li>
 
 <li>FilterBspData</li>
 
@@ -264,6 +266,10 @@ Error message and password prompt
 <li>HtmlHeaderAdditions</li>
 
 <li>ListWidget Snippet</li>
+
+<li>Sammlung nützlicher Filter</li>
+
+<li>SonstigeBeispiele</li>
 
 <li>SvgEditor</li>
 
@@ -10159,6 +10165,11 @@ Error message and password prompt
     }
 }</pre>
 </div>
+<div created="20210503185812402" modified="20210503190002883" title="$:/DefaultTiddlers">
+<pre>GettingStarted
+SonstigeBeispiele
+FilterBeispiele</pre>
+</div>
 <div created="20210120141051896" modified="20210120141052361" title="$:/GitHub/Branch">
 <pre>main</pre>
 </div>
@@ -10469,7 +10480,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div list="SvgEditor GettingStarted" title="$:/StoryList">
+<div created="20210503191217014" list="GettingStarted SonstigeBeispiele FilterBeispiele" modified="20210503191217014" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10610,29 +10621,30 @@ feld: `{{!!feld}}` --&gt; &quot;//{{!!feld}}//&quot;</pre>
   border: 2px solid green;
 }</pre>
 </div>
-<div created="20210121090105843" modified="20210121132402685" tags="blubb" title="Dingens" topic="blubb">
+<div created="20210503185734366" modified="20210503185754346" tags="beispiel blubb" title="Filter-Listen in Wiki-Text">
+<pre>mit 3fachen geschweiften Klammern:
+
+1.
+
+{{{ [[FilterBspData]indexes[]] }}}
+2.
+
+{{{ [&lt;currentTiddler&gt;tags[]] }}}
+3.
+
+{{{ [&lt;currentTiddler&gt;split[ ]] }}}
+</pre>
+</div>
+<div created="20210503185922850" modified="20210503185950097" tags="blubb" title="FilterBeispiele" topic="filter">
 <pre>{{||BeispielListe}}</pre>
 </div>
-<div created="20210121122539575" modified="20210121150815155" tags="beispiel filter" title="einige Filter">
-<pre>&lt;$list filter=&quot;[[FilterBspData]indexes[]]&quot; variable=filtername &gt;
-
-!! &lt;&lt;filtername&gt;&gt;
-''Filter:'' &lt;$view tiddler=FilterBspData index=&lt;&lt;filtername&gt;&gt;/&gt;
-&lt;$list filter=&quot;[[FilterBspData]getindex&lt;filtername&gt;]&quot; variable=item &gt;
-
-''Ergebnis:'' &lt;$list filter=&lt;&lt;item&gt;&gt; variable=erg&gt;
-&lt;&lt;erg&gt;&gt;
-&lt;/$list&gt;
-
-&lt;/$list&gt;&lt;/$list&gt;</pre>
-</div>
-<div created="20210121131133020" modified="20210121135458625" tags="filter" title="FilterBspData" type="application/json">
+<div created="20210121131133020" modified="20210503191138903" tags="filter" title="FilterBspData" type="application/json">
 <pre>{
-&quot;multi&quot;:  &quot;[{BeispielListe!!tags}split[ ]] DiBu bla sort +[sort[]]&quot;,
-&quot;bla&quot;: &quot;[{$:/palette}indexes[]sort[title]]&quot;
+&quot;mehrere Listen verketten&quot;:  &quot;[{BeispielListe!!tags}split[ ]] DiBu bla sort +[sort[]]&quot;,
+&quot;Liste von Farbnamen&quot;: &quot;[{$:/palette}indexes[]sort[title]limit[10]]&quot;
 }</pre>
 </div>
-<div created="20210121092604067" modified="20210121134047003" tags="filter" title="FilterLiveEditor">
+<div created="20210121092604067" modified="20210503190457257" tags="filter beispiel" title="FilterLiveEditor">
 <pre>&lt;$edit-text tiddler=Temp field=filter size=50 /&gt;
 
 &lt;$list filter={{Temp!!filter}} variable=item&gt;
@@ -10665,10 +10677,28 @@ request.send();
 * &lt;&lt;currentTiddler&gt;&gt;
 &lt;/$list &gt;</pre>
 </div>
+<div created="20210121122539575" modified="20210503191218669" tags="beispiel filter" title="Sammlung nützlicher Filter">
+<pre>Die Filter werden in FilterBspData gesammelt.
+
+&lt;$list filter=&quot;[[FilterBspData]indexes[]]&quot; variable=filtername &gt;
+
+!! &lt;&lt;filtername&gt;&gt;
+''Filter:'' &lt;$view tiddler=FilterBspData index=&lt;&lt;filtername&gt;&gt;/&gt;
+&lt;$list filter=&quot;[[FilterBspData]getindex&lt;filtername&gt;]&quot; variable=item &gt;
+
+''Ergebnis:'' &lt;$list filter=&lt;&lt;item&gt;&gt; variable=erg&gt;
+&lt;&lt;erg&gt;&gt;
+&lt;/$list&gt;
+
+&lt;/$list&gt;&lt;/$list&gt;</pre>
+</div>
+<div created="20210121090105843" modified="20210503185805841" tags="blubb" title="SonstigeBeispiele" topic="blubb">
+<pre>{{||BeispielListe}}</pre>
+</div>
 <div created="20210127131800925" modified="20210127132129777" tags="" title="SvgEditor" type="text/html">
 <pre>&lt;iframe src=&quot;https://svg-edit.github.io/svgedit/dist/editor/index.html?extensions=&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
-<div created="20210121105009248" filter="[[FilterBspData]indexes[]]" modified="20210121134133645" title="Temp">
+<div created="20210121105009248" filter="[{$:/palette}indexes[]sort[title]limit[5]]" modified="20210503191106285" title="Temp">
 <pre></pre>
 </div>
 
