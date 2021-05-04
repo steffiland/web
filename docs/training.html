@@ -279,8 +279,6 @@ Error message and password prompt
 
 <li>2021-04-11 Mobility</li>
 
-<li>2021-05-04 CC</li>
-
 <li>ActiveStretching</li>
 
 <li>Alle Trainings</li>
@@ -331,10 +329,6 @@ Error message and password prompt
 
 <li>ConvictConditioning2</li>
 
-<li>Draft of 'CC Training bearbeiten'</li>
-
-<li>Draft of 'StyleSheet'</li>
-
 <li>EagleClaws</li>
 
 <li>Einstellungen</li>
@@ -342,6 +336,8 @@ Error message and password prompt
 <li>FingertipPushups</li>
 
 <li>FOG für Frauen</li>
+
+<li>FOG Training bearbeiten</li>
 
 <li>fogff</li>
 
@@ -378,8 +374,6 @@ Error message and password prompt
 <li>StyleSheet</li>
 
 <li>sxw</li>
-
-<li>Tagebucheintrag bearbeiten</li>
 
 <li>Template</li>
 
@@ -10580,10 +10574,10 @@ ConvictConditioning</pre>
 <div created="20210115194907006" modified="20210118141109064" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/General</pre>
 </div>
-<div created="20210118140350474" modified="20210118140350474" title="$:/state/tab-687079307">
+<div created="20210118140350474" modified="20210504125833753" title="$:/state/tab-687079307">
 <pre>Zyklus 1</pre>
 </div>
-<div created="20210115194841734" modified="20210406113539487" title="$:/state/tab/sidebar--595412856">
+<div created="20210115194841734" modified="20210504130605271" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
 <div created="20210116121729544" modified="20210116121729544" title="$:/state/toc/fogff-FOG für Frauen Trainingsplan-853454163">
@@ -10628,7 +10622,7 @@ ConvictConditioning</pre>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210504061415123" list="[[Draft of 'StyleSheet']] CCPushUpProgression [[FOG für Frauen]] [[Mobility Training]] [[CC Training]] [[Draft of 'CC Training bearbeiten']] [[Trainingsübersicht FOG für Frauen]] [[Trainingsübersicht Mobility]] ConvictConditioning" modified="20210504065641255" title="$:/StoryList">
+<div list="[[FOG für Frauen]] [[Mobility Training]] [[CC Training]] [[Trainingsübersicht FOG für Frauen]] [[Trainingsübersicht Mobility]] ConvictConditioning" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10812,9 +10806,6 @@ ConvictConditioning</pre>
 <div bhold="2" bhold_text="↗️" created="20210411191125505" description="Trifecta je 2x15s" lsitz="1" lsitz_text="Knie höher ziehen" modified="20210411192447600" tags="training mobility-training" thold="2" thold_text="Blockade re Hüfte" title="2021-04-11 Mobility">
 <pre>{{||MobTemplate}}</pre>
 </div>
-<div created="20210504062233366" modified="20210504062613857" push-lvl="2" tags="cc-training training" title="2021-05-04 CC">
-<pre>{{||CCDisplayTemplate}}</pre>
-</div>
 <div created="20210125202836653" gelenke="Nacken, Schultern, Arme, Ellbogen, Handgelenke, mittlerer Rücken, Hüfte, Knie, Fußgelenke, Beine" modified="20210406102800120" tags="ConvictConditioning2" title="ActiveStretching">
 <pre>!!Gelenke Kreisen
  &lt;$list filter=&quot;[{ActiveStretching!!gelenke}split[, ]]&quot; variable=&quot;tt&quot;&gt;
@@ -10958,8 +10949,32 @@ ConvictConditioning</pre>
 &lt;/$select&gt;
 &amp;#8286; &lt;$button to=Einstellungen&gt;{{$:/core/images/options-button}}&lt;/$button&gt;</pre>
 </div>
-<div created="20210502194048451" modified="20210504062218115" showdelete="hide" showplan="show" tags="" title="CC Training bearbeiten">
-<pre>&lt;$wikify name=titel text=&quot;{{Einstellungen!!neutitel}}&quot; &gt;
+<div created="20210502194048451" modified="20210504130545204" showDelete="hide" showPlan="hide" showdelete="hide" showplan="show" tags="" title="CC Training bearbeiten">
+<pre>\define progression(uebung:&quot;CCPullProgression&quot;, lvl:&quot;1&quot;)
+  &lt;div class={{{ [&lt;__lvl__&gt;addprefix[level]] }}}&gt;
+  &lt;&lt;__uebung__&gt;&gt; - &lt;&lt;__lvl__&gt;&gt; (&lt;$text text= {{{ [&lt;__uebung__&gt;getindex&lt;__lvl__&gt;split[:]nth[1]] }}} /&gt;) Ziele: &lt;br/&gt;
+
+  Anfänger =  &lt;$text text= {{{ [&lt;__uebung__&gt;getindex&lt;__lvl__&gt;split[:]nth[2]] }}} /&gt;
+  Fortgeschrittene = &lt;$text text=  {{{ [&lt;__uebung__&gt;getindex&lt;__lvl__&gt;split[:]nth[3]] }}} /&gt;
+  Profi = &lt;$text text= {{{ [&lt;__uebung__&gt;getindex&lt;__lvl__&gt;split[:]nth[4]] }}} /&gt;
+&lt;/div&gt;
+\end
+\define dropdown(uebung:&quot;CCPullProgression&quot;, feld:&quot;nameofthefield&quot;)
+ &lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=&lt;&lt;__feld__&gt;&gt; class=&quot;fixedwidth&quot;&gt;
+&lt;$list filter=&quot;[range[10]]&quot; variable=&quot;lvl&quot;&gt;
+&lt;option value=&lt;&lt;lvl&gt;&gt; &gt;&lt;&lt;lvl&gt;&gt; - {{{ [&lt;__uebung__&gt;getindex&lt;lvl&gt;split[:]nth[1]] }}}&lt;/option&gt;
+&lt;/$list&gt;
+&lt;/$select&gt;
+\end
+\define dropdown2(uebung:&quot;BeinhebenSchrägProgression&quot;, feld:&quot;nameofthefield&quot;)
+alternativ: $uebung$ &lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=&lt;&lt;__feld__&gt;&gt; class=&quot;fixedwidth&quot;&gt;
+&lt;$list filter=&quot;[title&lt;__uebung__&gt;indexes[]sortan[]]&quot; variable=&quot;dditem&quot;&gt;
+&lt;option value=&lt;&lt;dditem&gt;&gt; &gt;&lt;&lt;dditem&gt;&gt; - &lt;$transclude tiddler=&lt;&lt;__uebung__&gt;&gt; index=&lt;&lt;dditem&gt;&gt;/&gt;&lt;/option&gt;
+&lt;/$list&gt;
+&lt;/$select&gt;
+\end
+
+&lt;$wikify name=titel text=&quot;{{Einstellungen!!neutitel}}&quot; &gt;
 
 !! &quot;&lt;&lt;titel&gt;&gt;&quot;  &lt;$reveal type=&quot;nomatch&quot; state=&quot;!!showDelete&quot; text=&quot;show&quot;&gt;
 &lt;$button set=&quot;!!showDelete&quot; setTo=&quot;show&quot;&gt;{{$:/core/images/delete-button}}&lt;/$button&gt;
@@ -10972,35 +10987,77 @@ ConvictConditioning</pre>
 Ja, Eintrag wirklich löschen
 &lt;/$button&gt; 
 &lt;$button  set=&quot;!!showDelete&quot; setTo=&quot;hide&quot;&gt;{{$:/core/images/close-button}} nein, doch nicht löschen&lt;/$button&gt; 
-&lt;/$reveal&gt;
+&lt;/$reveal&gt; &lt;$button  to=&quot;ConvictConditioning Grundsätze&quot; &gt;{{$:/core/images/file}}&lt;/$button&gt; 
 
 ---
 
-!!! Push-Ups 
-Level: &lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=&quot;push-lvl&quot;&gt;
-&lt;$list filter=&quot;[range[10]]&quot; variable=&quot;lvl&quot;&gt;
-&lt;option value=&lt;&lt;lvl&gt;&gt; &gt;&lt;&lt;lvl&gt;&gt; - {{{ [[CCPushUpProgression]getindex&lt;lvl&gt;split[:]nth[1]] }}}&lt;/option&gt;
-&lt;/$list&gt;
-&lt;/$select&gt;
+!!! Liegestütze
+&lt;&lt;dropdown &quot;CCPushUpProgression&quot; &quot;push-lvl&quot; &gt;&gt;
+&lt;&lt;dropdown2 &quot;Progression Push rechtwinklig&quot; &quot;push2-lvl&quot; &gt;&gt;
 
 &lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;push-lvl&quot; &gt;
-
-@@.level&lt;$view tiddler=&lt;&lt;titel&gt;&gt; field=&quot;push-lvl&quot;/&gt;
-* List One
-* List Two
-@@
-
-Übung 
-&lt;$view tiddler=&lt;&lt;titel&gt;&gt; field=&quot;push-lvl&quot;/&gt; (&lt;$text text= {{{ [[CCPushUpProgression]getindex&lt;lvl&gt;split[:]nth[1]] }}} /&gt;) Ziele:
-
-Anfänger =  &lt;$text text= {{{ [[CCPushUpProgression]getindex&lt;lvl&gt;split[:]nth[2]] }}} /&gt;
-Fortgeschrittene = &lt;$text text=  {{{ [[CCPushUpProgression]getindex&lt;lvl&gt;split[:]nth[3]] }}} /&gt;
-Profi = &lt;$text text= {{{ [[CCPushUpProgression]getindex&lt;lvl&gt;split[:]nth[4]] }}} /&gt;
+&lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung=&quot;CCPushUpProgression&quot; /&gt;
 &lt;/$set&gt;
-
 
 Bemerkungen: 
 &lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;push-text&quot;/&gt; 
+
+!!! Beinheben /  Core
+&lt;&lt;dropdown &quot;CCBeinhebenProgression&quot; &quot;core-lvl&quot; &gt;&gt;
+&lt;&lt;dropdown2 &quot;BeinhebenSchrägProgression&quot; &quot;core2-lvl&quot; &gt;&gt;
+
+&lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;core-lvl&quot; &gt;
+&lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung=&quot;CCBeinhebenProgression&quot; /&gt;
+&lt;/$set&gt;
+
+Bemerkungen: 
+&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;core-text&quot;/&gt; 
+
+---
+!!! Pull
+&lt;&lt;dropdown &quot;CCPullProgression&quot; &quot;pull-lvl&quot; &gt;&gt;
+&lt;&lt;dropdown2 &quot;Progression Pull&quot; &quot;pull2-lvl&quot; &gt;&gt;
+
+&lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;pull-lvl&quot; &gt;
+&lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung=&quot;CCPullProgression&quot; /&gt;
+&lt;/$set&gt;
+
+Bemerkungen: 
+&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;pull-text&quot;/&gt; 
+
+!!! Kniebeugen
+&lt;&lt;dropdown &quot;CCSquatProgression&quot; &quot;legs-lvl&quot; &gt;&gt;
+&lt;&lt;dropdown2 &quot;Progression Beine&quot; &quot;legs2-lvl&quot; &gt;&gt;
+
+&lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;legs-lvl&quot; &gt;
+&lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung=&quot;CCSquatProgression&quot; /&gt;
+&lt;/$set&gt;
+
+Bemerkungen: 
+&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;legs-text&quot;/&gt;
+
+---
+
+!!! Brücke  (ab Core+Beine Lvl 6)
+&lt;&lt;dropdown &quot;CCBridgeProgression&quot; &quot;bridge-lvl&quot; &gt;&gt;
+
+&lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;bridge-lvl&quot; &gt;
+&lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung=&quot;CCBridgeProgression&quot; /&gt;
+&lt;/$set&gt;
+
+Bemerkungen: 
+&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;bridge-text&quot;/&gt;
+
+!!! Handstand (ab Push Lvl 6)
+&lt;&lt;dropdown &quot;CCHandstandProgression&quot; &quot;hs-lvl&quot; &gt;&gt;
+&lt;&lt;dropdown2 &quot;Progression Push gerade&quot; &quot;hs2-lvl&quot; &gt;&gt;
+
+&lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;hs-lvl&quot; &gt;
+&lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung=&quot;CCHandstandProgression&quot; /&gt;
+&lt;/$set&gt;
+
+Bemerkungen: 
+&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;hs-text&quot;/&gt;
 &lt;/$wikify&gt;</pre>
 </div>
 <div created="20210128103856380" modified="20210128111859333" tags="CCProgression" title="CCBeinhebenProgression" type="application/x-tiddler-dictionary">
@@ -11153,16 +11210,13 @@ und folgende Varianten:
 
 </pre>
 </div>
-<div caption="Grundsätze" created="20210121201441088" modified="20210128113521856" tags="ConvictConditioning" title="ConvictConditioning Grundsätze" type="text/x-markdown">
-<pre>## Big Six:
-  * Liegestütz - Pushups
-  * Kniebeuge - Squats
-  * Klimmzug - Pull-up
-  * Beinheben - Leg Raise
-  * Brücke - Bridge
-  * Handstand-Liegestütz - handstand pushup
+<div caption="Grundsätze" created="20210121201441088" modified="20210504130130526" tags="ConvictConditioning" title="ConvictConditioning Grundsätze" type="text/x-markdown">
+<pre>## Aufwärmen
+* verringert Verletzungsrisiko, minimiert Muskelkater, schnellere Regeneration
+* z.B. 2 Aufwärmsätze mit vielen Wdh., z.B. 20x Level 1, dann 15x Level2
+* Fingertip Pushups z.B. an der Wand oder hüfthoch): eine gute Aufwärmübung sowohl für Pushups, als auch fürs Hängen
 
-## Grundsätze
+## Prinzipien
 * wirklich bei Level 1 mit jeder Übung beginnen
 * erst dann steigern, wenn man die komplette Wiederholungszahl sauber beherrscht
 * Satzpause ganz nach belieben, aber maximal 4min, damit der Körper nicht abkühlt
@@ -11190,10 +11244,6 @@ und folgende Varianten:
 * ggf. einfach ein paar Level zurück und wieder verstärkt auf sauber Ausführung achten
 * wenn man bei einem neuen Level plötzlich nur 1-2Wdh. schafft, dann diese Übung &quot;außer der Reihe&quot; jeden Tag üben, bis zu 3x über den Tag verteilt je 1-2 Wdh. Das für ein bis 2 Wochen lang machen, dann wird auch eine höhere Wiederholungszahl innerhalb des Trainingsplanes klappen
 
-## Aufwärmen
-* verringert Verletzungsrisiko, minimiert Muskelkater, schnellere Regeneration
-* z.B. 2 Aufwärmsätze mit vielen Wdh., z.B. 20x Level 1, dann 15x Level2
-* Fingertip Pushups z.B. an der Wand oder hüfthoch): eine gute Aufwärmübung sowohl für Pushups, als auch fürs Hängen
 
 </pre>
 </div>
@@ -11211,84 +11261,12 @@ und folgende Varianten:
 
 ##</pre>
 </div>
-<div created="20210502194048451" draft.of="CC Training bearbeiten" draft.title="CC Training bearbeiten" modified="20210504065615661" showdelete="hide" showplan="show" tags="" title="Draft of 'CC Training bearbeiten'">
-<pre>&lt;$wikify name=titel text=&quot;{{Einstellungen!!neutitel}}&quot; &gt;
-
-!! &quot;&lt;&lt;titel&gt;&gt;&quot;  &lt;$reveal type=&quot;nomatch&quot; state=&quot;!!showDelete&quot; text=&quot;show&quot;&gt;
-&lt;$button set=&quot;!!showDelete&quot; setTo=&quot;show&quot;&gt;{{$:/core/images/delete-button}}&lt;/$button&gt;
-&lt;/$reveal&gt;
-&lt;$reveal type=&quot;match&quot; state=&quot;!!showDelete&quot; text=&quot;show&quot;&gt;
-&lt;$button  set=&quot;!!showDelete&quot; setTo=&quot;hide&quot;&gt;
-&lt;$action-deletetiddler $tiddler=&lt;&lt;titel&gt;&gt; /&gt;
-&lt;$action-sendmessage $message=&quot;tm-close-tiddler&quot;/&gt;
-{{$:/core/images/delete-button}} 
-Ja, Eintrag wirklich löschen
-&lt;/$button&gt; 
-&lt;$button  set=&quot;!!showDelete&quot; setTo=&quot;hide&quot;&gt;{{$:/core/images/close-button}} nein, doch nicht löschen&lt;/$button&gt; 
-&lt;/$reveal&gt;
-
----
-
-!!! Push-Ups 
-Level: &lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=&quot;push-lvl&quot;&gt;
-&lt;$list filter=&quot;[range[10]]&quot; variable=&quot;lvl&quot;&gt;
-&lt;option value=&lt;&lt;lvl&gt;&gt; &gt;&lt;&lt;lvl&gt;&gt; - {{{ [[CCPushUpProgression]getindex&lt;lvl&gt;split[:]nth[1]] }}}&lt;/option&gt;
-&lt;/$list&gt;
-&lt;/$select&gt;
-
-&lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;push-lvl&quot; &gt;
-&lt;$wikify output=text name=csslvl  text=&quot;level&lt;&lt;lvl&gt;&gt;&quot; &gt;
-&lt;span class=&lt;&lt;csslvl&gt;&gt;&gt;
-Übung 
-&lt;&lt;lvl&gt;&gt; (&lt;$text text= {{{ [[CCPushUpProgression]getindex&lt;lvl&gt;split[:]nth[1]] }}} /&gt;) Ziele:
-
-@@&lt;&lt;csslvl&gt;&gt;
-Anfänger =  &lt;$text text= {{{ [[CCPushUpProgression]getindex&lt;lvl&gt;split[:]nth[2]] }}} /&gt;
-Fortgeschrittene = &lt;$text text=  {{{ [[CCPushUpProgression]getindex&lt;lvl&gt;split[:]nth[3]] }}} /&gt;
-Profi = &lt;$text text= {{{ [[CCPushUpProgression]getindex&lt;lvl&gt;split[:]nth[4]] }}} /&gt;
-@@
-&lt;/span&gt;
-&lt;/$wikify&gt;
-&lt;/$set&gt;
-
-
-Bemerkungen: 
-&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;push-text&quot;/&gt; 
-&lt;/$wikify&gt;</pre>
-</div>
-<div created="20210129123738475" draft.of="StyleSheet" draft.title="StyleSheet" modified="20210504070829383" tags="intern $:/tags/Stylesheet" title="Draft of 'StyleSheet'" type="text/css">
-<pre>.row-numbers table {
-  counter-reset: row-num;
-}
-.row-numbers tr.row-numbers  {
-  counter-increment: row-num ;
-}
-
-.row-numbers th.row-numbers::before {
-   content: &quot;(&quot; counter(row-num) &quot;)&quot;; 
-}
-
-.fixedwidth {
-  width: 150px;
-}
-
-.level1 { background: #00BFFF; }
-.level2 { background: #0ACBD6; }
-.level3 { background: #14D8AD; }
-.level4 { background: #1EE584; }
-.level5 { background: #28F25B; }
-.level6 { background: #33FF33; }
-.level7 { background: #66E744; }
-.level8 { background: #99CF56; }
-.level9 { background: #CCB768; }
-.level10 { background: #FFA07A; }</pre>
-</div>
 <div created="20210124124927714" modified="20210124125005333" tags="" title="EagleClaws" type="text/x-markdown">
 <pre>* Form your hands into tight fists, and gradually open your fingers/ thumbs joint– by joint, slowly and deliberately and under maximum isometric tension. Once your (trembling!) hands are stretched open to the max, reverse the process into a hard fist. Thats one rep.
 * davon 2x10 Wdh. und nach jedem Satz die Hand gut ausschütteln *dann 1 Aufwärmsatz einfache Fingertip Pushups, 1 Level einfacher als die Arbeitssätze:
 * 5-10 Wdh. keinesfalls mehr als max. 15 Wdh.</pre>
 </div>
-<div created="20201209095546498" listlimit="15" modified="20210504062233366" neutitel="2021-05-04 CC" tags="$:/tags/StartupAction intern fogff" titel_template="&lt;&lt;now &quot;YYYY-0MM-0DD&quot;&gt;&gt;" title="Einstellungen">
+<div created="20201209095546498" listlimit="15" modified="20210504130602212" neutitel="2021-05-04 CC" tags="$:/tags/StartupAction intern fogff" titel_template="&lt;&lt;now &quot;YYYY-0MM-0DD&quot;&gt;&gt;" title="Einstellungen">
 <pre>* Anzeigelimit Trainingstagebuch: &lt;$edit-text  field=&quot;listlimit&quot; /&gt;
 * Template für Titel neuer Tagebucheinträge:  &lt;$edit-text  field=&quot;titel_template&quot; /&gt;  &amp;rArr; &quot;{{!!titel_template}}&quot;
 * &amp;#10173; [[GettingStarted]]
@@ -11316,16 +11294,16 @@ Bemerkungen:
 * keinesfalls explosive Übungsausführung
 </pre>
 </div>
-<div created="20201209185211015" modified="20210406101101823" tags="fogff TOC" title="FOG für Frauen">
+<div created="20201209185211015" modified="20210504130506016" tags="fogff TOC" title="FOG für Frauen">
 <pre>&lt;$wikify name=titelneu text=&quot;{{Einstellungen!!titel_template}} FOG&quot; &gt;
-&lt;$button  to=&quot;Tagebucheintrag bearbeiten&quot;&gt;
+&lt;$button  to=&quot;FOG Training bearbeiten&quot;&gt;
 &lt;$action-createtiddler $basetitle=&lt;&lt;titelneu&gt;&gt; $overwrite=&quot;yes&quot; $template=&quot;YayogFrauenTemplate&quot; /&gt;
 &lt;$action-setfield neutitel=&lt;&lt;titelneu&gt;&gt; $tiddler=&quot;Einstellungen&quot; /&gt;
 {{$:/core/images/new-button}}  
 &lt;/$button&gt;
 &lt;&lt;titelneu&gt;&gt;
 &lt;/$wikify&gt;
-&amp;#8286; &lt;$button to=&quot;Tagebucheintrag bearbeiten&quot; &gt;
+&amp;#8286; &lt;$button to=&quot;FOG Training bearbeiten&quot; &gt;
 {{$:/core/images/edit-button}}
 &lt;/$button&gt;
 &lt;$select tiddler=Einstellungen field=neutitel &gt;
@@ -11334,6 +11312,125 @@ Bemerkungen:
 &lt;/$list&gt;
 &lt;/$select&gt;
 &amp;#8286; &lt;$button to=Einstellungen&gt;{{$:/core/images/options-button}}&lt;/$button&gt;</pre>
+</div>
+<div created="20210115094459690" modified="20210504130434485" showPlan="hide" showdelete="hide" showplan="show" tags="" title="FOG Training bearbeiten">
+<pre>&lt;$wikify name=titel text=&quot;{{Einstellungen!!neutitel}}&quot; &gt;
+
+!! &quot;&lt;&lt;titel&gt;&gt;&quot;  &lt;$reveal type=&quot;nomatch&quot; state=&quot;!!showDelete&quot; text=&quot;show&quot;&gt;
+&lt;$button set=&quot;!!showDelete&quot; setTo=&quot;show&quot;&gt;{{$:/core/images/delete-button}}&lt;/$button&gt;
+&lt;/$reveal&gt;
+&lt;$reveal type=&quot;match&quot; state=&quot;!!showDelete&quot; text=&quot;show&quot;&gt;
+&lt;$button  set=&quot;!!showDelete&quot; setTo=&quot;hide&quot;&gt;
+&lt;$action-deletetiddler $tiddler=&lt;&lt;titel&gt;&gt; /&gt;
+&lt;$action-sendmessage $message=&quot;tm-close-tiddler&quot;/&gt;
+{{$:/core/images/delete-button}} 
+Ja, Eintrag wirklich löschen
+&lt;/$button&gt; 
+&lt;$button  set=&quot;!!showDelete&quot; setTo=&quot;hide&quot;&gt;{{$:/core/images/close-button}} nein, doch nicht löschen&lt;/$button&gt; 
+&lt;/$reveal&gt;
+&lt;$reveal type=&quot;nomatch&quot; state=&quot;!!showPlan&quot; text=&quot;show&quot;&gt;
+&lt;$button set=&quot;!!showPlan&quot; setTo=&quot;show&quot;&gt;{{$:/core/images/file}} Trainingsplan zeigen&lt;/$button&gt;
+&lt;/$reveal&gt;
+&lt;$reveal type=&quot;match&quot; state=&quot;!!showPlan&quot; text=&quot;show&quot;&gt;
+&lt;$button set=&quot;!!showPlan&quot; setTo=&quot;hide&quot;&gt;{{$:/core/images/file}} Trainingsplan ausblenden&lt;/$button&gt;
+{{Trainingsplan FOG für Frauen}}
+&lt;/$reveal&gt;
+
+---
+
+Zyklus/Woche: &lt;$select tiddler=&lt;&lt;titel&gt;&gt; field='woche'&gt;
+&lt;optgroup label='Zyklus 1'&gt;
+&lt;option&gt;Z1 Woche 1&lt;/option&gt;
+&lt;option&gt;Z1 Woche 2&lt;/option&gt;
+&lt;option&gt;Z1 Woche 3&lt;/option&gt;
+&lt;option&gt;Z1 Woche 4&lt;/option&gt;
+&lt;/optgroup&gt;
+&lt;optgroup label='Zyklus 2'&gt;
+&lt;option&gt;Z2 Woche 1&lt;/option&gt;
+&lt;option&gt;Z2 Woche 2&lt;/option&gt;
+&lt;option&gt;Z2 Woche 3&lt;/option&gt;
+&lt;option&gt;Z2 Woche 4&lt;/option&gt;
+&lt;/optgroup&gt;
+&lt;optgroup label='Zyklus 3'&gt;
+&lt;option&gt;Z3 Woche 1&lt;/option&gt;
+&lt;option&gt;Z3 Woche 2&lt;/option&gt;
+&lt;option&gt;Z3 Woche 3&lt;/option&gt;
+&lt;option&gt;Z3 Woche 4&lt;/option&gt;
+&lt;/optgroup&gt;
+&lt;optgroup label='Zyklus 4'&gt;
+&lt;option&gt;Z4 Woche 1&lt;/option&gt;
+&lt;option&gt;Z4 Woche 2&lt;/option&gt;
+&lt;option&gt;Z4 Woche 3&lt;/option&gt;
+&lt;option&gt;Z4 Woche 4&lt;/option&gt;
+&lt;/optgroup&gt;
+&lt;/$select&gt; 
+Sätze x Wiederholungen: &lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=sxw&gt;
+&lt;$list filter=&quot;[title[sxw]indexes[]]&quot; variable=&quot;sxwitem&quot;&gt;
+&lt;option&gt;&lt;&lt;sxwitem&gt;&gt;&lt;/option&gt;
+&lt;/$list&gt;
+&lt;/$select&gt;
+
+
+Pull:  
+
+&lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=pull class=&quot;fixedwidth&quot;&gt;
+&lt;$list filter=&quot;[title[Progression Pull]indexes[]sortan[]]&quot; variable=&quot;pullitem&quot;&gt;
+&lt;option value=&lt;&lt;pullitem&gt;&gt; &gt;&lt;&lt;pullitem&gt;&gt; - &lt;$transclude tiddler=&quot;Progression Pull&quot; index=&lt;&lt;pullitem&gt;&gt;/&gt;&lt;/option&gt;
+&lt;/$list&gt;
+&lt;/$select&gt;
+&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;pull_text&quot; /&gt;
+
+Beine / Kniebeuge:
+
+&lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=legs class=&quot;fixedwidth&quot;&gt;
+&lt;$list filter=&quot;[title[Progression Beine]indexes[]sortan[]]&quot; variable=&quot;bein_item&quot;&gt;
+&lt;option value=&lt;&lt;bein_item&gt;&gt; &gt;&lt;&lt;bein_item&gt;&gt; - &lt;$transclude tiddler=&quot;Progression Beine&quot; index=&lt;&lt;bein_item&gt;&gt;/&gt;&lt;/option&gt;
+&lt;/$list&gt;
+&lt;/$select&gt;
+&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;legs_text&quot; /&gt;
+
+Push:
+&lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=push_type &gt;
+&lt;option&gt;gerade&lt;/option&gt;
+&lt;option&gt;rechtwinklig&lt;/option&gt;
+&lt;/$select&gt;
+
+&lt;$set name=&quot;pushpart&quot; tiddler=&lt;&lt;titel&gt;&gt; field=&quot;push_type&quot; &gt;
+&lt;$wikify name=myPush text=&quot;Progression Push &lt;&lt;pushpart&gt;&gt;&quot; &gt;
+
+&lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=push class=&quot;fixedwidth&quot;&gt;
+&lt;$list  filter=&quot;[title&lt;myPush&gt;indexes[]sortan[]]&quot; variable=&quot;push_item&quot;&gt;
+&lt;option value=&lt;&lt;push_item&gt;&gt; &gt;&lt;&lt;push_item&gt;&gt; - &lt;$transclude tiddler=&lt;&lt;myPush&gt;&gt; index=&lt;&lt;push_item&gt;&gt;/&gt;&lt;/option&gt;
+&lt;/$list&gt;
+&lt;/$select&gt;
+&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;push_text&quot; /&gt;
+&lt;/$wikify&gt;
+&lt;/$set&gt;
+
+Core / Beinheben: 
+
+&lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=core class=&quot;fixedwidth&quot;&gt;
+&lt;$list filter=&quot;[title[BeinhebenSchrägProgression]indexes[]sortan[]]&quot; variable=&quot;core_item&quot;&gt;
+&lt;option value=&lt;&lt;core_item&gt;&gt; &gt;&lt;&lt;core_item&gt;&gt; - &lt;$transclude tiddler=&quot;BeinhebenSchrägProgression&quot; index=&lt;&lt;core_item&gt;&gt;/&gt;&lt;/option&gt;
+&lt;/$list&gt;
+&lt;/$select&gt;
+&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;core_text&quot; 
+ /&gt;
+
+
+Hüfte / Beugen:
+
+&lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=hips class=&quot;fixedwidth&quot;&gt;
+&lt;$list filter=&quot;[title[Progression Beuge]indexes[]sortan[]]&quot; variable=&quot;hip_item&quot;&gt;
+&lt;option value=&lt;&lt;hip_item&gt;&gt; &gt;&lt;&lt;hip_item&gt;&gt; - &lt;$transclude tiddler=&quot;Progression Beuge&quot; index=&lt;&lt;hip_item&gt;&gt;/&gt;&lt;/option&gt;
+&lt;/$list&gt;
+&lt;/$select&gt;
+&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;hips_text&quot; 
+ /&gt;
+
+Bemerkungen: 
+&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;description&quot;/&gt; 
+&lt;/$wikify&gt;</pre>
 </div>
 <div caption="Interna" created="20210116123141461" modified="20210116123727017" tags="[[FOG für Frauen]]" title="fogff">
 <pre>&lt;&lt;list-links filter:&quot;[tag[fogff]tag[intern]sort[created]]&quot;&gt;&gt;</pre>
@@ -11745,7 +11842,7 @@ v11:Malteser Pushups
 * &lt;&lt;currentTiddler&gt;&gt;
 &lt;/$list &gt;</pre>
 </div>
-<div created="20210129123738475" modified="20210406101252583" tags="intern $:/tags/Stylesheet" title="StyleSheet" type="text/css">
+<div created="20210129123738475" modified="20210504110230690" tags="intern $:/tags/Stylesheet" title="StyleSheet" type="text/css">
 <pre>.row-numbers table {
   counter-reset: row-num;
 }
@@ -11759,7 +11856,29 @@ v11:Malteser Pushups
 
 .fixedwidth {
   width: 150px;
-}</pre>
+}
+
+.level1 { background: #00BFFF; }
+.level2 { background: #0ACBD6; }
+.level3 { background: #14D8AD; }
+.level4 { background: #1EE584; }
+.level5 { background: #28F25B; }
+.level6 { background: #33FF33; }
+.level7 { background: #66E744; }
+.level8 { background: #99CF56; }
+.level9 { background: #CCB768; }
+.level10 { background: #FFA07A; }
+.level1::before { content: &quot; 1️⃣ &quot;; }
+.level2::before { content: &quot; 2️⃣😀 &quot;; }
+.level3::before { content: &quot; 3️⃣ &quot;; }
+.level4::before { content: &quot; 4️⃣ &quot;; }
+.level5::before { content: &quot; 5️⃣ &quot;; }
+.level6::before { content: &quot; 6️⃣ &quot;; }
+.level7::before { content: &quot; 7️⃣ &quot;; }
+.level8::before { content: &quot; 8️⃣ &quot;; }
+.level9::before { content: &quot; 9️⃣ &quot;; }
+.level10::before { content: &quot; 🔟 &quot;; }
+.stepbeginner { border-radius: 50%; background-color: #4CAF50;}</pre>
 </div>
 <div created="20201209081342383" modified="20210406101227215" tags="intern" title="sxw" type="application/x-tiddler-dictionary">
 <pre>2x12:
@@ -11767,125 +11886,6 @@ v11:Malteser Pushups
 3x10:
 3x15:
 10x3:</pre>
-</div>
-<div created="20210115094459690" modified="20210406101525367" showdelete="hide" showplan="show" tags="" title="Tagebucheintrag bearbeiten">
-<pre>&lt;$wikify name=titel text=&quot;{{Einstellungen!!neutitel}}&quot; &gt;
-
-!! &quot;&lt;&lt;titel&gt;&gt;&quot;  &lt;$reveal type=&quot;nomatch&quot; state=&quot;!!showDelete&quot; text=&quot;show&quot;&gt;
-&lt;$button set=&quot;!!showDelete&quot; setTo=&quot;show&quot;&gt;{{$:/core/images/delete-button}}&lt;/$button&gt;
-&lt;/$reveal&gt;
-&lt;$reveal type=&quot;match&quot; state=&quot;!!showDelete&quot; text=&quot;show&quot;&gt;
-&lt;$button  set=&quot;!!showDelete&quot; setTo=&quot;hide&quot;&gt;
-&lt;$action-deletetiddler $tiddler=&lt;&lt;titel&gt;&gt; /&gt;
-&lt;$action-sendmessage $message=&quot;tm-close-tiddler&quot;/&gt;
-{{$:/core/images/delete-button}} 
-Ja, Eintrag wirklich löschen
-&lt;/$button&gt; 
-&lt;$button  set=&quot;!!showDelete&quot; setTo=&quot;hide&quot;&gt;{{$:/core/images/close-button}} nein, doch nicht löschen&lt;/$button&gt; 
-&lt;/$reveal&gt;
-&lt;$reveal type=&quot;nomatch&quot; state=&quot;!!showPlan&quot; text=&quot;show&quot;&gt;
-&lt;$button set=&quot;!!showPlan&quot; setTo=&quot;show&quot;&gt;{{$:/core/images/file}} Trainingsplan zeigen&lt;/$button&gt;
-&lt;/$reveal&gt;
-&lt;$reveal type=&quot;match&quot; state=&quot;!!showPlan&quot; text=&quot;show&quot;&gt;
-&lt;$button set=&quot;!!showPlan&quot; setTo=&quot;hide&quot;&gt;{{$:/core/images/file}} Trainingsplan ausblenden&lt;/$button&gt;
-{{Trainingsplan FOG für Frauen}}
-&lt;/$reveal&gt;
-
----
-
-Zyklus/Woche: &lt;$select tiddler=&lt;&lt;titel&gt;&gt; field='woche'&gt;
-&lt;optgroup label='Zyklus 1'&gt;
-&lt;option&gt;Z1 Woche 1&lt;/option&gt;
-&lt;option&gt;Z1 Woche 2&lt;/option&gt;
-&lt;option&gt;Z1 Woche 3&lt;/option&gt;
-&lt;option&gt;Z1 Woche 4&lt;/option&gt;
-&lt;/optgroup&gt;
-&lt;optgroup label='Zyklus 2'&gt;
-&lt;option&gt;Z2 Woche 1&lt;/option&gt;
-&lt;option&gt;Z2 Woche 2&lt;/option&gt;
-&lt;option&gt;Z2 Woche 3&lt;/option&gt;
-&lt;option&gt;Z2 Woche 4&lt;/option&gt;
-&lt;/optgroup&gt;
-&lt;optgroup label='Zyklus 3'&gt;
-&lt;option&gt;Z3 Woche 1&lt;/option&gt;
-&lt;option&gt;Z3 Woche 2&lt;/option&gt;
-&lt;option&gt;Z3 Woche 3&lt;/option&gt;
-&lt;option&gt;Z3 Woche 4&lt;/option&gt;
-&lt;/optgroup&gt;
-&lt;optgroup label='Zyklus 4'&gt;
-&lt;option&gt;Z4 Woche 1&lt;/option&gt;
-&lt;option&gt;Z4 Woche 2&lt;/option&gt;
-&lt;option&gt;Z4 Woche 3&lt;/option&gt;
-&lt;option&gt;Z4 Woche 4&lt;/option&gt;
-&lt;/optgroup&gt;
-&lt;/$select&gt; 
-Sätze x Wiederholungen: &lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=sxw&gt;
-&lt;$list filter=&quot;[title[sxw]indexes[]]&quot; variable=&quot;sxwitem&quot;&gt;
-&lt;option&gt;&lt;&lt;sxwitem&gt;&gt;&lt;/option&gt;
-&lt;/$list&gt;
-&lt;/$select&gt;
-
-
-Pull:  
-
-&lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=pull class=&quot;fixedwidth&quot;&gt;
-&lt;$list filter=&quot;[title[Progression Pull]indexes[]sortan[]]&quot; variable=&quot;pullitem&quot;&gt;
-&lt;option value=&lt;&lt;pullitem&gt;&gt; &gt;&lt;&lt;pullitem&gt;&gt; - &lt;$transclude tiddler=&quot;Progression Pull&quot; index=&lt;&lt;pullitem&gt;&gt;/&gt;&lt;/option&gt;
-&lt;/$list&gt;
-&lt;/$select&gt;
-&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;pull_text&quot; /&gt;
-
-Beine / Kniebeuge:
-
-&lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=legs class=&quot;fixedwidth&quot;&gt;
-&lt;$list filter=&quot;[title[Progression Beine]indexes[]sortan[]]&quot; variable=&quot;bein_item&quot;&gt;
-&lt;option value=&lt;&lt;bein_item&gt;&gt; &gt;&lt;&lt;bein_item&gt;&gt; - &lt;$transclude tiddler=&quot;Progression Beine&quot; index=&lt;&lt;bein_item&gt;&gt;/&gt;&lt;/option&gt;
-&lt;/$list&gt;
-&lt;/$select&gt;
-&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;legs_text&quot; /&gt;
-
-Push:
-&lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=push_type &gt;
-&lt;option&gt;gerade&lt;/option&gt;
-&lt;option&gt;rechtwinklig&lt;/option&gt;
-&lt;/$select&gt;
-
-&lt;$set name=&quot;pushpart&quot; tiddler=&lt;&lt;titel&gt;&gt; field=&quot;push_type&quot; &gt;
-&lt;$wikify name=myPush text=&quot;Progression Push &lt;&lt;pushpart&gt;&gt;&quot; &gt;
-
-&lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=push class=&quot;fixedwidth&quot;&gt;
-&lt;$list  filter=&quot;[title&lt;myPush&gt;indexes[]sortan[]]&quot; variable=&quot;push_item&quot;&gt;
-&lt;option value=&lt;&lt;push_item&gt;&gt; &gt;&lt;&lt;push_item&gt;&gt; - &lt;$transclude tiddler=&lt;&lt;myPush&gt;&gt; index=&lt;&lt;push_item&gt;&gt;/&gt;&lt;/option&gt;
-&lt;/$list&gt;
-&lt;/$select&gt;
-&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;push_text&quot; /&gt;
-&lt;/$wikify&gt;
-&lt;/$set&gt;
-
-Core / Beinheben: 
-
-&lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=core class=&quot;fixedwidth&quot;&gt;
-&lt;$list filter=&quot;[title[BeinhebenSchrägProgression]indexes[]sortan[]]&quot; variable=&quot;core_item&quot;&gt;
-&lt;option value=&lt;&lt;core_item&gt;&gt; &gt;&lt;&lt;core_item&gt;&gt; - &lt;$transclude tiddler=&quot;BeinhebenSchrägProgression&quot; index=&lt;&lt;core_item&gt;&gt;/&gt;&lt;/option&gt;
-&lt;/$list&gt;
-&lt;/$select&gt;
-&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;core_text&quot; 
- /&gt;
-
-
-Hüfte / Beugen:
-
-&lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=hips class=&quot;fixedwidth&quot;&gt;
-&lt;$list filter=&quot;[title[Progression Beuge]indexes[]sortan[]]&quot; variable=&quot;hip_item&quot;&gt;
-&lt;option value=&lt;&lt;hip_item&gt;&gt; &gt;&lt;&lt;hip_item&gt;&gt; - &lt;$transclude tiddler=&quot;Progression Beuge&quot; index=&lt;&lt;hip_item&gt;&gt;/&gt;&lt;/option&gt;
-&lt;/$list&gt;
-&lt;/$select&gt;
-&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;hips_text&quot; 
- /&gt;
-
-Bemerkungen: 
-&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;description&quot;/&gt; 
-&lt;/$wikify&gt;</pre>
 </div>
 <div created="20201209195044974" hips="0" legs="0" modified="20210116123852397" pull="0" push="0" tags="fogff intern" title="Template">
 <pre>Zyklus: {{!!woche}} (Sätze x Wdh: {{!!sxw}})
