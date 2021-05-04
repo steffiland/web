@@ -10548,8 +10548,8 @@ ConvictConditioning</pre>
 <div created="20210118080006797" modified="20210406104838067" title="$:/state/advancedsearch/currentTab">
 <pre>$:/core/ui/AdvancedSearch/Shadows</pre>
 </div>
-<div created="20210116123243473" modified="20210406090105402" title="$:/state/showeditpreview">
-<pre>yes</pre>
+<div created="20210116123243473" modified="20210504212942286" title="$:/state/showeditpreview">
+<pre>no</pre>
 </div>
 <div created="20210116120950002" modified="20210116124914713" title="$:/state/sidebar">
 <pre>yes</pre>
@@ -10626,7 +10626,7 @@ ConvictConditioning</pre>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div list="[[FOG für Frauen]] [[Mobility Training]] [[CC Training]] [[Trainingsübersicht FOG für Frauen]] [[Trainingsübersicht Mobility]] ConvictConditioning" title="$:/StoryList">
+<div created="20210504212210138" list="[[FOG für Frauen]] [[Mobility Training]] [[CC Training]] [[Trainingsübersicht Mobility]] ConvictConditioning" modified="20210504213604690" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10953,7 +10953,7 @@ ConvictConditioning</pre>
 &lt;/$select&gt;
 &amp;#8286; &lt;$button to=Einstellungen&gt;{{$:/core/images/options-button}}&lt;/$button&gt;</pre>
 </div>
-<div created="20210502194048451" modified="20210504130545204" showdelete="hide" showplan="hide" tags="" title="CC Training bearbeiten">
+<div created="20210502194048451" modified="20210504213608812" showDelete="hide" showdelete="hide" showplan="hide" tags="" title="CC Training bearbeiten">
 <pre>\define progression(uebung:&quot;CCPullProgression&quot;, lvl:&quot;1&quot;)
   &lt;div class={{{ [&lt;__lvl__&gt;addprefix[level]] }}}&gt;
   &lt;&lt;__uebung__&gt;&gt; - &lt;&lt;__lvl__&gt;&gt; (&lt;$text text= {{{ [&lt;__uebung__&gt;getindex&lt;__lvl__&gt;split[:]nth[1]] }}} /&gt;) Ziele: &lt;br/&gt;
@@ -10965,7 +10965,7 @@ ConvictConditioning</pre>
 \end
 \define dropdown(uebung:&quot;CCPullProgression&quot;, feld:&quot;nameofthefield&quot;)
  &lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=&lt;&lt;__feld__&gt;&gt; class=&quot;fixedwidth&quot;&gt;
-&lt;$list filter=&quot;[range[10]]&quot; variable=&quot;lvl&quot;&gt;
+&lt;$list filter=&quot;[range[0,10]]&quot; variable=&quot;lvl&quot;&gt;
 &lt;option value=&lt;&lt;lvl&gt;&gt; &gt;&lt;&lt;lvl&gt;&gt; - {{{ [&lt;__uebung__&gt;getindex&lt;lvl&gt;split[:]nth[1]] }}}&lt;/option&gt;
 &lt;/$list&gt;
 &lt;/$select&gt;
@@ -11096,15 +11096,15 @@ Bemerkungen:
 9:Brücke aus dem Stand:1x1:2x3:2x6
 10:Stand-zu-Stand-Brücke:1x1:2x3:2x10-30</pre>
 </div>
-<div created="20210504193249754" modified="20210504193402557" tags="intern" title="CCDisplayTemplate" type="text/x-markdown">
+<div created="20210504193249754" modified="20210504213503622" tags="intern" title="CCDisplayTemplate" type="text/x-markdown">
 <pre>Übung | Level | Wdh., Bemerkungen
 --|--|--
-Liegestütz&lt;br/&gt;Push rechtw | {{!!push-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;CCPushUpProgression&quot; lvl={{!!push-lvl}} /&gt; {{!!push2-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;Progression Push rechtwinklig&quot; lvl={{!!push2-lvl}} /&gt; | {{!!push-text}}
-Beinheben&lt;br/&gt;Core  | {{!!core-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;CCBeinhebenProgression&quot; lvl={{!!core-lvl}} /&gt; {{!!core2-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;BeinhebenSchrägProgression&quot; lvl={{!!core2-lvl}} /&gt; ​| {{!!core-text}} |
-Pull &lt;br/&gt;| {{!!pull-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;CCPullProgression&quot; lvl={{!!pull-lvl}} /&gt; {{!!pull2-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;Progression Pull&quot; lvl={{!!pull2-lvl}} /&gt; ​| {{!!pull-text}} |
-Kniebeuge&lt;br/&gt; | {{!!legs-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;CCSquatProgression&quot; lvl={{!!legs-lvl}} /&gt; {{!!legs2-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;Progression Beine&quot; lvl={{!!legs2-lvl}} /&gt; ​| {{!!legs-text}} |
-Brücke | {{!!bridge-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;CCBridgeProgression&quot; lvl={{!!bridge-lvl}} /&gt; {{!!bridge2-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;wurschtel&quot; lvl={{!!bridge2-lvl}} /&gt; ​| {{!!bridge-text}} |
-Handstand &lt;br/&gt;Push gerade | {{!!hs-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;CCHandstandProgression&quot; lvl={{!!hs-lvl}} /&gt; {{!!hs2-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;Progression Push gerade&quot; lvl={{!!hs2-lvl}} /&gt; ​| {{!!hs-text}} </pre>
+Liegestütz&lt;br/&gt;Push rechtw | {{!!push-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;CCPushUpProgression&quot; lvl={{!!push-lvl}} /&gt; *{{!!push2-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;Progression Push rechtwinklig&quot; lvl={{!!push2-lvl}} /&gt;* | {{!!push-text}}
+Beinheben&lt;br/&gt;Core  | {{!!core-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;CCBeinhebenProgression&quot; lvl={{!!core-lvl}} /&gt; *{{!!core2-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;BeinhebenSchrägProgression&quot; lvl={{!!core2-lvl}} /&gt;* ​| {{!!core-text}} |
+Pull &lt;br/&gt;| {{!!pull-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;CCPullProgression&quot; lvl={{!!pull-lvl}} /&gt; *{{!!pull2-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;Progression Pull&quot; lvl={{!!pull2-lvl}} /&gt;* ​| {{!!pull-text}} |
+Kniebeuge&lt;br/&gt; | {{!!legs-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;CCSquatProgression&quot; lvl={{!!legs-lvl}} /&gt; *{{!!legs2-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;Progression Beine&quot; lvl={{!!legs2-lvl}} /&gt;* ​| {{!!legs-text}} |
+Brücke | {{!!bridge-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;CCBridgeProgression&quot; lvl={{!!bridge-lvl}} /&gt; *{{!!bridge2-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;wurschtel&quot; lvl={{!!bridge2-lvl}} /&gt;* ​| {{!!bridge-text}} |
+Handstand &lt;br/&gt;Push gerade | {{!!hs-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;CCHandstandProgression&quot; lvl={{!!hs-lvl}} /&gt; *{{!!hs2-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;Progression Push gerade&quot; lvl={{!!hs2-lvl}} /&gt;* ​| {{!!hs-text}} </pre>
 </div>
 <div created="20210122115452088" modified="20210122124149426" tags="CCProgression" title="CCHangProgression" type="application/x-tiddler-dictionary">
 <pre>1:Horizontal Hang:1x10:4x30
@@ -11133,8 +11133,9 @@ Handstand &lt;br/&gt;Push gerade | {{!!hs-lvl}} &lt;$macrocall $name=&quot;show&
 <div caption="Progression" created="20210122115026962" modified="20210122115055517" tags="ConvictConditioning" title="CCProgression">
 <pre></pre>
 </div>
-<div created="20210128072122056" modified="20210128103835157" tags="CCProgression" title="CCPullProgression" type="application/x-tiddler-dictionary">
-<pre>1:Senkrechter Zug (Türziehen im Stehen):1x10:2x20:3x40
+<div created="20210128072122056" modified="20210504212738964" tags="CCProgression" title="CCPullProgression" type="application/x-tiddler-dictionary">
+<pre>::::
+1:Senkrechter Zug (Türziehen im Stehen):1x10:2x20:3x40
 2:Waagerechter Zug (umgekehrtes Bankdrücken mit gestreckten Beinen):1x10:2x20:3x30
 3:Klappmesser-Klimmzug:1x10:2x15:3x20
 4:halber Klimmzug:1x8:2x11:2x15
@@ -11280,7 +11281,7 @@ und folgende Varianten:
 * davon 2x10 Wdh. und nach jedem Satz die Hand gut ausschütteln *dann 1 Aufwärmsatz einfache Fingertip Pushups, 1 Level einfacher als die Arbeitssätze:
 * 5-10 Wdh. keinesfalls mehr als max. 15 Wdh.</pre>
 </div>
-<div created="20201209095546498" listlimit="15" modified="20210504195459009" neutitel="2021-04-09 Mobility" tags="$:/tags/StartupAction intern fogff" titel_template="&lt;&lt;now &quot;YYYY-0MM-0DD&quot;&gt;&gt;" title="Einstellungen">
+<div created="20201209095546498" listlimit="15" modified="20210504212210135" neutitel="2021-05-04 CC" tags="$:/tags/StartupAction intern fogff" titel_template="&lt;&lt;now &quot;YYYY-0MM-0DD&quot;&gt;&gt;" title="Einstellungen">
 <pre>* Anzeigelimit Trainingstagebuch: &lt;$edit-text  field=&quot;listlimit&quot; /&gt;
 * Template für Titel neuer Tagebucheinträge:  &lt;$edit-text  field=&quot;titel_template&quot; /&gt;  &amp;rArr; &quot;{{!!titel_template}}&quot;
 * &amp;#10173; [[GettingStarted]]
@@ -11327,7 +11328,7 @@ und folgende Varianten:
 &lt;/$select&gt;
 &amp;#8286; &lt;$button to=Einstellungen&gt;{{$:/core/images/options-button}}&lt;/$button&gt;</pre>
 </div>
-<div created="20210115094459690" modified="20210504195456234" showDelete="hide" showdelete="hide" showplan="hide" tags="" title="FOG Training bearbeiten">
+<div created="20210115094459690" modified="20210504195456234" showdelete="hide" showplan="hide" tags="" title="FOG Training bearbeiten">
 <pre>&lt;$wikify name=titel text=&quot;{{Einstellungen!!neutitel}}&quot; &gt;
 
 !! &quot;&lt;&lt;titel&gt;&gt;&quot;  &lt;$reveal type=&quot;nomatch&quot; state=&quot;!!showDelete&quot; text=&quot;show&quot;&gt;
@@ -11874,7 +11875,7 @@ v11:Malteser Pushups
 * &lt;&lt;currentTiddler&gt;&gt;
 &lt;/$list &gt;</pre>
 </div>
-<div created="20210129123738475" modified="20210504110230690" tags="intern $:/tags/Stylesheet" title="StyleSheet" type="text/css">
+<div created="20210129123738475" modified="20210504213028353" tags="intern $:/tags/Stylesheet" title="StyleSheet" type="text/css">
 <pre>.row-numbers table {
   counter-reset: row-num;
 }
@@ -11890,6 +11891,7 @@ v11:Malteser Pushups
   width: 150px;
 }
 
+.level0 { display: none; }
 .level1 { background: #00BFFF; }
 .level2 { background: #0ACBD6; }
 .level3 { background: #14D8AD; }
