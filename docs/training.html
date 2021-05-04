@@ -303,6 +303,8 @@ Error message and password prompt
 
 <li>CCBridgeProgression</li>
 
+<li>CCDisplayTemplate</li>
+
 <li>CCHangProgression</li>
 
 <li>CCLSitzProgression</li>
@@ -386,6 +388,8 @@ Error message and password prompt
 <li>TrainingsPlan</li>
 
 <li>Trainingsplan FOG für Frauen</li>
+
+<li>Trainingsübersicht CC</li>
 
 <li>Trainingsübersicht FOG für Frauen</li>
 
@@ -10577,7 +10581,7 @@ ConvictConditioning</pre>
 <div created="20210118140350474" modified="20210504125833753" title="$:/state/tab-687079307">
 <pre>Zyklus 1</pre>
 </div>
-<div created="20210115194841734" modified="20210504130605271" title="$:/state/tab/sidebar--595412856">
+<div created="20210115194841734" modified="20210504182948547" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
 <div created="20210116121729544" modified="20210116121729544" title="$:/state/toc/fogff-FOG für Frauen Trainingsplan-853454163">
@@ -10622,7 +10626,7 @@ ConvictConditioning</pre>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div list="[[FOG für Frauen]] [[Mobility Training]] [[CC Training]] [[Trainingsübersicht FOG für Frauen]] [[Trainingsübersicht Mobility]] ConvictConditioning" title="$:/StoryList">
+<div created="20210504182335244" list="Template [[FOG für Frauen]] [[Mobility Training]] [[CC Training]] [[CC Training bearbeiten]] [[Trainingsübersicht FOG für Frauen]] [[2021-04-11 FOG]] [[Trainingsübersicht Mobility]] ConvictConditioning" modified="20210504193241495" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10949,7 +10953,7 @@ ConvictConditioning</pre>
 &lt;/$select&gt;
 &amp;#8286; &lt;$button to=Einstellungen&gt;{{$:/core/images/options-button}}&lt;/$button&gt;</pre>
 </div>
-<div created="20210502194048451" modified="20210504130545204" showDelete="hide" showPlan="hide" showdelete="hide" showplan="show" tags="" title="CC Training bearbeiten">
+<div created="20210502194048451" modified="20210504130545204" showdelete="hide" showplan="hide" tags="" title="CC Training bearbeiten">
 <pre>\define progression(uebung:&quot;CCPullProgression&quot;, lvl:&quot;1&quot;)
   &lt;div class={{{ [&lt;__lvl__&gt;addprefix[level]] }}}&gt;
   &lt;&lt;__uebung__&gt;&gt; - &lt;&lt;__lvl__&gt;&gt; (&lt;$text text= {{{ [&lt;__uebung__&gt;getindex&lt;__lvl__&gt;split[:]nth[1]] }}} /&gt;) Ziele: &lt;br/&gt;
@@ -11091,6 +11095,16 @@ Bemerkungen:
 8:Brücke an der Wand aufwärts:1x2:2x4:2x8
 9:Brücke aus dem Stand:1x1:2x3:2x6
 10:Stand-zu-Stand-Brücke:1x1:2x3:2x10-30</pre>
+</div>
+<div created="20210504193249754" modified="20210504193402557" tags="intern" title="CCDisplayTemplate" type="text/x-markdown">
+<pre>Übung | Level | Wdh., Bemerkungen
+--|--|--
+Liegestütz&lt;br/&gt;Push rechtw | {{!!push-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;CCPushUpProgression&quot; lvl={{!!push-lvl}} /&gt; {{!!push2-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;Progression Push rechtwinklig&quot; lvl={{!!push2-lvl}} /&gt; | {{!!push-text}}
+Beinheben&lt;br/&gt;Core  | {{!!core-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;CCBeinhebenProgression&quot; lvl={{!!core-lvl}} /&gt; {{!!core2-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;BeinhebenSchrägProgression&quot; lvl={{!!core2-lvl}} /&gt; ​| {{!!core-text}} |
+Pull &lt;br/&gt;| {{!!pull-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;CCPullProgression&quot; lvl={{!!pull-lvl}} /&gt; {{!!pull2-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;Progression Pull&quot; lvl={{!!pull2-lvl}} /&gt; ​| {{!!pull-text}} |
+Kniebeuge&lt;br/&gt; | {{!!legs-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;CCSquatProgression&quot; lvl={{!!legs-lvl}} /&gt; {{!!legs2-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;Progression Beine&quot; lvl={{!!legs2-lvl}} /&gt; ​| {{!!legs-text}} |
+Brücke | {{!!bridge-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;CCBridgeProgression&quot; lvl={{!!bridge-lvl}} /&gt; {{!!bridge2-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;wurschtel&quot; lvl={{!!bridge2-lvl}} /&gt; ​| {{!!bridge-text}} |
+Handstand &lt;br/&gt;Push gerade | {{!!hs-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;CCHandstandProgression&quot; lvl={{!!hs-lvl}} /&gt; {{!!hs2-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;Progression Push gerade&quot; lvl={{!!hs2-lvl}} /&gt; ​| {{!!hs-text}} </pre>
 </div>
 <div created="20210122115452088" modified="20210122124149426" tags="CCProgression" title="CCHangProgression" type="application/x-tiddler-dictionary">
 <pre>1:Horizontal Hang:1x10:4x30
@@ -11266,7 +11280,7 @@ und folgende Varianten:
 * davon 2x10 Wdh. und nach jedem Satz die Hand gut ausschütteln *dann 1 Aufwärmsatz einfache Fingertip Pushups, 1 Level einfacher als die Arbeitssätze:
 * 5-10 Wdh. keinesfalls mehr als max. 15 Wdh.</pre>
 </div>
-<div created="20201209095546498" listlimit="15" modified="20210504130602212" neutitel="2021-05-04 CC" tags="$:/tags/StartupAction intern fogff" titel_template="&lt;&lt;now &quot;YYYY-0MM-0DD&quot;&gt;&gt;" title="Einstellungen">
+<div created="20201209095546498" listlimit="15" modified="20210504182335243" neutitel="2021-05-04 CC" tags="$:/tags/StartupAction intern fogff" titel_template="&lt;&lt;now &quot;YYYY-0MM-0DD&quot;&gt;&gt;" title="Einstellungen">
 <pre>* Anzeigelimit Trainingstagebuch: &lt;$edit-text  field=&quot;listlimit&quot; /&gt;
 * Template für Titel neuer Tagebucheinträge:  &lt;$edit-text  field=&quot;titel_template&quot; /&gt;  &amp;rArr; &quot;{{!!titel_template}}&quot;
 * &amp;#10173; [[GettingStarted]]
@@ -11313,7 +11327,7 @@ und folgende Varianten:
 &lt;/$select&gt;
 &amp;#8286; &lt;$button to=Einstellungen&gt;{{$:/core/images/options-button}}&lt;/$button&gt;</pre>
 </div>
-<div created="20210115094459690" modified="20210504130434485" showPlan="hide" showdelete="hide" showplan="show" tags="" title="FOG Training bearbeiten">
+<div created="20210115094459690" modified="20210504130434485" showdelete="hide" showplan="hide" tags="" title="FOG Training bearbeiten">
 <pre>&lt;$wikify name=titel text=&quot;{{Einstellungen!!neutitel}}&quot; &gt;
 
 !! &quot;&lt;&lt;titel&gt;&gt;&quot;  &lt;$reveal type=&quot;nomatch&quot; state=&quot;!!showDelete&quot; text=&quot;show&quot;&gt;
@@ -11474,11 +11488,16 @@ CCHangProgression
  &lt;/g&gt;
 &lt;/svg&gt;</pre>
 </div>
-<div created="20210125093310102" modified="20210125134304930" tags="$:/tags/Macro intern" title="Makros">
+<div created="20210125093310102" modified="20210504192110310" tags="$:/tags/Macro intern" title="Makros">
 <pre>\define dataindex(tiddler:&quot;NotExistingTitle&quot; index:&quot;1&quot; column:&quot;1&quot; sep:&quot;:&quot;)
 &lt;$wikify text=&quot;&lt;$transclude tiddler=$tiddler$ index=$index$ /&gt;&quot; name=&quot;line&quot; &gt;
 &lt;$list filter=&quot;[&lt;line&gt;split[$sep$]nth[$column$]]&quot;&gt;&lt;&lt;currentTiddler&gt;&gt;&lt;/$list&gt;
 &lt;/$wikify&gt;
+\end
+\define show(uebung:&quot;CCPullProgression&quot; lvl:)
+&lt;$set name=&quot;myVariable&quot; filter=&quot;[&lt;__uebung__&gt;getindex&lt;__lvl__&gt;split[:]nth[1]]&quot;  emptyValue=&quot;&quot;&gt;
+&lt;$wikify name=&quot;t&quot; text=&lt;&lt;myVariable&gt;&gt; &gt; &lt;&lt;t&gt;&gt; &lt;/$wikify&gt;
+&lt;/$set&gt;
 \end
 \define example(text:&quot;hello&quot;)
 * ''Code:'' `$text$`
@@ -11496,7 +11515,20 @@ CCHangProgression
 
 &lt;$macrocall $name=&quot;example&quot; text='&lt;&lt;dataindex &quot;CCWadenhebenProgression&quot; &quot;3&quot; &quot;3&quot;&gt;&gt;'/&gt;
 
+&lt;$macrocall $name=&quot;example&quot; text='&lt;&lt;dataindex &quot;CCWadenhebenProgression&quot; &gt;&gt;'/&gt;
+
 &lt;$macrocall $name=&quot;example&quot; text='&lt;$macrocall $name=&quot;dataindex&quot; tiddler=&quot;CCWadenhebenProgression&quot; index=&quot;3&quot; /&gt;'/&gt;
+
+!!show Makro
+* für den Datenzugriff auf mehrspaltige Tiddler, zeigt immer die 2. Spalte an, und eine leere Zeichenkette, falls nichts gefunden wird
+* Parameter:
+** uebung - der Tiddler
+** lvl - der Index
+&lt;$macrocall $name=&quot;example&quot; text='&lt;&lt;show &quot;CCPullProgression&quot; &quot;7&quot;&gt;&gt;'/&gt;
+
+&lt;$macrocall $name=&quot;example&quot; text='&lt;&lt;show &quot;CCPullProgression&quot; &gt;&gt;'/&gt;
+
+&lt;$macrocall $name=&quot;example&quot; text='&lt;$macrocall $name=&quot;show&quot; uebung=&quot;CCPullProgression&quot; lvl=&quot;7&quot; /&gt;'/&gt;
 
 !! Example Makro
 * für Codebeispiele. Erwartet den Parameter &quot;text&quot;.
@@ -12034,6 +12066,42 @@ Splitplan | Übung
 ''Ausführungsgeschwindigkeiten:''  &lt;br/&gt;
 Aufwärtsbewegung: langsam und kontrolliert, dauert ca. 2sec (wenn explosiv: dann unter 1sec)  &lt;br/&gt;
 Abwärtsbewegung: langsam und kontrolliert, dauert ca. 2sec</pre>
+</div>
+<div caption="Trainingsübersicht" class="row-numbers" created="20210504182806418" modified="20210504191429568" tags="ConvictConditioning" title="Trainingsübersicht CC">
+<pre>TODO
+&lt;table&gt;
+&lt;tr&gt;
+&lt;th&gt;Pull&lt;/th&gt;
+&lt;th&gt;Beine&lt;/th&gt;
+&lt;th&gt;Push&lt;/th&gt;
+&lt;th&gt;Beuge&lt;/th&gt;
+&lt;th&gt;Core&lt;/th&gt;
+&lt;/tr&gt;
+&lt;$list filter=&quot;[tag[cc-training]!suffix[Template]!sort[created]first{Einstellungen!!listlimit}]&quot; variable =&quot;title&quot;&gt;
+        &lt;tr class=&quot;row-numbers&quot;&gt;
+        &lt;th class=&quot;row-numbers&quot; colspan=5&gt;
+             &lt;$link to=&lt;&lt;title&gt;&gt;&gt;&lt;&lt;title&gt;&gt;:&lt;/$link&gt; 
+             &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=woche/&gt; &amp;mdash;
+             &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=sxw/&gt; &amp;mdash;
+             &lt;$transclude tiddler=&lt;&lt;title&gt;&gt; field=description/&gt; 
+        &lt;/th&gt;&lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=pull/&gt;&lt;/td&gt;
+        &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=legs/&gt;&lt;/td&gt;
+        &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=push/&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=push_type/&gt;&lt;/td&gt;
+        &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=hips/&gt;&lt;/td&gt;
+        &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=core/&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+  &lt;tr&gt;
+        &lt;td&gt; &lt;$transclude tiddler=&lt;&lt;title&gt;&gt; field=pull_text/&gt;&lt;/td&gt;
+        &lt;td&gt; &lt;$transclude tiddler=&lt;&lt;title&gt;&gt; field=legs_text/&gt;&lt;/td&gt;
+        &lt;td&gt; &lt;$transclude tiddler=&lt;&lt;title&gt;&gt; field=push_text/&gt;&lt;/td&gt;
+        &lt;td&gt; &lt;$transclude tiddler=&lt;&lt;title&gt;&gt; field=hips_text/&gt;&lt;/td&gt;
+        &lt;td&gt; &lt;$transclude tiddler=&lt;&lt;title&gt;&gt; field=core_text/&gt;&lt;/td&gt;
+        
+        &lt;/tr&gt;
+&lt;/$list&gt;
+&lt;/table&gt;</pre>
 </div>
 <div caption="Trainingsübersicht" class="row-numbers" created="20201209130805592" modified="20210202143258121" tags="fogff [[FOG für Frauen]]" title="Trainingsübersicht FOG für Frauen">
 <pre>&lt;table&gt;
