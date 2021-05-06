@@ -145,6 +145,8 @@ Error message and password prompt
 
 <li>$:/config/AutoSave</li>
 
+<li>$:/config/Manager/System</li>
+
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home</li>
 
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/manager</li>
@@ -180,6 +182,8 @@ Error message and password prompt
 <li>$:/SiteTitle</li>
 
 <li>$:/state/advancedsearch/currentTab</li>
+
+<li>$:/state/image-picker/system--1420465552</li>
 
 <li>$:/state/showeditpreview</li>
 
@@ -435,6 +439,9 @@ Error message and password prompt
 </div>
 <div created="20201209133541959" modified="20210118141120022" title="$:/config/AutoSave">
 <pre>no</pre>
+</div>
+<div created="20210506101706867" modified="20210506101706867" title="$:/config/Manager/System">
+<pre></pre>
 </div>
 <div created="20201209124652652" modified="20201209124652652" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home">
 <pre>show</pre>
@@ -10652,8 +10659,11 @@ ConvictConditioning</pre>
 <div created="20210118080006797" modified="20210406104838067" title="$:/state/advancedsearch/currentTab">
 <pre>$:/core/ui/AdvancedSearch/Shadows</pre>
 </div>
-<div created="20210116123243473" modified="20210504212942286" title="$:/state/showeditpreview">
-<pre>no</pre>
+<div created="20210506101625702" modified="20210506101632234" title="$:/state/image-picker/system--1420465552">
+<pre>show</pre>
+</div>
+<div created="20210116123243473" modified="20210506093439520" title="$:/state/showeditpreview">
+<pre>yes</pre>
 </div>
 <div created="20210116120950002" modified="20210116124914713" title="$:/state/sidebar">
 <pre>yes</pre>
@@ -10685,7 +10695,7 @@ ConvictConditioning</pre>
 <div created="20210118140350474" modified="20210504125833753" title="$:/state/tab-687079307">
 <pre>Zyklus 1</pre>
 </div>
-<div created="20210115194841734" modified="20210504182948547" title="$:/state/tab/sidebar--595412856">
+<div created="20210115194841734" modified="20210506104204354" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
 <div created="20210116121729544" modified="20210116121729544" title="$:/state/toc/fogff-FOG für Frauen Trainingsplan-853454163">
@@ -11057,25 +11067,33 @@ ConvictConditioning</pre>
 &lt;/$select&gt;
 &amp;#8286; &lt;$button to=Einstellungen&gt;{{$:/core/images/options-button}}&lt;/$button&gt;</pre>
 </div>
-<div created="20210502194048451" modified="20210504213608812" showdelete="hide" showplan="hide" tags="" title="CC Training bearbeiten">
-<pre>\define progression(uebung:&quot;CCPullProgression&quot;, lvl:&quot;1&quot;)
-  &lt;div class={{{ [&lt;__lvl__&gt;addprefix[level]] }}}&gt;
-  &lt;&lt;__uebung__&gt;&gt; - &lt;&lt;__lvl__&gt;&gt; (&lt;$text text= {{{ [&lt;__uebung__&gt;getindex&lt;__lvl__&gt;split[:]nth[1]] }}} /&gt;) Ziele: &lt;br/&gt;
-
-  Anfänger =  &lt;$text text= {{{ [&lt;__uebung__&gt;getindex&lt;__lvl__&gt;split[:]nth[2]] }}} /&gt;
-  Fortgeschrittene = &lt;$text text=  {{{ [&lt;__uebung__&gt;getindex&lt;__lvl__&gt;split[:]nth[3]] }}} /&gt;
-  Profi = &lt;$text text= {{{ [&lt;__uebung__&gt;getindex&lt;__lvl__&gt;split[:]nth[4]] }}} /&gt;
+<div created="20210502194048451" modified="20210506133631396" showDelete="hide" showdelete="hide" showplan="hide" tags="" title="CC Training bearbeiten">
+<pre>\define progression(uebung:&quot;CCPullProgression&quot;, lvl:&quot;1&quot;, feld: &quot;nameofinnerlevelfield&quot;)
+  &lt;div class={{{ [&lt;titel&gt;get&lt;__feld__&gt;addprefix[step]] step }}}&gt;
+ Ziele &lt;&lt;__uebung__&gt;&gt; Level &lt;&lt;__lvl__&gt;&gt; (&lt;$text text= {{{ [&lt;__uebung__&gt;getindex&lt;__lvl__&gt;split[:]nth[1]] }}} /&gt;): &lt;br/&gt;
+   &lt;$radio tiddler=&lt;&lt;titel&gt;&gt; field=&lt;&lt;__feld__&gt;&gt; value=&quot;1&quot; class=&quot;radio-custom&quot;&gt;&lt;span class=&quot;checkmark&quot; /&gt;&lt;/$radio&gt; 
+     Anfänger =  &lt;$text text= {{{ [&lt;__uebung__&gt;getindex&lt;__lvl__&gt;split[:]nth[2]] }}} /&gt;
+   &lt;$radio tiddler=&lt;&lt;titel&gt;&gt; field=&lt;&lt;__feld__&gt;&gt; value=&quot;2&quot; class=&quot;radio-custom&quot;&gt;&lt;span class=&quot;checkmark&quot; /&gt;&lt;/$radio&gt; 
+     Fortgeschrittene = &lt;$text text=  {{{ [&lt;__uebung__&gt;getindex&lt;__lvl__&gt;split[:]nth[3]] }}} /&gt;
+   &lt;$radio tiddler=&lt;&lt;titel&gt;&gt; field=&lt;&lt;__feld__&gt;&gt; value=&quot;3&quot; class=&quot;radio-custom&quot;&gt;&lt;span class=&quot;checkmark&quot; /&gt;&lt;/$radio&gt;
+     Profi = &lt;$text text= {{{ [&lt;__uebung__&gt;getindex&lt;__lvl__&gt;split[:]nth[4]] }}} /&gt;
+   
+  &lt;$button&gt;
+            &lt;$action-deletefield $tiddler=&lt;&lt;titel&gt;&gt; $field=&lt;&lt;__feld__&gt;&gt; /&gt;
+      {{$:/core/images/cancel-button}}
+   &lt;/$button&gt;
 &lt;/div&gt;
 \end
 \define dropdown(uebung:&quot;CCPullProgression&quot;, feld:&quot;nameofthefield&quot;)
- &lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=&lt;&lt;__feld__&gt;&gt; class=&quot;fixedwidth&quot;&gt;
+ Level: &lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=&lt;&lt;__feld__&gt;&gt; class=&quot;fixedwidth&quot;&gt;
 &lt;$list filter=&quot;[range[0,10]]&quot; variable=&quot;lvl&quot;&gt;
 &lt;option value=&lt;&lt;lvl&gt;&gt; &gt;&lt;&lt;lvl&gt;&gt; - {{{ [&lt;__uebung__&gt;getindex&lt;lvl&gt;split[:]nth[1]] }}}&lt;/option&gt;
 &lt;/$list&gt;
 &lt;/$select&gt;
 \end
 \define dropdown2(uebung:&quot;BeinhebenSchrägProgression&quot;, feld:&quot;nameofthefield&quot;)
-alternativ: $uebung$ &lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=&lt;&lt;__feld__&gt;&gt; class=&quot;fixedwidth&quot;&gt;
+ [[alt:|$uebung$]] 
+&lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=&lt;&lt;__feld__&gt;&gt; class=&quot;fixedwidth&quot;&gt;
 &lt;$list filter=&quot;[title&lt;__uebung__&gt;indexes[]sortan[]]&quot; variable=&quot;dditem&quot;&gt;
 &lt;option value=&lt;&lt;dditem&gt;&gt; &gt;&lt;&lt;dditem&gt;&gt; - &lt;$transclude tiddler=&lt;&lt;__uebung__&gt;&gt; index=&lt;&lt;dditem&gt;&gt;/&gt;&lt;/option&gt;
 &lt;/$list&gt;
@@ -11099,73 +11117,80 @@ Ja, Eintrag wirklich löschen
 
 ---
 
-!!! Liegestütze
-&lt;&lt;dropdown &quot;CCPushUpProgression&quot; &quot;push-lvl&quot; &gt;&gt;
-&lt;&lt;dropdown2 &quot;Progression Push rechtwinklig&quot; &quot;push2-lvl&quot; &gt;&gt;
+&lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;push-lvl&quot; &gt;&lt;div class={{{ [&lt;lvl&gt;addprefix[level]] }}}&gt;
 
-&lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;push-lvl&quot; &gt;
-&lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung=&quot;CCPushUpProgression&quot; /&gt;
-&lt;/$set&gt;
+!!! Liegestütze
+
+&lt;&lt;dropdown &quot;CCPushUpProgression&quot; &quot;push-lvl&quot; &gt;&gt; &lt;&lt;dropdown2 &quot;Progression Push rechtwinklig&quot; &quot;push2-lvl&quot; &gt;&gt;
+
+&lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung=&quot;CCPushUpProgression&quot; feld=&quot;push-step&quot; /&gt;
 
 Bemerkungen: 
 &lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;push-text&quot;/&gt; 
+&lt;/div&gt;&lt;/$set&gt;
+
+&lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;core-lvl&quot; &gt;&lt;div class={{{ [&lt;lvl&gt;addprefix[level]] }}}&gt;
 
 !!! Beinheben /  Core
 &lt;&lt;dropdown &quot;CCBeinhebenProgression&quot; &quot;core-lvl&quot; &gt;&gt;
 &lt;&lt;dropdown2 &quot;BeinhebenSchrägProgression&quot; &quot;core2-lvl&quot; &gt;&gt;
 
-&lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;core-lvl&quot; &gt;
-&lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung=&quot;CCBeinhebenProgression&quot; /&gt;
-&lt;/$set&gt;
+&lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung=&quot;CCBeinhebenProgression&quot; feld=&quot;core-step&quot;  /&gt;
 
 Bemerkungen: 
 &lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;core-text&quot;/&gt; 
+&lt;/div&gt;&lt;/$set&gt;
 
 ---
+&lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;pull-lvl&quot; &gt;&lt;div class={{{ [&lt;lvl&gt;addprefix[level]] }}}&gt;
+
 !!! Pull
 &lt;&lt;dropdown &quot;CCPullProgression&quot; &quot;pull-lvl&quot; &gt;&gt;
 &lt;&lt;dropdown2 &quot;Progression Pull&quot; &quot;pull2-lvl&quot; &gt;&gt;
 
-&lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;pull-lvl&quot; &gt;
-&lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung=&quot;CCPullProgression&quot; /&gt;
-&lt;/$set&gt;
+&lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung=&quot;CCPullProgression&quot; feld=&quot;pull-step&quot;  /&gt;
 
 Bemerkungen: 
 &lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;pull-text&quot;/&gt; 
+&lt;/div&gt;&lt;/$set&gt;
+
+&lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;legs-lvl&quot; &gt;&lt;div class={{{ [&lt;lvl&gt;addprefix[level]] }}}&gt;
 
 !!! Kniebeugen
 &lt;&lt;dropdown &quot;CCSquatProgression&quot; &quot;legs-lvl&quot; &gt;&gt;
 &lt;&lt;dropdown2 &quot;Progression Beine&quot; &quot;legs2-lvl&quot; &gt;&gt;
 
-&lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;legs-lvl&quot; &gt;
-&lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung=&quot;CCSquatProgression&quot; /&gt;
-&lt;/$set&gt;
+&lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung=&quot;CCSquatProgression&quot; feld=&quot;legs-step&quot;  /&gt;
 
 Bemerkungen: 
 &lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;legs-text&quot;/&gt;
+&lt;/div&gt;&lt;/$set&gt;
 
 ---
+
+&lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;bridge-lvl&quot; &gt;&lt;div class={{{ [&lt;lvl&gt;addprefix[level]] }}}&gt;
 
 !!! Brücke  (ab Core+Beine Lvl 6)
 &lt;&lt;dropdown &quot;CCBridgeProgression&quot; &quot;bridge-lvl&quot; &gt;&gt;
 
-&lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;bridge-lvl&quot; &gt;
-&lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung=&quot;CCBridgeProgression&quot; /&gt;
-&lt;/$set&gt;
+&lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung=&quot;CCBridgeProgression&quot; feld=&quot;bridge-step&quot;  /&gt;
 
 Bemerkungen: 
 &lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;bridge-text&quot;/&gt;
+&lt;/div&gt;&lt;/$set&gt;
+
+&lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;hs-lvl&quot; &gt;&lt;div class={{{ [&lt;lvl&gt;addprefix[level]] }}}&gt;
 
 !!! Handstand (ab Push Lvl 6)
 &lt;&lt;dropdown &quot;CCHandstandProgression&quot; &quot;hs-lvl&quot; &gt;&gt;
 &lt;&lt;dropdown2 &quot;Progression Push gerade&quot; &quot;hs2-lvl&quot; &gt;&gt;
 
-&lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;hs-lvl&quot; &gt;
-&lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung=&quot;CCHandstandProgression&quot; /&gt;
-&lt;/$set&gt;
+&lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung=&quot;CCHandstandProgression&quot; feld=&quot;hs-step&quot;  /&gt;
 
 Bemerkungen: 
 &lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;hs-text&quot;/&gt;
+&lt;/div&gt;&lt;/$set&gt;
+
 &lt;/$wikify&gt;</pre>
 </div>
 <div created="20210128103856380" modified="20210128111859333" tags="CCProgression" title="CCBeinhebenProgression" type="application/x-tiddler-dictionary">
@@ -11385,7 +11410,7 @@ und folgende Varianten:
 * davon 2x10 Wdh. und nach jedem Satz die Hand gut ausschütteln *dann 1 Aufwärmsatz einfache Fingertip Pushups, 1 Level einfacher als die Arbeitssätze:
 * 5-10 Wdh. keinesfalls mehr als max. 15 Wdh.</pre>
 </div>
-<div created="20201209095546498" listlimit="15" modified="20210504212210135" neutitel="2021-05-04 CC" tags="$:/tags/StartupAction intern fogff" titel_template="&lt;&lt;now &quot;YYYY-0MM-0DD&quot;&gt;&gt;" title="Einstellungen">
+<div created="20201209095546498" listlimit="15" modified="20210506092640283" neutitel="2021-05-06 CC" tags="$:/tags/StartupAction intern fogff" titel_template="&lt;&lt;now &quot;YYYY-0MM-0DD&quot;&gt;&gt;" title="Einstellungen">
 <pre>* Anzeigelimit Trainingstagebuch: &lt;$edit-text  field=&quot;listlimit&quot; /&gt;
 * Template für Titel neuer Tagebucheinträge:  &lt;$edit-text  field=&quot;titel_template&quot; /&gt;  &amp;rArr; &quot;{{!!titel_template}}&quot;
 * &amp;#10173; [[GettingStarted]]
@@ -11979,7 +12004,7 @@ v11:Malteser Pushups
 * &lt;&lt;currentTiddler&gt;&gt;
 &lt;/$list &gt;</pre>
 </div>
-<div created="20210129123738475" modified="20210504213028353" tags="intern $:/tags/Stylesheet" title="StyleSheet" type="text/css">
+<div created="20210129123738475" modified="20210506133146668" tags="intern $:/tags/Stylesheet" title="StyleSheet" type="text/css">
 <pre>.row-numbers table {
   counter-reset: row-num;
 }
@@ -11995,28 +12020,31 @@ v11:Malteser Pushups
   width: 150px;
 }
 
-.level0 { display: none; }
-.level1 { background: #00BFFF; }
-.level2 { background: #0ACBD6; }
-.level3 { background: #14D8AD; }
-.level4 { background: #1EE584; }
-.level5 { background: #28F25B; }
-.level6 { background: #33FF33; }
-.level7 { background: #66E744; }
-.level8 { background: #99CF56; }
-.level9 { background: #CCB768; }
-.level10 { background: #FFA07A; }
-.level1::before { content: &quot; 1️⃣ &quot;; }
-.level2::before { content: &quot; 2️⃣😀 &quot;; }
-.level3::before { content: &quot; 3️⃣ &quot;; }
-.level4::before { content: &quot; 4️⃣ &quot;; }
-.level5::before { content: &quot; 5️⃣ &quot;; }
-.level6::before { content: &quot; 6️⃣ &quot;; }
-.level7::before { content: &quot; 7️⃣ &quot;; }
-.level8::before { content: &quot; 8️⃣ &quot;; }
-.level9::before { content: &quot; 9️⃣ &quot;; }
-.level10::before { content: &quot; 🔟 &quot;; }
-.stepbeginner { border-radius: 50%; background-color: #4CAF50;}</pre>
+.level1 { background: #19CF2B; }
+.level2 { background: #47D836; }
+.level3 { background: #75E241; }
+.level4 { background: #A3EB4C; }
+.level5 { background: #D1F557; }
+.level6 { background: #FFFF63; }
+.level7 { background: #FFCB63; }
+.level8 { background: #FF9763; }
+.level9 { background: #FF6363; }
+.level10 { background: #FF2F63; }
+#.level1::before { content: &quot; 1️⃣ &quot;; }
+#.level2::before { content: &quot; 2️⃣😀 &quot;; }
+#.level3::before { content: &quot; 3️⃣ &quot;; }
+#.level4::before { content: &quot; 4️⃣ &quot;; }
+#.level5::before { content: &quot; 5️⃣ &quot;; }
+#.level6::before { content: &quot; 6️⃣ &quot;; }
+#.level7::before { content: &quot; 7️⃣ &quot;; }
+#.level8::before { content: &quot; 8️⃣ &quot;; }
+#.level9::before { content: &quot; 9️⃣ &quot;; }
+#.level10::before { content: &quot; 🔟 &quot;; }
+.step { border-radius: 5px; background-color: white;}
+.step1 { border-radius: 5px; background-color: #4CAF50;}
+.step2 { border-radius: 5px; background-color: goldenrod;}
+.step3 { border-radius: 5px; background-color: red;}
+</pre>
 </div>
 <div created="20201209081342383" modified="20210406101227215" tags="intern" title="sxw" type="application/x-tiddler-dictionary">
 <pre>2x12:
