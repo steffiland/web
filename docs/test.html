@@ -247,6 +247,8 @@ Error message and password prompt
 
 <li>$:/themes/tiddlywiki/vanilla</li>
 
+<li>Alle Bilder</li>
+
 <li>BeispielListe</li>
 
 <li>BeispielTemplate</li>
@@ -10480,7 +10482,7 @@ FilterBeispiele</pre>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210503191217014" list="GettingStarted SonstigeBeispiele FilterBeispiele" modified="20210503191217014" title="$:/StoryList">
+<div created="20210506102044764" list="GettingStarted SonstigeBeispiele FilterBeispiele $:/core/images/close-others-button" modified="20210506102951164" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10592,6 +10594,12 @@ FilterBeispiele</pre>
     }
 }</pre>
 </div>
+<div created="20210506102508978" modified="20210506102956352" tags="filter beispiel" title="Alle Bilder">
+<pre>&lt;$list filter=&quot;[all[shadows]tag[$:/tags/Image]]&quot; &gt;
+&lt;&lt;currentTiddler&gt;&gt;: &lt;$transclude /&gt;;
+&lt;/$list&gt;
+</pre>
+</div>
 <div created="20210121075441582" modified="20210121091835823" tags="blubb template" title="BeispielListe">
 <pre>Alle Beispiele zum Thema &quot;{{!!topic}}&quot;
 
@@ -10698,7 +10706,7 @@ request.send();
 <div created="20210127131800925" modified="20210127132129777" tags="" title="SvgEditor" type="text/html">
 <pre>&lt;iframe src=&quot;https://svg-edit.github.io/svgedit/dist/editor/index.html?extensions=&quot;&gt;&lt;/iframe&gt;</pre>
 </div>
-<div created="20210121105009248" filter="[{$:/palette}indexes[]sort[title]limit[5]]" modified="20210503191106285" title="Temp">
+<div created="20210121105009248" filter="[all[shadows]tag[$:/tags/Image]limit[4]]" modified="20210506102918278" title="Temp">
 <pre></pre>
 </div>
 
