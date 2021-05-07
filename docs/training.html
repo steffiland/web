@@ -11067,9 +11067,9 @@ ConvictConditioning</pre>
 &lt;/$select&gt;
 &amp;#8286; &lt;$button to=Einstellungen&gt;{{$:/core/images/options-button}}&lt;/$button&gt;</pre>
 </div>
-<div created="20210502194048451" modified="20210506133631396" showDelete="hide" showdelete="hide" showplan="hide" tags="" title="CC Training bearbeiten">
+<div created="20210502194048451" modified="20210507123820226" showDelete="hide" showdelete="hide" showplan="hide" tags="" title="CC Training bearbeiten">
 <pre>\define progression(uebung:&quot;CCPullProgression&quot;, lvl:&quot;1&quot;, feld: &quot;nameofinnerlevelfield&quot;)
-  &lt;div class={{{ [&lt;titel&gt;get&lt;__feld__&gt;addprefix[step]] step }}}&gt;
+  &lt;div class={{{ [&lt;titel&gt;get&lt;__feld__&gt;addprefix[step step]]  step }}}&gt;
  Ziele &lt;&lt;__uebung__&gt;&gt; Level &lt;&lt;__lvl__&gt;&gt; (&lt;$text text= {{{ [&lt;__uebung__&gt;getindex&lt;__lvl__&gt;split[:]nth[1]] }}} /&gt;): &lt;br/&gt;
    &lt;$radio tiddler=&lt;&lt;titel&gt;&gt; field=&lt;&lt;__feld__&gt;&gt; value=&quot;1&quot; class=&quot;radio-custom&quot;&gt;&lt;span class=&quot;checkmark&quot; /&gt;&lt;/$radio&gt; 
      Anfänger =  &lt;$text text= {{{ [&lt;__uebung__&gt;getindex&lt;__lvl__&gt;split[:]nth[2]] }}} /&gt;
@@ -11119,7 +11119,7 @@ Ja, Eintrag wirklich löschen
 
 &lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;push-lvl&quot; &gt;&lt;div class={{{ [&lt;lvl&gt;addprefix[level]] }}}&gt;
 
-!!! Liegestütze
+!!! Liegestütze &lt;span class=&quot;indicator&quot;/&gt;
 
 &lt;&lt;dropdown &quot;CCPushUpProgression&quot; &quot;push-lvl&quot; &gt;&gt; &lt;&lt;dropdown2 &quot;Progression Push rechtwinklig&quot; &quot;push2-lvl&quot; &gt;&gt;
 
@@ -11131,7 +11131,7 @@ Bemerkungen:
 
 &lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;core-lvl&quot; &gt;&lt;div class={{{ [&lt;lvl&gt;addprefix[level]] }}}&gt;
 
-!!! Beinheben /  Core
+!!! Beinheben /  Core &lt;span class=&quot;indicator&quot; /&gt;
 &lt;&lt;dropdown &quot;CCBeinhebenProgression&quot; &quot;core-lvl&quot; &gt;&gt;
 &lt;&lt;dropdown2 &quot;BeinhebenSchrägProgression&quot; &quot;core2-lvl&quot; &gt;&gt;
 
@@ -11144,7 +11144,7 @@ Bemerkungen:
 ---
 &lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;pull-lvl&quot; &gt;&lt;div class={{{ [&lt;lvl&gt;addprefix[level]] }}}&gt;
 
-!!! Pull
+!!! Pull &lt;span class=&quot;indicator&quot; /&gt;
 &lt;&lt;dropdown &quot;CCPullProgression&quot; &quot;pull-lvl&quot; &gt;&gt;
 &lt;&lt;dropdown2 &quot;Progression Pull&quot; &quot;pull2-lvl&quot; &gt;&gt;
 
@@ -11156,7 +11156,7 @@ Bemerkungen:
 
 &lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;legs-lvl&quot; &gt;&lt;div class={{{ [&lt;lvl&gt;addprefix[level]] }}}&gt;
 
-!!! Kniebeugen
+!!! Kniebeugen &lt;span class=&quot;indicator&quot; /&gt;
 &lt;&lt;dropdown &quot;CCSquatProgression&quot; &quot;legs-lvl&quot; &gt;&gt;
 &lt;&lt;dropdown2 &quot;Progression Beine&quot; &quot;legs2-lvl&quot; &gt;&gt;
 
@@ -11170,7 +11170,7 @@ Bemerkungen:
 
 &lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;bridge-lvl&quot; &gt;&lt;div class={{{ [&lt;lvl&gt;addprefix[level]] }}}&gt;
 
-!!! Brücke  (ab Core+Beine Lvl 6)
+!!! Brücke  (ab Core+Beine Lvl 6) &lt;span class=&quot;indicator&quot; /&gt;
 &lt;&lt;dropdown &quot;CCBridgeProgression&quot; &quot;bridge-lvl&quot; &gt;&gt;
 
 &lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung=&quot;CCBridgeProgression&quot; feld=&quot;bridge-step&quot;  /&gt;
@@ -11181,7 +11181,7 @@ Bemerkungen:
 
 &lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;hs-lvl&quot; &gt;&lt;div class={{{ [&lt;lvl&gt;addprefix[level]] }}}&gt;
 
-!!! Handstand (ab Push Lvl 6)
+!!! Handstand (ab Push Lvl 6) &lt;span class=&quot;indicator&quot; /&gt;
 &lt;&lt;dropdown &quot;CCHandstandProgression&quot; &quot;hs-lvl&quot; &gt;&gt;
 &lt;&lt;dropdown2 &quot;Progression Push gerade&quot; &quot;hs2-lvl&quot; &gt;&gt;
 
@@ -11410,7 +11410,7 @@ und folgende Varianten:
 * davon 2x10 Wdh. und nach jedem Satz die Hand gut ausschütteln *dann 1 Aufwärmsatz einfache Fingertip Pushups, 1 Level einfacher als die Arbeitssätze:
 * 5-10 Wdh. keinesfalls mehr als max. 15 Wdh.</pre>
 </div>
-<div created="20201209095546498" listlimit="15" modified="20210506092640283" neutitel="2021-05-06 CC" tags="$:/tags/StartupAction intern fogff" titel_template="&lt;&lt;now &quot;YYYY-0MM-0DD&quot;&gt;&gt;" title="Einstellungen">
+<div created="20201209095546498" listlimit="15" modified="20210507123800884" neutitel="2021-05-07 CC" tags="$:/tags/StartupAction intern fogff" titel_template="&lt;&lt;now &quot;YYYY-0MM-0DD&quot;&gt;&gt;" title="Einstellungen">
 <pre>* Anzeigelimit Trainingstagebuch: &lt;$edit-text  field=&quot;listlimit&quot; /&gt;
 * Template für Titel neuer Tagebucheinträge:  &lt;$edit-text  field=&quot;titel_template&quot; /&gt;  &amp;rArr; &quot;{{!!titel_template}}&quot;
 * &amp;#10173; [[GettingStarted]]
@@ -12004,7 +12004,7 @@ v11:Malteser Pushups
 * &lt;&lt;currentTiddler&gt;&gt;
 &lt;/$list &gt;</pre>
 </div>
-<div created="20210129123738475" modified="20210506133146668" tags="intern $:/tags/Stylesheet" title="StyleSheet" type="text/css">
+<div created="20210129123738475" modified="20210507123717315" tags="intern $:/tags/Stylesheet" title="StyleSheet" type="text/css">
 <pre>.row-numbers table {
   counter-reset: row-num;
 }
@@ -12030,6 +12030,16 @@ v11:Malteser Pushups
 .level8 { background: #FF9763; }
 .level9 { background: #FF6363; }
 .level10 { background: #FF2F63; }
+.level1 .indicator::before { content: &quot;⭐&quot;; }
+.level2 .indicator::before { content: &quot;⭐⭐&quot;; }
+.level3 .indicator::before { content: &quot;⭐⭐⭐&quot;; }
+.level4 .indicator::before { content: &quot;⭐⭐⭐⭐&quot;; }
+.level5 .indicator::before { content: &quot;⭐⭐⭐⭐⭐&quot;; }
+.level6 .indicator::before { content: &quot;🌟⭐⭐⭐⭐&quot;; }
+.level7 .indicator::before { content: &quot;🌟🌟⭐⭐⭐&quot;; }
+.level8 .indicator::before { content: &quot;🌟🌟🌟⭐⭐&quot;; }
+.level9 .indicator::before { content: &quot;🌟🌟🌟🌟⭐&quot;; }
+.level10 .indicator::before { content: &quot;🌟🌟🌟🌟🌟&quot;; }
 #.level1::before { content: &quot; 1️⃣ &quot;; }
 #.level2::before { content: &quot; 2️⃣😀 &quot;; }
 #.level3::before { content: &quot; 3️⃣ &quot;; }
@@ -12040,10 +12050,14 @@ v11:Malteser Pushups
 #.level8::before { content: &quot; 8️⃣ &quot;; }
 #.level9::before { content: &quot; 9️⃣ &quot;; }
 #.level10::before { content: &quot; 🔟 &quot;; }
-.step { border-radius: 5px; background-color: white;}
-.step1 { border-radius: 5px; background-color: #4CAF50;}
-.step2 { border-radius: 5px; background-color: goldenrod;}
-.step3 { border-radius: 5px; background-color: red;}
+.step { border-radius: 5px;  background-color:  rgba(255,255,255, 0.5); }
+.step1 { background-color: #4CAF50;}
+.step::before { content: &quot;💤 &quot;; }
+.step1::before { content: &quot;🐣 &quot;; }
+.step2::before { content: &quot;🐤 &quot;; }
+.step3::before { content: &quot;🐔 &quot;; }
+.step2 { background-color: goldenrod;}
+.step3 { background-color: red;}
 </pre>
 </div>
 <div created="20201209081342383" modified="20210406101227215" tags="intern" title="sxw" type="application/x-tiddler-dictionary">
