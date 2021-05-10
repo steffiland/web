@@ -52,8 +52,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 
 <!--~~ Raw markup ~~-->
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
-
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
 
 </head>
 <body class="tc-body">
@@ -10768,7 +10768,7 @@ ConvictConditioning</pre>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210510085118896" list="CCDisplayPart [[2021-05-10 CC]] [[FOG für Frauen]] [[Mobility Training]] [[CC Training]] [[CC Training bearbeiten]] [[Trainingsübersicht FOG für Frauen]] [[Trainingsübersicht Mobility]] [[Trainingsübersicht CC]] ConvictConditioning" modified="20210510102515484" title="$:/StoryList">
+<div created="20210510104322801" list="[[CC Training bearbeiten]] [[FOG für Frauen]] [[Mobility Training]] [[CC Training]] [[Trainingsübersicht FOG für Frauen]] [[Trainingsübersicht Mobility]] [[Trainingsübersicht CC]] ConvictConditioning" modified="20210510115853325" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10965,7 +10965,7 @@ ConvictConditioning</pre>
 <div created="20210508111515106" legs-lvl="1" legs-step="2" legs-text="21,25,13" modified="20210508120008411" pull-lvl="1" pull-step="3" pull-text="↗️" push-lvl="0" push-text="" tags="cc-training training" title="2021-05-08 CC">
 <pre>{{||CCDisplayTemplate}}</pre>
 </div>
-<div core-lvl="2" created="20210510085118895" modified="20210510094051580" push-lvl="9" push-step="3" tags="cc-training training" title="2021-05-10 CC">
+<div core-lvl="4" created="20210510085118895" modified="20210510114933236" push-lvl="4" push-step="3" tags="cc-training training" title="2021-05-10 CC">
 <pre>{{||CCDisplayTemplate}}</pre>
 </div>
 <div created="20210125202836653" gelenke="Nacken, Schultern, Arme, Ellbogen, Handgelenke, mittlerer Rücken, Hüfte, Knie, Fußgelenke, Beine" modified="20210406102800120" tags="ConvictConditioning2" title="ActiveStretching">
@@ -11111,10 +11111,10 @@ ConvictConditioning</pre>
 &lt;/$select&gt;
 &amp;#8286; &lt;$button to=Einstellungen&gt;{{$:/core/images/options-button}}&lt;/$button&gt;</pre>
 </div>
-<div created="20210502194048451" modified="20210510085718240" showdelete="hide" showplan="hide" tags="" title="CC Training bearbeiten">
+<div created="20210502194048451" modified="20210510115758040" showdelete="hide" showplan="hide" tags="" title="CC Training bearbeiten">
 <pre>\define progression(uebung:&quot;CCPullProgression&quot;, lvl:&quot;1&quot;, feld: &quot;nameofinnerlevelfield&quot;)
   &lt;div class={{{ [&lt;titel&gt;get&lt;__feld__&gt;addprefix[step step]]  step }}}&gt;
- Ziele &lt;&lt;__uebung__&gt;&gt; Level &lt;&lt;__lvl__&gt;&gt; (&lt;$text text= {{{ [&lt;__uebung__&gt;getindex&lt;__lvl__&gt;split[:]nth[1]] }}} /&gt;): &lt;br/&gt;
+ Ziele &lt;&lt;__uebung__&gt;&gt; Level &lt;&lt;__lvl__&gt;&gt;: &lt;br/&gt;
    &lt;$radio tiddler=&lt;&lt;titel&gt;&gt; field=&lt;&lt;__feld__&gt;&gt; value=&quot;1&quot; class=&quot;radio-custom&quot;&gt;&lt;span class=&quot;checkmark&quot; /&gt;&lt;/$radio&gt; 
      Anfänger =  &lt;$text text= {{{ [&lt;__uebung__&gt;getindex&lt;__lvl__&gt;split[:]nth[2]] }}} /&gt;
    &lt;$radio tiddler=&lt;&lt;titel&gt;&gt; field=&lt;&lt;__feld__&gt;&gt; value=&quot;2&quot; class=&quot;radio-custom&quot;&gt;&lt;span class=&quot;checkmark&quot; /&gt;&lt;/$radio&gt; 
@@ -11161,77 +11161,77 @@ Ja, Eintrag wirklich löschen
 
 ---
 
-&lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;push-lvl&quot; &gt;&lt;div class={{{ [&lt;lvl&gt;addprefix[level]] }}}&gt;
+&lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;push-lvl&quot; &gt;
 
-!!! Liegestütze &lt;span class={{{ [&lt;lvl&gt;addprefix[indicator level]] }}}/&gt;
+!!! Liegestütze &lt;span class={{{ [&lt;lvl&gt;addprefix[indicator level level]] }}}&gt;&lt;/span&gt; &amp;nbsp; &lt;span class={{{ [&lt;titel&gt;get[push-step]addprefix[indicator step]] }}}/&gt;
 
 &lt;&lt;dropdown &quot;CCPushUpProgression&quot; &quot;push-lvl&quot; &gt;&gt; &lt;&lt;dropdown2 &quot;Progression Push rechtwinklig&quot; &quot;push2-lvl&quot; &gt;&gt;
 
 &lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung=&quot;CCPushUpProgression&quot; feld=&quot;push-step&quot; /&gt;
-&lt;/div&gt;&lt;/$set&gt;
+&lt;/$set&gt;
 
 Bemerkungen: 
 &lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;push-text&quot;/&gt; 
 
 
-&lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;core-lvl&quot; &gt;&lt;div class={{{ [&lt;lvl&gt;addprefix[level]] }}}&gt;
+&lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;core-lvl&quot; &gt;
 
-!!! Beinheben /  Core &lt;span class={{{ [&lt;lvl&gt;addprefix[indicator level]] }}} /&gt;
+!!! Beinheben /  Core &lt;span class={{{ [&lt;lvl&gt;addprefix[indicator level level]] }}}&gt;&lt;/span&gt; &amp;nbsp; &lt;span class={{{ [&lt;titel&gt;get[core-step]addprefix[indicator step]] }}}/&gt;
 &lt;&lt;dropdown &quot;CCBeinhebenProgression&quot; &quot;core-lvl&quot; &gt;&gt;
 &lt;&lt;dropdown2 &quot;BeinhebenSchrägProgression&quot; &quot;core2-lvl&quot; &gt;&gt;
 
 &lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung=&quot;CCBeinhebenProgression&quot; feld=&quot;core-step&quot;  /&gt;
-&lt;/div&gt;&lt;/$set&gt;
+&lt;/$set&gt;
 
 Bemerkungen: 
 &lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;core-text&quot;/&gt; 
 
 ---
-&lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;pull-lvl&quot; &gt;&lt;div class={{{ [&lt;lvl&gt;addprefix[level]] }}}&gt;
+&lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;pull-lvl&quot; &gt;
 
-!!! Pull &lt;span class={{{ [&lt;lvl&gt;addprefix[indicator level]] }}} /&gt;
+!!! Pull &lt;span class={{{ [&lt;lvl&gt;addprefix[indicator level level]] }}}&gt;&lt;/span&gt; &amp;nbsp; &lt;span class={{{ [&lt;titel&gt;get[pull-step]addprefix[indicator step]] }}}/&gt;
 &lt;&lt;dropdown &quot;CCPullProgression&quot; &quot;pull-lvl&quot; &gt;&gt;
 &lt;&lt;dropdown2 &quot;Progression Pull&quot; &quot;pull2-lvl&quot; &gt;&gt;
 
 &lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung=&quot;CCPullProgression&quot; feld=&quot;pull-step&quot;  /&gt;
-&lt;/div&gt;&lt;/$set&gt;
+&lt;/$set&gt;
 
 Bemerkungen: 
 &lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;pull-text&quot;/&gt; 
 
-&lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;legs-lvl&quot; &gt;&lt;div class={{{ [&lt;lvl&gt;addprefix[level]] }}}&gt;
+&lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;legs-lvl&quot; &gt;
 
-!!! Kniebeugen &lt;span class={{{ [&lt;lvl&gt;addprefix[indicator level]] }}} /&gt;
+!!! Kniebeugen &lt;span class={{{ [&lt;lvl&gt;addprefix[indicator level level]] }}}&gt;&lt;/span&gt; &amp;nbsp; &lt;span class={{{ [&lt;titel&gt;get[legs-step]addprefix[indicator step]] }}}/&gt;
 &lt;&lt;dropdown &quot;CCSquatProgression&quot; &quot;legs-lvl&quot; &gt;&gt;
 &lt;&lt;dropdown2 &quot;Progression Beine&quot; &quot;legs2-lvl&quot; &gt;&gt;
 
 &lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung=&quot;CCSquatProgression&quot; feld=&quot;legs-step&quot;  /&gt;
-&lt;/div&gt;&lt;/$set&gt;
+&lt;/$set&gt;
 
 Bemerkungen: 
 &lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;legs-text&quot;/&gt;
 
 ---
 
-&lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;bridge-lvl&quot; &gt;&lt;div class={{{ [&lt;lvl&gt;addprefix[level]] }}}&gt;
+&lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;bridge-lvl&quot; &gt;
 
-!!! Brücke  (ab Core+Beine Lvl 6) &lt;span class={{{ [&lt;lvl&gt;addprefix[indicator level]] }}} /&gt;
+!!! Brücke  (ab Core+Beine Lvl 6) &lt;span class={{{ [&lt;lvl&gt;addprefix[indicator level level]] }}}&gt;&lt;/span&gt; &amp;nbsp; &lt;span class={{{ [&lt;titel&gt;get[bridge-step]addprefix[indicator step]] }}}/&gt;
 &lt;&lt;dropdown &quot;CCBridgeProgression&quot; &quot;bridge-lvl&quot; &gt;&gt;
 
 &lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung=&quot;CCBridgeProgression&quot; feld=&quot;bridge-step&quot;  /&gt;
-&lt;/div&gt;&lt;/$set&gt;
+&lt;/$set&gt;
 
 Bemerkungen: 
 &lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;bridge-text&quot;/&gt;
 
-&lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;hs-lvl&quot; &gt;&lt;div class={{{ [&lt;lvl&gt;addprefix[level]] }}}&gt;
+&lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;hs-lvl&quot; &gt;
 
-!!! Handstand (ab Push Lvl 6) &lt;span class={{{ [&lt;lvl&gt;addprefix[indicator level]] }}} /&gt;
+!!! Handstand (ab Push Lvl 6) &lt;span class={{{ [&lt;lvl&gt;addprefix[indicator level level]] }}}&gt;&lt;/span&gt; &amp;nbsp; &lt;span class={{{ [&lt;titel&gt;get[hs-step]addprefix[indicator step]] }}}/&gt;
 &lt;&lt;dropdown &quot;CCHandstandProgression&quot; &quot;hs-lvl&quot; &gt;&gt;
 &lt;&lt;dropdown2 &quot;Progression Push gerade&quot; &quot;hs2-lvl&quot; &gt;&gt;
 
 &lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung=&quot;CCHandstandProgression&quot; feld=&quot;hs-step&quot;  /&gt;
-&lt;/div&gt;&lt;/$set&gt;
+&lt;/$set&gt;
 
 Bemerkungen: 
 &lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;hs-text&quot;/&gt;
@@ -11283,45 +11283,39 @@ Bemerkungen gesamt:
 &lt;th&gt; Push gerade Handstand&lt;/th&gt;
 &lt;/tr&gt;&lt;/thead&gt;</pre>
 </div>
-<div created="20210510081824902" modified="20210510093855120" tags="intern" title="CCDisplayPart">
+<div created="20210510081824902" modified="20210510120037919" tags="intern" title="CCDisplayPart">
 <pre>&lt;tr&gt;
 &lt;th colspan=6&gt;{{!!title}} &amp;mdash; {{!!description}}&lt;/th&gt;&lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt; 
-   Lvl: {{!!push-lvl}}-{{!!push-step}} 
-   &lt;span class={{{ [{!!push-lvl}addprefix[indicator level]] }}}/&gt;&lt;span class={{{ [{!!push-step}addprefix[indicator step step]] }}}/&gt;
+&lt;td class={{{ [{!!push-lvl}addprefix[level]] }}}&gt; 
+   &lt;span class={{{ [{!!push-lvl}addprefix[indicator level]] }}}/&gt; &amp;nbsp; &lt;span class={{{ [{!!push-step}addprefix[indicator step step]] }}}/&gt;
    &lt;i&gt;{{!!push2-lvl}}&lt;$macrocall $name=&quot;show&quot; uebung=&quot;Progression Push rechtwinklig&quot; lvl={{!!push2-lvl}} /&gt;&lt;/i&gt;
-&lt;/td&gt;&lt;td&gt;
-  Lvl {{!!core-lvl}}-{{!!core-step}}
-  &lt;span class={{{ [{!!core-lvl}addprefix[indicator level]] }}}/&gt;&lt;span class={{{ [{!!core-step}addprefix[indicator step step]] }}}/&gt;
+&lt;/td&gt;&lt;td class={{{ [{!!core-lvl}addprefix[level]] }}}&gt;
+  &lt;span class={{{ [{!!core-lvl}addprefix[indicator level]] }}}/&gt; &amp;nbsp; &lt;span class={{{ [{!!core-step}addprefix[indicator step step]] }}}/&gt;
    &lt;i&gt;{{!!core2-lvl}}&lt;$macrocall $name=&quot;show&quot; uebung=&quot;BeinhebenSchrägProgression&quot; lvl={{!!core2-lvl}} /&gt;&lt;/i&gt;
-&lt;/td&gt;&lt;td&gt;
-   {{!!pull-lvl}}-{{!!pull-step}}
-   &lt;span class={{{ [{!!pull-lvl}addprefix[indicator level]] }}}/&gt;&lt;span class={{{ [{!!pull-step}addprefix[indicator step step]] }}}/&gt;
+&lt;/td&gt;&lt;td class={{{ [{!!pull-lvl}addprefix[level]] }}}&gt;
+   &lt;span class={{{ [{!!pull-lvl}addprefix[indicator level]] }}}/&gt; &amp;nbsp; &lt;span class={{{ [{!!pull-step}addprefix[indicator step step]] }}}/&gt;
    &lt;i&gt;{{!!pull2-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;Progression Pull&quot; lvl={{!!pull2-lvl}} /&gt;&lt;/i&gt;
-&lt;/td&gt;&lt;td&gt;
-  {{!!legs-lvl}}-{{!!legs-step}}
-  &lt;span class={{{ [{!!legs-lvl}addprefix[indicator level]] }}}/&gt;&lt;span class={{{ [{!!legs-step}addprefix[indicator step step]] }}}/&gt;
+&lt;/td&gt;&lt;td class={{{ [{!!legs-lvl}addprefix[level]] }}}&gt;
+  &lt;span class={{{ [{!!legs-lvl}addprefix[indicator level]] }}}/&gt; &amp;nbsp; &lt;span class={{{ [{!!legs-step}addprefix[indicator step step]] }}}/&gt;
   &lt;i&gt;&lt;$macrocall $name=&quot;show&quot; uebung=&quot;Progression Beine&quot; lvl={{!!legs2-lvl}} /&gt;&lt;/i&gt;
-&lt;/td&gt;&lt;td&gt;
-  {{!!bridge-lvl}}-{{!!bridge-step}}
-   &lt;span class={{{ [{!!bridge-lvl}addprefix[indicator level]] }}}/&gt;&lt;span class={{{ [{!!bridge-step}addprefix[indicator step step]] }}}/&gt;
+&lt;/td&gt;&lt;td class={{{ [{!!bridge-lvl}addprefix[level]] }}}&gt;
+   &lt;span class={{{ [{!!bridge-lvl}addprefix[indicator level]] }}}/&gt; &amp;nbsp; &lt;span class={{{ [{!!bridge-step}addprefix[indicator step step]] }}}/&gt;
   &lt;i&gt;{{!!bridge2-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;wurschtel&quot; lvl={{!!bridge2-lvl}} /&gt;&lt;/i&gt;
-&lt;/td&gt;&lt;td&gt;
-   {{!!hs-lvl}}-{{!!hs-step}}
-   &lt;span class={{{ [{!!hs-lvl}addprefix[indicator level]] }}}/&gt;&lt;span class={{{ [{!!hs-step}addprefix[indicator step step]] }}}/&gt;
+&lt;/td&gt;&lt;td class={{{ [{!!hs-lvl}addprefix[level]] }}}&gt;
+   &lt;span class={{{ [{!!hs-lvl}addprefix[indicator level]] }}}/&gt; &amp;nbsp; &lt;span class={{{ [{!!hs-step}addprefix[indicator step step]] }}}/&gt;
    &lt;i&gt;{{!!hs2-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;Progression Push gerade&quot; lvl={{!!hs2-lvl}} /&gt;&lt;/i&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt; 
+&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class={{{ [{!!push-lvl}addprefix[level]] }}}&gt; 
    {{!!push-text}}
-&lt;/td&gt;&lt;td&gt;
+&lt;/td&gt;&lt;td class={{{ [{!!core-lvl}addprefix[level]] }}}&gt;
    {{!!core-text}}
-&lt;/td&gt;&lt;td&gt;
+&lt;/td&gt;&lt;td class={{{ [{!!pull-lvl}addprefix[level]] }}}&gt;
    {{!!pull-text}}
-&lt;/td&gt;&lt;td&gt;
+&lt;/td&gt;&lt;td class={{{ [{!!legs-lvl}addprefix[level]] }}}&gt;
   {{!!legs-text}} 
-&lt;/td&gt;&lt;td&gt;
+&lt;/td&gt;&lt;td class={{{ [{!!bridge-lvl}addprefix[level]] }}}&gt;
   {{!!bridge-text}}
-&lt;/td&gt;&lt;td&gt;
+&lt;/td&gt;&lt;td class={{{ [{!!hs-lvl}addprefix[level]] }}}&gt;
    {{!!hs-text}}
 &lt;/td&gt;&lt;/tr&gt;</pre>
 </div>
@@ -11699,9 +11693,9 @@ CCHangProgression
 
 </pre>
 </div>
-<div created="20210510104101435" modified="20210510104118907" tags="$:/tags/RawMarkup" title="HtmlHeader" type="text/plain">
-<pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css?family=Audiowide&quot;&gt;
-</pre>
+<div created="20210510104101435" modified="20210510115713396" tags="$:/tags/RawMarkup" title="HtmlHeader" type="text/plain">
+<pre>&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot;&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Bungee&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</pre>
 </div>
 <div created="20210126143921295" modified="20210127125228100" tags="Bilder" title="LSit" type="image/svg+xml">
 <pre>&lt;?xml version=&quot;1.0&quot;?&gt;
@@ -12105,7 +12099,7 @@ v11:Malteser Pushups
 * &lt;&lt;currentTiddler&gt;&gt;
 &lt;/$list &gt;</pre>
 </div>
-<div created="20210129123738475" modified="20210510104136198" tags="intern $:/tags/Stylesheet" title="StyleSheet" type="text/css">
+<div created="20210129123738475" modified="20210510115847213" tags="intern $:/tags/Stylesheet" title="StyleSheet" type="text/css">
 <pre>.row-numbers table {
   counter-reset: row-num;
 }
@@ -12124,41 +12118,32 @@ v11:Malteser Pushups
 .vertical { writing-mode: vertical-lr; }
 .br td:nth-child(2n+3), .br th:nth-child(2n+3) { border-left: double; }
 
-#.level1 { background: #19CF2B; }
-#.level2 { background: #47D836; }
-#.level3 { background: #75E241; }
-#.level4 { background: #A3EB4C; }
-#.level5 { background: #D1F557; }
-#.level6 { background: #FFFF63; }
-#.level7 { background: #FFCB63; }
-#.level8 { background: #FF9763; }
-#.level9 { background: #FF6363; }
-#.level10 { background: #FF2F63; }
-.indicator.level1, .indicator.level2, .indicator.level3, .indicator.level4, .indicator.level5, .indicator.level6, .indicator.level7, .indicator.level8, .indicator.level9, .indicator.level10 {  border-radius: 50%; border: black double; font: &quot;Audiowide&quot;; }
+.indicator.level1, .indicator.level2, .indicator.level3, .indicator.level4, .indicator.level5, .indicator.level6, .indicator.level7, .indicator.level8, .indicator.level9, .indicator.level10 {  border-radius: 30%; border: black none; font-family: 'Bungee', cursive; visibility: visible;  }
 
-.indicator.level1 { background: #19CF2B; }
-.indicator.level2 { background: #47D836; }
-.indicator.level3 { background: #75E241; }
-.indicator.level4 { background: #A3EB4C; }
-.indicator.level5 { background: #D1F557; }
-.indicator.level6 { background: #FFFF63; }
-.indicator.level7 { background: #FFCB63; }
-.indicator.level8 { background: #FF9763; }
-.indicator.level9 { background: #FF6363; }
-.indicator.level10 { background: #FF2F63; }
-.level1.indicator::before { content: &quot; 1 &quot;; }
-.level2.indicator::before { content: &quot; 2 &quot;; }
-.level3.indicator::before { content: &quot; 3 &quot;; }
-.level4.indicator::before { content: &quot; 4 &quot;; }
-.level5.indicator::before { content: &quot; 5 &quot;; }
-.level6.indicator::before { content: &quot; 6 &quot;; }
-.level7.indicator::before { content: &quot; 7 &quot;; }
-.level8.indicator::before { content: &quot; 8 &quot;; }
-.level9.indicator::before { content: &quot; 9 &quot;; }
-.level10.indicator::before { content: &quot;⭐&quot;; }
+.level1 { background: #19CF2B; }
+.level2 { background: #47D836; }
+.level3 { background: #75E241; }
+.level4 { background: #A3EB4C; }
+.level5 { background: #D1F557; }
+.level6 { background: #FFFF63; }
+.level7 { background: #FFCB63; }
+.level8 { background: #FF9763; }
+.level9 { background: #FF6363; }
+.level10 { background: #FF2F63; }
+##.level1.indicator::before, .level2.indicator::before, .level3.indicator::before, .level4.indicator::before, .level5.indicator::before, .level6.indicator::before, .level7.indicator::before, .level8.indicator::before, .level9.indicator::before, .level10.indicator::before {visibility: visible; content: &quot; Level &quot;; }
+.level1.indicator::after { content: &quot; 1 &quot;; }
+.level2.indicator::after { content: &quot; 2 &quot;; }
+.level3.indicator::after { content: &quot; 3 &quot;; }
+.level4.indicator::after { content: &quot; 4 &quot;; }
+.level5.indicator::after { content: &quot; 5 &quot;; }
+.level6.indicator::after { content: &quot; 6 &quot;; }
+.level7.indicator::after { content: &quot; 7 &quot;; }
+.level8.indicator::after { content: &quot; 8 &quot;; }
+.level9.indicator::after { content: &quot; 9 &quot;; }
+.level10.indicator::after { content: &quot;⭐&quot;; }
 
-.step.indicator { border-radius: 50%; border: black solid 1px; }
-.step.indicator::before { content: &quot;💤 &quot;; }
+.step1.indicator, .step2.indicator, .step3.indicator { border-radius: 50%; border: black solid 1px; }
+##.step.indicator::before { content: &quot;💤 &quot;; }
 .step1.indicator::before { content: &quot;🐣 &quot;; }
 .step2.indicator::before { content: &quot;🐔 &quot;; }
 .step3.indicator::before { content: &quot;👑&quot;; }
