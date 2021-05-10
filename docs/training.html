@@ -183,6 +183,10 @@ Error message and password prompt
 
 <li>$:/state/advancedsearch/currentTab</li>
 
+<li>$:/state/folded/Trainingsübersicht FOG für Frauen</li>
+
+<li>$:/state/folded/Trainingsübersicht Mobility</li>
+
 <li>$:/state/image-picker/system--1420465552</li>
 
 <li>$:/state/showeditpreview</li>
@@ -289,6 +293,8 @@ Error message and password prompt
 
 <li>2021-05-07 CC</li>
 
+<li>2021-05-07 CC 1</li>
+
 <li>2021-05-07 Mobility</li>
 
 <li>2021-05-08 CC</li>
@@ -316,6 +322,10 @@ Error message and password prompt
 <li>CCBridgeHoldProgression</li>
 
 <li>CCBridgeProgression</li>
+
+<li>CCDisplayHeader</li>
+
+<li>CCDisplayPart</li>
 
 <li>CCDisplayTemplate</li>
 
@@ -10325,12 +10335,13 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20201209124632735" modified="20210502200139549" title="$:/DefaultTiddlers">
+<div created="20201209124632735" modified="20210510083715569" title="$:/DefaultTiddlers">
 <pre>[[FOG für Frauen]]
 [[Mobility Training]]
 [[CC Training]]
 [[Trainingsübersicht FOG für Frauen]]
 [[Trainingsübersicht Mobility]]
+[[Trainingsübersicht CC]]
 ConvictConditioning</pre>
 </div>
 <div created="20210505061509239" modified="20210505061516042" tags="intern" title="$:/favicon.ico" type="image/svg+xml">
@@ -10665,11 +10676,17 @@ ConvictConditioning</pre>
 <div created="20210118080006797" modified="20210406104838067" title="$:/state/advancedsearch/currentTab">
 <pre>$:/core/ui/AdvancedSearch/Shadows</pre>
 </div>
+<div created="20210510083727832" modified="20210510083739621" title="$:/state/folded/Trainingsübersicht FOG für Frauen">
+<pre>show</pre>
+</div>
+<div created="20210510083736344" modified="20210510083736344" title="$:/state/folded/Trainingsübersicht Mobility">
+<pre>hide</pre>
+</div>
 <div created="20210506101625702" modified="20210506101632234" title="$:/state/image-picker/system--1420465552">
 <pre>show</pre>
 </div>
-<div created="20210116123243473" modified="20210508115118682" title="$:/state/showeditpreview">
-<pre>no</pre>
+<div created="20210116123243473" modified="20210510073501548" title="$:/state/showeditpreview">
+<pre>yes</pre>
 </div>
 <div created="20210116120950002" modified="20210116124914713" title="$:/state/sidebar">
 <pre>yes</pre>
@@ -10746,7 +10763,7 @@ ConvictConditioning</pre>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210508111515111" list="[[FOG für Frauen]] [[Mobility Training]] [[CC Training]] [[CC Training bearbeiten]] [[Trainingsübersicht FOG für Frauen]] [[Trainingsübersicht Mobility]] ConvictConditioning" modified="20210508115043704" title="$:/StoryList">
+<div list="[[FOG für Frauen]] [[Mobility Training]] [[CC Training]] [[Trainingsübersicht FOG für Frauen]] [[Trainingsübersicht Mobility]] [[Trainingsübersicht CC]] ConvictConditioning" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10933,6 +10950,10 @@ ConvictConditioning</pre>
 <div core-lvl="1" core-step="1" core-text="19,11" created="20210507190032919" modified="20210507193954141" push-lvl="1" push-step="3" push-text="50,50,50" push2-lvl="1" tags="cc-training training" title="2021-05-07 CC">
 <pre>{{||CCDisplayTemplate}}</pre>
 </div>
+<div core-lvl="1" core-step="1" core-text="19,11" created="20210510073435563" description=":-)" modified="20210510081955831" push-lvl="1" push-step="3" push-text="50,50,50" push2-lvl="1" tags="training intern" title="2021-05-07 CC 1">
+<pre>{{||CCDisplayTemplate}}
+</pre>
+</div>
 <div as-hüfte="1" created="20210507194020187" modified="20210507201418856" sxw-kreisen="2x20" tags="training mobility-training" thold="2" title="2021-05-07 Mobility">
 <pre>{{||MobTemplate}}</pre>
 </div>
@@ -11082,7 +11103,7 @@ ConvictConditioning</pre>
 &lt;/$select&gt;
 &amp;#8286; &lt;$button to=Einstellungen&gt;{{$:/core/images/options-button}}&lt;/$button&gt;</pre>
 </div>
-<div created="20210502194048451" modified="20210508115711039" showdelete="hide" showplan="hide" tags="" title="CC Training bearbeiten">
+<div created="20210502194048451" modified="20210510073656387" showdelete="hide" showplan="hide" tags="" title="CC Training bearbeiten">
 <pre>\define progression(uebung:&quot;CCPullProgression&quot;, lvl:&quot;1&quot;, feld: &quot;nameofinnerlevelfield&quot;)
   &lt;div class={{{ [&lt;titel&gt;get&lt;__feld__&gt;addprefix[step step]]  step }}}&gt;
  Ziele &lt;&lt;__uebung__&gt;&gt; Level &lt;&lt;__lvl__&gt;&gt; (&lt;$text text= {{{ [&lt;__uebung__&gt;getindex&lt;__lvl__&gt;split[:]nth[1]] }}} /&gt;): &lt;br/&gt;
@@ -11206,6 +11227,10 @@ Bemerkungen:
 
 Bemerkungen: 
 &lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;hs-text&quot;/&gt;
+
+---
+Bemerkungen gesamt: 
+&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;description&quot;/&gt; 
 &lt;/$wikify&gt;</pre>
 </div>
 <div created="20210128103856380" modified="20210128111859333" tags="CCProgression" title="CCBeinhebenProgression" type="application/x-tiddler-dictionary">
@@ -11240,15 +11265,58 @@ Bemerkungen:
 9:Brücke aus dem Stand:1x1:2x3:2x6
 10:Stand-zu-Stand-Brücke:1x1:2x3:2x10-30</pre>
 </div>
-<div created="20210504193249754" modified="20210504213503622" tags="intern" title="CCDisplayTemplate" type="text/x-markdown">
-<pre>Übung | Level | Wdh., Bemerkungen
---|--|--
-Liegestütz&lt;br/&gt;Push rechtw | {{!!push-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;CCPushUpProgression&quot; lvl={{!!push-lvl}} /&gt; *{{!!push2-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;Progression Push rechtwinklig&quot; lvl={{!!push2-lvl}} /&gt;* | {{!!push-text}}
-Beinheben&lt;br/&gt;Core  | {{!!core-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;CCBeinhebenProgression&quot; lvl={{!!core-lvl}} /&gt; *{{!!core2-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;BeinhebenSchrägProgression&quot; lvl={{!!core2-lvl}} /&gt;* ​| {{!!core-text}} |
-Pull &lt;br/&gt;| {{!!pull-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;CCPullProgression&quot; lvl={{!!pull-lvl}} /&gt; *{{!!pull2-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;Progression Pull&quot; lvl={{!!pull2-lvl}} /&gt;* ​| {{!!pull-text}} |
-Kniebeuge&lt;br/&gt; | {{!!legs-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;CCSquatProgression&quot; lvl={{!!legs-lvl}} /&gt; *{{!!legs2-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;Progression Beine&quot; lvl={{!!legs2-lvl}} /&gt;* ​| {{!!legs-text}} |
-Brücke | {{!!bridge-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;CCBridgeProgression&quot; lvl={{!!bridge-lvl}} /&gt; *{{!!bridge2-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;wurschtel&quot; lvl={{!!bridge2-lvl}} /&gt;* ​| {{!!bridge-text}} |
-Handstand &lt;br/&gt;Push gerade | {{!!hs-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;CCHandstandProgression&quot; lvl={{!!hs-lvl}} /&gt; *{{!!hs2-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;Progression Push gerade&quot; lvl={{!!hs2-lvl}} /&gt;* ​| {{!!hs-text}} </pre>
+<div created="20210510081026610" modified="20210510082718863" tags="intern" title="CCDisplayHeader">
+<pre>&lt;thead&gt;&lt;tr class=&quot;vertical&quot;&gt;
+&lt;th class=&quot;vertical&quot; &gt;Push rw.&lt;br/&gt;Liegestütz&lt;/th&gt;
+&lt;th&gt;Core Beinheben &lt;/th&gt;
+&lt;th&gt;Pull&lt;/th&gt;
+&lt;th&gt; Beine Kniebeuge &lt;/th&gt;
+&lt;th&gt; Brücke &lt;/th&gt;
+&lt;th&gt; Push gerade Handstand&lt;/th&gt;
+&lt;/tr&gt;&lt;/thead&gt;</pre>
+</div>
+<div created="20210510081824902" modified="20210510082049825" tags="intern" title="CCDisplayPart">
+<pre>&lt;tr&gt;
+&lt;th colspan=6&gt;{{!!title}} &amp;mdash; {{!!description}}&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt; 
+   Lvl {{!!push-lvl}}-{{!!push-step}} 
+   &lt;i&gt;{{!!push2-lvl}}&lt;$macrocall $name=&quot;show&quot; uebung=&quot;Progression Push rechtwinklig&quot; lvl={{!!push2-lvl}} /&gt;&lt;/i&gt;
+&lt;/td&gt;&lt;td&gt;
+  Lvl {{!!core-lvl}}-{{!!core-step}}
+  &lt;i&gt;{{!!core2-lvl}}&lt;$macrocall $name=&quot;show&quot; uebung=&quot;BeinhebenSchrägProgression&quot; lvl={{!!core2-lvl}} /&gt;&lt;/i&gt;
+&lt;/td&gt;&lt;td&gt;
+   {{!!pull-lvl}}-{{!!pull-step}}
+   &lt;i&gt;{{!!pull2-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;Progression Pull&quot; lvl={{!!pull2-lvl}} /&gt;&lt;/i&gt;
+&lt;/td&gt;&lt;td&gt;
+  {{!!legs-lvl}}-{{!!legs-step}}
+  &lt;i&gt;&lt;$macrocall $name=&quot;show&quot; uebung=&quot;Progression Beine&quot; lvl={{!!legs2-lvl}} /&gt;&lt;/i&gt;
+&lt;/td&gt;&lt;td&gt;
+  {{!!bridge-lvl}}-{{!!bridge-step}}
+  &lt;i&gt;{{!!bridge2-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;wurschtel&quot; lvl={{!!bridge2-lvl}} /&gt;&lt;/i&gt;
+&lt;/td&gt;&lt;td&gt;
+   {{!!hs-lvl}}-{{!!hs-step}}
+   &lt;i&gt;{{!!hs2-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;Progression Push gerade&quot; lvl={{!!hs2-lvl}} /&gt;&lt;/i&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt; 
+   {{!!push-text}}
+&lt;/td&gt;&lt;td&gt;
+   {{!!core-text}}
+&lt;/td&gt;&lt;td&gt;
+   {{!!pull-text}}
+&lt;/td&gt;&lt;td&gt;
+  {{!!legs-text}} 
+&lt;/td&gt;&lt;td&gt;
+  {{!!bridge-text}}
+&lt;/td&gt;&lt;td&gt;
+   {{!!hs-text}}
+&lt;/td&gt;&lt;/tr&gt;</pre>
+</div>
+<div created="20210504193249754" modified="20210510083147926" tags="intern" title="CCDisplayTemplate">
+<pre>&lt;table class=br&gt;
+{{||CCDisplayHeader}}
+&lt;tbody&gt;
+{{||CCDisplayPart}}
+&lt;/tbody&gt;&lt;/table&gt;</pre>
 </div>
 <div created="20210122115452088" modified="20210122124149426" tags="CCProgression" title="CCHangProgression" type="application/x-tiddler-dictionary">
 <pre>1:Horizontal Hang:1x10:4x30
@@ -11336,7 +11404,7 @@ Handstand &lt;br/&gt;Push gerade | {{!!hs-lvl}} &lt;$macrocall $name=&quot;show&
 8:Wadenheben einbeinig auf Stufe, gestreckt:4x30:4x50
 </pre>
 </div>
-<div created="20210121194450643" modified="20210129125721707" tags="TOC" title="ConvictConditioning">
+<div created="20210121194450643" modified="20210510084244704" tags="TOC" title="ConvictConditioning">
 <pre>! Big Six - 6 Grundübungen
 
 * Liegestütze: CCPushUpProgression - alternativ [[Progression Push rechtwinklig]]
@@ -11359,13 +11427,13 @@ und dann für Fortgeschrittene ab Level 6:
 
 
 Folgende Progessionen gibt es:
-&lt;&lt;list-links &quot;[tag{!!title}tag[CCProgression]sort[title]]&quot;&gt;&gt;
+&lt;&lt;list-links &quot;[tag[CCProgression]sort[title]]&quot;&gt;&gt;
 und folgende Varianten:
-&lt;&lt;list-links &quot;[tag{!!title}suffix[Variants]sort[title]]&quot;&gt;&gt;
+&lt;&lt;list-links &quot;[tag[ConvictConditioning]suffix[Variants]sort[title]]&quot;&gt;&gt;
 
-**Alle Artikel:**
+''Alle Artikel:''
 
- {{{[tag{!!title}sort[title]]}}}
+{{{ [tag[ConvictConditioning]sort[title]] }}}
 
 </pre>
 </div>
@@ -12019,7 +12087,7 @@ v11:Malteser Pushups
 * &lt;&lt;currentTiddler&gt;&gt;
 &lt;/$list &gt;</pre>
 </div>
-<div created="20210129123738475" modified="20210507123717315" tags="intern $:/tags/Stylesheet" title="StyleSheet" type="text/css">
+<div created="20210129123738475" modified="20210510083459997" tags="intern $:/tags/Stylesheet" title="StyleSheet" type="text/css">
 <pre>.row-numbers table {
   counter-reset: row-num;
 }
@@ -12034,6 +12102,9 @@ v11:Malteser Pushups
 .fixedwidth {
   width: 150px;
 }
+
+.vertical { writing-mode: vertical-lr; }
+.br td:nth-child(2n+3), .br th:nth-child(2n+3) { border-left: double; }
 
 .level1 { background: #19CF2B; }
 .level2 { background: #47D836; }
@@ -12230,41 +12301,15 @@ Splitplan | Übung
 Aufwärtsbewegung: langsam und kontrolliert, dauert ca. 2sec (wenn explosiv: dann unter 1sec)  &lt;br/&gt;
 Abwärtsbewegung: langsam und kontrolliert, dauert ca. 2sec</pre>
 </div>
-<div caption="Trainingsübersicht" class="row-numbers" created="20210504182806418" modified="20210504191429568" tags="ConvictConditioning" title="Trainingsübersicht CC">
-<pre>TODO
-&lt;table&gt;
-&lt;tr&gt;
-&lt;th&gt;Pull&lt;/th&gt;
-&lt;th&gt;Beine&lt;/th&gt;
-&lt;th&gt;Push&lt;/th&gt;
-&lt;th&gt;Beuge&lt;/th&gt;
-&lt;th&gt;Core&lt;/th&gt;
-&lt;/tr&gt;
-&lt;$list filter=&quot;[tag[cc-training]!suffix[Template]!sort[created]first{Einstellungen!!listlimit}]&quot; variable =&quot;title&quot;&gt;
-        &lt;tr class=&quot;row-numbers&quot;&gt;
-        &lt;th class=&quot;row-numbers&quot; colspan=5&gt;
-             &lt;$link to=&lt;&lt;title&gt;&gt;&gt;&lt;&lt;title&gt;&gt;:&lt;/$link&gt; 
-             &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=woche/&gt; &amp;mdash;
-             &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=sxw/&gt; &amp;mdash;
-             &lt;$transclude tiddler=&lt;&lt;title&gt;&gt; field=description/&gt; 
-        &lt;/th&gt;&lt;/tr&gt;
-        &lt;tr&gt;
-        &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=pull/&gt;&lt;/td&gt;
-        &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=legs/&gt;&lt;/td&gt;
-        &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=push/&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=push_type/&gt;&lt;/td&gt;
-        &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=hips/&gt;&lt;/td&gt;
-        &lt;td&gt; &lt;$view tiddler=&lt;&lt;title&gt;&gt; field=core/&gt;&lt;/td&gt;
-        &lt;/tr&gt;
-  &lt;tr&gt;
-        &lt;td&gt; &lt;$transclude tiddler=&lt;&lt;title&gt;&gt; field=pull_text/&gt;&lt;/td&gt;
-        &lt;td&gt; &lt;$transclude tiddler=&lt;&lt;title&gt;&gt; field=legs_text/&gt;&lt;/td&gt;
-        &lt;td&gt; &lt;$transclude tiddler=&lt;&lt;title&gt;&gt; field=push_text/&gt;&lt;/td&gt;
-        &lt;td&gt; &lt;$transclude tiddler=&lt;&lt;title&gt;&gt; field=hips_text/&gt;&lt;/td&gt;
-        &lt;td&gt; &lt;$transclude tiddler=&lt;&lt;title&gt;&gt; field=core_text/&gt;&lt;/td&gt;
-        
-        &lt;/tr&gt;
+<div caption="Trainingsübersicht" class="row-numbers" created="20210504182806418" modified="20210510083135888" tags="ConvictConditioning" title="Trainingsübersicht CC">
+<pre>
+&lt;table class=br&gt;
+{{CCDisplayHeader}}
+&lt;tbody&gt;
+&lt;$list filter=&quot;[tag[cc-training]!suffix[Template]!sort[created]first{Einstellungen!!listlimit}]&quot; &gt;
+{{||CCDisplayPart}}
 &lt;/$list&gt;
-&lt;/table&gt;</pre>
+&lt;/tbody&gt;&lt;/table&gt;</pre>
 </div>
 <div caption="Trainingsübersicht" class="row-numbers" created="20201209130805592" modified="20210202143258121" tags="fogff [[FOG für Frauen]]" title="Trainingsübersicht FOG für Frauen">
 <pre>&lt;table&gt;
