@@ -52,6 +52,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 
 <!--~~ Raw markup ~~-->
 
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
 
 
 </head>
@@ -370,6 +371,8 @@ Error message and password prompt
 <li>fogff</li>
 
 <li>Hängen</li>
+
+<li>HtmlHeader</li>
 
 <li>LSit</li>
 
@@ -10765,7 +10768,7 @@ ConvictConditioning</pre>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210510085118896" list="CCDisplayPart [[2021-05-10 CC]] [[FOG für Frauen]] [[Mobility Training]] [[CC Training]] [[CC Training bearbeiten]] [[Trainingsübersicht FOG für Frauen]] [[Trainingsübersicht Mobility]] [[Trainingsübersicht CC]] ConvictConditioning" modified="20210510092049077" title="$:/StoryList">
+<div created="20210510085118896" list="CCDisplayPart [[2021-05-10 CC]] [[FOG für Frauen]] [[Mobility Training]] [[CC Training]] [[CC Training bearbeiten]] [[Trainingsübersicht FOG für Frauen]] [[Trainingsübersicht Mobility]] [[Trainingsübersicht CC]] ConvictConditioning" modified="20210510102515484" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -11696,6 +11699,10 @@ CCHangProgression
 
 </pre>
 </div>
+<div created="20210510104101435" modified="20210510104118907" tags="$:/tags/RawMarkup" title="HtmlHeader" type="text/plain">
+<pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css?family=Audiowide&quot;&gt;
+</pre>
+</div>
 <div created="20210126143921295" modified="20210127125228100" tags="Bilder" title="LSit" type="image/svg+xml">
 <pre>&lt;?xml version=&quot;1.0&quot;?&gt;
 &lt;svg width=&quot;200&quot; height=&quot;200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:svg=&quot;http://www.w3.org/2000/svg&quot;&gt;
@@ -12098,7 +12105,7 @@ v11:Malteser Pushups
 * &lt;&lt;currentTiddler&gt;&gt;
 &lt;/$list &gt;</pre>
 </div>
-<div created="20210129123738475" modified="20210510094847103" tags="intern $:/tags/Stylesheet" title="StyleSheet" type="text/css">
+<div created="20210129123738475" modified="20210510104136198" tags="intern $:/tags/Stylesheet" title="StyleSheet" type="text/css">
 <pre>.row-numbers table {
   counter-reset: row-num;
 }
@@ -12117,44 +12124,44 @@ v11:Malteser Pushups
 .vertical { writing-mode: vertical-lr; }
 .br td:nth-child(2n+3), .br th:nth-child(2n+3) { border-left: double; }
 
-.level1 { background: #19CF2B; }
-.level2 { background: #47D836; }
-.level3 { background: #75E241; }
-.level4 { background: #A3EB4C; }
-.level5 { background: #D1F557; }
-.level6 { background: #FFFF63; }
-.level7 { background: #FFCB63; }
-.level8 { background: #FF9763; }
-.level9 { background: #FF6363; }
-.level10 { background: #FF2F63; }
-.level1.indicator::before { content: &quot;⭐&quot;; }
-.level2.indicator::before { content: &quot;⭐⭐&quot;; }
-.level3.indicator::before { content: &quot;⭐⭐⭐&quot;; }
-.level4.indicator::before { content: &quot;⭐⭐⭐⭐&quot;; }
-.level5.indicator::before { content: &quot;⭐⭐⭐⭐⭐&quot;; }
-.level6.indicator::before { content: &quot;🌟⭐⭐⭐⭐&quot;; }
-.level7.indicator::before { content: &quot;🌟🌟⭐⭐⭐&quot;; }
-.level8.indicator::before { content: &quot;🌟🌟🌟⭐⭐&quot;; }
-.level9.indicator::before { content: &quot;🌟🌟🌟🌟⭐&quot;; }
-.level10.indicator::before { content: &quot;🌟🌟🌟🌟🌟&quot;; }
-#.level1::before { content: &quot; 1️⃣ &quot;; }
-#.level2::before { content: &quot; 2️⃣😀 &quot;; }
-#.level3::before { content: &quot; 3️⃣ &quot;; }
-#.level4::before { content: &quot; 4️⃣ &quot;; }
-#.level5::before { content: &quot; 5️⃣ &quot;; }
-#.level6::before { content: &quot; 6️⃣ &quot;; }
-#.level7::before { content: &quot; 7️⃣ &quot;; }
-#.level8::before { content: &quot; 8️⃣ &quot;; }
-#.level9::before { content: &quot; 9️⃣ &quot;; }
-#.level10::before { content: &quot; 🔟 &quot;; }
-.step1 { background-color: #4CAF50;}
+#.level1 { background: #19CF2B; }
+#.level2 { background: #47D836; }
+#.level3 { background: #75E241; }
+#.level4 { background: #A3EB4C; }
+#.level5 { background: #D1F557; }
+#.level6 { background: #FFFF63; }
+#.level7 { background: #FFCB63; }
+#.level8 { background: #FF9763; }
+#.level9 { background: #FF6363; }
+#.level10 { background: #FF2F63; }
+.indicator.level1, .indicator.level2, .indicator.level3, .indicator.level4, .indicator.level5, .indicator.level6, .indicator.level7, .indicator.level8, .indicator.level9, .indicator.level10 {  border-radius: 50%; border: black double; font: &quot;Audiowide&quot;; }
+
+.indicator.level1 { background: #19CF2B; }
+.indicator.level2 { background: #47D836; }
+.indicator.level3 { background: #75E241; }
+.indicator.level4 { background: #A3EB4C; }
+.indicator.level5 { background: #D1F557; }
+.indicator.level6 { background: #FFFF63; }
+.indicator.level7 { background: #FFCB63; }
+.indicator.level8 { background: #FF9763; }
+.indicator.level9 { background: #FF6363; }
+.indicator.level10 { background: #FF2F63; }
+.level1.indicator::before { content: &quot; 1 &quot;; }
+.level2.indicator::before { content: &quot; 2 &quot;; }
+.level3.indicator::before { content: &quot; 3 &quot;; }
+.level4.indicator::before { content: &quot; 4 &quot;; }
+.level5.indicator::before { content: &quot; 5 &quot;; }
+.level6.indicator::before { content: &quot; 6 &quot;; }
+.level7.indicator::before { content: &quot; 7 &quot;; }
+.level8.indicator::before { content: &quot; 8 &quot;; }
+.level9.indicator::before { content: &quot; 9 &quot;; }
+.level10.indicator::before { content: &quot;⭐&quot;; }
+
 .step.indicator { border-radius: 50%; border: black solid 1px; }
-.step.indicator::before { content: &quot;💤 &quot;; b}
+.step.indicator::before { content: &quot;💤 &quot;; }
 .step1.indicator::before { content: &quot;🐣 &quot;; }
 .step2.indicator::before { content: &quot;🐔 &quot;; }
 .step3.indicator::before { content: &quot;👑&quot;; }
-.step2 { background-color: goldenrod;}
-.step3 { background-color: red;}
 </pre>
 </div>
 <div created="20201209081342383" modified="20210406101227215" tags="intern" title="sxw" type="application/x-tiddler-dictionary">
