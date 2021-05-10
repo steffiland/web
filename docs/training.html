@@ -10767,7 +10767,7 @@ ConvictConditioning</pre>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210510120624536" list="StyleSheet [[CC Training bearbeiten]] [[FOG für Frauen]] [[Mobility Training]] [[CC Training]] [[Trainingsübersicht FOG für Frauen]] [[Trainingsübersicht Mobility]] [[Trainingsübersicht CC]] ConvictConditioning" modified="20210510120703381" title="$:/StoryList">
+<div created="20210510121147224" list="StyleSheet [[FOG für Frauen]] [[Mobility Training]] [[CC Training]] [[CC Training bearbeiten]] [[Trainingsübersicht FOG für Frauen]] [[Trainingsübersicht Mobility]] [[Trainingsübersicht CC]] ConvictConditioning" modified="20210510121431591" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10964,7 +10964,7 @@ ConvictConditioning</pre>
 <div created="20210508111515106" legs-lvl="1" legs-step="2" legs-text="21,25,13" modified="20210508120008411" pull-lvl="1" pull-step="3" pull-text="↗️" push-lvl="0" push-text="" tags="cc-training training" title="2021-05-08 CC">
 <pre>{{||CCDisplayTemplate}}</pre>
 </div>
-<div core-lvl="4" created="20210510085118895" modified="20210510114933236" push-lvl="4" push-step="3" tags="cc-training training" title="2021-05-10 CC">
+<div core-lvl="10" created="20210510085118895" modified="20210510121614708" push-lvl="9" push-step="3" tags="cc-training training" title="2021-05-10 CC">
 <pre>{{||CCDisplayTemplate}}</pre>
 </div>
 <div created="20210125202836653" gelenke="Nacken, Schultern, Arme, Ellbogen, Handgelenke, mittlerer Rücken, Hüfte, Knie, Fußgelenke, Beine" modified="20210406102800120" tags="ConvictConditioning2" title="ActiveStretching">
@@ -11110,7 +11110,7 @@ ConvictConditioning</pre>
 &lt;/$select&gt;
 &amp;#8286; &lt;$button to=Einstellungen&gt;{{$:/core/images/options-button}}&lt;/$button&gt;</pre>
 </div>
-<div created="20210502194048451" modified="20210510115758040" showdelete="hide" showplan="hide" tags="" title="CC Training bearbeiten">
+<div created="20210502194048451" modified="20210510121544208" showdelete="hide" showplan="hide" tags="" title="CC Training bearbeiten">
 <pre>\define progression(uebung:&quot;CCPullProgression&quot;, lvl:&quot;1&quot;, feld: &quot;nameofinnerlevelfield&quot;)
   &lt;div class={{{ [&lt;titel&gt;get&lt;__feld__&gt;addprefix[step step]]  step }}}&gt;
  Ziele &lt;&lt;__uebung__&gt;&gt; Level &lt;&lt;__lvl__&gt;&gt;: &lt;br/&gt;
@@ -11162,7 +11162,7 @@ Ja, Eintrag wirklich löschen
 
 &lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;push-lvl&quot; &gt;
 
-!!! Liegestütze &lt;span class={{{ [&lt;lvl&gt;addprefix[indicator level level]] }}}&gt;&lt;/span&gt; &amp;nbsp; &lt;span class={{{ [&lt;titel&gt;get[push-step]addprefix[indicator step]] }}}/&gt;
+!!! &lt;span class={{{ [&lt;lvl&gt;addprefix[indicator level level]] }}}&gt;Liegestütze &lt;/span&gt; &amp;nbsp; &lt;span class={{{ [&lt;titel&gt;get[push-step]addprefix[indicator step]] }}}/&gt;
 
 &lt;&lt;dropdown &quot;CCPushUpProgression&quot; &quot;push-lvl&quot; &gt;&gt; &lt;&lt;dropdown2 &quot;Progression Push rechtwinklig&quot; &quot;push2-lvl&quot; &gt;&gt;
 
@@ -11175,7 +11175,7 @@ Bemerkungen:
 
 &lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;core-lvl&quot; &gt;
 
-!!! Beinheben /  Core &lt;span class={{{ [&lt;lvl&gt;addprefix[indicator level level]] }}}&gt;&lt;/span&gt; &amp;nbsp; &lt;span class={{{ [&lt;titel&gt;get[core-step]addprefix[indicator step]] }}}/&gt;
+!!! &lt;span class={{{ [&lt;lvl&gt;addprefix[indicator level level]] }}}&gt;Beinheben /  Core &lt;/span&gt; &amp;nbsp; &lt;span class={{{ [&lt;titel&gt;get[core-step]addprefix[indicator step]] }}}/&gt;
 &lt;&lt;dropdown &quot;CCBeinhebenProgression&quot; &quot;core-lvl&quot; &gt;&gt;
 &lt;&lt;dropdown2 &quot;BeinhebenSchrägProgression&quot; &quot;core2-lvl&quot; &gt;&gt;
 
@@ -11188,7 +11188,7 @@ Bemerkungen:
 ---
 &lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;pull-lvl&quot; &gt;
 
-!!! Pull &lt;span class={{{ [&lt;lvl&gt;addprefix[indicator level level]] }}}&gt;&lt;/span&gt; &amp;nbsp; &lt;span class={{{ [&lt;titel&gt;get[pull-step]addprefix[indicator step]] }}}/&gt;
+!!! &lt;span class={{{ [&lt;lvl&gt;addprefix[indicator level level]] }}}&gt;Pull &lt;/span&gt; &amp;nbsp; &lt;span class={{{ [&lt;titel&gt;get[pull-step]addprefix[indicator step]] }}}/&gt;
 &lt;&lt;dropdown &quot;CCPullProgression&quot; &quot;pull-lvl&quot; &gt;&gt;
 &lt;&lt;dropdown2 &quot;Progression Pull&quot; &quot;pull2-lvl&quot; &gt;&gt;
 
@@ -11200,7 +11200,7 @@ Bemerkungen:
 
 &lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;legs-lvl&quot; &gt;
 
-!!! Kniebeugen &lt;span class={{{ [&lt;lvl&gt;addprefix[indicator level level]] }}}&gt;&lt;/span&gt; &amp;nbsp; &lt;span class={{{ [&lt;titel&gt;get[legs-step]addprefix[indicator step]] }}}/&gt;
+!!! &lt;span class={{{ [&lt;lvl&gt;addprefix[indicator level level]] }}}&gt;Kniebeugen &lt;/span&gt; &amp;nbsp; &lt;span class={{{ [&lt;titel&gt;get[legs-step]addprefix[indicator step]] }}}/&gt;
 &lt;&lt;dropdown &quot;CCSquatProgression&quot; &quot;legs-lvl&quot; &gt;&gt;
 &lt;&lt;dropdown2 &quot;Progression Beine&quot; &quot;legs2-lvl&quot; &gt;&gt;
 
@@ -11214,7 +11214,7 @@ Bemerkungen:
 
 &lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;bridge-lvl&quot; &gt;
 
-!!! Brücke  (ab Core+Beine Lvl 6) &lt;span class={{{ [&lt;lvl&gt;addprefix[indicator level level]] }}}&gt;&lt;/span&gt; &amp;nbsp; &lt;span class={{{ [&lt;titel&gt;get[bridge-step]addprefix[indicator step]] }}}/&gt;
+!!! (ab Core+Beine Lvl 6) &lt;span class={{{ [&lt;lvl&gt;addprefix[indicator level level]] }}}&gt;Brücke  &lt;/span&gt; &amp;nbsp; &lt;span class={{{ [&lt;titel&gt;get[bridge-step]addprefix[indicator step]] }}}/&gt;
 &lt;&lt;dropdown &quot;CCBridgeProgression&quot; &quot;bridge-lvl&quot; &gt;&gt;
 
 &lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung=&quot;CCBridgeProgression&quot; feld=&quot;bridge-step&quot;  /&gt;
@@ -11225,7 +11225,7 @@ Bemerkungen:
 
 &lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;hs-lvl&quot; &gt;
 
-!!! Handstand (ab Push Lvl 6) &lt;span class={{{ [&lt;lvl&gt;addprefix[indicator level level]] }}}&gt;&lt;/span&gt; &amp;nbsp; &lt;span class={{{ [&lt;titel&gt;get[hs-step]addprefix[indicator step]] }}}/&gt;
+!!! &lt;span class={{{ [&lt;lvl&gt;addprefix[indicator level level]] }}}&gt;Handstand (ab Push Lvl 6) &lt;/span&gt; &amp;nbsp; &lt;span class={{{ [&lt;titel&gt;get[hs-step]addprefix[indicator step]] }}}/&gt;
 &lt;&lt;dropdown &quot;CCHandstandProgression&quot; &quot;hs-lvl&quot; &gt;&gt;
 &lt;&lt;dropdown2 &quot;Progression Push gerade&quot; &quot;hs2-lvl&quot; &gt;&gt;
 
@@ -12097,7 +12097,7 @@ v11:Malteser Pushups
 * &lt;&lt;currentTiddler&gt;&gt;
 &lt;/$list &gt;</pre>
 </div>
-<div created="20210129123738475" modified="20210510120900922" tags="intern $:/tags/Stylesheet" title="StyleSheet" type="text/css">
+<div created="20210129123738475" modified="20210510121458155" tags="intern $:/tags/Stylesheet" title="StyleSheet" type="text/css">
 <pre>.row-numbers table {
   counter-reset: row-num;
 }
@@ -12116,7 +12116,7 @@ v11:Malteser Pushups
 .vertical { writing-mode: vertical-lr; }
 .br td:nth-child(2n+3), .br th:nth-child(2n+3) { border-left: double; }
 
-.indicator.level1, .indicator.level2, .indicator.level3, .indicator.level4, .indicator.level5, .indicator.level6, .indicator.level7, .indicator.level8, .indicator.level9, .indicator.level10 { font-family: 'Audiowide', cursive; visibility: visible;  }
+.indicator.level1::after, .indicator.level2::after, .indicator.level3::after, .indicator.level4::after, .indicator.level5::after, .indicator.level6::after, .indicator.level7::after, .indicator.level8::after, .indicator.level9::after, .indicator.level10::after { font-family: 'Audiowide', cursive; visibility: visible;  }
 
 .level1 { background: #19CF2B; }
 .level2 { background: #47D836; }
