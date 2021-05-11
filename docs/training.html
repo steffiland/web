@@ -297,8 +297,6 @@ Error message and password prompt
 
 <li>2021-05-07 CC</li>
 
-<li>2021-05-07 CC 1</li>
-
 <li>2021-05-07 Mobility</li>
 
 <li>2021-05-08 CC</li>
@@ -10774,7 +10772,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210511112736777" list="Home" modified="20210511112736777" title="$:/StoryList">
+<div list="Home" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10958,12 +10956,8 @@ Error message and password prompt
 <div bhold="2" bhold_text="↗️" created="20210411191125505" description="Trifecta je 2x15s" lsitz="1" lsitz_text="Knie höher ziehen" modified="20210411192447600" tags="training mobility-training" thold="2" thold_text="Blockade re Hüfte" title="2021-04-11 Mobility">
 <pre>{{||MobTemplate}}</pre>
 </div>
-<div core-lvl="1" core-step="1" core-text="19,11" created="20210507190032919" modified="20210511112652194" push-lvl="1" push-step="3" push-text="50,50,50" tags="cc-training training" title="2021-05-07 CC">
+<div core-lvl="1" core-step="1" core-text="19,11" created="20210507190032919" description="&lt;&lt;fa plane&gt;&gt;" modified="20210511124502430" push-lvl="1" push-step="3" push-text="50,50,50" tags="cc-training training" title="2021-05-07 CC">
 <pre>{{||CCDisplayTemplate}}</pre>
-</div>
-<div core-lvl="1" core-step="1" core-text="19,11" created="20210510073435563" description=":-)" modified="20210511095647637" push-lvl="1" push-step="3" push-text="50,50,50" push2-lvl="1" tags="training" title="2021-05-07 CC 1">
-<pre>{{||CCDisplayTemplate}}
-</pre>
 </div>
 <div as-hüfte="1" created="20210507194020187" modified="20210507201418856" sxw-kreisen="2x20" tags="training mobility-training" thold="2" title="2021-05-07 Mobility">
 <pre>{{||MobTemplate}}</pre>
@@ -11098,17 +11092,16 @@ Error message and password prompt
  &lt;/g&gt;
 &lt;/svg&gt;</pre>
 </div>
-<div created="20210502193603277" modified="20210511093622234" tags="TOC" title="CC Training">
+<div created="20210502193603277" modified="20210511125337146" tags="TOC" title="CC Training">
 <pre>&lt;$wikify name=titelneu text=&quot;{{Einstellungen!!titel_template}} CC&quot; &gt;
 &lt;$button  to=&quot;CC Training bearbeiten&quot;&gt;
 &lt;$action-createtiddler $basetitle=&lt;&lt;titelneu&gt;&gt; $overwrite=&quot;yes&quot; $template=&quot;CCTemplate&quot; /&gt;
 &lt;$action-setfield neutitel=&lt;&lt;titelneu&gt;&gt; $tiddler=&quot;Einstellungen&quot; /&gt;
-{{$:/core/images/new-button}}  
-&lt;/$button&gt;
+&lt;&lt;fa plus&gt;&gt;&lt;/$button&gt;
 &lt;&lt;titelneu&gt;&gt;
 &lt;/$wikify&gt;
 &amp;#8286; &lt;$button to=&quot;CC Training bearbeiten&quot; &gt;
-{{$:/core/images/edit-button}}
+&lt;&lt;fa pen&gt;&gt;
 &lt;/$button&gt;
 &lt;$select tiddler=Einstellungen field=neutitel &gt;
 &lt;$list  filter=&quot;[tag[cc-training]!suffix[Template]!sort[created]first{Einstellungen!!listlimit}]&quot;  variable=&quot;item&quot;&gt;
@@ -11116,8 +11109,8 @@ Error message and password prompt
 &lt;/$list&gt;
 &lt;/$select&gt;
 &amp;#8286; 
-&lt;$button  to=&quot;Trainingsübersicht CC&quot;&gt;{{$:/core/images/list}}&lt;/$button&gt;
-&lt;$button  to=&quot;ConvictConditioning&quot;&gt;{{$:/core/images/tip}}&lt;/$button&gt;</pre>
+&lt;$button  to=&quot;Trainingsübersicht CC&quot;&gt;&lt;&lt;fa list&gt;&gt;&lt;/$button&gt;
+&lt;$button  to=&quot;ConvictConditioning&quot;&gt;&lt;&lt;fa question&gt;&gt;&lt;/$button&gt;</pre>
 </div>
 <div created="20210502194048451" modified="20210511064351211" showdelete="hide" showplan="hide" tags="" title="CC Training bearbeiten">
 <pre>\define progression(uebung:&quot;CCPullProgression&quot;, lvl:&quot;1&quot;, feld: &quot;nameofinnerlevelfield&quot;)
@@ -11295,9 +11288,9 @@ Bemerkungen gesamt:
 &lt;th&gt; Push gerade Handstand&lt;/th&gt;
 &lt;/tr&gt;&lt;/thead&gt;</pre>
 </div>
-<div created="20210510081824902" modified="20210510125218182" tags="intern" title="CCDisplayPart">
+<div created="20210510081824902" modified="20210511121636080" tags="intern" title="CCDisplayPart">
 <pre>&lt;tr&gt;
-&lt;th colspan=6&gt;&lt;$link to={{!!title}}&gt;{{!!title}}:&lt;/$link&gt; &amp;mdash; {{!!description}}&lt;/th&gt;&lt;/tr&gt;
+&lt;th colspan=6&gt;&lt;$link to={{!!title}}&gt;{{!!title}}&lt;/$link&gt; {{!!description}}&lt;/th&gt;&lt;/tr&gt;
 &lt;tr&gt;
 &lt;td class={{{ [{!!push-lvl}addprefix[level]] }}}&gt; 
    &lt;span class={{{ [{!!push-lvl}addprefix[indicator level]] }}}/&gt; &amp;nbsp; &lt;span class={{{ [{!!push-step}addprefix[indicator step step]] }}}/&gt;
@@ -11513,7 +11506,7 @@ und folgende Varianten:
 * davon 2x10 Wdh. und nach jedem Satz die Hand gut ausschütteln *dann 1 Aufwärmsatz einfache Fingertip Pushups, 1 Level einfacher als die Arbeitssätze:
 * 5-10 Wdh. keinesfalls mehr als max. 15 Wdh.</pre>
 </div>
-<div created="20201209095546498" listlimit="15" modified="20210511112909795" neutitel="2021-05-07 CC" saved="2021-05-11 13:29:09" tags="$:/tags/StartupAction intern fogff" titel_template="&lt;&lt;now &quot;YYYY-0MM-0DD&quot;&gt;&gt;" title="Einstellungen">
+<div created="20201209095546498" listlimit="15" modified="20210511125508273" neutitel="2021-05-07 CC" saved="2021-05-11 14:55:08" tags="$:/tags/StartupAction intern fogff" titel_template="&lt;&lt;now &quot;YYYY-0MM-0DD&quot;&gt;&gt;" title="Einstellungen">
 <pre>* Anzeigelimit Trainingstagebuch: &lt;$edit-text  field=&quot;listlimit&quot; /&gt;
 * Template für Titel neuer Tagebucheinträge:  &lt;$edit-text  field=&quot;titel_template&quot; /&gt;  &amp;rArr; &quot;{{!!titel_template}}&quot;
 * &amp;#10173; [[GettingStarted]]
@@ -11541,25 +11534,24 @@ und folgende Varianten:
 * keinesfalls explosive Übungsausführung
 </pre>
 </div>
-<div created="20201209185211015" modified="20210511093538902" tags="fogff TOC" title="FOG für Frauen">
+<div created="20201209185211015" modified="20210511125241047" tags="fogff TOC" title="FOG für Frauen">
 <pre>&lt;$wikify name=titelneu text=&quot;{{Einstellungen!!titel_template}} FOG&quot; &gt;
 &lt;$button  to=&quot;FOG Training bearbeiten&quot;&gt;
 &lt;$action-createtiddler $basetitle=&lt;&lt;titelneu&gt;&gt; $overwrite=&quot;yes&quot; $template=&quot;YayogFrauenTemplate&quot; /&gt;
 &lt;$action-setfield neutitel=&lt;&lt;titelneu&gt;&gt; $tiddler=&quot;Einstellungen&quot; /&gt;
-{{$:/core/images/new-button}}  
+&lt;&lt;fa plus&gt;&gt;
 &lt;/$button&gt;
 &lt;&lt;titelneu&gt;&gt;
 &lt;/$wikify&gt;
 &amp;#8286; &lt;$button to=&quot;FOG Training bearbeiten&quot; &gt;
-{{$:/core/images/edit-button}}
-&lt;/$button&gt;
+&lt;&lt;fa pen&gt;&gt;&lt;/$button&gt;
 &lt;$select tiddler=Einstellungen field=neutitel &gt;
 &lt;$list  filter=&quot;[tag[fogff-training]!suffix[Template]!sort[created]first{Einstellungen!!listlimit}]&quot;  variable=&quot;item&quot;&gt;
 &lt;option&gt;&lt;&lt;item&gt;&gt;&lt;/option&gt;
 &lt;/$list&gt;
 &lt;/$select&gt;
 &amp;#8286; 
-&lt;$button  to=&quot;Trainingsübersicht FOG für Frauen&quot;&gt;{{$:/core/images/list}}&lt;/$button&gt;</pre>
+&lt;$button  to=&quot;Trainingsübersicht FOG für Frauen&quot;&gt;&lt;&lt;fa list&gt;&gt;&lt;/$button&gt;</pre>
 </div>
 <div created="20210115094459690" modified="20210504195456234" showdelete="hide" showplan="hide" tags="" title="FOG Training bearbeiten">
 <pre>&lt;$wikify name=titel text=&quot;{{Einstellungen!!neutitel}}&quot; &gt;
@@ -11706,28 +11698,27 @@ CCHangProgression
 
 </pre>
 </div>
-<div created="20210511064843936" modified="20210511112834598" tags="intern" title="HauptMenue">
+<div created="20210511064843936" modified="20210511125153525" tags="intern" title="HauptMenue">
 <pre>&lt;$button message=tm-save-wiki&gt;
 &lt;$action-setfield $tiddler=Einstellungen $field=&quot;saved&quot; $value=&lt;&lt;now &quot;YYYY-0MM-0DD 0hh:0mm:0ss&quot;&gt;&gt;/&gt;
 &lt;span class=&quot;fa fa-save&quot;/&gt;&lt;/$button&gt;
 &lt;$edit-text tiddler=&quot;$:/language/ControlPanel/Saving/GitService/CommitMessage&quot; tag=input/&gt;
 &lt;$button&gt;
 &lt;$action-setfield $tiddler=&quot;$:/language/ControlPanel/Saving/GitService/CommitMessage&quot; text=&quot;&quot;/&gt;
-{{$:/core/images/erase}}
-&lt;/$button&gt;
+&lt;&lt;fa eraser&gt;&gt;&lt;/$button&gt;
 &lt;$button&gt;
 &lt;$action-setfield $tiddler=&quot;$:/language/ControlPanel/Saving/GitService/CommitMessage&quot; text=&quot;Saved by TiddlyWiki&quot;/&gt;
-{{$:/core/images/copy-clipboard}} default
+&lt;&lt;fa &quot;external-link-alt fa-rotate-180&quot;&gt;&gt; default
 &lt;/$button&gt;
 &amp;#8286;
 &lt;$button message=tm-browser-refresh&gt;
 &lt;span class=&quot;fa fa-sync&quot;/&gt;&lt;/$button&gt;
-&lt;$button to=Einstellungen&gt;{{$:/core/images/options-button}}&lt;/$button&gt;
+&lt;$button to=Einstellungen&gt;&lt;&lt;fa cog&gt;&gt;&lt;/$button&gt;
 
 &lt;span class=&quot;fa fa-save&quot;/&gt; {{Einstellungen!!saved}}
 &amp;#8286;
 &lt;span class=&quot;fa fa-pen&quot;/&gt; &lt;$list filter=&quot;[!is[system]!title[Einstellungen]!has[draft.of]!sort[modified]limit[1]]&quot;&gt;
-&lt;$view field=&quot;modified&quot; format=&quot;date&quot; template=&quot;YYYY-0MM-0DD 0hh:0mm:0ss&quot;/&gt; (&lt;$view field=&quot;title&quot;/&gt;)
+&lt;$view field=&quot;modified&quot; format=&quot;date&quot; template=&quot;YYYY-0MM-0DD 0hh:0mm:0ss&quot;/&gt; &lt;$link to={{!!title}}&gt;{{!!title}}&lt;/$link&gt;
 &lt;/$list&gt;
 </pre>
 </div>
@@ -11763,7 +11754,7 @@ CCHangProgression
  &lt;/g&gt;
 &lt;/svg&gt;</pre>
 </div>
-<div created="20210125093310102" modified="20210504192110310" tags="$:/tags/Macro intern" title="Makros">
+<div created="20210125093310102" modified="20210511123147293" tags="$:/tags/Macro intern" title="Makros">
 <pre>\define dataindex(tiddler:&quot;NotExistingTitle&quot; index:&quot;1&quot; column:&quot;1&quot; sep:&quot;:&quot;)
 &lt;$wikify text=&quot;&lt;$transclude tiddler=$tiddler$ index=$index$ /&gt;&quot; name=&quot;line&quot; &gt;
 &lt;$list filter=&quot;[&lt;line&gt;split[$sep$]nth[$column$]]&quot;&gt;&lt;&lt;currentTiddler&gt;&gt;&lt;/$list&gt;
@@ -11777,6 +11768,9 @@ CCHangProgression
 \define example(text:&quot;hello&quot;)
 * ''Code:'' `$text$`
 * ''Ergebnis: '' $text$
+\end
+\define fa(text: fingerprint)
+&lt;span class=&quot;fa fa-$text$&quot;/&gt;
 \end
 
 !!dataindex Makro
@@ -11814,19 +11808,29 @@ CCHangProgression
 * Bsp 2: `&lt;$macrocall $name=&quot;example&quot; text=&quot;{{{[tag[ConvictConditioning]join[ --- ]]}}}&quot;/&gt;` &amp;rArr;
 &lt;$macrocall $name=&quot;example&quot; text=&quot;{{{[tag[ConvictConditioning]join[ - ]]}}}&quot;/&gt;
 
+!! Font Awesome Makro
+* zum Anzeigen von [[FontAwesome|https://fontawesome.com/cheatsheet]] Icons
+
+&lt;$macrocall $name=&quot;example&quot; text=&quot;&lt;&lt;fa&gt;&gt;&quot;/&gt;
+
+&lt;$macrocall $name=&quot;example&quot; text=&quot;&lt;&lt;fa check&gt;&gt;&quot;/&gt;
+
+&lt;$macrocall $name=&quot;example&quot; text=&quot;&lt;&lt;fa 'spin fa-grin'&gt;&gt;&quot;/&gt;
+
+&lt;$macrocall $name=&quot;example&quot; text=&quot;&lt;&lt;fa 'rotate-90 fa-running'&gt;&gt;&quot;/&gt;
 </pre>
 </div>
-<div created="20210406100250119" modified="20210511093842239" tags="TOC" title="Mobility Training">
+<div created="20210406100250119" modified="20210511124711593" tags="TOC" title="Mobility Training">
 <pre>&lt;$wikify name=titelneu text=&quot;{{Einstellungen!!titel_template}} Mobility&quot; &gt;
 &lt;$button  to=&quot;Mobility Training bearbeiten&quot;&gt;
 &lt;$action-createtiddler $basetitle=&lt;&lt;titelneu&gt;&gt; $overwrite=&quot;yes&quot; $template=&quot;MobilityTemplate&quot; /&gt;
 &lt;$action-setfield neutitel=&lt;&lt;titelneu&gt;&gt; $tiddler=&quot;Einstellungen&quot; /&gt;
-{{$:/core/images/new-button}}  
+&lt;&lt;fa plus&gt;&gt;
 &lt;/$button&gt;
 &lt;&lt;titelneu&gt;&gt;
 &lt;/$wikify&gt;
 &amp;#8286; &lt;$button to=&quot;Mobility Training bearbeiten&quot; &gt;
-{{$:/core/images/edit-button}}
+&lt;&lt;fa pen&gt;&gt;
 &lt;/$button&gt;
 &lt;$select tiddler=Einstellungen field=neutitel &gt;
 &lt;$list  filter=&quot;[tag[mobility-training]!suffix[Template]!sort[created]first{Einstellungen!!listlimit}]&quot;  variable=&quot;item&quot;&gt;
@@ -11834,8 +11838,8 @@ CCHangProgression
 &lt;/$list&gt;
 &lt;/$select&gt;
 &amp;#8286;
-&lt;$button  to=&quot;Trainingsübersicht Mobility&quot;&gt;{{$:/core/images/list}}&lt;/$button&gt;
-&lt;$button  to=&quot;ConvictConditioning2&quot;&gt;{{$:/core/images/tip}}&lt;/$button&gt;</pre>
+&lt;$button  to=&quot;Trainingsübersicht Mobility&quot;&gt;&lt;&lt;fa list&gt;&gt;&lt;/$button&gt;
+&lt;$button  to=&quot;ConvictConditioning2&quot;&gt;&lt;&lt;fa question&gt;&gt;&lt;/$button&gt;</pre>
 </div>
 <div created="20210406084617147" modified="20210406123801218" showdelete="hide" showplan="show" tags="" title="Mobility Training bearbeiten">
 <pre>&lt;$wikify name=titel text=&quot;{{Einstellungen!!neutitel}}&quot; &gt;
