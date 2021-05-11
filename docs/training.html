@@ -329,11 +329,15 @@ Error message and password prompt
 
 <li>CCBridgeProgression</li>
 
+<li>CCBridgeProgression-alt</li>
+
 <li>CCDisplayHeader</li>
 
 <li>CCDisplayPart</li>
 
 <li>CCDisplayTemplate</li>
+
+<li>CCHandstandProgression</li>
 
 <li>CCHangProgression</li>
 
@@ -10470,8 +10474,8 @@ Error message and password prompt
 <div title="$:/isEncrypted">
 <pre>no</pre>
 </div>
-<div created="20210511073438317" modified="20210511112906918" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
-<pre>Saved by TiddlyWiki</pre>
+<div created="20210511073438317" modified="20210511195604693" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
+<pre>Handstand und Brücke-alternativ ergänzt</pre>
 </div>
 <div dependents="" description="Markdown parser based on remarkable by Jon Schlinkert" list="readme usage" name="Markdown" plugin-type="plugin" title="$:/plugins/tiddlywiki/markdown" type="application/json" version="5.1.23">
 <pre>{
@@ -10699,7 +10703,7 @@ Error message and password prompt
 <div created="20210116123243473" modified="20210511093130050" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20210116120950002" modified="20210511140710773" title="$:/state/sidebar">
+<div created="20210116120950002" modified="20210511195547107" title="$:/state/sidebar">
 <pre>no</pre>
 </div>
 <div created="20210118140801608" modified="20210121140300132" title="$:/state/tab--1048911287">
@@ -10774,7 +10778,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210511141216873" list="Home [[Trainingsübersicht CC]] [[CC Training bearbeiten]]" modified="20210511141305244" title="$:/StoryList">
+<div list="Home" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -11117,7 +11121,7 @@ Error message and password prompt
 &lt;$button  to=&quot;Trainingsübersicht CC&quot;&gt;&lt;&lt;fa list&gt;&gt;&lt;/$button&gt;
 &lt;$button  to=&quot;ConvictConditioning&quot;&gt;&lt;&lt;fa question&gt;&gt;&lt;/$button&gt;</pre>
 </div>
-<div created="20210502194048451" modified="20210511064351211" showdelete="hide" showplan="hide" tags="" title="CC Training bearbeiten">
+<div created="20210502194048451" modified="20210511195518300" showdelete="hide" showplan="hide" tags="" title="CC Training bearbeiten">
 <pre>\define progression(uebung:&quot;CCPullProgression&quot;, lvl:&quot;1&quot;, feld: &quot;nameofinnerlevelfield&quot;)
    &lt;div class={{{ [&lt;titel&gt;get&lt;__feld__&gt;addprefix[step step]]  step }}}&gt;
    &lt;$radio tiddler=&lt;&lt;titel&gt;&gt; field=&lt;&lt;__feld__&gt;&gt; value=&quot;1&quot; class=&quot;radio-custom&quot;/&gt;
@@ -11227,6 +11231,7 @@ Bemerkungen:
 
 !!! (ab Core+Beine Lvl 6) &lt;span class={{{ [&lt;lvl&gt;addprefix[indicator level level]] }}}&gt;Brücke  &lt;/span&gt; &amp;nbsp; &lt;span class={{{ [&lt;titel&gt;get[bridge-step]addprefix[indicator step]] }}}/&gt;
 &lt;&lt;dropdown &quot;CCBridgeProgression&quot; &quot;bridge-lvl&quot; &gt;&gt;
+&lt;&lt;dropdown2 &quot;CCBridgeProgression-alt&quot; &quot;bridge2-lvl&quot; &gt;&gt;
 
 &lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung=&quot;CCBridgeProgression&quot; feld=&quot;bridge-step&quot;  /&gt;
 &lt;/$set&gt;
@@ -11283,6 +11288,23 @@ Bemerkungen gesamt:
 9:Brücke aus dem Stand:1x1:2x3:2x6
 10:Stand-zu-Stand-Brücke:1x1:2x3:2x10-30</pre>
 </div>
+<div created="20210511191704115" modified="20210511195300607" tags="CCProgression" title="CCBridgeProgression-alt" type="application/x-tiddler-dictionary">
+<pre>1:Kurze Brücke:1x10:2x25:3x50
+2:Gerade Brücke:1x10:2x20:3x40
+2b:Table Bridge (ML Hip Raiser):1x10:2x20:3x30
+3a:kurze Brücke einbeinig (Bein auf Knie ablegen):::
+3b:gerade Brücke einbeinig (Bein auf Knöchel/Knie/Oberschenkel):::
+3c:kurze Brücke Füße erhöht (Gymnastikball):::
+4:Kopfbrücke:1x8:2x15:2x25
+5:halbe Brücke, mit Ball unter Rücken:1x8:2x15:2x20
+6:vollständige Brücke:1x6:2x10:2x15
+6b:Brücke Füße erhöht (Gymnastikball):::
+6c:1beinige Brücke, Bein waagerecht gestreckt:::
+7:Brücke an der Wand abwärts:1x3:2x6:2x10
+8:Brücke an der Wand aufwärts:1x2:2x4:2x8
+9:Brücke aus dem Stand:1x1:2x3:2x6
+10:Stand-zu-Stand-Brücke:1x1:2x3:2x10-30</pre>
+</div>
 <div created="20210510081026610" modified="20210510082718863" tags="intern" title="CCDisplayHeader">
 <pre>&lt;thead&gt;&lt;tr class=&quot;vertical&quot;&gt;
 &lt;th class=&quot;vertical&quot; &gt;Push rw.&lt;br/&gt;Liegestütz&lt;/th&gt;
@@ -11293,7 +11315,7 @@ Bemerkungen gesamt:
 &lt;th&gt; Push gerade Handstand&lt;/th&gt;
 &lt;/tr&gt;&lt;/thead&gt;</pre>
 </div>
-<div created="20210510081824902" modified="20210511121636080" tags="intern" title="CCDisplayPart">
+<div created="20210510081824902" modified="20210511195538836" tags="intern" title="CCDisplayPart">
 <pre>&lt;tr&gt;
 &lt;th colspan=6&gt;&lt;$link to={{!!title}}&gt;{{!!title}}&lt;/$link&gt; {{!!description}}&lt;/th&gt;&lt;/tr&gt;
 &lt;tr&gt;
@@ -11311,7 +11333,7 @@ Bemerkungen gesamt:
   &lt;i&gt;&lt;$macrocall $name=&quot;show&quot; uebung=&quot;Progression Beine&quot; lvl={{!!legs2-lvl}} /&gt;&lt;/i&gt;
 &lt;/td&gt;&lt;td class={{{ [{!!bridge-lvl}addprefix[level]] }}}&gt;
    &lt;span class={{{ [{!!bridge-lvl}addprefix[indicator level]] }}}/&gt; &amp;nbsp; &lt;span class={{{ [{!!bridge-step}addprefix[indicator step step]] }}}/&gt;
-  &lt;i&gt;{{!!bridge2-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;wurschtel&quot; lvl={{!!bridge2-lvl}} /&gt;&lt;/i&gt;
+  &lt;i&gt;{{!!bridge2-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;CCBridgeProgression-alt&quot; lvl={{!!bridge2-lvl}} /&gt;&lt;/i&gt;
 &lt;/td&gt;&lt;td class={{{ [{!!hs-lvl}addprefix[level]] }}}&gt;
    &lt;span class={{{ [{!!hs-lvl}addprefix[indicator level]] }}}/&gt; &amp;nbsp; &lt;span class={{{ [{!!hs-step}addprefix[indicator step step]] }}}/&gt;
    &lt;i&gt;{{!!hs2-lvl}} &lt;$macrocall $name=&quot;show&quot; uebung=&quot;Progression Push gerade&quot; lvl={{!!hs2-lvl}} /&gt;&lt;/i&gt;
@@ -11335,6 +11357,19 @@ Bemerkungen gesamt:
 &lt;tbody&gt;
 {{||CCDisplayPart}}
 &lt;/tbody&gt;&lt;/table&gt;</pre>
+</div>
+<div created="20210511184608466" modified="20210511185410461" tags="CCProgression" title="CCHandstandProgression" type="application/x-tiddler-dictionary">
+<pre>::::
+1:Kopfstand an Wand:30s:1min:2min
+2:Krähe:10s:30s:1min
+3:Handstand an Wand:30s:1min:2min
+4:halber Handstand-Liegestütz:1x5:2x10:2x20
+5:Handstand-Liegestütz:1x5:2x10:2x15
+6:enger Handstand-Liegestütz:1x5:2x9:2x12
+7:ungleicher HS-Liegestütz:1x5:2x8:2x10
+8:½ einarmiger HS-Liegestütz:1x4:2x6:2x8
+9:Hebel-Handstand-Liegestütz:1x3:2x4:2x6
+10:einarmiger Handstand-Liegestütz:1x1:2x2:1x5</pre>
 </div>
 <div created="20210122115452088" modified="20210122124149426" tags="CCProgression" title="CCHangProgression" type="application/x-tiddler-dictionary">
 <pre>1:Horizontal Hang:1x10:4x30
@@ -11511,7 +11546,7 @@ und folgende Varianten:
 * davon 2x10 Wdh. und nach jedem Satz die Hand gut ausschütteln *dann 1 Aufwärmsatz einfache Fingertip Pushups, 1 Level einfacher als die Arbeitssätze:
 * 5-10 Wdh. keinesfalls mehr als max. 15 Wdh.</pre>
 </div>
-<div created="20201209095546498" listlimit="15" modified="20210511144540487" neutitel="2021-05-11 CC" saved="2021-05-11 16:45:40" tags="$:/tags/StartupAction intern fogff" titel_template="&lt;&lt;now &quot;YYYY-0MM-0DD&quot;&gt;&gt;" title="Einstellungen">
+<div created="20201209095546498" listlimit="15" modified="20210511195607568" neutitel="2021-05-11 CC" saved="2021-05-11 21:56:07" tags="$:/tags/StartupAction intern fogff" titel_template="&lt;&lt;now &quot;YYYY-0MM-0DD&quot;&gt;&gt;" title="Einstellungen">
 <pre>* Anzeigelimit Trainingstagebuch: &lt;$edit-text  field=&quot;listlimit&quot; /&gt;
 * Template für Titel neuer Tagebucheinträge:  &lt;$edit-text  field=&quot;titel_template&quot; /&gt;  &amp;rArr; &quot;{{!!titel_template}}&quot;
 * &amp;#10173; [[GettingStarted]]
@@ -11846,7 +11881,7 @@ CCHangProgression
 &lt;$button  to=&quot;Trainingsübersicht Mobility&quot;&gt;&lt;&lt;fa list&gt;&gt;&lt;/$button&gt;
 &lt;$button  to=&quot;ConvictConditioning2&quot;&gt;&lt;&lt;fa question&gt;&gt;&lt;/$button&gt;</pre>
 </div>
-<div created="20210406084617147" modified="20210511141227879" showDelete="hide" showdelete="hide" showplan="show" tags="" title="Mobility Training bearbeiten">
+<div created="20210406084617147" modified="20210511141227879" showdelete="hide" showplan="show" tags="" title="Mobility Training bearbeiten">
 <pre>&lt;$wikify name=titel text=&quot;{{Einstellungen!!neutitel}}&quot; &gt;
 
 !! &quot;&lt;&lt;titel&gt;&gt;&quot;  &lt;$reveal type=&quot;nomatch&quot; state=&quot;!!showDelete&quot; text=&quot;show&quot;&gt;
