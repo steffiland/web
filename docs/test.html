@@ -68,6 +68,7 @@ request.open('get', 'https://api.github.com/repos/steffiland/web/pages', true);
 request.send();
 
 </script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 
 
 </head>
@@ -179,6 +180,8 @@ Error message and password prompt
 
 <li>$:/GitHub/Username</li>
 
+<li>$:/Import</li>
+
 <li>$:/isEncrypted</li>
 
 <li>$:/plugins/tiddlywiki/markdown</li>
@@ -257,6 +260,12 @@ Error message and password prompt
 
 <li>CSS</li>
 
+<li>CssBeispiele</li>
+
+<li>Draft of 'Font Awesome'</li>
+
+<li>Einstellungen</li>
+
 <li>Filter-Listen in Wiki-Text</li>
 
 <li>FilterBeispiele</li>
@@ -265,7 +274,13 @@ Error message and password prompt
 
 <li>FilterLiveEditor</li>
 
+<li>Font Awesome</li>
+
+<li>HauptMenue</li>
+
 <li>HtmlHeaderAdditions</li>
+
+<li>HtmlHeaderFontAwesome</li>
 
 <li>ListWidget Snippet</li>
 
@@ -10167,10 +10182,11 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20210503185812402" modified="20210503190002883" title="$:/DefaultTiddlers">
+<div created="20210503185812402" modified="20210511110401410" title="$:/DefaultTiddlers">
 <pre>GettingStarted
 SonstigeBeispiele
-FilterBeispiele</pre>
+FilterBeispiele
+CssBeispiele</pre>
 </div>
 <div created="20210120141051896" modified="20210120141052361" title="$:/GitHub/Branch">
 <pre>main</pre>
@@ -10186,6 +10202,11 @@ FilterBeispiele</pre>
 </div>
 <div created="20210120141020281" modified="20210120141021817" title="$:/GitHub/Username">
 <pre>steffiland</pre>
+</div>
+<div status="complete" title="$:/Import">
+<pre>The following tiddlers were imported:
+
+# [[HauptMenue]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -10482,7 +10503,7 @@ FilterBeispiele</pre>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210506102044764" list="GettingStarted SonstigeBeispiele FilterBeispiele $:/core/images/close-others-button" modified="20210506102951164" title="$:/StoryList">
+<div created="20210511111744498" list="$:/Import HauptMenue [[Draft of 'Font Awesome']] GettingStarted SonstigeBeispiele FilterBeispiele CssBeispiele" modified="20210511111817989" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10629,6 +10650,25 @@ feld: `{{!!feld}}` --&gt; &quot;//{{!!feld}}//&quot;</pre>
   border: 2px solid green;
 }</pre>
 </div>
+<div created="20210511110412070" modified="20210511110443713" tags="css" title="CssBeispiele" topic="css">
+<pre>{{||BeispielListe}}</pre>
+</div>
+<div created="20210511110132598" draft.of="Font Awesome" draft.title="Font Awesome" modified="20210511111756624" tags="beispiel css" title="Draft of 'Font Awesome'">
+<pre>&lt;span class=&quot;fa-stack fa-2x&quot;&gt;
+  &lt;i class=&quot;fas fa-camera fa-stack-1x&quot;&gt;&lt;/i&gt;
+  &lt;i class=&quot;fas fa-ban fa-stack-2x&quot; style=&quot;color:Tomato&quot;&gt;&lt;/i&gt;
+&lt;/span&gt;
+&lt;i class=&quot;fad fa-bus-alt&quot; style=&quot;--fa-primary-color: orangered;&quot;&gt;&lt;/i&gt; &lt;!-- primary layer color defined --&gt;
+  
+
+* https://fontawesome.com/how-to-use/on-the-web/styling/stacking-icons
+* https://fontawesome.com/cheatsheet
+* HtmlHeaderFontAwesome
+* https://fontawesome.com/how-to-use/on-the-web/styling/duotone-icons</pre>
+</div>
+<div created="20210511111847870" modified="20210511111847870" saved="2021-05-11 13:18:47" title="Einstellungen">
+<pre></pre>
+</div>
 <div created="20210503185734366" modified="20210503185754346" tags="beispiel blubb" title="Filter-Listen in Wiki-Text">
 <pre>mit 3fachen geschweiften Klammern:
 
@@ -10661,6 +10701,41 @@ feld: `{{!!feld}}` --&gt; &quot;//{{!!feld}}//&quot;</pre>
 &lt;/$list&gt;
 </pre>
 </div>
+<div created="20210511110132598" modified="20210511110326635" tags="beispiel css" title="Font Awesome">
+<pre>&lt;span class=&quot;fa-stack fa-2x&quot;&gt;
+  &lt;i class=&quot;fas fa-camera fa-stack-1x&quot;&gt;&lt;/i&gt;
+  &lt;i class=&quot;fas fa-ban fa-stack-2x&quot; style=&quot;color:Tomato&quot;&gt;&lt;/i&gt;
+&lt;/span&gt;
+
+* https://fontawesome.com/how-to-use/on-the-web/styling/stacking-icons
+* https://fontawesome.com/cheatsheet
+* HtmlHeaderFontAwesome</pre>
+</div>
+<div created="20210511064843936" modified="20210511111841071" tags="intern" title="HauptMenue">
+<pre>&lt;$button message=tm-save-wiki&gt;
+&lt;$action-setfield $tiddler=Einstellungen $field=&quot;saved&quot; $value=&lt;&lt;now &quot;YYYY-0MM-0DD 0hh:0mm:0ss&quot;&gt;&gt;/&gt;
+&lt;span class=&quot;fa fa-save&quot;/&gt;&lt;/$button&gt;
+&lt;$edit-text tiddler=&quot;$:/language/ControlPanel/Saving/GitService/CommitMessage&quot; tag=input/&gt;
+&lt;$button&gt;
+&lt;$action-setfield $tiddler=&quot;$:/language/ControlPanel/Saving/GitService/CommitMessage&quot; text=&quot;&quot;/&gt;
+{{$:/core/images/erase}}
+&lt;/$button&gt;
+&lt;$button&gt;
+&lt;$action-setfield $tiddler=&quot;$:/language/ControlPanel/Saving/GitService/CommitMessage&quot; text=&quot;Saved by TiddlyWiki&quot;/&gt;
+{{$:/core/images/copy-clipboard}} default
+&lt;/$button&gt;
+&amp;#8286;
+&lt;$button message=tm-browser-refresh&gt;
+{{$:/core/images/refresh-button}}&lt;/$button&gt;
+
+---
+&lt;span class=&quot;fa fa-save&quot;/&gt; {{Einstellungen!!saved}}
+&amp;#8286;
+&lt;span class=&quot;fa fa-pen&quot;/&gt; &lt;$list filter=&quot;[!is[system]!has[draft.of]!sort[modified]limit[1]]&quot;&gt;
+&lt;$view field=&quot;modified&quot; format=&quot;date&quot; template=&quot;YYYY-0MM-0DD 0hh:0mm:0ss&quot;/&gt; (&lt;$view field=&quot;title&quot;/&gt;)
+&lt;/$list&gt;
+</pre>
+</div>
 <div created="20210125071034517" modified="20210125074935073" tags="$:/tags/RawMarkup intern" title="HtmlHeaderAdditions" type="text/plain">
 <pre>&lt;!-- this will be added to the HTML Header because of the RawMarkup Tag --&gt;
 &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js&quot;&gt;&lt;/script&gt;
@@ -10678,6 +10753,10 @@ request.open('get', 'https://api.github.com/repos/steffiland/web/pages', true);
 request.send();
 
 &lt;/script&gt;
+</pre>
+</div>
+<div created="20210510104101435" modified="20210511110301206" tags="$:/tags/RawMarkup intern" title="HtmlHeaderFontAwesome" type="text/plain">
+<pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css&quot; integrity=&quot;sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==&quot; crossorigin=&quot;anonymous&quot; /&gt;
 </pre>
 </div>
 <div caption="Listwidget" created="20210121092726898" modified="20210121093041699" tags="$:/tags/TextEditor/Snippet" title="ListWidget Snippet">
