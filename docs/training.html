@@ -54,6 +54,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 
 <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Bungee&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+<!-- see https://fontawesome.com/cheatsheet -->
 
 </head>
 <body class="tc-body">
@@ -10773,7 +10774,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div list="Home" title="$:/StoryList">
+<div created="20210511105200115" list="HauptMenue Home" modified="20210511110028062" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -11512,7 +11513,7 @@ und folgende Varianten:
 * davon 2x10 Wdh. und nach jedem Satz die Hand gut ausschütteln *dann 1 Aufwärmsatz einfache Fingertip Pushups, 1 Level einfacher als die Arbeitssätze:
 * 5-10 Wdh. keinesfalls mehr als max. 15 Wdh.</pre>
 </div>
-<div created="20201209095546498" listlimit="15" modified="20210511104925516" neutitel="2021-05-10 CC" saved="2021-05-11 12:49:25" tags="$:/tags/StartupAction intern fogff" titel_template="&lt;&lt;now &quot;YYYY-0MM-0DD&quot;&gt;&gt;" title="Einstellungen">
+<div created="20201209095546498" listlimit="15" modified="20210511111933950" neutitel="2021-05-10 CC" saved="2021-05-11 13:19:33" tags="$:/tags/StartupAction intern fogff" titel_template="&lt;&lt;now &quot;YYYY-0MM-0DD&quot;&gt;&gt;" title="Einstellungen">
 <pre>* Anzeigelimit Trainingstagebuch: &lt;$edit-text  field=&quot;listlimit&quot; /&gt;
 * Template für Titel neuer Tagebucheinträge:  &lt;$edit-text  field=&quot;titel_template&quot; /&gt;  &amp;rArr; &quot;{{!!titel_template}}&quot;
 * &amp;#10173; [[GettingStarted]]
@@ -11705,27 +11706,31 @@ CCHangProgression
 
 </pre>
 </div>
-<div created="20210511064843936" modified="20210511104852817" tags="intern" title="HauptMenue">
+<div created="20210511064843936" modified="20210511111808282" tags="intern" title="HauptMenue">
 <pre>&lt;$button message=tm-save-wiki&gt;
 &lt;$action-setfield $tiddler=Einstellungen $field=&quot;saved&quot; $value=&lt;&lt;now &quot;YYYY-0MM-0DD 0hh:0mm:0ss&quot;&gt;&gt;/&gt;
-{{$:/core/images/save-button}}&lt;/$button&gt;
+&lt;span class=&quot;fa fa-save&quot;/&gt;&lt;/$button&gt;
 &lt;$edit-text tiddler=&quot;$:/language/ControlPanel/Saving/GitService/CommitMessage&quot; tag=input/&gt;
 &lt;$button&gt;
 &lt;$action-setfield $tiddler=&quot;$:/language/ControlPanel/Saving/GitService/CommitMessage&quot; text=&quot;&quot;/&gt;
-{{$:/core/images/paint}}
+{{$:/core/images/erase}}
 &lt;/$button&gt;
 &lt;$button&gt;
 &lt;$action-setfield $tiddler=&quot;$:/language/ControlPanel/Saving/GitService/CommitMessage&quot; text=&quot;Saved by TiddlyWiki&quot;/&gt;
 {{$:/core/images/copy-clipboard}} default
 &lt;/$button&gt;
 &amp;#8286;
+&lt;$button message=tm-browser-refresh&gt;
+{{$:/core/images/refresh-button}}&lt;/$button&gt;
 &lt;$button to=Einstellungen&gt;{{$:/core/images/options-button}}&lt;/$button&gt;
 
-💾 {{Einstellungen!!saved}}
+---
+&lt;span class=&quot;fa fa-save&quot;/&gt; {{Einstellungen!!saved}}
 &amp;#8286;
-🖊️&lt;$list filter=&quot;[!is[system]!has[draft.of]!sort[modified]limit[1]]&quot;&gt;
+&lt;span class=&quot;fa fa-pen&quot;/&gt; &lt;$list filter=&quot;[!is[system]!has[draft.of]!sort[modified]limit[1]]&quot;&gt;
 &lt;$view field=&quot;modified&quot; format=&quot;date&quot; template=&quot;YYYY-0MM-0DD 0hh:0mm:0ss&quot;/&gt; (&lt;$view field=&quot;title&quot;/&gt;)
-&lt;/$list&gt;</pre>
+&lt;/$list&gt;
+</pre>
 </div>
 <div created="20210511085126066" modified="20210511104857439" tags="" title="Home">
 <pre>{{HauptMenue}}
@@ -11735,9 +11740,10 @@ CCHangProgression
 {{CC Training}}
 </pre>
 </div>
-<div created="20210510104101435" modified="20210511104820497" tags="$:/tags/RawMarkup intern" title="HtmlHeader" type="text/plain">
+<div created="20210510104101435" modified="20210511105813309" tags="$:/tags/RawMarkup intern" title="HtmlHeader" type="text/plain">
 <pre>&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Audiowide&amp;family=Bungee&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css&quot; integrity=&quot;sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==&quot; crossorigin=&quot;anonymous&quot; /&gt;</pre>
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css&quot; integrity=&quot;sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==&quot; crossorigin=&quot;anonymous&quot; /&gt;
+&lt;!-- see https://fontawesome.com/cheatsheet --&gt;</pre>
 </div>
 <div caption="Intern" created="20210511094312078" modified="20210511095636019" tags="TOC" title="intern">
 <pre>&lt;&lt;list-links filter:&quot;[tag&lt;currentTiddler&gt;sort[title]]&quot;&gt;&gt;</pre>
