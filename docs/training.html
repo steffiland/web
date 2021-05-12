@@ -377,7 +377,7 @@ Error message and password prompt
 
 <li>ConvictConditioning2</li>
 
-<li>Draft of 'CC Training bearbeiten 1'</li>
+<li>Draft of 'HauptMenue'</li>
 
 <li>EagleClaws</li>
 
@@ -10714,10 +10714,10 @@ Error message and password prompt
 <div created="20210506101625702" modified="20210506101632234" title="$:/state/image-picker/system--1420465552">
 <pre>show</pre>
 </div>
-<div created="20210116123243473" modified="20210512193128061" title="$:/state/showeditpreview">
-<pre>no</pre>
+<div created="20210116123243473" modified="20210512194310687" title="$:/state/showeditpreview">
+<pre>yes</pre>
 </div>
-<div created="20210116120950002" modified="20210512193120228" title="$:/state/sidebar">
+<div created="20210116120950002" modified="20210512194315272" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20210118140801608" modified="20210121140300132" title="$:/state/tab--1048911287">
@@ -10804,7 +10804,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div list="Home" title="$:/StoryList">
+<div created="20210512195248368" list="[[Draft of 'HauptMenue']] Home" modified="20210512195248368" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -11282,7 +11282,7 @@ Bemerkungen gesamt:
 &lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;description&quot;/&gt; 
 &lt;/$wikify&gt;</pre>
 </div>
-<div created="20210512110321213" modified="20210512151109619" showdelete="hide" showplan="hide" tags="" title="CC Training bearbeiten 1">
+<div created="20210512110321213" modified="20210512195225403" showdelete="hide" showplan="hide" tags="" title="CC Training bearbeiten 1">
 <pre>\define progression(uebung:&quot;CCPullProgression&quot;, lvl:&quot;1&quot;, feld: &quot;nameofinnerlevelfield&quot;)
    &lt;div class={{{ [&lt;titel&gt;get&lt;__feld__&gt;addprefix[step step]]  step }}}&gt;
    &lt;$radio tiddler=&lt;&lt;titel&gt;&gt; field=&lt;&lt;__feld__&gt;&gt; value=&quot;1&quot; class=&quot;radio-custom&quot;/&gt;
@@ -11338,20 +11338,21 @@ Ja, Eintrag wirklich löschen
 ---
 
 &lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;push-lvl&quot; &gt;
-&lt;div class=table&gt;
-&lt;div class=&quot;box {{{ [&lt;lvl&gt;addprefix[indicator level level]] }}}&quot;&gt;
+&lt;div class=container-fluid&gt;
+&lt;div class=&quot;row row-cols-3&quot;&gt;
+&lt;div class=&quot;col {{{ [&lt;lvl&gt;addprefix[indicator level level]] }}}&quot;&gt;
   Liegestütze &amp;nbsp; &lt;span class={{{ [&lt;titel&gt;get[push-step]addprefix[indicator step]] }}}/&gt;
-&lt;/div&gt;&lt;div class=box&gt;
+&lt;/div&gt;&lt;div class=col&gt;
   &lt;&lt;dropdown &quot;CCPushUpProgression&quot; &quot;push-lvl&quot; &gt;&gt; 
-&lt;/div&gt;&lt;div class=box&gt;
+&lt;/div&gt;&lt;div class=col&gt;
   &lt;&lt;dropdown2 &quot;Progression Push rechtwinklig&quot; &quot;push2-lvl&quot; &gt;&gt;
 &lt;/div&gt;
-&lt;div class=box-1&gt;
+&lt;div class=col-6&gt;
 &lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung=&quot;CCPushUpProgression&quot; feld=&quot;push-step&quot; /&gt;
 &lt;/div&gt;
-&lt;div class=box-1&gt;
+&lt;div class=col-6&gt;
 Bemerkungen: &lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;push-text&quot;/&gt; 
-&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;
 &lt;/div&gt;&lt;/$set&gt;
 
 &lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;core-lvl&quot; &gt;
@@ -11712,146 +11713,38 @@ und folgende Varianten:
 
 ##</pre>
 </div>
-<div created="20210512110321213" draft.of="CC Training bearbeiten 1" draft.title="CC Training bearbeiten 1" modified="20210512193049935" showdelete="hide" showplan="hide" tags="" title="Draft of 'CC Training bearbeiten 1'">
-<pre>\define progression(uebung:&quot;CCPullProgression&quot;, lvl:&quot;1&quot;, feld: &quot;nameofinnerlevelfield&quot;)
-   &lt;div class={{{ [&lt;titel&gt;get&lt;__feld__&gt;addprefix[step step]]  step }}}&gt;
-   &lt;$radio tiddler=&lt;&lt;titel&gt;&gt; field=&lt;&lt;__feld__&gt;&gt; value=&quot;1&quot; class=&quot;radio-custom&quot;/&gt;
-     Anfänger&amp;nbsp;&lt;$text text= {{{ [&lt;__uebung__&gt;getindex&lt;__lvl__&gt;split[:]nth[2]] }}} /&gt;
-   &lt;$radio tiddler=&lt;&lt;titel&gt;&gt; field=&lt;&lt;__feld__&gt;&gt; value=&quot;2&quot; class=&quot;radio-custom&quot;/&gt;
-     Fortgeschrittene&amp;nbsp;&lt;$text text=  {{{ [&lt;__uebung__&gt;getindex&lt;__lvl__&gt;split[:]nth[3]] }}} /&gt;
-   &lt;$radio tiddler=&lt;&lt;titel&gt;&gt; field=&lt;&lt;__feld__&gt;&gt; value=&quot;3&quot; class=&quot;radio-custom&quot;/&gt;
-     Profi&amp;nbsp;&lt;$text text= {{{ [&lt;__uebung__&gt;getindex&lt;__lvl__&gt;split[:]nth[4]] }}} /&gt;
-    &lt;$button&gt;
-            &lt;$action-deletefield $tiddler=&lt;&lt;titel&gt;&gt; $field=&lt;&lt;__feld__&gt;&gt; /&gt;
-      {{$:/core/images/cancel-button}}
-   &lt;/$button&gt;
-&lt;/div&gt;
-\end
-\define dropdown(uebung:&quot;CCPullProgression&quot;, feld:&quot;nameofthefield&quot;)
- [[Level:|$uebung$]]&amp;nbsp;&lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=&lt;&lt;__feld__&gt;&gt; class=&quot;fixedwidth&quot;&gt;
-&lt;$list filter=&quot;[range[0,10]]&quot; variable=&quot;lvl&quot;&gt;
-&lt;option value=&lt;&lt;lvl&gt;&gt; &gt;&lt;&lt;lvl&gt;&gt; - {{{ [&lt;__uebung__&gt;getindex&lt;lvl&gt;split[:]nth[1]] }}}&lt;/option&gt;
+<div created="20210511064843936" draft.of="HauptMenue" draft.title="HauptMenue" modified="20210512195255277" tags="intern" title="Draft of 'HauptMenue'">
+<pre>&lt;$button message=tm-save-wiki class=tooltip&gt;
+&lt;span class=tooltiptext&gt;speichern&lt;/span&gt;
+&lt;$action-setfield $tiddler=Einstellungen $field=&quot;saved&quot; $value=&lt;&lt;now &quot;YYYY-0MM-0DD 0hh:0mm:0ss&quot;&gt;&gt;/&gt;
+&lt;span class=&quot;fa fa-save&quot;/&gt;&lt;/$button&gt;
+&lt;$edit-text tiddler=&quot;$:/language/ControlPanel/Saving/GitService/CommitMessage&quot; tag=input/&gt;
+&lt;$button class=tooltip&gt;
+&lt;span class=tooltiptext&gt;Commit Message leeren&lt;/span&gt;
+&lt;$action-setfield $tiddler=&quot;$:/language/ControlPanel/Saving/GitService/CommitMessage&quot; text=&quot;&quot;/&gt;
+&lt;&lt;fa eraser&gt;&gt;&lt;/$button&gt;
+&lt;$button class=tooltip&gt;
+&lt;span class=tooltiptext&gt;Commit Message auf default setzen&lt;/span&gt;
+&lt;$action-setfield $tiddler=&quot;$:/language/ControlPanel/Saving/GitService/CommitMessage&quot; text=&quot;Saved by TiddlyWiki&quot;/&gt;
+&lt;&lt;fa &quot;external-link-alt fa-rotate-180&quot;&gt;&gt;
+&lt;/$button&gt;
+&amp;#8286;
+&lt;$button message=tm-browser-refresh  class=tooltip&gt;
+&lt;span class=tooltiptext&gt;Wiki-Seite neu laden&lt;/span&gt;
+&lt;span class=&quot;fa fa-sync&quot;/&gt;&lt;/$button&gt;
+&lt;$button to=Einstellungen  class=tooltip&gt;
+&lt;span class=tooltiptext&gt;Einstellungen&lt;/span&gt;&lt;&lt;fa cog&gt;&gt;&lt;/$button&gt;
+&lt;$button to=TOC  class=tooltip&gt;
+&lt;span class=tooltiptext&gt;Inhaltsverzeichnis&lt;/span&gt;&lt;&lt;fa &quot;file-alt fa-regular&quot;&gt;&gt;&lt;/$button&gt;
+&lt;$button message=tm-edit-tiddler  class=tooltip&gt;
+&lt;span class=tooltiptext&gt;Haptmenü bearbeiten&lt;/span&gt;&lt;span class=&quot;fa fa-edit&quot;/&gt;&lt;/$button&gt;
+
+&lt;span class=&quot;fa fa-save&quot;/&gt; {{Einstellungen!!saved}}
+&amp;#8286;
+&lt;span class=&quot;fa fa-pen&quot;/&gt; &lt;$list filter=&quot;[!is[system]!title[Einstellungen]!has[draft.of]!sort[modified]limit[1]]&quot;&gt;
+&lt;$view field=&quot;modified&quot; format=&quot;date&quot; template=&quot;YYYY-0MM-0DD 0hh:0mm:0ss&quot;/&gt; &lt;$link to={{!!title}}&gt;{{!!title}}&lt;/$link&gt;
 &lt;/$list&gt;
-&lt;/$select&gt;
-   &lt;$button&gt;
-            &lt;$action-deletefield $tiddler=&lt;&lt;titel&gt;&gt; $field=&lt;&lt;__feld__&gt;&gt; /&gt;
-      {{$:/core/images/cancel-button}}
-   &lt;/$button&gt;
-\end
-\define dropdown2(uebung:&quot;BeinhebenSchrägProgression&quot;, feld:&quot;nameofthefield&quot;)
- [[alternativ:|$uebung$]]&amp;nbsp;&lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=&lt;&lt;__feld__&gt;&gt; class=&quot;fixedwidth&quot;&gt;
-&lt;$list filter=&quot;[title&lt;__uebung__&gt;indexes[]sortan[]]&quot; variable=&quot;dditem&quot;&gt;
-&lt;option value=&lt;&lt;dditem&gt;&gt; &gt;&lt;&lt;dditem&gt;&gt; - &lt;$transclude tiddler=&lt;&lt;__uebung__&gt;&gt; index=&lt;&lt;dditem&gt;&gt;/&gt;&lt;/option&gt;
-&lt;/$list&gt;
-&lt;/$select&gt;
-   &lt;$button&gt;
-            &lt;$action-deletefield $tiddler=&lt;&lt;titel&gt;&gt; $field=&lt;&lt;__feld__&gt;&gt; /&gt;
-      {{$:/core/images/cancel-button}}
-   &lt;/$button&gt;
-\end
-
-&lt;$wikify name=titel text=&quot;{{Einstellungen!!neutitel}}&quot; &gt;
-
-!! &quot;&lt;&lt;titel&gt;&gt;&quot;  &lt;$reveal type=&quot;nomatch&quot; state=&quot;!!showDelete&quot; text=&quot;show&quot;&gt;
-&lt;$button set=&quot;!!showDelete&quot; setTo=&quot;show&quot;&gt;{{$:/core/images/delete-button}}&lt;/$button&gt;
-&lt;/$reveal&gt;
-&lt;$reveal type=&quot;match&quot; state=&quot;!!showDelete&quot; text=&quot;show&quot;&gt;
-&lt;$button  set=&quot;!!showDelete&quot; setTo=&quot;hide&quot;&gt;
-&lt;$action-deletetiddler $tiddler=&lt;&lt;titel&gt;&gt; /&gt;
-&lt;$action-sendmessage $message=&quot;tm-close-tiddler&quot;/&gt;
-{{$:/core/images/delete-button}} 
-Ja, Eintrag wirklich löschen
-&lt;/$button&gt; 
-&lt;$button  set=&quot;!!showDelete&quot; setTo=&quot;hide&quot;&gt;{{$:/core/images/close-button}} nein, doch nicht löschen&lt;/$button&gt; 
-&lt;/$reveal&gt; &lt;$button  to=&quot;ConvictConditioning Grundsätze&quot; &gt;{{$:/core/images/file}}&lt;/$button&gt; 
-
----
-
-&lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;push-lvl&quot; &gt;
-&lt;div class=table&gt;
-&lt;div class=&quot;box {{{ [&lt;lvl&gt;addprefix[indicator level level]] }}}&quot;&gt;
-  Liegestütze &amp;nbsp; &lt;span class={{{ [&lt;titel&gt;get[push-step]addprefix[indicator step]] }}}/&gt;
-&lt;/div&gt;&lt;div class=box&gt;
-  &lt;&lt;dropdown &quot;CCPushUpProgression&quot; &quot;push-lvl&quot; &gt;&gt; 
-&lt;/div&gt;&lt;div class=box&gt;
-  &lt;&lt;dropdown2 &quot;Progression Push rechtwinklig&quot; &quot;push2-lvl&quot; &gt;&gt;
-&lt;/div&gt;
-&lt;div class=box-1&gt;
-&lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung=&quot;CCPushUpProgression&quot; feld=&quot;push-step&quot; /&gt;
-&lt;/div&gt;
-&lt;div class=box-1&gt;
-Bemerkungen: &lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;push-text&quot;/&gt; 
-&lt;/div&gt;
-&lt;/div&gt;&lt;/$set&gt;
-
-&lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;core-lvl&quot; &gt;
-
-!!! &lt;span class={{{ [&lt;lvl&gt;addprefix[indicator level level]] }}}&gt;Beinheben /  Core &lt;/span&gt; &amp;nbsp; &lt;span class={{{ [&lt;titel&gt;get[core-step]addprefix[indicator step]] }}}/&gt;
-&lt;&lt;dropdown &quot;CCBeinhebenProgression&quot; &quot;core-lvl&quot; &gt;&gt;
-&lt;&lt;dropdown2 &quot;BeinhebenSchrägProgression&quot; &quot;core2-lvl&quot; &gt;&gt;
-
-&lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung=&quot;CCBeinhebenProgression&quot; feld=&quot;core-step&quot;  /&gt;
-&lt;/$set&gt;
-
-Bemerkungen: 
-&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;core-text&quot;/&gt; 
-
-&lt;/table&gt;
----
-&lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;pull-lvl&quot; &gt;
-
-!!! &lt;span class={{{ [&lt;lvl&gt;addprefix[indicator level level]] }}}&gt;Pull &lt;/span&gt; &amp;nbsp; &lt;span class={{{ [&lt;titel&gt;get[pull-step]addprefix[indicator step]] }}}/&gt;
-&lt;&lt;dropdown &quot;CCPullProgression&quot; &quot;pull-lvl&quot; &gt;&gt;
-&lt;&lt;dropdown2 &quot;Progression Pull&quot; &quot;pull2-lvl&quot; &gt;&gt;
-
-&lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung=&quot;CCPullProgression&quot; feld=&quot;pull-step&quot;  /&gt;
-&lt;/$set&gt;
-
-Bemerkungen: 
-&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;pull-text&quot;/&gt; 
-
-&lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;legs-lvl&quot; &gt;
-
-!!! &lt;span class={{{ [&lt;lvl&gt;addprefix[indicator level level]] }}}&gt;Kniebeugen &lt;/span&gt; &amp;nbsp; &lt;span class={{{ [&lt;titel&gt;get[legs-step]addprefix[indicator step]] }}}/&gt;
-&lt;&lt;dropdown &quot;CCSquatProgression&quot; &quot;legs-lvl&quot; &gt;&gt;
-&lt;&lt;dropdown2 &quot;Progression Beine&quot; &quot;legs2-lvl&quot; &gt;&gt;
-
-&lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung=&quot;CCSquatProgression&quot; feld=&quot;legs-step&quot;  /&gt;
-&lt;/$set&gt;
-
-Bemerkungen: 
-&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;legs-text&quot;/&gt;
-
----
-
-&lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;bridge-lvl&quot; &gt;
-
-!!! (ab Core+Beine Lvl 6) &lt;span class={{{ [&lt;lvl&gt;addprefix[indicator level level]] }}}&gt;Brücke  &lt;/span&gt; &amp;nbsp; &lt;span class={{{ [&lt;titel&gt;get[bridge-step]addprefix[indicator step]] }}}/&gt;
-&lt;&lt;dropdown &quot;CCBridgeProgression&quot; &quot;bridge-lvl&quot; &gt;&gt;
-&lt;&lt;dropdown2 &quot;CCBridgeProgression-alt&quot; &quot;bridge2-lvl&quot; &gt;&gt;
-
-&lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung=&quot;CCBridgeProgression&quot; feld=&quot;bridge-step&quot;  /&gt;
-&lt;/$set&gt;
-
-Bemerkungen: 
-&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;bridge-text&quot;/&gt;
-
-&lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;hs-lvl&quot; &gt;
-
-!!! &lt;span class={{{ [&lt;lvl&gt;addprefix[indicator level level]] }}}&gt;Handstand (ab Push Lvl 6) &lt;/span&gt; &amp;nbsp; &lt;span class={{{ [&lt;titel&gt;get[hs-step]addprefix[indicator step]] }}}/&gt;
-&lt;&lt;dropdown &quot;CCHandstandProgression&quot; &quot;hs-lvl&quot; &gt;&gt;
-&lt;&lt;dropdown2 &quot;Progression Push gerade&quot; &quot;hs2-lvl&quot; &gt;&gt;
-
-&lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung=&quot;CCHandstandProgression&quot; feld=&quot;hs-step&quot;  /&gt;
-&lt;/$set&gt;
-
-Bemerkungen: 
-&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;hs-text&quot;/&gt;
-
----
-Bemerkungen gesamt: 
-&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;description&quot;/&gt; 
-&lt;/$wikify&gt;</pre>
+</pre>
 </div>
 <div created="20210124124927714" modified="20210124125005333" tags="" title="EagleClaws" type="text/x-markdown">
 <pre>* Form your hands into tight fists, and gradually open your fingers/ thumbs joint– by joint, slowly and deliberately and under maximum isometric tension. Once your (trembling!) hands are stretched open to the max, reverse the process into a hard fist. Thats one rep.
@@ -12518,7 +12411,7 @@ v11:Malteser Pushups
 * &lt;&lt;currentTiddler&gt;&gt;
 &lt;/$list &gt;</pre>
 </div>
-<div created="20210129123738475" modified="20210512193359660" tags="intern $:/tags/Stylesheet" title="StyleSheet" type="text/css">
+<div created="20210129123738475" modified="20210512194551751" tags="intern $:/tags/Stylesheet" title="StyleSheet" type="text/css">
 <pre>## divs für floating Tabellen: 
 ## https://www.w3schools.com/css/css_float_examples.asp
 * {
@@ -12562,7 +12455,7 @@ v11:Malteser Pushups
 [data-tiddler-title=&quot;Home&quot;] select, [data-tiddler-title=&quot;Home&quot;] input, [data-tiddler-title=&quot;Home&quot;] .tc-reveal button+span,
 [data-tiddler-title*=&quot;Training bearbeiten&quot;] select, [data-tiddler-title*=&quot;Training bearbeiten&quot;] input,
 input.fixedwidth, select.fixedwidth, span.fixedwidth,
-.fixedwidth input, .fixedwidth input {
+.fixedwidth select, .fixedwidth input {
   width: 150px; min-width: 150px; display: inline-block; 
 }
 
