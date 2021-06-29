@@ -327,8 +327,6 @@ Error message and password prompt
 
 <li>2021-06-26 CC</li>
 
-<li>2021-06-29 CC</li>
-
 <li>ActiveStretching</li>
 
 <li>Alle Trainings</li>
@@ -10823,7 +10821,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210629125159988" list="[[New Tiddler]] [[CC Training]] StyleSheet Home [[CC Training bearbeiten]] [[Trainingsübersicht CC]]" modified="20210629125640216" title="$:/StoryList">
+<div created="20210629130220003" list="[[New Tiddler]] Home [[Trainingsübersicht CC]]" modified="20210629131432666" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -11035,9 +11033,6 @@ Error message and password prompt
 <pre>{{||CCDisplayTemplate}}</pre>
 </div>
 <div core-lvl="1" core-text="40,40" created="20210626121649947" modified="20210626125116902" push-lvl="2" push-step="2" push-text="40,40,40" tags="cc-training training" title="2021-06-26 CC">
-<pre>{{||CCDisplayTemplate}}</pre>
-</div>
-<div created="20210629125159924" modified="20210629125159924" tags="cc-training training" title="2021-06-29 CC">
 <pre>{{||CCDisplayTemplate}}</pre>
 </div>
 <div created="20210125202836653" gelenke="Nacken, Schultern, Arme, Ellbogen, Handgelenke, mittlerer Rücken, Hüfte, Knie, Fußgelenke, Beine" modified="20210406102800120" tags="ConvictConditioning2" title="ActiveStretching">
@@ -11632,7 +11627,7 @@ und folgende Varianten:
 * davon 2x10 Wdh. und nach jedem Satz die Hand gut ausschütteln *dann 1 Aufwärmsatz einfache Fingertip Pushups, 1 Level einfacher als die Arbeitssätze:
 * 5-10 Wdh. keinesfalls mehr als max. 15 Wdh.</pre>
 </div>
-<div created="20201209095546498" listlimit="15" modified="20210629125159934" neutitel="2021-06-29 CC" saved="2021-06-26 14:51:20" tags="$:/tags/StartupAction intern fogff" titel_template="&lt;&lt;now &quot;YYYY-0MM-0DD&quot;&gt;&gt;" title="Einstellungen">
+<div created="20201209095546498" listlimit="15" modified="20210629131443984" neutitel="2021-06-29 CC" saved="2021-06-29 15:14:43" tags="$:/tags/StartupAction intern fogff" titel_template="&lt;&lt;now &quot;YYYY-0MM-0DD&quot;&gt;&gt;" title="Einstellungen">
 <pre>* Anzeigelimit Trainingstagebuch: &lt;$edit-text  field=&quot;listlimit&quot; /&gt;
 * Template für Titel neuer Tagebucheinträge:  &lt;$edit-text  field=&quot;titel_template&quot; /&gt;  &amp;rArr; &quot;{{!!titel_template}}&quot;
 * &amp;#10173; [[GettingStarted]]
@@ -12066,12 +12061,12 @@ Gelenke kreisen {{!!sxw-kreisen}}:
 * **!!!die richtige Wrestler- und Front-Bridge erst trainieren, wenn man die klassische Brücke sehr gut beherrscht !!!**
 * 1-2x pro Woche mit trainieren (15min), Details siehe Buch</pre>
 </div>
-<div class="fixedwidth" created="20210629125658947" modified="20210629125948375" tags="" title="New Tiddler">
-<pre>Texteingabefeld: &lt;input class=&quot;fixedwidth&quot; type=&quot;text&quot;/&gt; fixedwidth
+<div class="fixedwidth" created="20210629125658947" modified="20210629130835053" tags="" title="New Tiddler">
+<pre>Texteingabefeld: &lt;input type=&quot;text&quot; class=&quot;fixedwidth&quot; /&gt; fixedwidth
 
 Texteingabefeld: &lt;input class=&quot;fixedwidth&quot; type=&quot;text&quot;/&gt; normal
 
-Texteingabefeld: &lt;input type=&quot;text&quot; style=&quot;width: 150px; min-width: 150px; display: inline-block; &quot;/&gt; Style manuell</pre>
+Texteingabefeld: &lt;input type=&quot;text&quot; style=&quot;background: red &quot;/&gt; Style manuell</pre>
 </div>
 <div created="20201209074158717" modified="20210209073432013" tags="intern fogff" title="Progression Beine" type="application/x-tiddler-dictionary">
 <pre>-:-
@@ -12299,7 +12294,7 @@ v11:Malteser Pushups
 * &lt;&lt;currentTiddler&gt;&gt;
 &lt;/$list &gt;</pre>
 </div>
-<div created="20210129123738475" modified="20210629130043347" tags="intern $:/tags/Stylesheet" title="StyleSheet" type="text/css">
+<div created="20210129123738475" modified="20210629130822529" tags="intern $:/tags/Stylesheet" title="StyleSheet" type="text/css">
 <pre>## divs für floating Tabellen: 
 ## https://www.mediaevent.de/css/display-table.html
 * {
@@ -12353,14 +12348,17 @@ v11:Malteser Pushups
    content: &quot;(&quot; counter(row-num) &quot;)&quot;; 
 }
 #########
+.fixedwidth input, input.fixedwidth {
+  width: 150px; min-width: 150px; display: inline-block; background: red;
+}
 
 #[data-tiddler-title=&quot;Home&quot;] select, [data-tiddler-title=&quot;Home&quot;] input, [data-tiddler-title=&quot;Home&quot;] .tc-reveal button+span,
-[data-tiddler-title*=&quot;Training bearbeiten&quot;] select, [data-tiddler-title*=&quot;Training bearbeiten&quot;] input,
+[data-tiddler-title*=&quot;Training bearbeiten&quot;] select, [data-tiddler-title*=&quot;Training bearbeiten&quot;] input, .fixedwidth input, .fixedwidth select,  select.fixedwidth, span.fixedwidth, 
 
-input.fixedwidth, select.fixedwidth, span.fixedwidth,
-.fixedwidth input, .fixedwidth select {
-  width: 150px; min-width: 150px; display: inline-block; 
-}
+
+
+
+
 
 .vertical { writing-mode: vertical-lr; }
 .br td:nth-child(2n+3), .br th:nth-child(2n+3) { border-left: double gray; }
