@@ -327,6 +327,8 @@ Error message and password prompt
 
 <li>2021-06-26 CC</li>
 
+<li>2021-06-30 CC</li>
+
 <li>ActiveStretching</li>
 
 <li>Alle Trainings</li>
@@ -347,6 +349,20 @@ Error message and password prompt
 
 <li>CC Training bearbeiten 1</li>
 
+<li>CC Training bearbeiten alt</li>
+
+<li>CC-edit-bridge</li>
+
+<li>CC-edit-core</li>
+
+<li>CC-edit-hs</li>
+
+<li>CC-edit-legs</li>
+
+<li>CC-edit-pull</li>
+
+<li>CC-edit-push</li>
+
 <li>CCBeinhebenProgression</li>
 
 <li>CCBridgeHoldProgression</li>
@@ -360,6 +376,8 @@ Error message and password prompt
 <li>CCDisplayPart</li>
 
 <li>CCDisplayTemplate</li>
+
+<li>CCEditTemplate</li>
 
 <li>CCHandstandProgression</li>
 
@@ -388,6 +406,8 @@ Error message and password prompt
 <li>ConvictConditioning Grundsätze</li>
 
 <li>ConvictConditioning2</li>
+
+<li>Draft of 'CCEditTemplate'</li>
 
 <li>EagleClaws</li>
 
@@ -514,8 +534,8 @@ Error message and password prompt
 <div created="20201209184943796" modified="20201209184943796" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/refresh">
 <pre>show</pre>
 </div>
-<div created="20201209200630213" modified="20201209200630213" title="$:/config/RelinkOnRename">
-<pre>yes</pre>
+<div created="20201209200630213" modified="20210630083002970" title="$:/config/RelinkOnRename">
+<pre>no</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="TiddlyWiki5 core" list="readme" name="Core" plugin-priority="0" plugin-type="plugin" title="$:/core" type="application/json" version="5.1.23">
 <pre>{
@@ -10502,8 +10522,8 @@ Error message and password prompt
 <div title="$:/isEncrypted">
 <pre>no</pre>
 </div>
-<div created="20210511073438317" modified="20210620132223844" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
-<pre>Sport</pre>
+<div created="20210511073438317" modified="20210630084708878" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
+<pre>layout redesign</pre>
 </div>
 <div dependents="" description="Markdown parser based on remarkable by Jon Schlinkert" list="readme usage" name="Markdown" plugin-type="plugin" title="$:/plugins/tiddlywiki/markdown" type="application/json" version="5.1.23">
 <pre>{
@@ -10821,7 +10841,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210629130220003" list="[[New Tiddler]] Home [[Trainingsübersicht CC]]" modified="20210629131432666" title="$:/StoryList">
+<div list="Home [[Trainingsübersicht CC]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -11035,6 +11055,9 @@ Error message and password prompt
 <div core-lvl="1" core-text="40,40" created="20210626121649947" modified="20210626125116902" push-lvl="2" push-step="2" push-text="40,40,40" tags="cc-training training" title="2021-06-26 CC">
 <pre>{{||CCDisplayTemplate}}</pre>
 </div>
+<div created="20210630071528739" modified="20210630071528739" tags="cc-training training" title="2021-06-30 CC">
+<pre>{{||CCDisplayTemplate}}</pre>
+</div>
 <div created="20210125202836653" gelenke="Nacken, Schultern, Arme, Ellbogen, Handgelenke, mittlerer Rücken, Hüfte, Knie, Fußgelenke, Beine" modified="20210406102800120" tags="ConvictConditioning2" title="ActiveStretching">
 <pre>!!Gelenke Kreisen
  &lt;$list filter=&quot;[{ActiveStretching!!gelenke}split[, ]]&quot; variable=&quot;tt&quot;&gt;
@@ -11159,7 +11182,7 @@ Error message and password prompt
  &lt;/g&gt;
 &lt;/svg&gt;</pre>
 </div>
-<div created="20210502193603277" modified="20210512095249094" tags="ConvictConditioning" title="CC Training">
+<div created="20210502193603277" modified="20210630071355599" tags="ConvictConditioning" title="CC Training">
 <pre>&lt;$wikify name=titelneu text=&quot;{{Einstellungen!!titel_template}} CC&quot; &gt;
 &lt;$button  to=&quot;CC Training bearbeiten&quot;&gt;
 &lt;$action-createtiddler $basetitle=&lt;&lt;titelneu&gt;&gt; $overwrite=&quot;yes&quot; $template=&quot;CCTemplate&quot; /&gt;
@@ -11179,8 +11202,95 @@ Error message and password prompt
 &lt;$button  to=&quot;Trainingsübersicht CC&quot;&gt;&lt;&lt;fa list&gt;&gt;&lt;/$button&gt;
 &lt;$button  to=&quot;ConvictConditioning&quot;&gt;&lt;&lt;fa question&gt;&gt;&lt;/$button&gt;</pre>
 </div>
-<div class="fixedwidth" created="20210502194048451" modified="20210629125447181" showdelete="hide" showplan="hide" tags="" title="CC Training bearbeiten">
+<div class="fixedwidth" created="20210630074314034" modified="20210630084652994" showdelete="hide" showplan="hide" tags="" title="CC Training bearbeiten">
 <pre>\define progression(uebung:&quot;CCPullProgression&quot;, lvl:&quot;1&quot;, feld: &quot;nameofinnerlevelfield&quot;)
+   &lt;span class=fixedwidth&gt;erreichtes Niveau:&lt;/span&gt; lubb
+\end
+\define dropdown(uebung:&quot;CCPullProgression&quot;, feld:&quot;nameofthefield&quot;)
+ &lt;span class=&quot;fixedwidth&quot;&gt;[[Level:|$uebung$]]&lt;/span&gt;&amp;nbsp;&lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=&lt;&lt;__feld__&gt;&gt; class=&quot;fixedwidth&quot;&gt;
+&lt;$list filter=&quot;[range[0,10]]&quot; variable=&quot;lvl&quot;&gt;
+&lt;option value=&lt;&lt;lvl&gt;&gt; &gt;&lt;&lt;lvl&gt;&gt; - {{{ [&lt;__uebung__&gt;getindex&lt;lvl&gt;split[:]nth[1]] }}}&lt;/option&gt;
+&lt;/$list&gt;
+&lt;/$select&gt;
+   &lt;$button&gt;
+            &lt;$action-deletefield $tiddler=&lt;&lt;titel&gt;&gt; $field=&lt;&lt;__feld__&gt;&gt; /&gt;
+      {{$:/core/images/cancel-button}}
+   &lt;/$button&gt;
+\end
+\define dropdown2(uebung:&quot;BeinhebenSchrägProgression&quot;, feld:&quot;nameofthefield&quot;)
+ &lt;span class=&quot;fixedwidth&quot;&gt;[[alternativ:|$uebung$]]&lt;/span&gt;&amp;nbsp;&lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=&lt;&lt;__feld__&gt;&gt; class=&quot;fixedwidth&quot;&gt;
+&lt;$list filter=&quot;[title&lt;__uebung__&gt;indexes[]sortan[]]&quot; variable=&quot;dditem&quot;&gt;
+&lt;option value=&lt;&lt;dditem&gt;&gt; &gt;&lt;&lt;dditem&gt;&gt; - &lt;$transclude tiddler=&lt;&lt;__uebung__&gt;&gt; index=&lt;&lt;dditem&gt;&gt;/&gt;&lt;/option&gt;
+&lt;/$list&gt;
+&lt;/$select&gt;
+   &lt;$button&gt;
+            &lt;$action-deletefield $tiddler=&lt;&lt;titel&gt;&gt; $field=&lt;&lt;__feld__&gt;&gt; /&gt;
+      {{$:/core/images/cancel-button}}
+   &lt;/$button&gt;
+\end
+\define bemerkungen(feld:&quot;nameofthefield&quot;)
+&lt;span class=&quot;fixedwidth&quot;&gt;Bemerkungen:&lt;/span&gt; &lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&lt;&lt;__feld__&gt;&gt; /&gt; 
+\end
+
+&lt;$wikify name=titel text=&quot;{{Einstellungen!!neutitel}}&quot; &gt;
+
+!! &quot;&lt;&lt;titel&gt;&gt;&quot;  &lt;$reveal type=&quot;nomatch&quot; state=&quot;!!showDelete&quot; text=&quot;show&quot;&gt;
+&lt;$button set=&quot;!!showDelete&quot; setTo=&quot;show&quot;&gt;{{$:/core/images/delete-button}}&lt;/$button&gt;
+&lt;/$reveal&gt;
+&lt;$reveal type=&quot;match&quot; state=&quot;!!showDelete&quot; text=&quot;show&quot;&gt;
+&lt;$button  set=&quot;!!showDelete&quot; setTo=&quot;hide&quot;&gt;
+&lt;$action-deletetiddler $tiddler=&lt;&lt;titel&gt;&gt; /&gt;
+&lt;$action-sendmessage $message=&quot;tm-close-tiddler&quot;/&gt;
+{{$:/core/images/delete-button}} 
+Ja, Eintrag wirklich löschen
+&lt;/$button&gt; 
+&lt;$button  set=&quot;!!showDelete&quot; setTo=&quot;hide&quot;&gt;{{$:/core/images/close-button}} nein, doch nicht löschen&lt;/$button&gt; 
+&lt;/$reveal&gt; &lt;$button  to=&quot;ConvictConditioning Grundsätze&quot; &gt;{{$:/core/images/file}}&lt;/$button&gt; 
+
+---
+
+{{CC-edit-push||CCEditTemplate}}
+
+{{CC-edit-core||CCEditTemplate}}
+
+---
+{{CC-edit-pull||CCEditTemplate}}
+
+{{CC-edit-legs||CCEditTemplate}}
+
+---
+
+{{CC-edit-bridge||CCEditTemplate}}
+
+{{CC-edit-hs||CCEditTemplate}}
+
+---
+&lt;span class=&quot;fixedwidth&quot;&gt;Trainingsnotiz:&lt;/span&gt; 
+&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;description&quot;/&gt; 
+&lt;/$wikify&gt;</pre>
+</div>
+<div created="20210512110321213" modified="20210513125713488" showdelete="hide" showplan="hide" tags="" title="CC Training bearbeiten 1">
+<pre>&lt;div class=table&gt;
+&lt;div class=row&gt;
+&lt;div class=box&gt;
+Level: kgwklgfvweklwfgl
+&lt;/div&gt;
+&lt;div class=box&gt;
+alt: kgwklgfvweklwfgl
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=row&gt;
+&lt;div class=&quot;box box-1&quot;&gt;
+Anfänger sldkhöskvh  Fortgeschrittener jehglkkl Profi kflwegkl wejkgfjklw
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=row&gt;
+&lt;div class=&quot;box box-1&quot;&gt;
+Bemerkungen kjjsrhljglwt4lfl43htöhöfkljfgt
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;</pre>
+</div>
+<div class="fixedwidth" created="20210502194048451" modified="20210630083004894" showdelete="hide" showplan="hide" tags="" title="CC Training bearbeiten alt">
+<pre>\define progression(uebung:&quot;CCPullProgression&quot;, lvl:&quot;1&quot;, feld: &quot;nameofinnerlevelfield&quot;)
+   &lt;span class=fixedwidth&gt;erreichtes Niveau:&lt;/span&gt;
    &lt;div class={{{ [&lt;titel&gt;get&lt;__feld__&gt;addprefix[step step]]  step }}}&gt;
    &lt;$radio tiddler=&lt;&lt;titel&gt;&gt; field=&lt;&lt;__feld__&gt;&gt; value=&quot;1&quot; class=&quot;radio-custom&quot;/&gt;
      Anfänger&amp;nbsp;&lt;$text text= {{{ [&lt;__uebung__&gt;getindex&lt;__lvl__&gt;split[:]nth[2]] }}} /&gt;
@@ -11195,7 +11305,7 @@ Error message and password prompt
 &lt;/div&gt;
 \end
 \define dropdown(uebung:&quot;CCPullProgression&quot;, feld:&quot;nameofthefield&quot;)
- [[Level:|$uebung$]]&amp;nbsp;&lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=&lt;&lt;__feld__&gt;&gt; class=&quot;fixedwidth&quot;&gt;
+ &lt;span class=&quot;fixedwidth&quot;&gt;[[Level:|$uebung$]]&lt;/span&gt;&amp;nbsp;&lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=&lt;&lt;__feld__&gt;&gt; class=&quot;fixedwidth&quot;&gt;
 &lt;$list filter=&quot;[range[0,10]]&quot; variable=&quot;lvl&quot;&gt;
 &lt;option value=&lt;&lt;lvl&gt;&gt; &gt;&lt;&lt;lvl&gt;&gt; - {{{ [&lt;__uebung__&gt;getindex&lt;lvl&gt;split[:]nth[1]] }}}&lt;/option&gt;
 &lt;/$list&gt;
@@ -11206,7 +11316,7 @@ Error message and password prompt
    &lt;/$button&gt;
 \end
 \define dropdown2(uebung:&quot;BeinhebenSchrägProgression&quot;, feld:&quot;nameofthefield&quot;)
- [[alternativ:|$uebung$]]&amp;nbsp;&lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=&lt;&lt;__feld__&gt;&gt; class=&quot;fixedwidth&quot;&gt;
+ &lt;span class=&quot;fixedwidth&quot;&gt;[[alternativ:|$uebung$]]&lt;/span&gt;&amp;nbsp;&lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=&lt;&lt;__feld__&gt;&gt; class=&quot;fixedwidth&quot;&gt;
 &lt;$list filter=&quot;[title&lt;__uebung__&gt;indexes[]sortan[]]&quot; variable=&quot;dditem&quot;&gt;
 &lt;option value=&lt;&lt;dditem&gt;&gt; &gt;&lt;&lt;dditem&gt;&gt; - &lt;$transclude tiddler=&lt;&lt;__uebung__&gt;&gt; index=&lt;&lt;dditem&gt;&gt;/&gt;&lt;/option&gt;
 &lt;/$list&gt;
@@ -11215,6 +11325,9 @@ Error message and password prompt
             &lt;$action-deletefield $tiddler=&lt;&lt;titel&gt;&gt; $field=&lt;&lt;__feld__&gt;&gt; /&gt;
       {{$:/core/images/cancel-button}}
    &lt;/$button&gt;
+\end
+\define bemerkungen(feld:&quot;nameofthefield&quot;)
+&lt;span class=&quot;fixedwidth&quot;&gt;Bemerkungen:&lt;/span&gt; &lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&lt;&lt;__feld__&gt;&gt; /&gt; 
 \end
 
 &lt;$wikify name=titel text=&quot;{{Einstellungen!!neutitel}}&quot; &gt;
@@ -11238,12 +11351,14 @@ Ja, Eintrag wirklich löschen
 
 !!! &lt;span class={{{ [&lt;lvl&gt;addprefix[indicator level level]] }}}&gt;Liegestütze &lt;/span&gt; &amp;nbsp; &lt;span class={{{ [&lt;titel&gt;get[push-step]addprefix[indicator step]] }}}/&gt;
 
-&lt;&lt;dropdown &quot;CCPushUpProgression&quot; &quot;push-lvl&quot; &gt;&gt; &lt;&lt;dropdown2 &quot;Progression Push rechtwinklig&quot; &quot;push2-lvl&quot; &gt;&gt;
+&lt;&lt;dropdown &quot;CCPushUpProgression&quot; &quot;push-lvl&quot; &gt;&gt;
+
+&lt;&lt;dropdown2 &quot;Progression Push rechtwinklig&quot; &quot;push2-lvl&quot; &gt;&gt;
+
+&lt;&lt;bemerkungen &quot;push-text&quot;&gt;&gt;
 
 &lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung=&quot;CCPushUpProgression&quot; feld=&quot;push-step&quot; /&gt;
 &lt;/$set&gt;
-
-Bemerkungen: &lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;push-text&quot;/&gt; 
 
 
 &lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;core-lvl&quot; &gt;
@@ -11252,11 +11367,10 @@ Bemerkungen: &lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;push-text&
 &lt;&lt;dropdown &quot;CCBeinhebenProgression&quot; &quot;core-lvl&quot; &gt;&gt;
 &lt;&lt;dropdown2 &quot;BeinhebenSchrägProgression&quot; &quot;core2-lvl&quot; &gt;&gt;
 
+&lt;&lt;bemerkungen &quot;core-text&quot;&gt;&gt;
+
 &lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung=&quot;CCBeinhebenProgression&quot; feld=&quot;core-step&quot;  /&gt;
 &lt;/$set&gt;
-
-Bemerkungen: 
-&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;core-text&quot;/&gt; 
 
 ---
 &lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;pull-lvl&quot; &gt;
@@ -11265,11 +11379,11 @@ Bemerkungen:
 &lt;&lt;dropdown &quot;CCPullProgression&quot; &quot;pull-lvl&quot; &gt;&gt;
 &lt;&lt;dropdown2 &quot;Progression Pull&quot; &quot;pull2-lvl&quot; &gt;&gt;
 
+&lt;&lt;bemerkungen &quot;pull-text&quot;&gt;&gt;
+
 &lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung=&quot;CCPullProgression&quot; feld=&quot;pull-step&quot;  /&gt;
 &lt;/$set&gt;
 
-Bemerkungen: 
-&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;pull-text&quot;/&gt; 
 
 &lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;legs-lvl&quot; &gt;
 
@@ -11277,11 +11391,11 @@ Bemerkungen:
 &lt;&lt;dropdown &quot;CCSquatProgression&quot; &quot;legs-lvl&quot; &gt;&gt;
 &lt;&lt;dropdown2 &quot;Progression Beine&quot; &quot;legs2-lvl&quot; &gt;&gt;
 
+&lt;&lt;bemerkungen &quot;legs-text&quot;&gt;&gt;
+
 &lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung=&quot;CCSquatProgression&quot; feld=&quot;legs-step&quot;  /&gt;
 &lt;/$set&gt;
 
-Bemerkungen: 
-&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;legs-text&quot;/&gt;
 
 ---
 
@@ -11291,11 +11405,10 @@ Bemerkungen:
 &lt;&lt;dropdown &quot;CCBridgeProgression&quot; &quot;bridge-lvl&quot; &gt;&gt;
 &lt;&lt;dropdown2 &quot;CCBridgeProgression-alt&quot; &quot;bridge2-lvl&quot; &gt;&gt;
 
+&lt;&lt;bemerkungen &quot;bridge-text&quot;&gt;&gt;
+
 &lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung=&quot;CCBridgeProgression&quot; feld=&quot;bridge-step&quot;  /&gt;
 &lt;/$set&gt;
-
-Bemerkungen: 
-&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;bridge-text&quot;/&gt;
 
 &lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field=&quot;hs-lvl&quot; &gt;
 
@@ -11303,35 +11416,33 @@ Bemerkungen:
 &lt;&lt;dropdown &quot;CCHandstandProgression&quot; &quot;hs-lvl&quot; &gt;&gt;
 &lt;&lt;dropdown2 &quot;Progression Push gerade&quot; &quot;hs2-lvl&quot; &gt;&gt;
 
+&lt;&lt;bemerkungen &quot;hs-text&quot;&gt;&gt;
+
 &lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung=&quot;CCHandstandProgression&quot; feld=&quot;hs-step&quot;  /&gt;
 &lt;/$set&gt;
 
-Bemerkungen: 
-&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;hs-text&quot;/&gt;
-
 ---
-Bemerkungen gesamt: 
+&lt;span class=&quot;fixedwidth&quot;&gt;Trainingsnotiz:&lt;/span&gt; 
 &lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;description&quot;/&gt; 
 &lt;/$wikify&gt;</pre>
 </div>
-<div created="20210512110321213" modified="20210513125713488" showdelete="hide" showplan="hide" tags="" title="CC Training bearbeiten 1">
-<pre>&lt;div class=table&gt;
-&lt;div class=row&gt;
-&lt;div class=box&gt;
-Level: kgwklgfvweklwfgl
-&lt;/div&gt;
-&lt;div class=box&gt;
-alt: kgwklgfvweklwfgl
-&lt;/div&gt;
-&lt;/div&gt;&lt;div class=row&gt;
-&lt;div class=&quot;box box-1&quot;&gt;
-Anfänger sldkhöskvh  Fortgeschrittener jehglkkl Profi kflwegkl wejkgfjklw
-&lt;/div&gt;
-&lt;/div&gt;&lt;div class=row&gt;
-&lt;div class=&quot;box box-1&quot;&gt;
-Bemerkungen kjjsrhljglwt4lfl43htöhöfkljfgt
-&lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;</pre>
+<div created="20210630082623166" header="Brücke (ab Core+Beine Lvl 6)" lvlaltfield="bridge2-lvl" lvlfield="bridge-lvl" modified="20210630082739058" progressfield="bridge-step" progression="CCBridgeProgression" progression-alt="CCBridgeProgression-alt" tags="" textfield="bridge-text" title="CC-edit-bridge">
+<pre></pre>
+</div>
+<div created="20210630082151912" header="Beinheben / Core" lvlaltfield="core2-lvl" lvlfield="core-lvl" modified="20210630082302301" progressfield="core-step" progression="CCBeinhebenProgression" progression-alt="BeinhebenSchrägProgression" tags="" textfield="core-text" title="CC-edit-core">
+<pre></pre>
+</div>
+<div created="20210630082758036" header="Handstand (ab Push Lvl 6)" lvlaltfield="hs2-lvl" lvlfield="hs-lvl" modified="20210630083117670" progressfield="hs-step" progression="CCHandstandProgression" progression-alt="Progression Push gerade" tags="" textfield="hs-text" title="CC-edit-hs">
+<pre></pre>
+</div>
+<div created="20210630082415521" header="Kniebeuge" lvlaltfield="legs2-lvl" lvlfield="legs-lvl" modified="20210630082553339" progressfield="legs-step" progression="CCSquatProgression" progression-alt="Progression Beine" tags="" textfield="legs-text" title="CC-edit-legs">
+<pre></pre>
+</div>
+<div created="20210630082023400" header="Liegestütze" lvlaltfield="pull2-lvl" lvlfield="pull-lvl" modified="20210630082141583" progressfield="pull-step" progression="CCPullProgression" progression-alt="Progression Pull" tags="" textfield="pull-text" title="CC-edit-pull">
+<pre></pre>
+</div>
+<div created="20210630074354154" header="Liegestütze" lvlaltfield="push2-lvl" lvlfield="push-lvl" modified="20210630084221552" progressfield="push-step" progression="CCPushUpProgression" progression-alt="Progression Push rechtwinklig" tags="" textfield="push-text" title="CC-edit-push">
+<pre>{{||CCEditTemplate}}</pre>
 </div>
 <div created="20210128103856380" modified="20210128111859333" tags="CCProgression" title="CCBeinhebenProgression" type="application/x-tiddler-dictionary">
 <pre>1:Knieanziehen im Sitzen, Knee Tucks:1x10:2x25:3x40
@@ -11434,6 +11545,22 @@ Bemerkungen kjjsrhljglwt4lfl43htöhöfkljfgt
 &lt;tbody&gt;
 {{||CCDisplayPart}}
 &lt;/tbody&gt;&lt;/table&gt;</pre>
+</div>
+<div created="20210630080517087" modified="20210630084402012" tags="" title="CCEditTemplate">
+<pre>&lt;$set name=titel tiddler=Einstellungen field=neutitel &gt;
+&lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field={{!!lvlfield}} &gt;
+
+!!! &lt;span class={{{ [&lt;lvl&gt;addprefix[indicator level level]] }}}&gt;{{!!header}}&lt;/span&gt; &amp;nbsp; &lt;span class={{{ [&lt;titel&gt;get[core-step]addprefix[indicator step]] }}}/&gt;
+
+&lt;$macrocall $name=&quot;dropdown&quot; uebung={{!!progression}} feld={{!!lvlfield}} /&gt;
+
+&lt;$macrocall $name=&quot;dropdown2&quot; uebung={{!!progression-alt}} feld={{!!lvlaltfield}} /&gt;
+
+&lt;$macrocall $name=&quot;bemerkungen&quot; feld={{!!textfield}} &gt;&gt;
+
+&lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung={{!!progression}}  feld={{!!progressfield}}  /&gt;
+
+&lt;/$set&gt;&lt;/$set&gt;</pre>
 </div>
 <div created="20210511184608466" modified="20210511185410461" tags="CCProgression" title="CCHandstandProgression" type="application/x-tiddler-dictionary">
 <pre>::::
@@ -11622,12 +11749,28 @@ und folgende Varianten:
 
 ##</pre>
 </div>
+<div created="20210630080517087" draft.of="CCEditTemplate" draft.title="CCEditTemplate" modified="20210630084607242" tags="" title="Draft of 'CCEditTemplate'">
+<pre>&lt;$set name=titel tiddler=Einstellungen field=neutitel &gt;
+&lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field={{!!lvlfield}} &gt;
+
+!!! &lt;span class={{{ [&lt;lvl&gt;addprefix[indicator level level]] }}}&gt;{{!!header}}&lt;/span&gt; &amp;nbsp; &lt;span class={{{ [&lt;titel&gt;get[core-step]addprefix[indicator step]] }}}/&gt;
+
+&lt;$macrocall $name=&quot;dropdown&quot; uebung={{!!progression}} feld={{!!lvlfield}} /&gt;
+
+&lt;$macrocall $name=&quot;dropdown2&quot; uebung={{!!progression-alt}} feld={{!!lvlaltfield}} /&gt;
+
+&lt;$macrocall $name=&quot;bemerkungen&quot; feld={{!!textfield}} &gt;&gt;
+
+&lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung={{!!progression}}  feld={{!!progressfield}}  /&gt;
+
+&lt;/$set&gt;&lt;/$set&gt;</pre>
+</div>
 <div created="20210124124927714" modified="20210124125005333" tags="" title="EagleClaws" type="text/x-markdown">
 <pre>* Form your hands into tight fists, and gradually open your fingers/ thumbs joint– by joint, slowly and deliberately and under maximum isometric tension. Once your (trembling!) hands are stretched open to the max, reverse the process into a hard fist. Thats one rep.
 * davon 2x10 Wdh. und nach jedem Satz die Hand gut ausschütteln *dann 1 Aufwärmsatz einfache Fingertip Pushups, 1 Level einfacher als die Arbeitssätze:
 * 5-10 Wdh. keinesfalls mehr als max. 15 Wdh.</pre>
 </div>
-<div created="20201209095546498" listlimit="15" modified="20210629131443984" neutitel="2021-06-29 CC" saved="2021-06-29 15:14:43" tags="$:/tags/StartupAction intern fogff" titel_template="&lt;&lt;now &quot;YYYY-0MM-0DD&quot;&gt;&gt;" title="Einstellungen">
+<div created="20201209095546498" listlimit="15" modified="20210630084710975" neutitel="2021-06-24 CC" saved="2021-06-30 10:47:10" tags="$:/tags/StartupAction intern fogff" titel_template="&lt;&lt;now &quot;YYYY-0MM-0DD&quot;&gt;&gt;" title="Einstellungen">
 <pre>* Anzeigelimit Trainingstagebuch: &lt;$edit-text  field=&quot;listlimit&quot; /&gt;
 * Template für Titel neuer Tagebucheinträge:  &lt;$edit-text  field=&quot;titel_template&quot; /&gt;  &amp;rArr; &quot;{{!!titel_template}}&quot;
 * &amp;#10173; [[GettingStarted]]
@@ -11655,14 +11798,14 @@ und folgende Varianten:
 * keinesfalls explosive Übungsausführung
 </pre>
 </div>
-<div created="20201209185211015" modified="20210512094432041" tags="fogff TOC" title="FOG für Frauen">
+<div created="20201209185211015" modified="20210630071110115" tags="fogff TOC" title="FOG für Frauen">
 <pre>&lt;$wikify name=titelneu text=&quot;{{Einstellungen!!titel_template}} FOG&quot; &gt;
 &lt;$button  to=&quot;FOG Training bearbeiten&quot;&gt;
 &lt;$action-createtiddler $basetitle=&lt;&lt;titelneu&gt;&gt; $overwrite=&quot;yes&quot; $template=&quot;YayogFrauenTemplate&quot; /&gt;
 &lt;$action-setfield neutitel=&lt;&lt;titelneu&gt;&gt; $tiddler=&quot;Einstellungen&quot; /&gt;
 &lt;&lt;fa plus&gt;&gt;
 &lt;/$button&gt;
-&lt;span&gt;&lt;&lt;titelneu&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;fixedwidth&quot;&gt;&lt;&lt;titelneu&gt;&gt;&lt;/span&gt;
 &lt;/$wikify&gt;
 &amp;#8286; &lt;$button to=&quot;FOG Training bearbeiten&quot; &gt;
 &lt;&lt;fa pen&gt;&gt;&lt;/$button&gt;
@@ -11952,14 +12095,14 @@ CCHangProgression
 &lt;$macrocall $name=&quot;example&quot; text=&quot;&lt;&lt;fa 'rotate-90 fa-running'&gt;&gt;&quot;/&gt;
 </pre>
 </div>
-<div created="20210406100250119" modified="20210512095320326" tags="TOC" title="Mobility Training">
+<div created="20210406100250119" modified="20210630071057963" tags="TOC" title="Mobility Training">
 <pre>&lt;$wikify name=titelneu text=&quot;{{Einstellungen!!titel_template}} Mobility&quot; &gt;
 &lt;$button  to=&quot;Mobility Training bearbeiten&quot;&gt;
 &lt;$action-createtiddler $basetitle=&lt;&lt;titelneu&gt;&gt; $overwrite=&quot;yes&quot; $template=&quot;MobilityTemplate&quot; /&gt;
 &lt;$action-setfield neutitel=&lt;&lt;titelneu&gt;&gt; $tiddler=&quot;Einstellungen&quot; /&gt;
 &lt;&lt;fa plus&gt;&gt;
 &lt;/$button&gt;
-&lt;span&gt;&lt;&lt;titelneu&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;fixedwidth&quot;&gt;&lt;&lt;titelneu&gt;&gt;&lt;/span&gt;
 &lt;/$wikify&gt;
 &amp;#8286; &lt;$button to=&quot;Mobility Training bearbeiten&quot; &gt;
 &lt;&lt;fa pen&gt;&gt;
@@ -12061,12 +12204,18 @@ Gelenke kreisen {{!!sxw-kreisen}}:
 * **!!!die richtige Wrestler- und Front-Bridge erst trainieren, wenn man die klassische Brücke sehr gut beherrscht !!!**
 * 1-2x pro Woche mit trainieren (15min), Details siehe Buch</pre>
 </div>
-<div class="fixedwidth" created="20210629125658947" modified="20210629130835053" tags="" title="New Tiddler">
-<pre>Texteingabefeld: &lt;input type=&quot;text&quot; class=&quot;fixedwidth&quot; /&gt; fixedwidth
+<div class="fw" created="20210629125658947" modified="20210630070736018" tags="" title="New Tiddler">
+<pre>
+Texteingabefeld: &lt;input type=&quot;text&quot; value=abcdefABCDEF /&gt; Style manuell
 
-Texteingabefeld: &lt;input class=&quot;fixedwidth&quot; type=&quot;text&quot;/&gt; normal
+&lt;style&gt;
 
-Texteingabefeld: &lt;input type=&quot;text&quot; style=&quot;background: red &quot;/&gt; Style manuell</pre>
+&lt;/style&gt;
+Texteingabefeld: &lt;input type=&quot;text&quot; class=&quot;fixedwidth&quot; value=abcdefABCDEF/&gt; fixedwidth
+
+&lt;span class=&quot;fw&quot;&gt;bla&lt;/span&gt;
+Texteingabefeld: &lt;input class=&quot;fw&quot; type=&quot;text&quot; value=abcdefABCDEF/&gt; normal
+</pre>
 </div>
 <div created="20201209074158717" modified="20210209073432013" tags="intern fogff" title="Progression Beine" type="application/x-tiddler-dictionary">
 <pre>-:-
@@ -12294,7 +12443,7 @@ v11:Malteser Pushups
 * &lt;&lt;currentTiddler&gt;&gt;
 &lt;/$list &gt;</pre>
 </div>
-<div created="20210129123738475" modified="20210629130822529" tags="intern $:/tags/Stylesheet" title="StyleSheet" type="text/css">
+<div created="20210129123738475" modified="20210630083355309" tags="intern $:/tags/Stylesheet" title="StyleSheet" type="text/css">
 <pre>## divs für floating Tabellen: 
 ## https://www.mediaevent.de/css/display-table.html
 * {
@@ -12347,18 +12496,13 @@ v11:Malteser Pushups
 .row-numbers th.row-numbers::before {
    content: &quot;(&quot; counter(row-num) &quot;)&quot;; 
 }
-#########
-.fixedwidth input, input.fixedwidth {
-  width: 150px; min-width: 150px; display: inline-block; background: red;
+
+[data-tiddler-title=&quot;Home&quot;] .tc-reveal button+span, span.fixedwidth {
+  width: 150px; min-width: 150px; background: lightgreen; display: inline-block;
 }
-
-#[data-tiddler-title=&quot;Home&quot;] select, [data-tiddler-title=&quot;Home&quot;] input, [data-tiddler-title=&quot;Home&quot;] .tc-reveal button+span,
-[data-tiddler-title*=&quot;Training bearbeiten&quot;] select, [data-tiddler-title*=&quot;Training bearbeiten&quot;] input, .fixedwidth input, .fixedwidth select,  select.fixedwidth, span.fixedwidth, 
-
-
-
-
-
+.fixedwidth input, input.fixedwidth, .fixedwidth select {
+  width: 150px; min-width: 150px; background: lightgreen;
+}
 
 .vertical { writing-mode: vertical-lr; }
 .br td:nth-child(2n+3), .br th:nth-child(2n+3) { border-left: double gray; }
