@@ -407,8 +407,6 @@ Error message and password prompt
 
 <li>ConvictConditioning2</li>
 
-<li>Draft of 'CCEditTemplate'</li>
-
 <li>EagleClaws</li>
 
 <li>Einstellungen</li>
@@ -10841,7 +10839,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div list="Home [[Trainingsübersicht CC]]" title="$:/StoryList">
+<div created="20210630084726215" list="Home [[Trainingsübersicht CC]]" modified="20210630084726215" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -11546,7 +11544,7 @@ Ja, Eintrag wirklich löschen
 {{||CCDisplayPart}}
 &lt;/tbody&gt;&lt;/table&gt;</pre>
 </div>
-<div created="20210630080517087" modified="20210630084402012" tags="" title="CCEditTemplate">
+<div created="20210630080517087" modified="20210630084729369" tags="" title="CCEditTemplate">
 <pre>&lt;$set name=titel tiddler=Einstellungen field=neutitel &gt;
 &lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field={{!!lvlfield}} &gt;
 
@@ -11749,28 +11747,12 @@ und folgende Varianten:
 
 ##</pre>
 </div>
-<div created="20210630080517087" draft.of="CCEditTemplate" draft.title="CCEditTemplate" modified="20210630084607242" tags="" title="Draft of 'CCEditTemplate'">
-<pre>&lt;$set name=titel tiddler=Einstellungen field=neutitel &gt;
-&lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field={{!!lvlfield}} &gt;
-
-!!! &lt;span class={{{ [&lt;lvl&gt;addprefix[indicator level level]] }}}&gt;{{!!header}}&lt;/span&gt; &amp;nbsp; &lt;span class={{{ [&lt;titel&gt;get[core-step]addprefix[indicator step]] }}}/&gt;
-
-&lt;$macrocall $name=&quot;dropdown&quot; uebung={{!!progression}} feld={{!!lvlfield}} /&gt;
-
-&lt;$macrocall $name=&quot;dropdown2&quot; uebung={{!!progression-alt}} feld={{!!lvlaltfield}} /&gt;
-
-&lt;$macrocall $name=&quot;bemerkungen&quot; feld={{!!textfield}} &gt;&gt;
-
-&lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung={{!!progression}}  feld={{!!progressfield}}  /&gt;
-
-&lt;/$set&gt;&lt;/$set&gt;</pre>
-</div>
 <div created="20210124124927714" modified="20210124125005333" tags="" title="EagleClaws" type="text/x-markdown">
 <pre>* Form your hands into tight fists, and gradually open your fingers/ thumbs joint– by joint, slowly and deliberately and under maximum isometric tension. Once your (trembling!) hands are stretched open to the max, reverse the process into a hard fist. Thats one rep.
 * davon 2x10 Wdh. und nach jedem Satz die Hand gut ausschütteln *dann 1 Aufwärmsatz einfache Fingertip Pushups, 1 Level einfacher als die Arbeitssätze:
 * 5-10 Wdh. keinesfalls mehr als max. 15 Wdh.</pre>
 </div>
-<div created="20201209095546498" listlimit="15" modified="20210630084710975" neutitel="2021-06-24 CC" saved="2021-06-30 10:47:10" tags="$:/tags/StartupAction intern fogff" titel_template="&lt;&lt;now &quot;YYYY-0MM-0DD&quot;&gt;&gt;" title="Einstellungen">
+<div created="20201209095546498" listlimit="15" modified="20210630084742797" neutitel="2021-06-24 CC" saved="2021-06-30 10:47:42" tags="$:/tags/StartupAction intern fogff" titel_template="&lt;&lt;now &quot;YYYY-0MM-0DD&quot;&gt;&gt;" title="Einstellungen">
 <pre>* Anzeigelimit Trainingstagebuch: &lt;$edit-text  field=&quot;listlimit&quot; /&gt;
 * Template für Titel neuer Tagebucheinträge:  &lt;$edit-text  field=&quot;titel_template&quot; /&gt;  &amp;rArr; &quot;{{!!titel_template}}&quot;
 * &amp;#10173; [[GettingStarted]]
