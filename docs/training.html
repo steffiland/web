@@ -10520,8 +10520,8 @@ Error message and password prompt
 <div title="$:/isEncrypted">
 <pre>no</pre>
 </div>
-<div created="20210511073438317" modified="20210630091703126" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
-<pre>Editor wählbar für CC</pre>
+<div created="20210511073438317" modified="20210630092202954" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
+<pre>Saved by TiddlyWiki</pre>
 </div>
 <div dependents="" description="Markdown parser based on remarkable by Jon Schlinkert" list="readme usage" name="Markdown" plugin-type="plugin" title="$:/plugins/tiddlywiki/markdown" type="application/json" version="5.1.23">
 <pre>{
@@ -10839,7 +10839,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div list="Home [[Trainingsübersicht CC]]" title="$:/StoryList">
+<div created="20210630091718674" list="Home [[Trainingsübersicht CC]]" modified="20210630092105730" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -11053,7 +11053,7 @@ Error message and password prompt
 <div core-lvl="1" core-text="40,40" created="20210626121649947" modified="20210626125116902" push-lvl="2" push-step="2" push-text="40,40,40" tags="cc-training training" title="2021-06-26 CC">
 <pre>{{||CCDisplayTemplate}}</pre>
 </div>
-<div created="20210630071528739" modified="20210630085005831" pull-lvl="2" pull-text="10,10,8" pull2-lvl="5a" tags="cc-training training" title="2021-06-29 CC">
+<div created="20210630071528739" modified="20210630092138480" pull-lvl="2" pull-text="10,10,8" pull2-lvl="5a" tags="cc-training training" title="2021-06-29 CC">
 <pre>{{||CCDisplayTemplate}}</pre>
 </div>
 <div created="20210125202836653" gelenke="Nacken, Schultern, Arme, Ellbogen, Handgelenke, mittlerer Rücken, Hüfte, Knie, Fußgelenke, Beine" modified="20210406102800120" tags="ConvictConditioning2" title="ActiveStretching">
@@ -11360,49 +11360,8 @@ Bemerkungen kjjsrhljglwt4lfl43htöhöfkljfgt
 &lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;</pre>
 </div>
-<div class="fixedwidth" created="20210630074314034" modified="20210630090250216" showdelete="hide" showplan="hide" tags="" title="CC Training bearbeiten neu">
-<pre>\define dropdown(uebung:&quot;CCPullProgression&quot;, feld:&quot;nameofthefield&quot;)
- &lt;span class=&quot;fixedwidth&quot;&gt;[[Level:|$uebung$]]&lt;/span&gt;&amp;nbsp;&lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=&lt;&lt;__feld__&gt;&gt; class=&quot;fixedwidth&quot;&gt;
-&lt;$list filter=&quot;[range[0,10]]&quot; variable=&quot;lvl&quot;&gt;
-&lt;option value=&lt;&lt;lvl&gt;&gt; &gt;&lt;&lt;lvl&gt;&gt; - {{{ [&lt;__uebung__&gt;getindex&lt;lvl&gt;split[:]nth[1]] }}}&lt;/option&gt;
-&lt;/$list&gt;
-&lt;/$select&gt;
-   &lt;$button&gt;
-            &lt;$action-deletefield $tiddler=&lt;&lt;titel&gt;&gt; $field=&lt;&lt;__feld__&gt;&gt; /&gt;
-      {{$:/core/images/cancel-button}}
-   &lt;/$button&gt;
-\end
-\define dropdown2(uebung:&quot;BeinhebenSchrägProgression&quot;, feld:&quot;nameofthefield&quot;)
- &lt;span class=&quot;fixedwidth&quot;&gt;[[alternativ:|$uebung$]]&lt;/span&gt;&amp;nbsp;&lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=&lt;&lt;__feld__&gt;&gt; class=&quot;fixedwidth&quot;&gt;
-&lt;$list filter=&quot;[title&lt;__uebung__&gt;indexes[]sortan[]]&quot; variable=&quot;dditem&quot;&gt;
-&lt;option value=&lt;&lt;dditem&gt;&gt; &gt;&lt;&lt;dditem&gt;&gt; - &lt;$transclude tiddler=&lt;&lt;__uebung__&gt;&gt; index=&lt;&lt;dditem&gt;&gt;/&gt;&lt;/option&gt;
-&lt;/$list&gt;
-&lt;/$select&gt;
-   &lt;$button&gt;
-            &lt;$action-deletefield $tiddler=&lt;&lt;titel&gt;&gt; $field=&lt;&lt;__feld__&gt;&gt; /&gt;
-      {{$:/core/images/cancel-button}}
-   &lt;/$button&gt;
-\end
-\define bemerkungen(feld:&quot;nameofthefield&quot;)
-&lt;span class=&quot;fixedwidth&quot;&gt;Bemerkungen:&lt;/span&gt; &lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&lt;&lt;__feld__&gt;&gt; /&gt; 
-\end
-\define progression(uebung:&quot;CCPullProgression&quot;, lvl:&quot;1&quot;, feld: &quot;nameofinnerlevelfield&quot;)
-   &lt;span class=fixedwidth&gt;erreichtes Niveau:&lt;/span&gt;
-   &lt;div class={{{ [&lt;titel&gt;get&lt;__feld__&gt;addprefix[step step]]  step }}}&gt;
-   &lt;$radio tiddler=&lt;&lt;titel&gt;&gt; field=&lt;&lt;__feld__&gt;&gt; value=&quot;1&quot; class=&quot;radio-custom&quot;/&gt;
-     Anfänger&amp;nbsp;&lt;$text text= {{{ [&lt;__uebung__&gt;getindex&lt;__lvl__&gt;split[:]nth[2]] }}} /&gt;
-   &lt;$radio tiddler=&lt;&lt;titel&gt;&gt; field=&lt;&lt;__feld__&gt;&gt; value=&quot;2&quot; class=&quot;radio-custom&quot;/&gt;
-     Fortgeschrittene&amp;nbsp;&lt;$text text=  {{{ [&lt;__uebung__&gt;getindex&lt;__lvl__&gt;split[:]nth[3]] }}} /&gt;
-   &lt;$radio tiddler=&lt;&lt;titel&gt;&gt; field=&lt;&lt;__feld__&gt;&gt; value=&quot;3&quot; class=&quot;radio-custom&quot;/&gt;
-     Profi&amp;nbsp;&lt;$text text= {{{ [&lt;__uebung__&gt;getindex&lt;__lvl__&gt;split[:]nth[4]] }}} /&gt;
-    &lt;$button&gt;
-            &lt;$action-deletefield $tiddler=&lt;&lt;titel&gt;&gt; $field=&lt;&lt;__feld__&gt;&gt; /&gt;
-      {{$:/core/images/cancel-button}}
-   &lt;/$button&gt;
-&lt;/div&gt;
-\end
-
-&lt;$wikify name=titel text=&quot;{{Einstellungen!!neutitel}}&quot; &gt;
+<div class="fixedwidth" created="20210630074314034" modified="20210630092101441" showdelete="hide" showplan="hide" tags="" title="CC Training bearbeiten neu">
+<pre>&lt;$set name=titel tiddler=&quot;Einstellungen&quot; field=&quot;neutitel&quot; &gt;
 
 !! &quot;&lt;&lt;titel&gt;&gt;&quot;  &lt;$reveal type=&quot;nomatch&quot; state=&quot;!!showDelete&quot; text=&quot;show&quot;&gt;
 &lt;$button set=&quot;!!showDelete&quot; setTo=&quot;show&quot;&gt;{{$:/core/images/delete-button}}&lt;/$button&gt;
@@ -11416,7 +11375,7 @@ Ja, Eintrag wirklich löschen
 &lt;/$button&gt; 
 &lt;$button  set=&quot;!!showDelete&quot; setTo=&quot;hide&quot;&gt;{{$:/core/images/close-button}} nein, doch nicht löschen&lt;/$button&gt; 
 &lt;/$reveal&gt; &lt;$button  to=&quot;ConvictConditioning Grundsätze&quot; &gt;{{$:/core/images/file}}&lt;/$button&gt; 
-
+&lt;/$set&gt;
 ---
 
 {{CC-edit-push||CCEditTemplate}}
@@ -11435,9 +11394,9 @@ Ja, Eintrag wirklich löschen
 {{CC-edit-hs||CCEditTemplate}}
 
 ---
-&lt;span class=&quot;fixedwidth&quot;&gt;Trainingsnotiz:&lt;/span&gt; 
-&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;description&quot;/&gt; 
-&lt;/$wikify&gt;</pre>
+&lt;$set name=titel tiddler=&quot;Einstellungen&quot; field=&quot;neutitel&quot; &gt;&lt;span class=&quot;fixedwidth&quot;&gt;Trainingsnotiz:&lt;/span&gt; 
+&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;description&quot;/&gt; &lt;/$set&gt;
+</pre>
 </div>
 <div created="20210630082623166" header="Brücke (ab Core+Beine Lvl 6)" lvlaltfield="bridge2-lvl" lvlfield="bridge-lvl" modified="20210630082739058" progressfield="bridge-step" progression="CCBridgeProgression" progression-alt="CCBridgeProgression-alt" tags="" textfield="bridge-text" title="CC-edit-bridge">
 <pre></pre>
@@ -11559,8 +11518,49 @@ Ja, Eintrag wirklich löschen
 {{||CCDisplayPart}}
 &lt;/tbody&gt;&lt;/table&gt;</pre>
 </div>
-<div created="20210630080517087" modified="20210630090745802" tags="" title="CCEditTemplate">
-<pre>&lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field={{!!lvlfield}} &gt;
+<div created="20210630080517087" modified="20210630092119531" tags="" title="CCEditTemplate">
+<pre>\define dropdown(uebung:&quot;CCPullProgression&quot;, feld:&quot;nameofthefield&quot;)
+ &lt;span class=&quot;fixedwidth&quot;&gt;[[Level:|$uebung$]]&lt;/span&gt;&amp;nbsp;&lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=&lt;&lt;__feld__&gt;&gt; class=&quot;fixedwidth&quot;&gt;
+&lt;$list filter=&quot;[range[0,10]]&quot; variable=&quot;lvl&quot;&gt;
+&lt;option value=&lt;&lt;lvl&gt;&gt; &gt;&lt;&lt;lvl&gt;&gt; - {{{ [&lt;__uebung__&gt;getindex&lt;lvl&gt;split[:]nth[1]] }}}&lt;/option&gt;
+&lt;/$list&gt;
+&lt;/$select&gt;
+   &lt;$button&gt;
+            &lt;$action-deletefield $tiddler=&lt;&lt;titel&gt;&gt; $field=&lt;&lt;__feld__&gt;&gt; /&gt;
+      {{$:/core/images/cancel-button}}
+   &lt;/$button&gt;
+\end
+\define dropdown2(uebung:&quot;BeinhebenSchrägProgression&quot;, feld:&quot;nameofthefield&quot;)
+ &lt;span class=&quot;fixedwidth&quot;&gt;[[alternativ:|$uebung$]]&lt;/span&gt;&amp;nbsp;&lt;$select tiddler=&lt;&lt;titel&gt;&gt; field=&lt;&lt;__feld__&gt;&gt; class=&quot;fixedwidth&quot;&gt;
+&lt;$list filter=&quot;[title&lt;__uebung__&gt;indexes[]sortan[]]&quot; variable=&quot;dditem&quot;&gt;
+&lt;option value=&lt;&lt;dditem&gt;&gt; &gt;&lt;&lt;dditem&gt;&gt; - &lt;$transclude tiddler=&lt;&lt;__uebung__&gt;&gt; index=&lt;&lt;dditem&gt;&gt;/&gt;&lt;/option&gt;
+&lt;/$list&gt;
+&lt;/$select&gt;
+   &lt;$button&gt;
+            &lt;$action-deletefield $tiddler=&lt;&lt;titel&gt;&gt; $field=&lt;&lt;__feld__&gt;&gt; /&gt;
+      {{$:/core/images/cancel-button}}
+   &lt;/$button&gt;
+\end
+\define bemerkungen(feld:&quot;nameofthefield&quot;)
+&lt;span class=&quot;fixedwidth&quot;&gt;Bemerkungen:&lt;/span&gt; &lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&lt;&lt;__feld__&gt;&gt; /&gt; 
+\end
+\define progression(uebung:&quot;CCPullProgression&quot;, lvl:&quot;1&quot;, feld: &quot;nameofinnerlevelfield&quot;)
+   &lt;span class=fixedwidth&gt;erreichtes Niveau:&lt;/span&gt;
+   &lt;div class={{{ [&lt;titel&gt;get&lt;__feld__&gt;addprefix[step step]]  step }}}&gt;
+   &lt;$radio tiddler=&lt;&lt;titel&gt;&gt; field=&lt;&lt;__feld__&gt;&gt; value=&quot;1&quot; class=&quot;radio-custom&quot;/&gt;
+     Anfänger&amp;nbsp;&lt;$text text= {{{ [&lt;__uebung__&gt;getindex&lt;__lvl__&gt;split[:]nth[2]] }}} /&gt;
+   &lt;$radio tiddler=&lt;&lt;titel&gt;&gt; field=&lt;&lt;__feld__&gt;&gt; value=&quot;2&quot; class=&quot;radio-custom&quot;/&gt;
+     Fortgeschrittene&amp;nbsp;&lt;$text text=  {{{ [&lt;__uebung__&gt;getindex&lt;__lvl__&gt;split[:]nth[3]] }}} /&gt;
+   &lt;$radio tiddler=&lt;&lt;titel&gt;&gt; field=&lt;&lt;__feld__&gt;&gt; value=&quot;3&quot; class=&quot;radio-custom&quot;/&gt;
+     Profi&amp;nbsp;&lt;$text text= {{{ [&lt;__uebung__&gt;getindex&lt;__lvl__&gt;split[:]nth[4]] }}} /&gt;
+    &lt;$button&gt;
+            &lt;$action-deletefield $tiddler=&lt;&lt;titel&gt;&gt; $field=&lt;&lt;__feld__&gt;&gt; /&gt;
+      {{$:/core/images/cancel-button}}
+   &lt;/$button&gt;
+&lt;/div&gt;
+\end
+
+&lt;$set name=titel tiddler=&quot;Einstellungen&quot; field=&quot;neutitel&quot; &gt;&lt;$set name=lvl tiddler=&lt;&lt;titel&gt;&gt; field={{!!lvlfield}} &gt;
 
 !!! &lt;span class={{{ [&lt;lvl&gt;addprefix[indicator level level]] }}}&gt;{{!!header}}&lt;/span&gt; &amp;nbsp; &lt;$set name=step value={{!!progressfield}} &gt;&lt;span class={{{ [&lt;titel&gt;get&lt;step&gt;addprefix[indicator step]] }}}/&gt;&lt;/$set&gt;
 
@@ -11572,7 +11572,7 @@ Ja, Eintrag wirklich löschen
 
 &lt;$macrocall $name=&quot;progression&quot; lvl=&lt;&lt;lvl&gt;&gt;  uebung={{!!progression}}  feld={{!!progressfield}}  /&gt;
 
-&lt;/$set&gt;</pre>
+&lt;/$set&gt;&lt;/$set&gt;</pre>
 </div>
 <div created="20210511184608466" modified="20210511185410461" tags="CCProgression" title="CCHandstandProgression" type="application/x-tiddler-dictionary">
 <pre>::::
@@ -11766,7 +11766,7 @@ und folgende Varianten:
 * davon 2x10 Wdh. und nach jedem Satz die Hand gut ausschütteln *dann 1 Aufwärmsatz einfache Fingertip Pushups, 1 Level einfacher als die Arbeitssätze:
 * 5-10 Wdh. keinesfalls mehr als max. 15 Wdh.</pre>
 </div>
-<div created="20201209095546498" listlimit="15" modified="20210630091704977" neutitel="2021-05-29 CC" saved="2021-06-30 11:17:04" tags="$:/tags/StartupAction intern fogff" titel_template="&lt;&lt;now &quot;YYYY-0MM-0DD&quot;&gt;&gt;" title="Einstellungen">
+<div created="20201209095546498" listlimit="15" modified="20210630092203724" neutitel="2021-06-29 CC" saved="2021-06-30 11:22:03" tags="$:/tags/StartupAction intern fogff" titel_template="&lt;&lt;now &quot;YYYY-0MM-0DD&quot;&gt;&gt;" title="Einstellungen">
 <pre>* Anzeigelimit Trainingstagebuch: &lt;$edit-text  field=&quot;listlimit&quot; /&gt;
 * Template für Titel neuer Tagebucheinträge:  &lt;$edit-text  field=&quot;titel_template&quot; /&gt;  &amp;rArr; &quot;{{!!titel_template}}&quot;
 * &amp;#10173; [[GettingStarted]]
