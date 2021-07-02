@@ -225,6 +225,10 @@ Error message and password prompt
 
 <li>$:/state/tab/sidebar--595412856</li>
 
+<li>$:/state/tab1--1848155767</li>
+
+<li>$:/state/tab1-1337749443</li>
+
 <li>$:/state/toc/fogff-FOG für Frauen Trainingsplan-853454163</li>
 
 <li>$:/state/toc/fogff-FOG für Frauen-853454163</li>
@@ -333,6 +337,8 @@ Error message and password prompt
 
 <li>2021-06-29 CC</li>
 
+<li>2021-07-01 CC</li>
+
 <li>ActiveStretching</li>
 
 <li>Alle Trainings</li>
@@ -398,6 +404,10 @@ Error message and password prompt
 <li>CCPushUpProgression</li>
 
 <li>CCSquatProgression</li>
+
+<li>CCTabButtonTemplate</li>
+
+<li>CCTabTemplate</li>
 
 <li>CCTemplate</li>
 
@@ -466,8 +476,6 @@ Error message and password prompt
 <li>StyleSheet</li>
 
 <li>sxw</li>
-
-<li>tc-vertical--1848155767</li>
 
 <li>Template</li>
 
@@ -10526,8 +10534,8 @@ Error message and password prompt
 <div title="$:/isEncrypted">
 <pre>no</pre>
 </div>
-<div created="20210511073438317" modified="20210630131324622" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
-<pre>Saved by TiddlyWiki</pre>
+<div created="20210511073438317" modified="20210702093021785" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
+<pre>neuer Editor jetzt mit Tabs</pre>
 </div>
 <div dependents="" description="Markdown parser based on remarkable by Jon Schlinkert" list="readme usage" name="Markdown" plugin-type="plugin" title="$:/plugins/tiddlywiki/markdown" type="application/json" version="5.1.23">
 <pre>{
@@ -10761,8 +10769,8 @@ Error message and password prompt
 <div created="20210513121528789" modified="20210513122953225" title="$:/state/side-edit-tiddler">
 <pre>StyleSheet</pre>
 </div>
-<div created="20210116120950002" modified="20210529133639728" title="$:/state/sidebar">
-<pre>yes</pre>
+<div created="20210116120950002" modified="20210702092851985" title="$:/state/sidebar">
+<pre>no</pre>
 </div>
 <div created="20210118140801608" modified="20210121140300132" title="$:/state/tab--1048911287">
 <pre>Zyklus 1</pre>
@@ -10796,6 +10804,12 @@ Error message and password prompt
 </div>
 <div created="20210115194841734" modified="20210511103039191" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Recent</pre>
+</div>
+<div created="20210702072805983" modified="20210702093026411" title="$:/state/tab1--1848155767">
+<pre>CC-edit-pull</pre>
+</div>
+<div created="20210702072608033" modified="20210702072608033" title="$:/state/tab1-1337749443">
+<pre>Zyklus 1</pre>
 </div>
 <div created="20210116121729544" modified="20210116121729544" title="$:/state/toc/fogff-FOG für Frauen Trainingsplan-853454163">
 <pre>open</pre>
@@ -10851,7 +10865,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div list="Home [[Trainingsübersicht CC]]" title="$:/StoryList">
+<div created="20210702071944398" list="Home [[Trainingsübersicht CC]] [[2021-07-01 CC]]" modified="20210702092927855" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -11068,6 +11082,9 @@ Error message and password prompt
 <div created="20210630071528739" description="" modified="20210630131244730" pull-lvl="2" pull-step="1" pull-text="10,10,8" pull2-lvl="5a" push-text="" tags="cc-training training" title="2021-06-29 CC">
 <pre>{{||CCDisplayTemplate}}</pre>
 </div>
+<div created="20210702075456068" modified="20210702093036329" pull-lvl="2" pull-text="12,12,10" pull2-lvl="5a" tags="cc-training training" title="2021-07-01 CC">
+<pre>{{||CCDisplayTemplate}}</pre>
+</div>
 <div created="20210125202836653" gelenke="Nacken, Schultern, Arme, Ellbogen, Handgelenke, mittlerer Rücken, Hüfte, Knie, Fußgelenke, Beine" modified="20210406102800120" tags="ConvictConditioning2" title="ActiveStretching">
 <pre>!!Gelenke Kreisen
  &lt;$list filter=&quot;[{ActiveStretching!!gelenke}split[, ]]&quot; variable=&quot;tt&quot;&gt;
@@ -11215,7 +11232,7 @@ Error message and password prompt
 &lt;$button  to=&quot;Trainingsübersicht CC&quot;&gt;&lt;&lt;fa list&gt;&gt;&lt;/$button&gt;
 &lt;$button  to=&quot;ConvictConditioning&quot;&gt;&lt;&lt;fa question&gt;&gt;&lt;/$button&gt;</pre>
 </div>
-<div class="fixedwidth" created="20210502194048451" modified="20210630085107659" showdelete="hide" showplan="hide" tags="" title="CC Training bearbeiten">
+<div class="fixedwidth" created="20210502194048451" modified="20210702092914273" showDelete="hide" showdelete="hide" showplan="hide" tags="" title="CC Training bearbeiten">
 <pre>\define progression(uebung:&quot;CCPullProgression&quot;, lvl:&quot;1&quot;, feld: &quot;nameofinnerlevelfield&quot;)
    &lt;span class=fixedwidth&gt;erreichtes Niveau:&lt;/span&gt;
    &lt;div class={{{ [&lt;titel&gt;get&lt;__feld__&gt;addprefix[step step]]  step }}}&gt;
@@ -11372,7 +11389,7 @@ Bemerkungen kjjsrhljglwt4lfl43htöhöfkljfgt
 &lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;</pre>
 </div>
-<div class="fixedwidth" created="20210630074314034" modified="20210630131226214" push-text="bb" showdelete="hide" showplan="hide" tags="" title="CC Training bearbeiten neu">
+<div class="fixedwidth" created="20210630074314034" modified="20210702092826256" push-text="bb" showdelete="hide" showplan="hide" tags="" title="CC Training bearbeiten neu">
 <pre>&lt;$set name=titel tiddler=&quot;Einstellungen&quot; field=&quot;neutitel&quot; &gt;
 
 !! &quot;&lt;&lt;titel&gt;&gt;&quot;  &lt;$reveal type=&quot;nomatch&quot; state=&quot;!!showDelete&quot; text=&quot;show&quot;&gt;
@@ -11390,6 +11407,9 @@ Ja, Eintrag wirklich löschen
 &lt;/$set&gt;
 ---
 
+&lt;&lt;tabs &quot;[prefix[CC-edit-]sort[order]]&quot; &quot;CC-edit-push&quot; &quot;$:/state/tab1&quot; &quot;tc-vertical&quot;  &quot;CCTabTemplate&quot; &quot;CCTabButtonTemplate&quot;&gt;&gt;
+
+&lt;!-- ---
 {{CC-edit-push||CCEditTemplate}}
 
 {{CC-edit-core||CCEditTemplate}}
@@ -11404,29 +11424,29 @@ Ja, Eintrag wirklich löschen
 {{CC-edit-bridge||CCEditTemplate}}
 
 {{CC-edit-hs||CCEditTemplate}}
-
+--&gt;
 ---
 &lt;$set name=titel tiddler=&quot;Einstellungen&quot; field=&quot;neutitel&quot; &gt;
 &lt;span class=&quot;fixedwidth&quot;&gt;Trainingsnotiz:&lt;/span&gt; 
 &lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;description&quot;/&gt; &lt;/$set&gt;
 </pre>
 </div>
-<div created="20210630082623166" header="Brücke (ab Core+Beine Lvl 6)" lvlaltfield="bridge2-lvl" lvlfield="bridge-lvl" modified="20210630082739058" progressfield="bridge-step" progression="CCBridgeProgression" progression-alt="CCBridgeProgression-alt" tags="" textfield="bridge-text" title="CC-edit-bridge">
-<pre></pre>
-</div>
-<div created="20210630082151912" header="Beinheben / Core" lvlaltfield="core2-lvl" lvlfield="core-lvl" modified="20210630082302301" progressfield="core-step" progression="CCBeinhebenProgression" progression-alt="BeinhebenSchrägProgression" tags="" textfield="core-text" title="CC-edit-core">
-<pre></pre>
-</div>
-<div created="20210630082758036" header="Handstand (ab Push Lvl 6)" lvlaltfield="hs2-lvl" lvlfield="hs-lvl" modified="20210630083117670" progressfield="hs-step" progression="CCHandstandProgression" progression-alt="Progression Push gerade" tags="" textfield="hs-text" title="CC-edit-hs">
-<pre></pre>
-</div>
-<div created="20210630082415521" header="Kniebeuge" lvlaltfield="legs2-lvl" lvlfield="legs-lvl" modified="20210630082553339" progressfield="legs-step" progression="CCSquatProgression" progression-alt="Progression Beine" tags="" textfield="legs-text" title="CC-edit-legs">
-<pre></pre>
-</div>
-<div created="20210630082023400" header="Liegestütze" lvlaltfield="pull2-lvl" lvlfield="pull-lvl" modified="20210630130440588" progressfield="pull-step" progression="CCPullProgression" progression-alt="Progression Pull" tags="" textfield="pull-text" title="CC-edit-pull">
+<div caption="Brücke" created="20210630082623166" header="Brücke (ab Core+Beine Lvl 6)" lvlaltfield="bridge2-lvl" lvlfield="bridge-lvl" modified="20210702073439647" order="5" progressfield="bridge-step" progression="CCBridgeProgression" progression-alt="CCBridgeProgression-alt" tags="" textfield="bridge-text" title="CC-edit-bridge">
 <pre>{{||CCEditTemplate}}</pre>
 </div>
-<div created="20210630074354154" header="Liegestütze" lvlaltfield="push2-lvl" lvlfield="push-lvl" modified="20210630130459192" progressfield="push-step" progression="CCPushUpProgression" progression-alt="Progression Push rechtwinklig" tags="" textfield="push-text" title="CC-edit-push">
+<div caption="Core" created="20210630082151912" header="Beinheben / Core" lvlaltfield="core2-lvl" lvlfield="core-lvl" modified="20210702073416154" order="2" progressfield="core-step" progression="CCBeinhebenProgression" progression-alt="BeinhebenSchrägProgression" tags="" textfield="core-text" title="CC-edit-core">
+<pre>{{||CCEditTemplate}}</pre>
+</div>
+<div caption="Push gerade" created="20210630082758036" header="Handstand (ab Push Lvl 6)" lvlaltfield="hs2-lvl" lvlfield="hs-lvl" modified="20210702073429297" order="6" progressfield="hs-step" progression="CCHandstandProgression" progression-alt="Progression Push gerade" tags="" textfield="hs-text" title="CC-edit-hs">
+<pre>{{||CCEditTemplate}}</pre>
+</div>
+<div caption="Beine" created="20210630082415521" header="Kniebeuge" lvlaltfield="legs2-lvl" lvlfield="legs-lvl" modified="20210702073452042" order="4" progressfield="legs-step" progression="CCSquatProgression" progression-alt="Progression Beine" tags="" textfield="legs-text" title="CC-edit-legs">
+<pre>{{||CCEditTemplate}}</pre>
+</div>
+<div caption="Pull" created="20210630082023400" header="Pull" lvlaltfield="pull2-lvl" lvlfield="pull-lvl" modified="20210702073112587" order="3" progressfield="pull-step" progression="CCPullProgression" progression-alt="Progression Pull" tags="" textfield="pull-text" title="CC-edit-pull">
+<pre>{{||CCEditTemplate}}</pre>
+</div>
+<div caption="Push rw" created="20210630074354154" header="Liegestütze" lvlaltfield="push2-lvl" lvlfield="push-lvl" modified="20210702073309742" order="1" progressfield="push-step" progression="CCPushUpProgression" progression-alt="Progression Push rechtwinklig" tags="" textfield="push-text" title="CC-edit-push">
 <pre>{{||CCEditTemplate}}</pre>
 </div>
 <div created="20210128103856380" modified="20210128111859333" tags="CCProgression" title="CCBeinhebenProgression" type="application/x-tiddler-dictionary">
@@ -11671,6 +11691,20 @@ Ja, Eintrag wirklich löschen
 9:unterstützte (tiefe) einbeinige Kniebeuge:1x5:2x10:2x20
 10:einbeinige (tiefe) Kniebeuge:1x5:2x10:2x50</pre>
 </div>
+<div created="20210702073739652" lvlfield="title" modified="20210702092713342" tags="" title="CCTabButtonTemplate">
+<pre>&lt;$tiddler tiddler=&lt;&lt;currentTab&gt;&gt;&gt;
+&lt;$set name=lvl tiddler={{Einstellungen!!neutitel}} field={{!!lvlfield}} &gt;
+&lt;span class={{{[&lt;lvl&gt;!is[blank]addprefix[level]]}}}&gt;
+{{!!caption}}
+{{{[&lt;lvl&gt;!is[blank]addprefix[(]addsuffix[)]]}}}&lt;/span&gt;
+&lt;/$set&gt;
+&lt;/$tiddler&gt;</pre>
+</div>
+<div created="20210702072353752" modified="20210702072412216" tags="" title="CCTabTemplate">
+<pre>&lt;$tiddler tiddler=&lt;&lt;currentTab&gt;&gt;&gt;
+&lt;$transclude mode=&quot;block&quot; /&gt;
+&lt;/$tiddler&gt;</pre>
+</div>
 <div created="20210502193848029" modified="20210502193949588" tags="cc-training training" title="CCTemplate">
 <pre>{{||CCDisplayTemplate}}</pre>
 </div>
@@ -11785,7 +11819,7 @@ und folgende Varianten:
 * davon 2x10 Wdh. und nach jedem Satz die Hand gut ausschütteln *dann 1 Aufwärmsatz einfache Fingertip Pushups, 1 Level einfacher als die Arbeitssätze:
 * 5-10 Wdh. keinesfalls mehr als max. 15 Wdh.</pre>
 </div>
-<div created="20201209095546498" listlimit="15" modified="20210630131257563" neutitel="2021-06-29 CC" saved="2021-06-30 15:12:57" tags="$:/tags/StartupAction intern fogff" titel_template="&lt;&lt;now &quot;YYYY-0MM-0DD&quot;&gt;&gt;" title="Einstellungen">
+<div created="20201209095546498" listlimit="15" modified="20210702093048511" neutitel="2021-07-01 CC" saved="2021-07-02 11:30:48" tags="$:/tags/StartupAction intern fogff" titel_template="&lt;&lt;now &quot;YYYY-0MM-0DD&quot;&gt;&gt;" title="Einstellungen">
 <pre>* Anzeigelimit Trainingstagebuch: &lt;$edit-text  field=&quot;listlimit&quot; /&gt;
 * Template für Titel neuer Tagebucheinträge:  &lt;$edit-text  field=&quot;titel_template&quot; /&gt;  &amp;rArr; &quot;{{!!titel_template}}&quot;
 * &amp;#10173; [[GettingStarted]]
@@ -11832,7 +11866,7 @@ und folgende Varianten:
 &amp;#8286; 
 &lt;$button  to=&quot;Trainingsübersicht FOG für Frauen&quot;&gt;&lt;&lt;fa list&gt;&gt;&lt;/$button&gt;</pre>
 </div>
-<div created="20210115094459690" modified="20210630130744150" showPlan="show" showdelete="hide" showplan="hide" tags="" title="FOG Training bearbeiten">
+<div created="20210115094459690" modified="20210630130744150" showdelete="hide" showplan="show" tags="" title="FOG Training bearbeiten">
 <pre>&lt;$wikify name=titel text=&quot;{{Einstellungen!!neutitel}}&quot; &gt;
 
 !! &quot;&lt;&lt;titel&gt;&gt;&quot;  &lt;$reveal type=&quot;nomatch&quot; state=&quot;!!showDelete&quot; text=&quot;show&quot;&gt;
@@ -12597,9 +12631,6 @@ v11:Malteser Pushups
 3x10:
 3x15:
 10x3:</pre>
-</div>
-<div created="20210630130911495" modified="20210630130913103" title="tc-vertical--1848155767">
-<pre>CC-edit-core</pre>
 </div>
 <div created="20201209195044974" hips="0" legs="0" modified="20210116123852397" pull="0" push="0" tags="fogff intern" title="Template">
 <pre>Zyklus: {{!!woche}} (Sätze x Wdh: {{!!sxw}})
