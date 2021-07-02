@@ -359,7 +359,7 @@ Error message and password prompt
 
 <li>CC Training bearbeiten 1</li>
 
-<li>CC Training bearbeiten neu</li>
+<li>CC Training bearbeiten alt</li>
 
 <li>CC-edit-bridge</li>
 
@@ -10534,8 +10534,8 @@ Error message and password prompt
 <div title="$:/isEncrypted">
 <pre>no</pre>
 </div>
-<div created="20210511073438317" modified="20210702093021785" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
-<pre>neuer Editor jetzt mit Tabs</pre>
+<div created="20210511073438317" modified="20210702094123911" title="$:/language/ControlPanel/Saving/GitService/CommitMessage">
+<pre>neuer Editor als Default</pre>
 </div>
 <div dependents="" description="Markdown parser based on remarkable by Jon Schlinkert" list="readme usage" name="Markdown" plugin-type="plugin" title="$:/plugins/tiddlywiki/markdown" type="application/json" version="5.1.23">
 <pre>{
@@ -10769,8 +10769,8 @@ Error message and password prompt
 <div created="20210513121528789" modified="20210513122953225" title="$:/state/side-edit-tiddler">
 <pre>StyleSheet</pre>
 </div>
-<div created="20210116120950002" modified="20210702092851985" title="$:/state/sidebar">
-<pre>no</pre>
+<div created="20210116120950002" modified="20210702093957004" title="$:/state/sidebar">
+<pre>yes</pre>
 </div>
 <div created="20210118140801608" modified="20210121140300132" title="$:/state/tab--1048911287">
 <pre>Zyklus 1</pre>
@@ -10865,7 +10865,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210702071944398" list="Home [[Trainingsübersicht CC]] [[2021-07-01 CC]]" modified="20210702092927855" title="$:/StoryList">
+<div list="Home [[Trainingsübersicht CC]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -11209,7 +11209,7 @@ Error message and password prompt
  &lt;/g&gt;
 &lt;/svg&gt;</pre>
 </div>
-<div created="20210502193603277" modified="20210630091643637" tags="ConvictConditioning" title="CC Training">
+<div created="20210502193603277" modified="20210702094112825" tags="ConvictConditioning" title="CC Training">
 <pre>&lt;$wikify name=titelneu text=&quot;{{Einstellungen!!titel_template}} CC&quot; &gt;
 &lt;$button  to=&quot;CC Training bearbeiten&quot;&gt;
 &lt;$action-createtiddler $basetitle=&lt;&lt;titelneu&gt;&gt; $overwrite=&quot;yes&quot; $template=&quot;CCTemplate&quot; /&gt;
@@ -11220,8 +11220,8 @@ Error message and password prompt
 &amp;#8286; &lt;$button to=&quot;CC Training bearbeiten&quot; &gt;
 &lt;&lt;fa pen&gt;&gt;
 &lt;/$button&gt;
-&lt;$button to=&quot;CC Training bearbeiten neu&quot; &gt;
-&lt;&lt;fa &quot;pen-alt&quot;&gt;&gt; &lt;sup&gt;neuer&lt;/sup&gt;&lt;sub&gt;Editor&lt;/sub&gt;
+&lt;$button to=&quot;CC Training bearbeiten alt&quot; &gt;
+&lt;&lt;fa &quot;pen-alt&quot;&gt;&gt; &lt;sup&gt;alter&lt;/sup&gt;&lt;sub&gt;Editor&lt;/sub&gt;
 &lt;/$button&gt;
 &lt;$select tiddler=Einstellungen field=neutitel&gt;
 &lt;$list  filter=&quot;[tag[cc-training]!suffix[Template]!sort[created]first{Einstellungen!!listlimit}]&quot;  variable=&quot;item&quot;&gt;
@@ -11232,7 +11232,68 @@ Error message and password prompt
 &lt;$button  to=&quot;Trainingsübersicht CC&quot;&gt;&lt;&lt;fa list&gt;&gt;&lt;/$button&gt;
 &lt;$button  to=&quot;ConvictConditioning&quot;&gt;&lt;&lt;fa question&gt;&gt;&lt;/$button&gt;</pre>
 </div>
-<div class="fixedwidth" created="20210502194048451" modified="20210702092914273" showDelete="hide" showdelete="hide" showplan="hide" tags="" title="CC Training bearbeiten">
+<div class="fixedwidth" created="20210630074314034" modified="20210702094039314" push-text="bb" showdelete="hide" showplan="hide" tags="" title="CC Training bearbeiten">
+<pre>&lt;$set name=titel tiddler=&quot;Einstellungen&quot; field=&quot;neutitel&quot; &gt;
+
+!! &quot;&lt;&lt;titel&gt;&gt;&quot;  &lt;$reveal type=&quot;nomatch&quot; state=&quot;!!showDelete&quot; text=&quot;show&quot;&gt;
+&lt;$button set=&quot;!!showDelete&quot; setTo=&quot;show&quot;&gt;{{$:/core/images/delete-button}}&lt;/$button&gt;
+&lt;/$reveal&gt;
+&lt;$reveal type=&quot;match&quot; state=&quot;!!showDelete&quot; text=&quot;show&quot;&gt;
+&lt;$button  set=&quot;!!showDelete&quot; setTo=&quot;hide&quot;&gt;
+&lt;$action-deletetiddler $tiddler=&lt;&lt;titel&gt;&gt; /&gt;
+&lt;$action-sendmessage $message=&quot;tm-close-tiddler&quot;/&gt;
+{{$:/core/images/delete-button}} 
+Ja, Eintrag wirklich löschen
+&lt;/$button&gt; 
+&lt;$button  set=&quot;!!showDelete&quot; setTo=&quot;hide&quot;&gt;{{$:/core/images/close-button}} nein, doch nicht löschen&lt;/$button&gt; 
+&lt;/$reveal&gt; &lt;$button  to=&quot;ConvictConditioning Grundsätze&quot; &gt;{{$:/core/images/file}}&lt;/$button&gt; 
+&lt;/$set&gt;
+---
+
+&lt;&lt;tabs &quot;[prefix[CC-edit-]sort[order]]&quot; &quot;CC-edit-push&quot; &quot;$:/state/tab1&quot; &quot;tc-vertical&quot;  &quot;CCTabTemplate&quot; &quot;CCTabButtonTemplate&quot;&gt;&gt;
+
+&lt;!-- ---
+{{CC-edit-push||CCEditTemplate}}
+
+{{CC-edit-core||CCEditTemplate}}
+
+---
+{{CC-edit-pull||CCEditTemplate}}
+
+{{CC-edit-legs||CCEditTemplate}}
+
+---
+
+{{CC-edit-bridge||CCEditTemplate}}
+
+{{CC-edit-hs||CCEditTemplate}}
+--&gt;
+---
+&lt;$set name=titel tiddler=&quot;Einstellungen&quot; field=&quot;neutitel&quot; &gt;
+&lt;span class=&quot;fixedwidth&quot;&gt;Trainingsnotiz:&lt;/span&gt; 
+&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;description&quot;/&gt; &lt;/$set&gt;
+</pre>
+</div>
+<div created="20210512110321213" modified="20210513125713488" showdelete="hide" showplan="hide" tags="" title="CC Training bearbeiten 1">
+<pre>&lt;div class=table&gt;
+&lt;div class=row&gt;
+&lt;div class=box&gt;
+Level: kgwklgfvweklwfgl
+&lt;/div&gt;
+&lt;div class=box&gt;
+alt: kgwklgfvweklwfgl
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=row&gt;
+&lt;div class=&quot;box box-1&quot;&gt;
+Anfänger sldkhöskvh  Fortgeschrittener jehglkkl Profi kflwegkl wejkgfjklw
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=row&gt;
+&lt;div class=&quot;box box-1&quot;&gt;
+Bemerkungen kjjsrhljglwt4lfl43htöhöfkljfgt
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;</pre>
+</div>
+<div class="fixedwidth" created="20210502194048451" modified="20210702094026300" showDelete="hide" showdelete="hide" showplan="hide" tags="" title="CC Training bearbeiten alt">
 <pre>\define progression(uebung:&quot;CCPullProgression&quot;, lvl:&quot;1&quot;, feld: &quot;nameofinnerlevelfield&quot;)
    &lt;span class=fixedwidth&gt;erreichtes Niveau:&lt;/span&gt;
    &lt;div class={{{ [&lt;titel&gt;get&lt;__feld__&gt;addprefix[step step]]  step }}}&gt;
@@ -11369,67 +11430,6 @@ Ja, Eintrag wirklich löschen
 &lt;span class=&quot;fixedwidth&quot;&gt;Trainingsnotiz:&lt;/span&gt; 
 &lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;description&quot;/&gt; 
 &lt;/$wikify&gt;</pre>
-</div>
-<div created="20210512110321213" modified="20210513125713488" showdelete="hide" showplan="hide" tags="" title="CC Training bearbeiten 1">
-<pre>&lt;div class=table&gt;
-&lt;div class=row&gt;
-&lt;div class=box&gt;
-Level: kgwklgfvweklwfgl
-&lt;/div&gt;
-&lt;div class=box&gt;
-alt: kgwklgfvweklwfgl
-&lt;/div&gt;
-&lt;/div&gt;&lt;div class=row&gt;
-&lt;div class=&quot;box box-1&quot;&gt;
-Anfänger sldkhöskvh  Fortgeschrittener jehglkkl Profi kflwegkl wejkgfjklw
-&lt;/div&gt;
-&lt;/div&gt;&lt;div class=row&gt;
-&lt;div class=&quot;box box-1&quot;&gt;
-Bemerkungen kjjsrhljglwt4lfl43htöhöfkljfgt
-&lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;</pre>
-</div>
-<div class="fixedwidth" created="20210630074314034" modified="20210702092826256" push-text="bb" showdelete="hide" showplan="hide" tags="" title="CC Training bearbeiten neu">
-<pre>&lt;$set name=titel tiddler=&quot;Einstellungen&quot; field=&quot;neutitel&quot; &gt;
-
-!! &quot;&lt;&lt;titel&gt;&gt;&quot;  &lt;$reveal type=&quot;nomatch&quot; state=&quot;!!showDelete&quot; text=&quot;show&quot;&gt;
-&lt;$button set=&quot;!!showDelete&quot; setTo=&quot;show&quot;&gt;{{$:/core/images/delete-button}}&lt;/$button&gt;
-&lt;/$reveal&gt;
-&lt;$reveal type=&quot;match&quot; state=&quot;!!showDelete&quot; text=&quot;show&quot;&gt;
-&lt;$button  set=&quot;!!showDelete&quot; setTo=&quot;hide&quot;&gt;
-&lt;$action-deletetiddler $tiddler=&lt;&lt;titel&gt;&gt; /&gt;
-&lt;$action-sendmessage $message=&quot;tm-close-tiddler&quot;/&gt;
-{{$:/core/images/delete-button}} 
-Ja, Eintrag wirklich löschen
-&lt;/$button&gt; 
-&lt;$button  set=&quot;!!showDelete&quot; setTo=&quot;hide&quot;&gt;{{$:/core/images/close-button}} nein, doch nicht löschen&lt;/$button&gt; 
-&lt;/$reveal&gt; &lt;$button  to=&quot;ConvictConditioning Grundsätze&quot; &gt;{{$:/core/images/file}}&lt;/$button&gt; 
-&lt;/$set&gt;
----
-
-&lt;&lt;tabs &quot;[prefix[CC-edit-]sort[order]]&quot; &quot;CC-edit-push&quot; &quot;$:/state/tab1&quot; &quot;tc-vertical&quot;  &quot;CCTabTemplate&quot; &quot;CCTabButtonTemplate&quot;&gt;&gt;
-
-&lt;!-- ---
-{{CC-edit-push||CCEditTemplate}}
-
-{{CC-edit-core||CCEditTemplate}}
-
----
-{{CC-edit-pull||CCEditTemplate}}
-
-{{CC-edit-legs||CCEditTemplate}}
-
----
-
-{{CC-edit-bridge||CCEditTemplate}}
-
-{{CC-edit-hs||CCEditTemplate}}
---&gt;
----
-&lt;$set name=titel tiddler=&quot;Einstellungen&quot; field=&quot;neutitel&quot; &gt;
-&lt;span class=&quot;fixedwidth&quot;&gt;Trainingsnotiz:&lt;/span&gt; 
-&lt;$edit-text tiddler=&lt;&lt;titel&gt;&gt; field=&quot;description&quot;/&gt; &lt;/$set&gt;
-</pre>
 </div>
 <div caption="Brücke" created="20210630082623166" header="Brücke (ab Core+Beine Lvl 6)" lvlaltfield="bridge2-lvl" lvlfield="bridge-lvl" modified="20210702073439647" order="5" progressfield="bridge-step" progression="CCBridgeProgression" progression-alt="CCBridgeProgression-alt" tags="" textfield="bridge-text" title="CC-edit-bridge">
 <pre>{{||CCEditTemplate}}</pre>
@@ -11819,7 +11819,7 @@ und folgende Varianten:
 * davon 2x10 Wdh. und nach jedem Satz die Hand gut ausschütteln *dann 1 Aufwärmsatz einfache Fingertip Pushups, 1 Level einfacher als die Arbeitssätze:
 * 5-10 Wdh. keinesfalls mehr als max. 15 Wdh.</pre>
 </div>
-<div created="20201209095546498" listlimit="15" modified="20210702093048511" neutitel="2021-07-01 CC" saved="2021-07-02 11:30:48" tags="$:/tags/StartupAction intern fogff" titel_template="&lt;&lt;now &quot;YYYY-0MM-0DD&quot;&gt;&gt;" title="Einstellungen">
+<div created="20201209095546498" listlimit="15" modified="20210702094140028" neutitel="2021-07-01 CC" saved="2021-07-02 11:41:40" tags="$:/tags/StartupAction intern fogff" titel_template="&lt;&lt;now &quot;YYYY-0MM-0DD&quot;&gt;&gt;" title="Einstellungen">
 <pre>* Anzeigelimit Trainingstagebuch: &lt;$edit-text  field=&quot;listlimit&quot; /&gt;
 * Template für Titel neuer Tagebucheinträge:  &lt;$edit-text  field=&quot;titel_template&quot; /&gt;  &amp;rArr; &quot;{{!!titel_template}}&quot;
 * &amp;#10173; [[GettingStarted]]
